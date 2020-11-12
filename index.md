@@ -1,3 +1,6 @@
+
+![header](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/flat_kit_manual_header.png)
+
 If you’ve got a question regarding Flat Kit, please read through the Frequently Asked Questions, and try searching for the answers here. If the question is not covered, please shoot an email to info@dustyroom.com. If you find a bug, it really helps us if you include steps to reproduce it. Please mind that we get lots of messages daily, be patient - we’re getting to it. Also, if you've got a feature you’d like to see implemented, let us know — some of the great ones came from the suggestions. Flat Kit is a vast field of stylistic possibilities, so please make sure you skim trough this manual, it may help you understand all the features better and give you a few ideas.
 
 # Frequently Asked Questions (FAQs)
