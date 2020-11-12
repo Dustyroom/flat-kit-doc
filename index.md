@@ -66,4 +66,22 @@ It’s important, because apart from the expected ‘Cel Shade parameter’, Fla
 
 One of the big advantages of using these shaders is the fact that you don’t have to guess how the colors will look on your scene. If you want precision and accuracy — you have it. Moreover, if you want something unpredictable and you are trying to make your scene look different to spark your inspiration and imagination, but not sure how, you can do this too! Remember, this is a set of shaders selected to complement each other.
 
-![Flat Kit structural view chart](https://drive.google.com/file/d/12xg38_UnTMz8l5nud-2T4zPzPo_fK2id)
+![Flat Kit structural view chart](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/FlatKit-Structure-Chart.png)
+
+# 2. Quick start. Beginning to work with Flat Kit
+
+Flat Kit is fully self-contained and does not depend on any external assets.  
+If you do not need demo scenes, example materials and models you may skip importing the Demos directory in the asset.  
+The easiest way to get started with the asset is to dig into the demo scenes.  
+For Built-In RP it may take a while for Unity to import the asset — this is normal. Under the hood, Unity needs to generate all shader variants that are used in the demo scenes.  
+On the 3D models side, it’s important that you make normals ‘smooth’ for your meshes. If you import someone else's models and can’t edit the object in 3D editor, at least try to calculate normals in Unity — in the import settings of the model. It should work anyway, but sometimes the difference can be obvious, especially on objects with rounded corners.  
+**Note:** Our demos were created in **Linear color space** (a setting found in Project Settings). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
+
+Below are the instructions on how to import Flat Kit.
+
+**Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Go to Window ▶ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.  
+**Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one.  
+**Step 3.** Once imported, go to Project tab ▶︎ Assets ▶︎ Flat Kit. You'll find the Flat Kit unitypackage file of your preferred RP. Double-click it.  
+**Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.
+
+![Flat Kit import instructions.](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/flat-kit-import-1-instructions.png)
