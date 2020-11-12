@@ -548,6 +548,21 @@ Enable the Post Processing flat on the camera inspector:
 > Camera properties. How to enable Post-processing v.2
 
 
+# 9. Contact information and links
+
+Flat Kit at the Asset Store
+https://assetstore.unity.com/packages/vfx/shaders/flat-kit-cel-toon-shading-143368
+
+Email:
+info@dustyroom.com
+
+Dustyroom website
+http://dustyroom.com
+
+Twitter
+twitter.com/_dstrm
+
+
 
 ![]()
 > 
