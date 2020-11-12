@@ -76,7 +76,7 @@ It’s important, because apart from the expected ‘Cel Shade parameter’, Fla
 
 One of the big advantages of using these shaders is the fact that you don’t have to guess how the colors will look on your scene. If you want precision and accuracy — you have it. Moreover, if you want something unpredictable and you are trying to make your scene look different to spark your inspiration and imagination, but not sure how, you can do this too! Remember, this is a set of shaders selected to complement each other.
 
-![Flat Kit structural view chart](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/FlatKit-Structure-Chart.png)
+![Flat Kit structural view chart](FlatKit_Manual_Images/FlatKit-Structure-Chart.png)
 > Flat Kit structural view chart. 
 
 
@@ -96,7 +96,7 @@ Below are the instructions on how to import Flat Kit.
 **Step 3.** Once imported, go to Project tab ▶︎ Assets ▶︎ Flat Kit. You'll find the Flat Kit unitypackage file of your preferred RP. Double-click it.  
 **Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.
 
-![Flat Kit import instructions](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/flat-kit-import-1-instructions.png)
+![Flat Kit import instructions](FlatKit_Manual_Images/flat-kit-import-1-instructions.png)
 > Flat Kit import instructions.  
 
 
@@ -108,7 +108,7 @@ Because of the fact that these shaders are designed for a stylized look as oppos
  
 At the moment, there are the following shaders included into Flat Kit: _Stylized Surface_, _Stylized Surface Cutout_, _Stylized Surface with Outline_, _Gradient Skybox_, _Water_, _Terrain_, _LightPlane_.
 
-![Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/all_shaders.png)
+![Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader](FlatKit_Manual_Images/all_shaders.png)
 > Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader.   
 
 ## 3.1. ‘Stylized Surface’ Shader
@@ -130,10 +130,10 @@ The **additional** parameters are:
 
 **Note:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add unuseful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html
 
-![‘Stylized Surface’ shader in Single mode. Simple use case](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/stylized-surface-1.png)
+![‘Stylized Surface’ shader in Single mode. Simple use case](FlatKit_Manual_Images/stylized-surface-1.png)
 > ‘Stylized Surface’ shader in Single mode. Simple use case.  
 
-![‘Stylized Surface’ shader in Single mode. More complex use case](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/stylized-surface-2.png)
+![‘Stylized Surface’ shader in Single mode. More complex use case](FlatKit_Manual_Images/stylized-surface-2.png)
 > ‘Stylized Surface’ shader in Single mode. More complex use case with more options engaged, but still, uses only Single mode.  
 
 ### 3.1.1. The Main Parameters of the Shader
@@ -152,7 +152,7 @@ Note, the flatness and actual representation of colors on the scene depend on th
 *   **Curve.** The gradient, interpolated transition from one color to another.  
 In order to get Steps and Curve modes to work — as soon as you have a number of steps (_Steps_ mode) or curve shape (_Curve_ mode) chosen — the shader will ask you to save its utility ramp texture somewhere on the disk. It will write the transition onto it. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
-![Curve shading mode of Stylized Surface shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/FK-StylizedSurface-Steps-Curves.png)
+![Curve shading mode of Stylized Surface shader](FlatKit_Manual_Images/FK-StylizedSurface-Steps-Curves.png)
 > _Steps_ and _Curve_ shading mode of Stylized Surface shader  
 
 **Extra Cel Layer.** This is like another instance of _Single_ mode of _Cel Shading Mode_. Works independently from the _main Cel Shading Mode_. It means, you can make main Cel shading as _None_ (flat), and add an _Extra Cel Layer_. The result will be the same as if you would have used the _Single mode_. Or, make the _main Cel layer_ and _Extra Cel Layer_ almost identical, giving an _Extra Cel Layer_ a darker color, and making it smaller. This would result in stepping, similar to Steps mode with 1 step. Classic toon.
@@ -164,7 +164,7 @@ _Specular Color_ picks up the color of your glare, the parameter works in HDR.
 _Specular Size_ determines how big the specular is. Higher values mean bigger specular.  
 _Specular Edge Smoothness_ — moving slider to the left decreases blurriness and makes specular sharper.
 
-![Specular. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/specular_parameters.png)
+![Specular. Inspector interface](FlatKit_Manual_Images/specular_parameters.png)
 > _Specular_. Inspector interface
 
 
@@ -175,13 +175,13 @@ _Light Align_ parameter rotates the rim.
 _Rim Size_ controls how big the Rim is. Very high values can serve you as an unlit effect.  
 _Rim Edge Smoothness_ — moving slider to the left sharpens the Rim, to the right — makes Rim blurry. 
 
-![Rim. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/rim_parameters.png)
+![Rim. Inspector interface](FlatKit_Manual_Images/rim_parameters.png)
 > _Rim_. Inspector interface
 
 
 You can think of Rim as some kind of inner shadow and/or as inner glow. In one of the _Fruit Vase_ demo scenes, there is an example of extensive use of Rim as an outline. On _Blueprint Grid_ demo scene _Rim_ is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute _Curve mode_ or _Extra Cel parameter_. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, most of them have many use cases.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of _Stylized Surface_ shader with _None_ mode selected (meaning no straightforward shadows are applied), using orange color, and only _Rim_ parameter enabled. The results are variations of Rim section only. As you see, the _Rim_ alone is quite a creative tool. Imagine adding some creative _Specular_ and _Height Gradient_...
 
-![Rim only, usage axamples](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/rim_examples_suzanne.png)
+![Rim only, usage axamples](FlatKit_Manual_Images/rim_examples_suzanne.png)
 > Variety of uses of _Rim_ parameter alone on Suzanne the Blender Monkey. Interface of _Stylized Surface_ shader with _‘None’_ cel shading mode
 
 
@@ -191,7 +191,7 @@ Although _Rim_ option is creatively useful, there are two more obvious ways to a
 
 **Height Gradient.** This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is absolute, it depends on the position of the object on the scene. If you would like to make a relative height gradient, duplicate the material and adjust the height gradient.
 
-![Height Gradient. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/gradient_height_parameters.png)
+![Height Gradient. Inspector interface](FlatKit_Manual_Images/gradient_height_parameters.png)
 > _Height Gradient._ Inspector interface
 
 _Gradient Color_ picks the parameter’s own color to fade into from transparency.  
@@ -217,7 +217,7 @@ Please note that the effect is visible only if the color of the light is anythin
 
 Light Color Contribution works only with directional light. The point and spot lights are contributing to colors and shading of the material regardless of the Light Color Contribution value.
 
-![Light Color Contribution parameter on Flat Kit shaders Inspector panel](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/light_color_contribution.png)
+![Light Color Contribution parameter on Flat Kit shaders Inspector panel](FlatKit_Manual_Images/light_color_contribution.png)
 > _Light Color Contribution_ parameter on Flat Kit shaders Inspector panel
 
 Let’s view it in example.  
@@ -227,28 +227,28 @@ Take the first image (below). At first, we turn down the _Intensity_ to the very
 Then we change the color of Directional Light from white to red. It has no effect because Directional Light is too “weak” to fill the scene.  
 After raising _Intensity_ value back to “1” the scene is now lighter and has a red tint.  
 
-![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png)
+![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png)
 > _Light Color Contribution_ at value 0.5. Changing _Intensity_ value and color of Directional Light
 
 Once we change Color Light Contribution parameter to “0” (pic below), Directional light has no effect light-wise and color-wise. Changing Intensity parameter of Directional Light on the Inspector panel has no effect. Both sides of the picture are identical.  
 This way you can achieve a flat look, in other words, the colors on the scene are exactly the same as you choose in the shader parameters.
 
-![Light Color Contribution at value 0. Directional Light intensity at max and min values](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/lighting_1_color_contrib_0.png)
+![Light Color Contribution at value 0. Directional Light intensity at max and min values](FlatKit_Manual_Images/lighting_1_color_contrib_0.png)
 > _Light Color Contribution_ at value 0. Directional Light _Intensity_ at max and min values
 
 Now, (on the pic below) we raise Light Color Contribution to the max value of “1”. If we set Directional Light Intensity parameter low, the scene theoretically has no source of direct light. Local lights now act as the only light sources. If the Intensity of Directional Light is at its maximum, it’s too hot now.
 
-![Light Color Contribution at value 1. Changing intensity value of Directional Light](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/lighting_8.png)
+![Light Color Contribution at value 1. Changing intensity value of Directional Light](FlatKit_Manual_Images/lighting_8.png)
 > _Light Color Contribution_ at value 1. Changing _Intensity_ value of Directional Light
 
 If you use a Particle System and choose your particles to emit light, Flat Kit shaders respect that!
 
-![Particles emitting light on Flat Kit shaders](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/lighting_particles_lights.png)
+![Particles emitting light on Flat Kit shaders](FlatKit_Manual_Images/lighting_particles_lights.png)
 > Particles emitting light on Flat Kit shaders.
 
 **Unity Built-in Shadows.** If the object has the ‘Receive Shadows’ option turned on in Mesh Renderer, you have an ability to use Unity-processed shadows on it, as you would do in Unity Standard Material shader, with a few extra-options.
 
-![Unity Built-in Shadows mode menu. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/unity_built_in_shadows_modes.png)
+![Unity Built-in Shadows mode menu. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_modes.png)
 > Unity Built-in Shadows mode menu. Inspector interface
 
 First, you have to select what mode to work with.  
@@ -257,7 +257,7 @@ _None_ mode turns the Built-in shadow parameter off.
 _Multiply_ mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'.
 _Color_ mode lets you choose the color of the cast shadow. The blending mode is 'Normal'.
 
-![Height Gradient in Color mode. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
+![Height Gradient in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
 > _Height Gradient_ in _Color_ mode. Inspector interface
 
 **Texture.** If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you work with transparency in textures in Built-In RP, please use Stylized Shader Cutout shader. It can see alpha on the texture as transparency. URP supports alpha by default.
@@ -269,13 +269,13 @@ _Texture Impact_ parameter controls how visible the texture is. Values to the le
 
 **Bump Map.** To make an impression of a low-poly mesh having many details, you can use normal maps. Add one to _Bump Map_ slot in the Inspector panel.
 
-![‘Stylized Surface’ shader — normal map applied](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/normalmap-interface.png)
+![‘Stylized Surface’ shader — normal map applied](FlatKit_Manual_Images/normalmap-interface.png)
 > ‘Stylized Surface’ shader — normal map applied
 
 _Texture selection slot_ lets you pick a texture;
 _Tiling_ repeats the texture along X and Y axis.
 
-![‘Normal Map Tree’ demo scene, a tree without and with a normal map](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/normalmap-trees.png)
+![‘Normal Map Tree’ demo scene, a tree without and with a normal map](FlatKit_Manual_Images/normalmap-trees.png)
 > ‘Normal Map Tree’ demo scene, a tree without and with a normal map
 
 
@@ -285,7 +285,7 @@ This is a version of Stylized Surface shader with an option to treat alpha as tr
 
 The _Base Alpha cutout_ parameter determines how much of the alpha portion of the texture is going to be transparent.
 
-![‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/stylized_surface_cutout_screenshot.png)
+![‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface](FlatKit_Manual_Images/stylized_surface_cutout_screenshot.png)
 > ‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface
 
 Use this shader if you work with transparency in Built-In RP. In URP you are good to go with the Stylized Surface shader instead of this one. It will spare a few cycles off your CPU.
@@ -301,7 +301,7 @@ _Outline Depth Offset_ moves the outline inwards or outwards an object.
 Remember, in addition to this shader Flat Kit has also a global Outline effect applied per scene (in URP) and per camera (in Built-In RP).  
 In the Outline Image Effect chapter in this manual you can find some useful specific and general info.
 
-![‘Stylized Surface with Outline’ shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
+![‘Stylized Surface with Outline’ shader](FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
 > ‘Stylized Surface with Outline’ shader
 
 ## 3.4. ‘Gradient Skybox’ Shader
@@ -315,7 +315,7 @@ _Direction X angle_ and _Direction Y angle_ rotate the effect along the correspo
 
 > **TIP.** Make Top Color and Bottom Color identical colors or move the Exponent parameter to one of the extremes if you want a flat background.
 
-![Gradient Skybox. Inspector panel interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/gradient-skybox-interface.png)
+![Gradient Skybox. Inspector panel interface](FlatKit_Manual_Images/gradient-skybox-interface.png)
 > Gradient Skybox. Inspector panel interface
 
 ## 3.5. 'Water' Shader
@@ -364,7 +364,7 @@ Usually flat shaded landscape objects lack organic embellishment the real world 
 This effect changes the scene dramatically. Now, the terrain has its shadow work that you set on the interface, and on top of that there is a gradient, subtle or obvious. Immediately, it adds depth and a more professional look to the scene.
 If you work on some kind of an environmental landscape object but do not use Unity Terrain, please use the _Stylized Surface_ shader instead of _Terrain_. _Height Gradient_ is available there, too.
 
-![Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/height-gradient-example-01.png)
+![Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene](FlatKit_Manual_Images/height-gradient-example-01.png)
 > Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene
 
 
@@ -374,7 +374,7 @@ This shader is what we are particularly proud of. It looks like a small tool. Bu
 
 The _Wanderer_ demo scene includes _LightPlane_ shader implemented not only as fog areas, but also as light beams of so-called pick-up objects and even as planets. The _Valley_ demo scene has got the _LightPlane_ shader used as floating air particles thanks to the Unity particle system.
 
-![LightPlane Shader. Inspector panel interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/light_plane_interface.png)
+![LightPlane Shader. Inspector panel interface](FlatKit_Manual_Images/light_plane_interface.png)
 > LightPlane Shader. Inspector panel interface
 
 _Depth Fade Distance_ ;  
@@ -415,14 +415,14 @@ When you click on any of the color ramps (Distance or Height Gradient), the Grad
 
 Fog Image Effect is being used in the _Wanderer_ demo scene (more subtly) and _Valley_ Demo scene (more accentuated).
 
-![Fog Image Effect. Inspector panel interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/fog_image_effect.png)
+![Fog Image Effect. Inspector panel interface](FlatKit_Manual_Images/fog_image_effect.png)
 > Fog Image Effect. Inspector panel interface
 
 Gradient editor controls the colors of the gradient. To open it, click on Distance Gradient or Height Gradient. The bottom row of breakpoints (pointing up) is the selection of the colors. The above row (pointing down) controls the opacity of the area it points at; the opacity value of one breakpoint fades into the opacity value of the adjacent one. Same for colors.
 
 > **TIP.** If you want the area close to you to be without fog, apart from increasing Near parameter, you can open up the color ramp(s), add a breakpoint next to the leftmost one on the ramp, select leftmost one, make it transparent (see screenshot of Gradient Editor below). The breakpoint you created (opaque, next to the transparent one) becomes your distance or height control.
 
-![Fog Image Effect. Gradient Editor interface.](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/fog_image_effect_gradient_editor.png)
+![Fog Image Effect. Gradient Editor interface.](FlatKit_Manual_Images/fog_image_effect_gradient_editor.png)
 > Fog Image Effect. Gradient Editor interface.
 
 
@@ -442,14 +442,14 @@ _Outline Only_ renders the outlines without meshes themselves, making it a kind 
 
 Combinations of these settings let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using _‘Stylized Surface with Outline’_ shader in addition to the global Outline effect.
 
-![Outline Forward Renderer in URP. Inspector interface.](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/Outlines-URP-1.png)
+![Outline Forward Renderer in URP. Inspector interface.](FlatKit_Manual_Images/Outlines-URP-1.png)
 > Outline Forward Renderer in URP. Inspector interface.
 
 Please, note that _Outline Image Effect_ is a global effect, as it is used as the camera component in Built-In RP and as a scene's Renderer Feature in URP, which is suitable for a consistent look of your project. If you would like to outline a particular object on your scene, you can engage the shader instead — ‘Stylized Surface with Outline’ shader.
 
 Some general info. Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. It can be done in a 3d editor. For example, here's how to do it in Blender.
 
-![Rotating normals in Blender](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/normals-rotation1.png)
+![Rotating normals in Blender](FlatKit_Manual_Images/normals-rotation1.png)
 > Rotating normals in Blender. Manipulating the normals angle is one of the ways to make Flat Kit generate outlines where you want them.
 
 # 5. Additional scripts
@@ -462,7 +462,7 @@ Used in the _Wanderer_ demo scene. It scrolls waterfall texture along the Y axis
 
 Linear Motion is a simple script that translates (moves) and rotates any object. We used it heavily on cameras to prepare promo video footage. There is an option to translate or rotate along the X, Y, Z axis.
 
-![Linear motion script. Inspector interface.](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/ConstantMotion.png)
+![Linear motion script. Inspector interface.](FlatKit_Manual_Images/ConstantMotion.png)
 > Linear motion script. Inspector interface.
 
 > **TIP.** Use a couple of instances of this component if you want to translate and rotate along more than one axis and make more complex automations.
@@ -499,7 +499,7 @@ In Flat Kit you can find presets as .mat Material instances (that you can drag a
 
 To save the preset, select the material or an object with this material you want to save, click on the ‘mixer’ icon on the top right of the shader interface on the Inspector panel. Then, the menu will pop up. Click ‘Save Current to…’. Then you choose the destination. Once created, you can move the actual file wherever you would like. All presets within a project will show up in the ‘Select Preset’ menu.
 
-![Preset menu. How to load.](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/preset-button.png)
+![Preset menu. How to load.](FlatKit_Manual_Images/preset-button.png)
 > Preset menu. How to load.
 
 Save, recall, experiment, discard bad results, save great results, all by using Unity’s preset system. You cat A/B this way and share the shader’s parameters across multiple separate materials. Scan through them and once you stumble upon something close to what you are looking for, adjust the one.
@@ -547,7 +547,7 @@ Right click on Assets (in Project tab) ▶︎ Create ▶︎ Rendering ▶︎ URP
 
 Once you do it, the Asset and Forward Renderer are created.
 
-Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more information.
+Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more information.
 
 ## 8.3. Flat Kit Image Effects in URP
 
@@ -563,10 +563,10 @@ To enable outline and fog, select the ForwardRendererConfig and add the 'outline
 
 The order of the effects can be managed like this.
 
-![Managing the order of renderer layers in URP](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/URP-renderer-layers-01.png)
+![Managing the order of renderer layers in URP](FlatKit_Manual_Images/URP-renderer-layers-01.png)
 > Managing the order of renderer layers in URP
 
-It's a default URP thing. What is worth noting is that for Outlines we made an option to choose the order of Renderer Events within Outline Image Effect interface. Please, refer to the corresponding chapter of this manual, [Outline Image Effect](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#42-outline-image-effect).
+It's a default URP thing. What is worth noting is that for Outlines we made an option to choose the order of Renderer Events within Outline Image Effect interface. Please, refer to the corresponding chapter of this manual, [Outline Image Effect](index.md#42-outline-image-effect).
 
 
 ## 8.4. Post-processing V2 in URP (General Info)
@@ -577,7 +577,7 @@ Go to Assets (in Project tab) ▶︎ Universal Rendering Pipeline asset ▶︎ g
 
 Enable the Post Processing flat on the camera inspector:
 
-![Camera properties. How to enable Post-processing v.2](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/enable-post-processing-camera.png)
+![Camera properties. How to enable Post-processing v.2](FlatKit_Manual_Images/enable-post-processing-camera.png)
 > Camera properties. How to enable Post-processing v.2
 
 
