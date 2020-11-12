@@ -54,12 +54,10 @@ In case you already use any other flat-looking shaders, you will still find a va
 
 Flat Kit was made with optimized and fast workflow in mind, so that one could fulfill the picture popped up in the mind — as quickly as possible, in various ways. This means:
 
-*   One task could be done in different ways. It is a multi-purpose set of shaders;
-*   Some outstanding graphical results can be achieved in minutes (given that you have your models ready, there are lots in FlatKit);
-*   There is always an element of you-didn’t-think-it-can-be-done-this-way surprise thanks to FlatKit deep yet streamlined interface.  
-For example, let’s take fog. Fog is usually a big part of any 3D environment, isn’t it? There are lots of methods to implement fog into the scene, often complex and complicated. With Flat Kit, we decided to make it as convenient as possible for the user end. So, the fog can be done in two ways.
-- Using **Fog Image Effect** post-effect / camera component
-- Using **LightPlane** shader.
+* One task could be done in different ways. It is a multi-purpose set of shaders;
+* Some outstanding graphical results can be achieved in minutes (given that you have your models ready, there are lots in FlatKit);
+* There is always an element of you-didn’t-think-it-can-be-done-this-way surprise thanks to FlatKit deep yet streamlined interface.  
+For example, let’s take fog. Fog is usually a big part of any 3D environment, isn’t it? There are lots of methods to implement fog into the scene, often complex and complicated. With Flat Kit, we decided to make it as convenient as possible for the user end. So, the fog can be done in two ways: using **Fog Image Effect** post-effect / camera component or/and using **LightPlane** shader.
 
     We are going to explain how these work and what they are down in the manual. Both ways suit different needs, but they really do compliment each other.
 
