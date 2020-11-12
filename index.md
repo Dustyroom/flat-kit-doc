@@ -69,9 +69,9 @@ Flat Kit was made with optimized and fast workflow in mind, so that one could fu
 * There is always an element of you-didn’t-think-it-can-be-done-this-way surprise thanks to FlatKit deep yet streamlined interface.  
 For example, let’s take fog. Fog is usually a big part of any 3D environment, isn’t it? There are lots of methods to implement fog into the scene, often complex and complicated. With Flat Kit, we decided to make it as convenient as possible for the user end. So, the fog can be done in two ways: using **Fog Image Effect** post-effect / camera component or/and using **LightPlane** shader.
 
-    We are going to explain how these work and what they are down in the manual. Both ways suit different needs, but they really do compliment each other.
+We are going to explain how these work and what they are down in the manual. Both ways suit different needs, but they really do compliment each other.
 
-    Another example of the multi-purpose nature of our shaders is cel shading itself. Now, it’s going to take a whole chapter of this manual to elaborate on cel shading. For now it’s only worth mentioning that the same or similar results can be made using different parameters of the shader’s interface.
+Another example of the multi-purpose nature of our shaders is cel shading itself. Now, it’s going to take a whole chapter of this manual to elaborate on cel shading. For now it’s only worth mentioning that the same or similar results can be made using different parameters of the shader’s interface.
 It’s important, because apart from the expected ‘Cel Shade parameter’, Flat Kit also has a bunch of additional settings to explore. Each additional parameter of the shader adds an extra dimension of possibilities. It’s like having purple color paint, then you have red, and blue, and yellow. Purple is cool by itself and you already have it, but you can make it up by mixing blue and red. Or you can spare blue to match with yellow — to get green. In any case you get your purple, and also, simultaneously — other combinations, often surprising and inspiring. We’ll talk about the importance of such potential later in the manual.
 
 One of the big advantages of using these shaders is the fact that you don’t have to guess how the colors will look on your scene. If you want precision and accuracy — you have it. Moreover, if you want something unpredictable and you are trying to make your scene look different to spark your inspiration and imagination, but not sure how, you can do this too! Remember, this is a set of shaders selected to complement each other.
@@ -470,7 +470,70 @@ Save, recall, experiment, discard bad results, save great results, all by using 
 > **TIP.** Naming the preset files as descriptive as possible is a gratifying practice. It would save your time later when you gather lots of them. It would be easier to navigate through them and distinguish between them, and also the proper names would remind you what you had in mind at the moment of saving the preset. Just look at the screenshot below.
 
 
+# 8. Flat Kit in URP
 
+FlatKit requires URP version 7.2.0 or higher.
+
+Generally, Flat Kit looks identical between the Built-in and Universal Rendering Pipelines. The exceptions to this rule are described in the 'known limitations' list below. The differences are becoming inevitable for a couple of reasons. Built-in RP is being deprecated by Unity, URP is faster and it is a way to go, URP offers the tools Built-In RP is lacking. One of the differences is in post-processing. Flat Kit Built-In RP uses Post-Processing Stack v.2. Flat Kit URP uses URP's native Volume toolkit. Both of these offer similar post-processing tools but they behave differently. Even when using the same values for Color grading section in Built-In RP and URP, the outcome is slightly diffrent.
+
+Please note, Flat Kit had been initially created for the Built-in Rendering Pipeline. To keep the visual results as close to the original as possible, the URP version of Flat Kit is using HLSL code rather than shader graph. It means you can switch a Flat Kit project between URP and Built-in RP at any point without extra work. However if you’d like to edit the shaders, you'll need some programming skills.
+
+## 8.1. Known Limitations
+
+Although we did our best to make Flat Kit support URP, the pipeline itself is not yet fully mature and brings some limitations. Until Unity has updated the URP, we are working on building our own workarounds in order to make things work.
+
+The current limitations are:
+
+* SRP Batcher is not yet supported by the Stylized Surface shaders.
+
+## 8.2. URP Installation
+
+To be able to use URP, we've included the URP version alongside the Built-in pipeline version, in a single package. In order to use URP, you need to unpack it first.
+
+If you have not installed Unity's Universal RP native package before, it's time to do so.
+
+Go to Window ▶︎ Package Manager ▶︎ All Packages ▶︎ Universal RP ▶︎ Install.
+
+Import the URP version of Flat Kit scripts and shaders
+
+Go to Assets (in Project tab) ▶︎ “URP Package” folder ▶︎ FlatKit URP ▶︎ unpack.
+
+NOTE: If the “URP Package” folder does not appear, please re-import Flat Kit from the Package Manager instead of the Asset Store in Unity: Window ▶︎ Package Manager ▶︎ Locate 'My Assets' drop-down menu ▶︎ Choose Flat Kit there.
+
+Once you've got it installed, select URP as a working rendering pipeline for your project.
+
+Go to Edit ▶︎ Project Settings ▶︎ Graphics ▶︎ Scriptable Render Pipeline Settings ▶︎ select your rendering pipeline asset. We've got an example included in the asset.
+
+Then you'll have to create a URP asset to work with.
+
+Right click on Assets (in Project tab) ▶︎ Create ▶︎ Rendering ▶︎ URP ▶︎ Pipeline Asset.
+
+Once you do it, the Asset and Forward Renderer are created.
+
+Please, refer to the chapter 'Quick start. Beginning to work with Flat Kit' in the beginning of this manual for more information.
+
+## 8.3. Flat Kit Image Effects in URP
+
+In URP, 'Fog' and 'Outline' image effects, included in Flat Kit, are no longer image effects, they have been adapted to become Render Features. Unlike the conventional image effects that are added to the camera game object, Render Features are added as stages to the Forward Renderer.
+
+To use Flat Kit effects, please first update the Universal RP to the version higher than 7.2.0.
+
+Go to Window ▶︎ Package Manager ▶︎ Universal RP ▶︎ Select the version to upgrade to ▶︎ click Upgrade
+
+Our example scenes already include configurations of the Forward Renderer with outline and fog image effects (look for the URP Config folders in the demo directory).
+
+To enable outline and fog, select the ForwardRendererConfig and add the 'outline' or 'fog' stage. In the case of 'outline' effect, you also need to add the DepthNormalsPass stage.
+
+## 8.4. Post-processing V2 in URP (General Info)
+
+We use PPv2 in our demo scenes for additional image effects. To enable these additional effects you need to:
+
+Go to Assets (in Project tab) ▶︎ Universal Rendering Pipeline asset ▶︎ go to Inspector tab ▶︎ Post-processing Feature Set ▶︎ select Post Processing V2 from the drop-down.
+
+Enable the Post Processing flat on the camera inspector:
+
+![Camera properties. How to enable Post-processing v.2]()
+> Camera properties. How to enable Post-processing v.2
 
 
 
