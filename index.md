@@ -521,7 +521,7 @@ Right click on Assets (in Project tab) ▶︎ Create ▶︎ Rendering ▶︎ URP
 
 Once you do it, the Asset and Forward Renderer are created.
 
-Please, refer to the chapter 'Quick start. Beginning to work with Flat Kit' in the beginning of this manual for more information.
+Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more information.
 
 ## 8.3. Flat Kit Image Effects in URP
 
@@ -540,7 +540,7 @@ The order of the effects can be managed like this.
 ![Managing the order of renderer layers in URP](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/URP-renderer-layers-01.png)
 > Managing the order of renderer layers in URP
 
-It's a default URP thing. What is worth noting is that for Outlines we made an option to choose the order of Renderer Events within Outline Image Effect interface. Please, refer to the corresponding chapter of this manual, Outline Image Effect.
+It's a default URP thing. What is worth noting is that for Outlines we made an option to choose the order of Renderer Events within Outline Image Effect interface. Please, refer to the corresponding chapter of this manual, [Outline Image Effect](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#42-outline-image-effect).
 
 
 ## 8.4. Post-processing V2 in URP (General Info)
