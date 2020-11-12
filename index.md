@@ -298,11 +298,11 @@ _Outline Color_ picks up the color of the outline.
 _Outline Width_ determines how thick the outline is.  
 _Outline Depth Offset_ moves the outline inwards or outwards an object.
 
-Remember, in addition to this shader Flat Kit has also a global Outline effect applied per scene (in URP) and per camera (in Built-In RP).
+Remember, in addition to this shader Flat Kit has also a global Outline effect applied per scene (in URP) and per camera (in Built-In RP).  
+In the Outline Image Effect chapter in this manual you can find some useful specific and general info.
 
 ![‘Stylized Surface with Outline’ shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
 > ‘Stylized Surface with Outline’ shader
-
 
 ## 3.4. ‘Gradient Skybox’ Shader
 
@@ -414,6 +414,10 @@ Combinations of these settings let you control the behavior of the outlines quit
 
 Please, note that _Outline Image Effect_ is a global effect, as it is used as the camera component in Built-In RP and as a scene's Renderer Feature in URP, which is suitable for a consistent look of your project. If you would like to outline a particular object on your scene, you can engage the shader instead — ‘Stylized Surface with Outline’ shader.
 
+Some general info. Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. It can be done in a 3d editor. For example, here's how to do it in Blender.
+
+![Rotating normals in Blender](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/normals-rotation1.png)
+> Rotating normals in Blender. Manipulating the normals angle is one of the ways to make Flat Kit generate outlines where you want them.
 
 # 5. Additional scripts
 
@@ -524,6 +528,14 @@ Our example scenes already include configurations of the Forward Renderer with o
 
 To enable outline and fog, select the ForwardRendererConfig and add the 'outline' or 'fog' stage. In the case of 'outline' effect, you also need to add the DepthNormalsPass stage.
 
+The order of the effects can be managed like this.
+
+![Managing the order of renderer layers in URP](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/URP-renderer-layers-01.png)
+> Managing the order of renderer layers in URP
+
+It's a default URP thing. What is worth noting is that for Outlines we made an option to choose the order of Renderer Events within Outline Image Effect interface. Please, refer to the corresponding chapter of this manual, Outline Image Effect.
+
+
 ## 8.4. Post-processing V2 in URP (General Info)
 
 We use PPv2 in our demo scenes for additional image effects. To enable these additional effects you need to:
@@ -532,7 +544,7 @@ Go to Assets (in Project tab) ▶︎ Universal Rendering Pipeline asset ▶︎ g
 
 Enable the Post Processing flat on the camera inspector:
 
-![Camera properties. How to enable Post-processing v.2]()
+![Camera properties. How to enable Post-processing v.2](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/enable-post-processing-camera.png)
 > Camera properties. How to enable Post-processing v.2
 
 
