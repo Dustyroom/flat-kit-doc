@@ -68,7 +68,7 @@ It’s important, because apart from the expected ‘Cel Shade parameter’, Fla
 One of the big advantages of using these shaders is the fact that you don’t have to guess how the colors will look on your scene. If you want precision and accuracy — you have it. Moreover, if you want something unpredictable and you are trying to make your scene look different to spark your inspiration and imagination, but not sure how, you can do this too! Remember, this is a set of shaders selected to complement each other.
 
 ![Flat Kit structural view chart](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/FlatKit-Structure-Chart.png)
-> Flat Kit structural view chart
+> Flat Kit structural view chart. 
 
 
 # 2. Quick start. Beginning to work with Flat Kit
@@ -88,7 +88,7 @@ Below are the instructions on how to import Flat Kit.
 **Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.
 
 ![Flat Kit import instructions](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/flat-kit-import-1-instructions.png)
-> Flat Kit import instructions
+> Flat Kit import instructions.  
 
 
 # 3. Shaders. In-Depth Overview
@@ -100,7 +100,7 @@ Because of the fact that these shaders are designed for a stylized look as oppos
 At the moment, there are the following shaders included into Flat Kit: _Stylized Surface_, _Stylized Surface Cutout_, _Stylized Surface with Outline_, _Gradient Skybox_, _Water_, _Terrain_, _LightPlane_.
 
 ![Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/all_shaders.png)
-> Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader
+> Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader.   
 
 ## 3.1. ‘Stylized Surface’ Shader
 This is a versatile shader to be used on rigid object materials. To use it on a material select the shader “FlatKit/Stylized Surface” or “FlatKit/Stylized Surface Cutout”. This is your main go-to shader. It works for the vast majority of cases.  
@@ -122,31 +122,30 @@ The **additional** parameters are:
 **Note:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add unuseful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html
 
 ![‘Stylized Surface’ shader in Single mode. Simple use case](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/stylized-surface-1.png)
-> ‘Stylized Surface’ shader in Single mode. Simple use case
+> ‘Stylized Surface’ shader in Single mode. Simple use case.  
 
 ![‘Stylized Surface’ shader in Single mode. More complex use case](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/stylized-surface-2.png)
-> ‘Stylized Surface’ shader in Single mode. More complex use case with more options engaged, but still, uses only Single mode.
+> ‘Stylized Surface’ shader in Single mode. More complex use case with more options engaged, but still, uses only Single mode.  
 
 ### 3.1.1. The Main Parameters of the Shader
 
-**Color.** This would be the color of your mesh (applicable to most cases, though you can make the shader's other parameters override or mask this main color, if you wish).
+**Color** This would be the color of your mesh (applicable to most cases, though you can make the shader's other parameters override or mask this main color, if you wish).
 
-* **Cel Shading Mode.** This is where you choose the style (mode) of your shading, the color of the shading, and other respective parameters of the modes. Depending on the mode you choose the parameters will look differently. So, let’s talk about modes.
+**Cel Shading Mode** This is where you choose the style (mode) of your shading, the color of the shading, and other respective parameters of the modes. Depending on the mode you choose the parameters will look differently. So, let’s talk about modes.
 
-*.  **None.** Use this to achieve a simple flat look or to get any other creative picture not involving cel shading, however, the following parameters of Stylized Surface shader will still let you do this, if you choose so.  
+*   **None** Use this to achieve a simple flat look or to get any other creative picture not involving cel shading, however, the following parameters of Stylized Surface shader will still let you do this, if you choose so.  
 Note, the flatness and actual representation of colors on the scene depend on the lighting of the scene. In our demos we use Skybox as the source of lighting. Conveniently, there is a Dependency slider on the Lighting panel of Unity, which tells how much of the influence the Skybox provides. At minimum, there won’t be any shadows, as well as the colors will be identical to those you would choose in the _Color_ block of the shader. At maximum, the Skybox heavily dictates what the colors will look like. For more natural (not necessarily realistic — but natural, organic look of the scene, it’s healthy to let Skybox influence the coloring of the scene).
 
-*   **Single.** This mode provides you with one shadow of chosen _Color_. _Self Shading Size_ is the size of the cel. Larger values mean larger size of the shadow. _Shadow Edge Size_ controls the sharpness of the cel. The lower the value — the sharper the cel. The higher the value — the more blurry is the shadow. _Localized Shading_ is basically how condensed the shadow is. Higher values represent sharper cel. 
+*   **Single** This mode provides you with one shadow of chosen _Color_. _Self Shading Size_ is the size of the cel. Larger values mean larger size of the shadow. _Shadow Edge Size_ controls the sharpness of the cel. The lower the value — the sharper the cel. The higher the value — the more blurry is the shadow. _Localized Shading_ is basically how condensed the shadow is. Higher values represent sharper cel. 
 
-*   **Steps.** Basically, you choose the shading color and number of steps to blend from main _Color_ into the color you pick up in _Steps_ mode.
+*   **Steps** Basically, you choose the shading color and number of steps to blend from main _Color_ into the color you pick up in _Steps_ mode.
 
-*   **Curve.** The gradient, interpolated transition from one color to another.
-
+*   **Curve** The gradient, interpolated transition from one color to another.  
 In order to get Steps and Curve modes to work — as soon as you have a number of steps (_Steps_ mode) or curve shape (_Curve_ mode) chosen — the shader will ask you to save its utility ramp texture somewhere on the disk. It will write the transition onto it. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
 ![Steps shading mode of Stylized Surface shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/FK-StylizedSurface-Steps.png)
-> Steps shading mode of Stylized Surface shader
+> Steps shading mode of Stylized Surface shader  
 
 ![Curve shading mode of Stylized Surface shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/FK-StylizedSurface-Steps-Curves.png)
-> Curve shading mode of Stylized Surface shader
+> Curve shading mode of Stylized Surface shader  
 
