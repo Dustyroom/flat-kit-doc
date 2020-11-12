@@ -47,7 +47,7 @@ A. The object shaders target 3.5 (or es 3.0 and WebGL 2.0).
 Q. It takes very long to import Flat Kit into Unity in Built-in RP.  
 A. FlatKit Built-in RP uses shader variants to achieve high flexibility and best performance. However it can take time to import the asset and build the game binary. In URP importing takes seconds, so we encourage you to use the URP version of Flat Kit. If you have to use Built-In RP, though, to speed things up, uncheck unneeded elements when importing the asset.
 
-Q. Is it possible to apply all these awesome effects just onto the camera while using my own shaders?
+Q. Is it possible to apply all these awesome effects just onto the camera while using my own shaders?  
 A. Cel shading is shader-driven, not camera, which means that Stylized Surface shaders have to be used for this. Outline and Fog image effects are used as camera components (Built-In RP) or as Render Features per scene (URP).
 
 
@@ -318,8 +318,15 @@ _Direction X angle_ and _Direction Y angle_ rotate the effect along the correspo
 ![Gradient Skybox. Inspector panel interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/gradient-skybox-interface.png)
 > Gradient Skybox. Inspector panel interface
 
+## 3.5. 'Water' Shader
 
-## 3.5. ‘Terrain’ Shader
+Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird thing with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated, it is intuitive and has helping tooltips on the parameters. 
+
+First of all, you'll need a surface to place a material with _Water_ shader on. A plane with vertex grid will do fine. The more high resolution the mesh is the smoother the waves will be. For extra interest you can slightly displace the vertices while editing the mesh. With Flat Kit you get a few such models.
+
+> **TIP.** Place the plane somewhere behind of in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
+
+## 3.6. ‘Terrain’ Shader
 
 Terrains are great in Unity. But it’s not so trivial to work with terrain materials, that is why we added a separate shader that deals with the Unity Terrain system.
 
@@ -335,7 +342,7 @@ If you work on some kind of an environmental landscape object but do not use Uni
 > Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene
 
 
-## 3.6. ‘LightPlane’ Shader
+## 3.7. ‘LightPlane’ Shader
 
 This shader is what we are particularly proud of. It looks like a small tool. But it has immeasurable possibilities. Fog, mist, delicate scene boundaries, light beams, glow of magic swords, laser beams. These things are what _LightPlane_ is for.
 
@@ -351,7 +358,7 @@ _UV Fade X_ ;
 _UV Fade Y_ ;  
 _Allow Alpha Overflow_ .
 
-## 3.7. GPU Instancing
+## 3.8. GPU Instancing
 
 When the “Enable Instancing” option is enabled on a material, the shaders will perform GPU Instancing of the following fields that are common across all FlatKit shaders:
 
@@ -550,17 +557,17 @@ Enable the Post Processing flat on the camera inspector:
 
 # 9. Contact information and links
 
-Flat Kit at the Asset Store
+Flat Kit at the Asset Store  
 https://assetstore.unity.com/packages/vfx/shaders/flat-kit-cel-toon-shading-143368
 
-Email:
+Email  
 info@dustyroom.com
 
-Dustyroom website
+Dustyroom website  
 http://dustyroom.com
 
-Twitter
-twitter.com/_dstrm
+Twitter  
+http://twitter.com/_dstrm
 
 
 
