@@ -1,2 +1,2 @@
-# Flat-Kit-Documentation
-Public documentation for the FlatKit asset
+# Flat Kit Documentation
+Flat Kit Unity asset docs
