@@ -320,9 +320,35 @@ _Direction X angle_ and _Direction Y angle_ rotate the effect along the correspo
 
 ## 3.5. 'Water' Shader
 
-Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird thing with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated, it is intuitive and has helping tooltips on the parameters. 
+Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird things with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated, it is intuitive and has helping tooltips on the parameters. 
 
 First of all, you'll need a surface to place a material with _Water_ shader on. A plane with vertex grid will do fine. The more high resolution the mesh is the smoother the waves will be. For extra interest you can slightly displace the vertices while editing the mesh. With Flat Kit you get a few such models.
+
+_Shallow._ Color at the top of the water.  
+_Deep._ Color below the surface.  
+_Clearness._ How transparent the color of the water is. The transparency doesn't affect other parameters like foam or refractions. This allows you to achieve awesome weird optical effects.  
+_Shadow Strength._ How visible the shadow is.  
+_Crest._ The color of the wave. It helps accentuate individual waves.  
+_Crest size._ How big of a part of a wave is colored.  
+_Crest transition._ How smoothly the accentuated wave blends into overall color of the water.  
+_Fade distance._ TBD.  
+_Depth._ TBD.  
+_Shape._ The formula that determine how the waves are shaped and distributed across the mesh. Round is for concentric round-shaped ripples; Grid is more linear movement; Pointy is for more pronounced individual wave peaks.  
+_Speed._ How fast it moves along the Direction parameter.  
+_Amplitude._ Sets deviation amount, or, how high it is.  
+_Frequency._ Density of the effect.  
+_Direction._ Direction of the motion.  
+_Noise._ Nonlinearity to the shape. Use it to make things more chaotic.  
+_Source._ How the foam is being made — from texture or generated from noise.  
+_Color._ Color value. Can be opaque or transparent.  
+_Min Depth._ TBD.  
+_Amount._ How often 'grains' occur.  
+_Sharpness._ How smooth or sharp the foam is.  
+_Scale._ How big the foam 'chunks' are.  
+_Stretch X._ How stretched the foam is along X axis.  
+_Stretch Y._ How stretched the foam is along Y axis.  
+_Power._ Makes specular thin or thick. _Power_ value is a multiplier of 'Strength' parameter.  
+_Strength._ How prominent the specular is.  
 
 > **TIP.** Place the plane somewhere behind of in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
 
