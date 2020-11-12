@@ -1,4 +1,4 @@
-If you’ve got a question regarding Flat Kit, please read through the Frequently Asked Questions, and try searching for the answers here. If the question is not covered, please shoot an email to info@dustyroom.com. If you find a bug, it really helps us if you include steps to reproduce it. Please mind that we get lots of messages daily, be patient - we’re getting to it. Also, if you got a feature you’d like to see implemented, let us know.
+If you’ve got a question regarding Flat Kit, please read through the Frequently Asked Questions, and try searching for the answers here. If the question is not covered, please shoot an email to info@dustyroom.com. If you find a bug, it really helps us if you include steps to reproduce it. Please mind that we get lots of messages daily, be patient - we’re getting to it. Also, if you've got a feature you’d like to see implemented, let us know — some of the great ones came from the suggestions. Flat Kit is a vast field of stylistic possibilities, so please make sure you skim trough this manual, it may help you understand all the features better and give you a few ideas.
 
 # Frequently Asked Questions (FAQs)
 
@@ -8,6 +8,9 @@ A. Flat Kit supports URP. There are a few known limitations, please see FlatKit 
 Q. There are missing scripts in some demo scenes on the main camera.  
 A. Our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
 
+Q. Is it easy to use Flat Kit for a beginner?
+A. Yes, there's nothing complicated about it on the front-end. Yes, there are lots of parameters but they are well-structured and laid-out in an intuitive way. Moreover, there are mouse-over tooltips with little hints on all parameters.
+
 Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
 A. In Flat Kit indirect sources of light influence the colors of the scene by default, which can be turned off. The shaders do not support parameters required for the photorealistic look such as metallicness and translucency and subsurface scattering.
 
@@ -15,7 +18,7 @@ Q. Does Flat Kit support normal maps?
 A. Yes, it does. It is in Bump map section of the interface.
 
 Q. Does Flat Kit work with Post-processing stack v.2?  
-A. Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’. See FlatKit in URP if you are willing to know more.
+A. Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See FlatKit in URP if you are willing to know more.
 
 Q. Does it work with Unity version 20XX.x?  
 A. As soon as you’ve got a stable Unity version, it does.
@@ -40,6 +43,9 @@ A. The object shaders target 3.5 (or es 3.0 and WebGL 2.0).
 
 Q. It takes very long to import Flat Kit into Unity in Built-in RP.  
 A. FlatKit Built-in RP uses shader variants to achieve high flexibility and best performance. However it can take time to import the asset and build the game binary. In URP importing takes seconds, so we encourage you to use the URP version of Flat Kit. If you have to use Built-In RP, though, to speed things up, uncheck unneeded elements when importing the asset.
+
+Q. Is it possible to apply all these awesome effects just onto the camera while using my own shaders?
+A. Cel shading is shader-driven, not camera, which means that Stylized Surface shaders have to be used for this. Outline and Fog image effects are used as camera components (Built-In RP) or as Render Features per scene (URP).
 
 
 
@@ -143,9 +149,48 @@ Note, the flatness and actual representation of colors on the scene depend on th
 *   **Curve** The gradient, interpolated transition from one color to another.  
 In order to get Steps and Curve modes to work — as soon as you have a number of steps (_Steps_ mode) or curve shape (_Curve_ mode) chosen — the shader will ask you to save its utility ramp texture somewhere on the disk. It will write the transition onto it. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
-![Steps shading mode of Stylized Surface shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/FK-StylizedSurface-Steps.png)
-> Steps shading mode of Stylized Surface shader  
-
 ![Curve shading mode of Stylized Surface shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/FK-StylizedSurface-Steps-Curves.png)
-> Curve shading mode of Stylized Surface shader  
+> _Steps_ and _Curve_ shading mode of Stylized Surface shader  
+
+**Extra Cel Layer** This is like another instance of _Single_ mode of _Cel Shading Mode_. Works independently from the _main Cel Shading Mode_. It means, you can make main Cel shading as _None_ (flat), and add an _Extra Cel Layer_. The result will be the same as if you would have used the _Single mode_. Or, make the _main Cel layer_ and _Extra Cel Layer_ almost identical, giving an _Extra Cel Layer_ a darker color, and making it smaller. This would result in stepping, similar to Steps mode with 1 step. Classic toon.
+
+**Specular** You can make a, well, specular with this parameter. Also it can be used as another layer of shadow.
+
+_Specular Color_ picks up the color of your glare, the parameter works in HDR.  
+_Specular Size_ determines how big the specular is. Higher values mean bigger specular.  
+_Specular Edge Smoothness_ — moving slider to the left decreases blurriness and makes specular sharper.
+
+**Rim** Rim was designed as one of the ways to make outlines.
+
+_Rim Color_ selects the color of the parameter. It works in HDR.  
+_Light Align_ parameter rotates the rim.  
+_Rim Size_ controls how big the Rim is. Very high values can serve you as an unlit effect.  
+_Rim Edge Smoothness_ — moving slider to the left sharpens the Rim, to the right — makes Rim blurry. 
+
+You can think of Rim as some kind of inner shadow and/or as inner glow. In one of the _Fruit Vase_ demo scenes, there is an example of extensive use of Rim as an outline. On _Blueprint Grid_ demo scene _Rim_ is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute _Curve mode_ or _Extra Cel parameter_. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, most of them have many use cases.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of _Stylized Surface_ shader with _None_ mode selected (meaning no straightforward shadows are applied), using orange color, and only _Rim_ parameter enabled. The results are variations of Rim section only. As you see, the _Rim_ alone is quite a creative tool. Imagine adding some creative _Specular_ and _Height Gradient_...
+
+Although _Rim_ option is creatively useful, there are two more obvious ways to add an outline using Flat Kit: to use _‘Stylized Surface with Outline’_ shader and/or to use _‘Outline Image Effect’_ camera component/renderer feature. We’ll talk about both of them later in this manual.
+ 
+**TIP.** Animate Cel layer size, Specular size or Rim size — to get a neat transition effect.
+
+**Height Gradient** This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is absolute, it depends on the position of the object on the scene. If you would like to make a relative height gradient, duplicate the material and adjust the height gradient.
+
+_Gradient Color_ picks the parameter’s own color to fade into from transparency.  
+_Center X_ and _Y_ are initial points from where the effect takes effect. Adjust these to move the gradient across the scene. Center X is useful if you engage _Gradient Angle_, which means the rotation of the Gradient.  
+_Size_ determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.  
+_Gradient Angle_ rotates the gradient.
+
+More about the nature and use of _Height Gradient_ is covered in the _‘Terrain’ Shader_ section of this manual.
+
+_*Setting the colors from scripts*_.
+
+The following are the color field names for manipulation via the code for tweening, randomization etc:
+*   `_Color`: the primary color, “Color” in the inspector,
+*   `_ColorDim` (and `_ColorDimSteps`, `_ColorDimCurve` in the corresponding cel shading modes): Color Shaded in the Inspector,
+*   `_ColorDimExtra`: the shaded color of the _“Extra Cel Layer”_ feature,
+*   `_FlatRimColor`: rim color, requires _“Enable Rim Color”_,
+*   `_FlatSpecularColor`: specular color, requires _“Enable Specular Color”_,
+*   `_ColorGradient`: the gradient color used along with the `_Color` parameter when _“Enable Height Color”_ feature is active.
+
+
 
