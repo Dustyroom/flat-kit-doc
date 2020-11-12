@@ -206,5 +206,168 @@ More about the nature and use of _Height Gradient_ is covered in the _‘Terrain
 *   `_FlatSpecularColor`: specular color, requires _“Enable Specular Color”_,
 *   `_ColorGradient`: the gradient color used along with the `_Color` parameter when _“Enable Height Color”_ feature is active.
 
+### 3.1.2. The Additional Parameters of the Shader
+
+*Advanced Lighting (Light Color Contribution).* Light Color Contribution defines how much the color of the light source of the scene impacts the color of the object. The value of 0.0 results in completely ignoring scene lights, the value of 1.0 results in full multiplication between scene light color and the object color. As an example, imagine the winter morning light. Usually it is blue-tinted, thus all the snow around can’t be white but rather blueish. 
+
+Please note that the effect is visible only if the color of the light is anything but white.
+
+Light Color Contribution works only with directional light. The point and spot lights are contributing to colors and shading of the material regardless of the Light Color Contribution value.
+
+![Light Color Contribution parameter on Flat Kit shaders Inspector panel](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/light_color_contribution.png)
+> _Light Color Contribution_ parameter on Flat Kit shaders Inspector panel
+
+Let’s view it in example.  
+Three pictures below describe how we change Light Color Contribution values on all (two) used materials: on a sphere and on a plane. Within a picture we change the intensity value of Directional Light as our main source of light.  
+Additionally, there is a point light on each picture. This way it’s visible how local lights work together with the main Directional Light.  
+Take the first image (below). At first, we turn down the _Intensity_ to the very low value. White sun now has no impact on the scene brightness, resulting in a darker scene.  
+Then we change the color of Directional Light from white to red. It has no effect because Directional Light is too “weak” to fill the scene.  
+After raising _Intensity_ value back to “1” the scene is now lighter and has a red tint.  
+
+![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png)
+> _Light Color Contribution_ at value 0.5. Changing _Intensity_ value and color of Directional Light
+
+Once we change Color Light Contribution parameter to “0” (pic below), Directional light has no effect light-wise and color-wise. Changing Intensity parameter of Directional Light on the Inspector panel has no effect. Both sides of the picture are identical.  
+This way you can achieve a flat look, in other words, the colors on the scene are exactly the same as you choose in the shader parameters.
+
+![Light Color Contribution at value 0. Directional Light intensity at max and min values](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/lighting_1_color_contrib_0.png)
+> _Light Color Contribution_ at value 0. Directional Light _Intensity_ at max and min values
+
+Now, (on the pic below) we raise Light Color Contribution to the max value of “1”. If we set Directional Light Intensity parameter low, the scene theoretically has no source of direct light. Local lights now act as the only light sources. If the Intensity of Directional Light is at its maximum, it’s too hot now.
+
+![Light Color Contribution at value 1. Changing intensity value of Directional Light](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/lighting_8.png)
+> _Light Color Contribution_ at value 1. Changing _Intensity_ value of Directional Light
+
+If you use a Particle System and choose your particles to emit light, Flat Kit shaders respect that!
+
+![Particles emitting light on Flat Kit shaders](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/lighting_particles_lights.png)
+> Particles emitting light on Flat Kit shaders.
+
+**Unity Built-in Shadows.** If the object has the ‘Receive Shadows’ option turned on in Mesh Renderer, you have an ability to use Unity-processed shadows on it, as you would do in Unity Standard Material shader, with a few extra-options.
+
+![Unity Built-in Shadows mode menu. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/unity_built_in_shadows_modes.png)
+> Unity Built-in Shadows mode menu. Inspector interface
+
+First, you have to select what mode to work with.  
+
+_None_ mode turns the Built-in shadow parameter off.
+_Multiply_ mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'.
+_Color_ mode lets you choose the color of the cast shadow. The blending mode is 'Normal'.
+
+![Height Gradient in Color mode. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
+> _Height Gradient_ in _Color_ mode. Inspector interface
+
+**Texture.** If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you work with transparency in textures in Built-In RP, please use Stylized Shader Cutout shader. It can see alpha on the texture as transparency. URP supports alpha by default.
+
+_Texture selection slot_ lets you pick a texture;
+_Tiling_ repeats the texture along X and Y axis;
+_Blending Mode_ lets you choose between 'Multiply' or 'Add' blending modes.
+_Texture Impact_ parameter controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.
+
+**Bump Map.** To make an impression of a low-poly mesh having many details, you can use normal maps. Add one to _Bump Map_ slot in the Inspector panel.
+
+![‘Stylized Surface’ shader — normal map applied](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/normalmap-interface.png)
+> ‘Stylized Surface’ shader — normal map applied
+
+_Texture selection slot_ lets you pick a texture;
+_Tiling_ repeats the texture along X and Y axis.
+
+![‘Normal Map Tree’ demo scene, a tree without and with a normal map](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/normalmap-trees.png)
+> ‘Normal Map Tree’ demo scene, a tree without and with a normal map
 
 
+## 3.2. ‘Stylized Surface Cutout’ Shader
+
+This is a version of Stylized Surface shader with an option to treat alpha as transparency on a texture. The rest of the shader is the same.
+
+The _Base Alpha cutout_ parameter determines how much of the alpha portion of the texture is going to be transparent.
+
+![‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/stylized_surface_cutout_screenshot.png)
+> ‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface
+
+Use this shader if you work with transparency in Built-In RP. In URP you are good to go with the Stylized Surface shader instead of this one. It will spare a few cycles off your CPU.
+
+## 3.3. ‘Stylized Surface with Outline’ Shader
+
+‘Stylized Surface with Outline’ shader, being the same as the regular ‘Stylized Surface’ shader in a nutshell, has an additional option of... outlines.
+
+_Outline Color_ picks up the color of the outline.  
+_Outline Width_ determines how thick the outline is.  
+_Outline Depth Offset_ moves the outline inwards or outwards an object.
+
+Remember, in addition to this shader Flat Kit has also a global Outline effect applied per scene (in URP) and per camera (in Built-In RP).
+
+![‘Stylized Surface with Outline’ shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
+> ‘Stylized Surface with Outline’ shader
+
+
+## 3.4. ‘Gradient Skybox’ Shader
+
+This is a simple method to fill the sky of your scene.
+
+_Top Color_ and _Bottom Color_ define two colors to be blended.  
+_Intensity_ is a darkness/brightness controller of the skybox. 
+_Exponent accentuates_ the effect in favour of either Top Color or Bottom Color.
+_Direction X angle_ and _Direction Y angle_ rotate the effect along the corresponding axis.
+
+> **TIP.** Make Top Color and Bottom Color identical colors or move the Exponent parameter to one of the extremes if you want a flat background.
+
+![Gradient Skybox. Inspector panel interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/gradient-skybox-interface.png)
+> Gradient Skybox. Inspector panel interface
+
+
+## 3.5. ‘Terrain’ Shader
+
+Terrains are great in Unity. But it’s not so trivial to work with terrain materials, that is why we added a separate shader that deals with the Unity Terrain system.
+
+If you are not familiar with Unity Terrains, please refer to their documentation. In two words, terrain uses Terrain Layers, something like containers of all textures — diffuse, normal, bump etc. FlatKit _Terrain_ shader sees those textures and applies its own colors onto the layers. Since we are talking about the flat look, no normal or bump maps are required. In order to have full control over colors of the terrain, you can load a plain white texture as your terrain layer (on _Valley demo_ scene we did so). All the colors will be available from the shader interface, they will be multiplied with your white texture, resulting in the pure color you choose. If you are already familiar with _Stylized Surface_ shader, _Terrain_ shader interface won’t be news to you.
+
+This is an appropriate time to talk about Height Gradient parameter Flat Kit offers. You can use it as a part of Stylized Surface, Stylized Surface Cutout and Terrain shaders. Height Gradient works wonders on terrain in context of flat shading.
+
+Usually flat shaded landscape objects lack organic embellishment the real world has. All extra-shadows, small scale details, big and tiny grunge spots etc make the picture nonlinear to our eyes, thus, interesting, engaging. With flat aesthetics — there is a color, there may be a shadow or shadows, maybe a few models for the more natural look. The result — quite a boring scene. If you want a more polished look, you’ll want to fight linearity, with _Height Gradient_ coming handy. It stretches the interpolation between transparency and its own color along the vertical axis (by default) and multiplies the gradient over the colors you already have. You can rotate the direction, so that it is no longer vertical but diagonal, horizontal and all in-between.
+This effect changes the scene dramatically. Now, the terrain has its shadow work that you set on the interface, and on top of that there is a gradient, subtle or obvious. Immediately, it adds depth and a more professional look to the scene.
+If you work on some kind of an environmental landscape object but do not use Unity Terrain, please use the _Stylized Surface_ shader instead of _Terrain_. _Height Gradient_ is available there, too.
+
+![Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/height-gradient-example-01.png)
+> Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene
+
+
+## 3.6. ‘LightPlane’ Shader
+
+This shader is what we are particularly proud of. It looks like a small tool. But it has immeasurable possibilities. Fog, mist, delicate scene boundaries, light beams, glow of magic swords, laser beams. These things are what _LightPlane_ is for.
+
+The _Wanderer_ demo scene includes _LightPlane_ shader implemented not only as fog areas, but also as light beams of so-called pick-up objects and even as planets. The _Valley_ demo scene has got the _LightPlane_ shader used as floating air particles thanks to the Unity particle system.
+
+![LightPlane Shader. Inspector panel interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/light_plane_interface.png)
+> LightPlane Shader. Inspector panel interface
+
+_Depth Fade Distance_ ;  
+_Camera Distance Fade Far_ ;  
+_Camera Distance Fade Close_ ;  
+_UV Fade X_ ;  
+_UV Fade Y_ ;  
+_Allow Alpha Overflow_ .
+
+## 3.7. GPU Instancing
+
+When the “Enable Instancing” option is enabled on a material, the shaders will perform GPU Instancing of the following fields that are common across all FlatKit shaders:
+
+- 1. _Color_ value (property name `_Color`),  
+- 2. Parameters of the cel shading mode _“Single”_  
+  - a. _Shaded Color_ value (property name `_ColorDim`),  
+- 3. Specular parameters, active when _“Enable Specular”_ is checked  
+  - a. _Specular Color_ value (property name `_FlatSpecularColor`),  
+  - b. _Specular Size_ value (property name `_FlatSpecularSize`),  
+  - c. _Edge Smoothness_ value (property name `_FlatSpecularEdgeSmoothness`),  
+- 4. Rim light parameters, active when _“Enable Rim”_ is checked  
+  - a. _Rim color_ value (property name `_FlatRimColor`),  
+  - b. _Rim size_ value (property name `_FlatRimSize`),  
+  - c. _Edge Smoothness_ value (property name `_FlatRimEdgeSmoothness`),  
+  - d. _Light Align_ value (property name `_FlatRimLightAlign`).
+
+
+
+
+
+![]()
+> 
