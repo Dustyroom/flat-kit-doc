@@ -365,6 +365,108 @@ When the “Enable Instancing” option is enabled on a material, the shaders wi
   - c. _Edge Smoothness_ value (property name `_FlatRimEdgeSmoothness`),  
   - d. _Light Align_ value (property name `_FlatRimLightAlign`).
 
+# 4. Image Effects
+
+Both _Fog_ and _Outline_ image effects rely on image-based anti-aliasing, like the one in Unity's Post-processing stack. Camera effects are used in Built-in rendering pipeline. For using these in URP — you must use ‘Renderer Features’.
+
+## 4.1. Fog Image Effect
+
+Fog Image Effect camera component can be reviewed as a post-processing effect. It can be subtle, like a mist in the lower part of the valley, or a dominant effect, as in a completely hazed environment. Simply put, it works in the following way. You decide whether you need only length fog or height fog or both. Then you determine the bounds where it would take effect. Then you choose colors along each dimension. And after that, blend between distance and height. This effect starts from camera position up to the Near/Far, Low/High bounds, meaning, your camera is the zero coordinate from where the fog spreads. Each camera on the scene can have a separate independent instance of an effect.
+
+Because Unity’s MSAA (multi-sample anti-aliasing, which is an option in the Quality Settings of your project) does not apply to depth texture, there may be inconsistencies between the anti-aliased color image and the unprocessed depth image. This may look as aliasing if fog intensity is set to a high value. *Such artifacts may only occur if using MSAA*, so we recommend using screen-space anti-aliasing, such as in Unity’s post-processing stack that you can import by going to Window ▶︎ Package Manager in Unity 2018+.
+
+When you click on any of the color ramps (Distance or Height Gradient), the Gradient Editor pops up.
+
+Fog Image Effect is being used in the _Wanderer_ demo scene (more subtly) and _Valley_ Demo scene (more accentuated).
+
+![Fog Image Effect. Inspector panel interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/fog_image_effect.png)
+> Fog Image Effect. Inspector panel interface
+
+Gradient editor controls the colors of the gradient. To open it, click on Distance Gradient or Height Gradient. The bottom row of breakpoints (pointing up) is the selection of the colors. The above row (pointing down) controls the opacity of the area it points at; the opacity value of one breakpoint fades into the opacity value of the adjacent one. Same for colors.
+
+> **TIP.** If you want the area close to you to be without fog, apart from increasing Near parameter, you can open up the color ramp(s), add a breakpoint next to the leftmost one on the ramp, select leftmost one, make it transparent (see screenshot of Gradient Editor below). The breakpoint you created (opaque, next to the transparent one) becomes your distance or height control.
+
+![Fog Image Effect. Gradient Editor interface.](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/fog_image_effect_gradient_editor.png)
+> Fog Image Effect. Gradient Editor interface.
+
+
+## 4.2. Outline Image Effect
+Outline Image effect is, essentially, a contour on the objects on the scene. It can draw outer outlines, inner ones or both outer and inner outlines of the objects.
+
+_Edge Color_ is a color of an outline.  
+_Thickness_ makes the outline thicker or thinner.  
+_Use Depth_ parameter outlines the outer contour of the objects with depth threshold control.  
+_Use Normals_ creates outlines for “inner” parts of the objects, meaning, for those that are inside the boundaries of the object, for every given camera perspective. The effect depends on the geometry of an object. So, having proper normals here is important. There is a Normals Threshold control.  
+_Min Depth Threshold_ and _Max Depth Threshold_ determine the range of depth differences where outline should be applied. Lower values draw lines “inside” the scene resulting in a more beveled image. Higher values have more flat effect.  
+_Min Normals Threshold_ and _Max Normals Threshold_ determine the range of normals edges to be outlined. Lower values increase the amount of affected normals, leading to more stroked effect. Higher values decrease the amount of affected normals, leading to flatter look.  
+_Advanced Settings_ let you adjust the parameters listed above. The thresholds parameters are basically the limits that determine the ranges in which the effects take places. For example, the higher Min Depth value is, the further away from camera the outline will be generated. The lower Max Depth value is, the sooner outlines stop occurring.  
+_Normals Thresholds_ determine min and max angles of the normals for the outlines to occur.  
+_Min_ and _Max Color Thresholds_ let you set the least and the strongest differences in color of the mesh to make the outline appear.  
+_Outline Only_ renders the outlines without meshes themselves, making it a kind of wireframe renderer.  
+
+Combinations of these settings let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using _‘Stylized Surface with Outline’_ shader in addition to the global Outline effect.
+
+![Outline Forward Renderer in URP. Inspector interface.](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/Outlines-URP-1.png)
+> Outline Forward Renderer in URP. Inspector interface.
+
+Please, note that _Outline Image Effect_ is a global effect, as it is used as the camera component in Built-In RP and as a scene's Renderer Feature in URP, which is suitable for a consistent look of your project. If you would like to outline a particular object on your scene, you can engage the shader instead — ‘Stylized Surface with Outline’ shader.
+
+
+# 5. Additional scripts
+
+## 5.1. UV Scroller
+
+Used in the _Wanderer_ demo scene. It scrolls waterfall texture along the Y axis.
+
+## 5.2. Linear Motion
+
+Linear Motion is a simple script that translates (moves) and rotates any object. We used it heavily on cameras to prepare promo video footage. There is an option to translate or rotate along the X, Y, Z axis.
+
+![Linear motion script. Inspector interface.](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/ConstantMotion.png)
+> Linear motion script. Inspector interface.
+
+> **TIP.** Use a couple of instances of this component if you want to translate and rotate along more than one axis and make more complex automations.
+
+# 6. Demo Scenes
+
+We tried to depict the big spectrum of possibilities using various scenes. They are one of ten million examples of possible Flat Kit use cases. Consider viewing them as starting points or macro-preset objects for your own project.
+
+* _Valley_, _Wanderer_ scenes are environmental. There we tried to show the work of both fog systems of Flat Kit. Also it is one of the perspectives of displaying the shaders — how these would look in a large scene.
+
+Valley uses Terrain shader and transparent textures inside a Stylized Surface Cutout shader. Valley demo scene is also an example of obvious, rather than subtle, use of _Fog_ Image Effect. Once the scene is loaded, you can scan through the _Fog_ Image Effect presets to find which one you like more. There is a Presets chapter later in this manual with explanation of how to use them.
+In a _Valley_ scene, please, note that although the ground is made with Unity native terrain, the trees on it are populated manually, not using the terrain system.
+
+* _Blueprint Grid (Mugs)_ and _Fruit Vase_ scenes are an exhibition of most sought use cases of cel / toon shading.
+
+However, you can find there more experimental stuff, too. It has been a temptation to overpopulate the scenes with content, because while making these included materials — literally dozens of interesting by-product or work-in-progress materials showed up, but we had to discard them to keep the scenes clean.
+Blueprint Grid is a descriptive one, there is a text telling what we used to get the displayed materials.
+Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits across all scenes and each scene is dedicated to some specific look, thus uses a different set of materials.
+
+* Tree Island scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or Any other arcade game.
+
+* Room. We just had to include a room.
+
+* Retro Cars. Retro cars are curvy. What a possibility to show how shiny (or rough) shaders can be.
+
+* Normal Map Tree. An example of normal maps application.
+
+
+# 7. Presets
+
+Unity has its own Preset management system. The preset is the saved current state of the shader, in our case, the Flat Kit material. The presets are available across scenes and can be saved whenever you want inside the current project. For convenience, we saved the most useful presets inside a shared presets folder (Assets/FlatKit/PresetsShared).
+
+In Flat Kit you can find presets as .mat Material instances (that you can drag and drop on the objects) and .preset Unity Presets (saved states of shaders that you can recall from interface of already applied materials). The sets are identical. Unity presets (.preset) are great when you have a material (.mat) applied to lots of objects and you want to swap it with a preset you already have.
+
+To save the preset, select the material or an object with this material you want to save, click on the ‘mixer’ icon on the top right of the shader interface on the Inspector panel. Then, the menu will pop up. Click ‘Save Current to…’. Then you choose the destination. Once created, you can move the actual file wherever you would like. All presets within a project will show up in the ‘Select Preset’ menu.
+
+![Preset menu. How to load.](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/preset-button.png)
+> Preset menu. How to load.
+
+Save, recall, experiment, discard bad results, save great results, all by using Unity’s preset system. You cat A/B this way and share the shader’s parameters across multiple separate materials. Scan through them and once you stumble upon something close to what you are looking for, adjust the one.
+
+> **TIP.** Naming the preset files as descriptive as possible is a gratifying practice. It would save your time later when you gather lots of them. It would be easier to navigate through them and distinguish between them, and also the proper names would remind you what you had in mind at the moment of saving the preset. Just look at the screenshot below.
+
+
 
 
 
