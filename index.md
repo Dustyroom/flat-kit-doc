@@ -3,12 +3,12 @@ If you’ve got a question regarding Flat Kit, please read through the Frequentl
 # Frequently Asked Questions (FAQs)
 
 Q. Does Flat Kit support URP?  
-A. Flat Kit supports URP. There are a few known limitations, please see FlatKit in URP.  Please note, there is no HDRP version of Flat Kit.
+A. Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see FlatKit in URP. As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
 
-Q. There are missing scripts in some demo scenes on the main camera.  
-A. Our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
+Q. There are missing scripts in some demo scenes on the main camera in URP.  
+A. This is an old one, so if you see the missing scripts, please update to the newer version of Flat Kit. In Built-In RP our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
 
-Q. Is it easy to use Flat Kit for a beginner?
+Q. Is it easy to use Flat Kit for a beginner?  
 A. Yes, there's nothing complicated about it on the front-end. Yes, there are lots of parameters but they are well-structured and laid-out in an intuitive way. Moreover, there are mouse-over tooltips with little hints on all parameters.
 
 Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
@@ -27,7 +27,7 @@ Q. What platforms can I build for? What about VR?
 A. Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile. Please, note, the Outline image effect currently is not optimized for VR.
 
 Q. Can I use the scenes from Flat Kit in a commercial project?  
-A. Yes, you can. As soon as you purchase it, you can use anything from Flat Kit in the private and commercial projects without a need to credit authors of the asset (us). What you can’t do is to re-sell, give away or place on public repositories any part of the asset as it is. More info here — https://unity3d.com/legal/as_terms
+A. Yes, you can. As soon as you purchase it, you can use anything from Flat Kit in the private and commercial projects without a need to credit authors of the asset (us). What you can’t do is to re-sell, give away or place on public repositories any part of the asset uncompiled, i.e. publicly accessible source code or models. More info here — https://unity3d.com/legal/as_terms
 
 Q. I’ve got errors just after importing Flat Kit. Why?  
 A. First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, shoot a mail to info@dustyroom.com
@@ -135,45 +135,61 @@ The **additional** parameters are:
 
 ### 3.1.1. The Main Parameters of the Shader
 
-**Color** This would be the color of your mesh (applicable to most cases, though you can make the shader's other parameters override or mask this main color, if you wish).
+**Color.** This would be the color of your mesh (applicable to most cases, though you can make the shader's other parameters override or mask this main color, if you wish).
 
-**Cel Shading Mode** This is where you choose the style (mode) of your shading, the color of the shading, and other respective parameters of the modes. Depending on the mode you choose the parameters will look differently. So, let’s talk about modes.
+**Cel Shading Mode.** This is where you choose the style (mode) of your shading, the color of the shading, and other respective parameters of the modes. Depending on the mode you choose the parameters will look differently. So, let’s talk about modes.
 
-*   **None** Use this to achieve a simple flat look or to get any other creative picture not involving cel shading, however, the following parameters of Stylized Surface shader will still let you do this, if you choose so.  
+*   **None.** Use this to achieve a simple flat look or to get any other creative picture not involving cel shading, however, the following parameters of Stylized Surface shader will still let you do this, if you choose so.  
 Note, the flatness and actual representation of colors on the scene depend on the lighting of the scene. In our demos we use Skybox as the source of lighting. Conveniently, there is a Dependency slider on the Lighting panel of Unity, which tells how much of the influence the Skybox provides. At minimum, there won’t be any shadows, as well as the colors will be identical to those you would choose in the _Color_ block of the shader. At maximum, the Skybox heavily dictates what the colors will look like. For more natural (not necessarily realistic — but natural, organic look of the scene, it’s healthy to let Skybox influence the coloring of the scene).
 
-*   **Single** This mode provides you with one shadow of chosen _Color_. _Self Shading Size_ is the size of the cel. Larger values mean larger size of the shadow. _Shadow Edge Size_ controls the sharpness of the cel. The lower the value — the sharper the cel. The higher the value — the more blurry is the shadow. _Localized Shading_ is basically how condensed the shadow is. Higher values represent sharper cel. 
+*   **Single.** This mode provides you with one shadow of chosen _Color_. _Self Shading Size_ is the size of the cel. Larger values mean larger size of the shadow. _Shadow Edge Size_ controls the sharpness of the cel. The lower the value — the sharper the cel. The higher the value — the more blurry is the shadow. _Localized Shading_ is basically how condensed the shadow is. Higher values represent sharper cel. 
 
-*   **Steps** Basically, you choose the shading color and number of steps to blend from main _Color_ into the color you pick up in _Steps_ mode.
+*   **Steps.** Basically, you choose the shading color and number of steps to blend from main _Color_ into the color you pick up in _Steps_ mode.
 
-*   **Curve** The gradient, interpolated transition from one color to another.  
+*   **Curve.** The gradient, interpolated transition from one color to another.  
 In order to get Steps and Curve modes to work — as soon as you have a number of steps (_Steps_ mode) or curve shape (_Curve_ mode) chosen — the shader will ask you to save its utility ramp texture somewhere on the disk. It will write the transition onto it. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
 ![Curve shading mode of Stylized Surface shader](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/FK-StylizedSurface-Steps-Curves.png)
 > _Steps_ and _Curve_ shading mode of Stylized Surface shader  
 
-**Extra Cel Layer** This is like another instance of _Single_ mode of _Cel Shading Mode_. Works independently from the _main Cel Shading Mode_. It means, you can make main Cel shading as _None_ (flat), and add an _Extra Cel Layer_. The result will be the same as if you would have used the _Single mode_. Or, make the _main Cel layer_ and _Extra Cel Layer_ almost identical, giving an _Extra Cel Layer_ a darker color, and making it smaller. This would result in stepping, similar to Steps mode with 1 step. Classic toon.
+**Extra Cel Layer.** This is like another instance of _Single_ mode of _Cel Shading Mode_. Works independently from the _main Cel Shading Mode_. It means, you can make main Cel shading as _None_ (flat), and add an _Extra Cel Layer_. The result will be the same as if you would have used the _Single mode_. Or, make the _main Cel layer_ and _Extra Cel Layer_ almost identical, giving an _Extra Cel Layer_ a darker color, and making it smaller. This would result in stepping, similar to Steps mode with 1 step. Classic toon.
 
-**Specular** You can make a, well, specular with this parameter. Also it can be used as another layer of shadow.
+
+**Specular.** You can make a, well, specular with this parameter. Also it can be used as another layer of shadow.
 
 _Specular Color_ picks up the color of your glare, the parameter works in HDR.  
 _Specular Size_ determines how big the specular is. Higher values mean bigger specular.  
 _Specular Edge Smoothness_ — moving slider to the left decreases blurriness and makes specular sharper.
 
-**Rim** Rim was designed as one of the ways to make outlines.
+![Specular. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/specular_parameters.png)
+> _Specular_. Inspector interface
+
+
+**Rim.** Rim was designed as one of the ways to make outlines.
 
 _Rim Color_ selects the color of the parameter. It works in HDR.  
 _Light Align_ parameter rotates the rim.  
 _Rim Size_ controls how big the Rim is. Very high values can serve you as an unlit effect.  
 _Rim Edge Smoothness_ — moving slider to the left sharpens the Rim, to the right — makes Rim blurry. 
 
+![Rim. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/rim_parameters.png)
+> _Rim_. Inspector interface
+
+
 You can think of Rim as some kind of inner shadow and/or as inner glow. In one of the _Fruit Vase_ demo scenes, there is an example of extensive use of Rim as an outline. On _Blueprint Grid_ demo scene _Rim_ is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute _Curve mode_ or _Extra Cel parameter_. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, most of them have many use cases.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of _Stylized Surface_ shader with _None_ mode selected (meaning no straightforward shadows are applied), using orange color, and only _Rim_ parameter enabled. The results are variations of Rim section only. As you see, the _Rim_ alone is quite a creative tool. Imagine adding some creative _Specular_ and _Height Gradient_...
+
+![Rim only, usage axamples](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/rim_examples_suzanne.png)
+> Variety of uses of _Rim_ parameter alone on Suzanne the Blender Monkey. Interface of _Stylized Surface_ shader with _‘None’_ cel shading mode
+
 
 Although _Rim_ option is creatively useful, there are two more obvious ways to add an outline using Flat Kit: to use _‘Stylized Surface with Outline’_ shader and/or to use _‘Outline Image Effect’_ camera component/renderer feature. We’ll talk about both of them later in this manual.
  
-**TIP.** Animate Cel layer size, Specular size or Rim size — to get a neat transition effect.
+> **TIP.** Animate Cel layer size, Specular size or Rim size — to get a neat transition effect.
 
-**Height Gradient** This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is absolute, it depends on the position of the object on the scene. If you would like to make a relative height gradient, duplicate the material and adjust the height gradient.
+**Height Gradient.** This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is absolute, it depends on the position of the object on the scene. If you would like to make a relative height gradient, duplicate the material and adjust the height gradient.
+
+![Height Gradient. Inspector interface](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/gradient_height_parameters.png)
+> _Height Gradient._ Inspector interface
 
 _Gradient Color_ picks the parameter’s own color to fade into from transparency.  
 _Center X_ and _Y_ are initial points from where the effect takes effect. Adjust these to move the gradient across the scene. Center X is useful if you engage _Gradient Angle_, which means the rotation of the Gradient.  
@@ -182,9 +198,7 @@ _Gradient Angle_ rotates the gradient.
 
 More about the nature and use of _Height Gradient_ is covered in the _‘Terrain’ Shader_ section of this manual.
 
-_*Setting the colors from scripts*_.
-
-The following are the color field names for manipulation via the code for tweening, randomization etc:
+*_Setting the colors from scripts_*. The following are the color field names for manipulation via the code for tweening, randomization etc:
 *   `_Color`: the primary color, “Color” in the inspector,
 *   `_ColorDim` (and `_ColorDimSteps`, `_ColorDimCurve` in the corresponding cel shading modes): Color Shaded in the Inspector,
 *   `_ColorDimExtra`: the shaded color of the _“Extra Cel Layer”_ feature,
