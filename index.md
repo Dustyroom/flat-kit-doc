@@ -479,20 +479,23 @@ Some general info. Manipulating the normals of the mesh can be a very efficient 
 
 ## 5.1. UV Scroller
 
-Used in the _Wanderer_ demo scene. It scrolls waterfall texture along the Y axis.
+Used in the _Wanderer_ demo scene. It scrolls waterfall texture along the Y axis. Also used in _Ocean Water_ scene under the waterfall.
 
 ## 5.2. Linear Motion
 
 Linear Motion is a simple script that translates (moves) and rotates any object. We used it heavily on cameras to prepare promo video footage. There is an option to translate or rotate along the X, Y, Z axis.
 
-![Linear motion script. Inspector interface.](FlatKit_Manual_Images/ConstantMotion.png)
-> Linear motion script. Inspector interface.
+![Linear motion script. Inspector interface](FlatKit_Manual_Images/ConstantMotion.png)
+> _Linear motion_ script. Inspector interface
 
 > **TIP.** Use a couple of instances of this component if you want to translate and rotate along more than one axis and make more complex automations.
 
 ## 5.3. Buoyancy
 
 This script is used with _Water_ shader specifially when there is an object on the water surface, and you want it to phisically flow on this surface. The object will replicate the water's shape, while water is being deformed. This scripts is added on the object as a component. You'll need to point to the water object mesh this object is interacting with (in _Water_ field of the script interface).
+
+![Buoyancy script interface](FlatKit_Manual_Images/buoyancy_interface.png)
+> _Buoyancy_ script interface
 
 - _Water_ field is where you choose the mesh of the water surface. The object holding this script will be afloat on this mesh.
 - _Size_ parameter sets the definition of the movement, meaning, how many of the _Water_ object's vertices it takes into account.
@@ -614,17 +617,14 @@ Enable the Post Processing flat on the camera inspector:
 
 # 9. Contact information and links
 
-Flat Kit at the Asset Store  
-https://assetstore.unity.com/packages/vfx/shaders/flat-kit-cel-toon-shading-143368
+![Flat Kit at the Asset Store](https://assetstore.unity.com/packages/vfx/shaders/flat-kit-cel-toon-shading-143368)
 
 Email  
 info@dustyroom.com
 
-Dustyroom website  
-http://dustyroom.com
+![Dustyroom website](http://dustyroom.com)
 
-Twitter  
-http://twitter.com/_dstrm
+![Twitter](https://twitter.com/_dstrm)
 
 
 
