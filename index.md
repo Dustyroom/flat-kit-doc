@@ -160,11 +160,9 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 
 **Specular.** You can make a, well, specular with this parameter. Also it can be used as another layer of shadow.
 
-_Specular Color_ picks up the color of your glare, the parameter works in HDR.  
-
-_Specular Size_ determines how big the specular is. Higher values mean bigger specular.  
-
-_Specular Edge Smoothness_ — moving slider to the left decreases blurriness and makes specular sharper.
+- _Specular Color_ picks up the color of your glare, the parameter works in HDR.  
+- _Specular Size_ determines how big the specular is. Higher values mean bigger specular.  
+- _Specular Edge Smoothness_ — moving slider to the left decreases blurriness and makes specular sharper.
 
 ![Specular. Inspector interface](FlatKit_Manual_Images/specular_parameters.png)
 > _Specular_. Inspector interface
@@ -172,13 +170,10 @@ _Specular Edge Smoothness_ — moving slider to the left decreases blurriness an
 
 **Rim.** Rim was designed as one of the ways to make outlines.
 
-_Rim Color_ selects the color of the parameter. It works in HDR.  
-
-_Light Align_ parameter rotates the rim.  
-
-_Rim Size_ controls how big the Rim is. Very high values can serve you as an unlit effect.  
-
-_Rim Edge Smoothness_ — moving slider to the left sharpens the Rim, to the right — makes Rim blurry. 
+- _Rim Color_ selects the color of the parameter. It works in HDR.  
+- _Light Align_ parameter rotates the rim.  
+- _Rim Size_ controls how big the Rim is. Very high values can serve you as an unlit effect.  
+- _Rim Edge Smoothness_ — moving slider to the left sharpens the Rim, to the right — makes Rim blurry. 
 
 ![Rim. Inspector interface](FlatKit_Manual_Images/rim_parameters.png)
 > _Rim_. Inspector interface
@@ -235,13 +230,13 @@ After raising _Intensity_ value back to “1” the scene is now lighter and has
 ![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png)
 > _Light Color Contribution_ at value 0.5. Changing _Intensity_ value and color of Directional Light
 
-Once we change Color Light Contribution parameter to “0” (pic below), Directional light has no effect light-wise and color-wise. Changing Intensity parameter of Directional Light on the Inspector panel has no effect. Both sides of the picture are identical.  
+Once we change _Color Light Contribution_ parameter to “0” (pic below), Directional light has no effect light-wise and color-wise. Changing _Intensity_ parameter of Directional Light on the Inspector panel has no effect. Both sides of the picture are identical.  
 This way you can achieve a flat look, in other words, the colors on the scene are exactly the same as you choose in the shader parameters.
 
 ![Light Color Contribution at value 0. Directional Light intensity at max and min values](FlatKit_Manual_Images/lighting_1_color_contrib_0.png)
 > _Light Color Contribution_ at value 0. Directional Light _Intensity_ at max and min values
 
-Now, (on the pic below) we raise Light Color Contribution to the max value of “1”. If we set Directional Light Intensity parameter low, the scene theoretically has no source of direct light. Local lights now act as the only light sources. If the Intensity of Directional Light is at its maximum, it’s too hot now.
+Now, (on the pic below) we raise _Light Color Contribution_ to the max value of “1”. If we set Directional Light _Intensity_ parameter low, the scene theoretically has no source of direct light. Local lights now act as the only light sources. If the _Intensity_ of Directional Light is at its maximum, it’s too hot now.
 
 ![Light Color Contribution at value 1. Changing intensity value of Directional Light](FlatKit_Manual_Images/lighting_8.png)
 > _Light Color Contribution_ at value 1. Changing _Intensity_ value of Directional Light
@@ -258,27 +253,27 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 
 First, you have to select what mode to work with.  
 
-_None_ mode turns the Built-in shadow parameter off.
-_Multiply_ mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'.
-_Color_ mode lets you choose the color of the cast shadow. The blending mode is 'Normal'.
+- _None_ mode turns the Built-in shadow parameter off.
+- _Multiply_ mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'.
+- _Color_ mode lets you choose the color of the cast shadow. The blending mode is 'Normal'.
 
 ![Height Gradient in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
 > _Height Gradient_ in _Color_ mode. Inspector interface
 
-**Texture.** If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you work with transparency in textures in Built-In RP, please use Stylized Shader Cutout shader. It can see alpha on the texture as transparency. URP supports alpha by default.
+**Texture.** If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you work with transparency in textures in Built-In RP, please use _Stylized Shader Cutout_ shader. It can see alpha on the texture as transparency. URP supports alpha by default.
 
-_Texture selection slot_ lets you pick a texture;
-_Tiling_ repeats the texture along X and Y axis;
-_Blending Mode_ lets you choose between 'Multiply' or 'Add' blending modes.
-_Texture Impact_ parameter controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.
+- _Texture selection slot_ lets you pick a texture;
+- _Tiling_ repeats the texture along X and Y axis;
+- _Blending Mode_ lets you choose between 'Multiply' or 'Add' blending modes.
+- _Texture Impact_ parameter controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.
 
 **Bump Map.** To make an impression of a low-poly mesh having many details, you can use normal maps. Add one to _Bump Map_ slot in the Inspector panel.
 
 ![‘Stylized Surface’ shader — normal map applied](FlatKit_Manual_Images/normalmap-interface.png)
 > ‘Stylized Surface’ shader — normal map applied
 
-_Texture selection slot_ lets you pick a texture;
-_Tiling_ repeats the texture along X and Y axis.
+- _Texture selection slot_ lets you pick a texture;
+- _Tiling_ repeats the texture along X and Y axis.
 
 ![‘Normal Map Tree’ demo scene, a tree without and with a normal map](FlatKit_Manual_Images/normalmap-trees.png)
 > ‘Normal Map Tree’ demo scene, a tree without and with a normal map
@@ -286,27 +281,25 @@ _Tiling_ repeats the texture along X and Y axis.
 
 ## 3.2. ‘Stylized Surface Cutout’ Shader
 
-This is a version of Stylized Surface shader with an option to treat alpha as transparency on a texture. The rest of the shader is the same.
+This is a version of _Stylized Surface_ shader with an option to treat alpha as transparency on a texture. The rest of the shader is the same.
 
 The _Base Alpha cutout_ parameter determines how much of the alpha portion of the texture is going to be transparent.
 
 ![‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface](FlatKit_Manual_Images/stylized_surface_cutout_screenshot.png)
 > ‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface
 
-Use this shader if you work with transparency in Built-In RP. In URP you are good to go with the Stylized Surface shader instead of this one. It will spare a few cycles off your CPU.
+Use this shader if you work with transparency in Built-In RP. In URP you are good to go with the _Stylized Surface_ shader instead of this one. It will spare a few cycles off your CPU.
 
 ## 3.3. ‘Stylized Surface with Outline’ Shader
 
-‘Stylized Surface with Outline’ shader, being the same as the regular ‘Stylized Surface’ shader in a nutshell, has an additional option of... outlines.
+_Stylized Surface with Outline_ shader, being the same as the regular _Stylized Surface_ shader in a nutshell, has an additional option of... outlines.
 
-_Outline Color_ picks up the color of the outline.  
+- _Outline Color_ picks up the color of the outline.  
+- _Outline Width_ determines how thick the outline is.  
+- _Outline Depth Offset_ moves the outline inwards or outwards an object.
 
-_Outline Width_ determines how thick the outline is.  
-
-_Outline Depth Offset_ moves the outline inwards or outwards an object.
-
-Remember, in addition to this shader Flat Kit has also a global Outline effect applied per scene (in URP) and per camera (in Built-In RP).  
-In the Outline Image Effect chapter in this manual you can find some useful specific and general info.
+Remember, in addition to this shader Flat Kit has also a global _Outline_ Image Effect applied per scene (in URP) and per camera (in Built-In RP).  
+In the [Outline Image Effect](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#42-outline-image-effect) chapter in this manual you can find some useful specific and general info.
 
 ![‘Stylized Surface with Outline’ shader](FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
 > ‘Stylized Surface with Outline’ shader
@@ -320,42 +313,44 @@ This is a simple method to fill the sky of your scene.
 - _Exponent_ accentuates the effect in favour of either Top Color or Bottom Color.  
 - _Direction X angle_ and _Direction Y angle_ rotate the effect along the corresponding axis.  
 
-> **TIP.** Make Top Color and Bottom Color identical colors or move the Exponent parameter to one of the extremes if you want a flat background.
+> **TIP.** Make _Top Color_ and _Bottom Color_ identical colors or move the _Exponent_ parameter to one of the extremes if you want a flat background.
 
 ![Gradient Skybox. Inspector panel interface](FlatKit_Manual_Images/gradient-skybox-interface.png)
 > Gradient Skybox. Inspector panel interface
 
 ## 3.5. 'Water' Shader
 
-Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird things with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated, it is intuitive and has helping tooltips on the parameters. 
+Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird things with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated at first, it is intuitive and has helping tooltips on the parameters. 
 
 First of all, you'll need a surface to place a material with _Water_ shader on. A plane with vertex grid will do fine. The more high resolution the mesh is the smoother the waves will be. For extra interest you can slightly displace the vertices while editing the mesh. With Flat Kit you get a few such models.
 
-_Shallow._ Color at the top of the water.  
-_Deep._ Color below the surface.  
-_Clearness._ How transparent the color of the water is. The transparency doesn't affect other parameters like foam or refractions. This allows you to achieve awesome weird optical effects.  
-_Shadow Strength._ How visible the shadow is.  
-_Crest._ The color of the wave. It helps accentuate individual waves.  
-_Crest size._ How big of a part of a wave is colored.  
-_Crest transition._ How smoothly the accentuated wave blends into overall color of the water.  
-_Fade distance._ TBD.  
-_Depth._ TBD.  
-_Shape._ The formula that determine how the waves are shaped and distributed across the mesh. Round is for concentric round-shaped ripples; Grid is more linear movement; Pointy is for more pronounced individual wave peaks.  
-_Speed._ How fast it moves along the Direction parameter.  
-_Amplitude._ Sets deviation amount, or, how high it is.  
-_Frequency._ Density of the effect.  
-_Direction._ Direction of the motion.  
-_Noise._ Nonlinearity to the shape. Use it to make things more chaotic.  
-_Source._ How the foam is being made — from texture or generated from noise.  
-_Color._ Color value. Can be opaque or transparent.  
-_Min Depth._ TBD.  
-_Amount._ How often 'grains' occur.  
-_Sharpness._ How smooth or sharp the foam is.  
-_Scale._ How big the foam 'chunks' are.  
-_Stretch X._ How stretched the foam is along X axis.  
-_Stretch Y._ How stretched the foam is along Y axis.  
-_Power._ Makes specular thin or thick. _Power_ value is a multiplier of 'Strength' parameter.  
-_Strength._ How prominent the specular is.  
+Let's float through the parameters of the shader.
+
+- _Shallow._ Color at the top of the water.  
+- _Deep._ Color below the surface.  
+- _Clearness._ How transparent the color of the water is. The transparency doesn't affect other parameters like foam or refractions. This allows you to achieve awesome weird optical effects.  
+- _Shadow Strength._ How visible the shadow is.  
+- _Crest._ The color of the wave. It helps accentuate individual waves.  
+- _Crest size._ How big of a part of a wave is colored.  
+- _Crest transition._ How smoothly the accentuated wave blends into overall color of the water.  
+- _Fade distance._ TBD.  
+- _Depth._ TBD.  
+- _Shape._ The formula that determine how the waves are shaped and distributed across the mesh. Round is for concentric round-shaped ripples; Grid is more linear movement; Pointy is for more pronounced individual wave peaks.  
+- _Speed._ How fast it moves along the Direction parameter.  
+- _Amplitude._ Sets deviation amount, or, how high it is.  
+- _Frequency._ Density of the effect.  
+- _Direction._ Direction of the motion.  
+- _Noise._ Nonlinearity to the shape. Use it to make things more chaotic.  
+- _Source._ How the foam is being made — from texture or generated from noise.  
+- _Color._ Color value. Can be opaque or transparent.  
+- _Min Depth._ TBD.  
+- _Amount._ How often 'grains' occur.  
+- _Sharpness._ How smooth or sharp the foam is.  
+- _Scale._ How big the foam 'chunks' are.  
+- _Stretch X._ How stretched the foam is along X axis.  
+- _Stretch Y._ How stretched the foam is along Y axis.  
+- _Power._ Makes specular thin or thick. _Power_ value is a multiplier of 'Strength' parameter.  
+- _Strength._ How prominent the specular is.  
 
 > **TIP.** Place the plane somewhere behind of in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
 
@@ -384,12 +379,12 @@ The _Wanderer_ demo scene includes _LightPlane_ shader implemented not only as f
 ![LightPlane Shader. Inspector panel interface](FlatKit_Manual_Images/light_plane_interface.png)
 > LightPlane Shader. Inspector panel interface
 
-_Depth Fade Distance_ ;  
-_Camera Distance Fade Far_ ;  
-_Camera Distance Fade Close_ ;  
-_UV Fade X_ ;  
-_UV Fade Y_ ;  
-_Allow Alpha Overflow_ .
+- _Depth Fade Distance_ ;  
+- _Camera Distance Fade Far_ ;  
+- _Camera Distance Fade Close_ ;  
+- _UV Fade X_ ;  
+- _UV Fade Y_ ;  
+- _Allow Alpha Overflow_ .
 
 ## 3.8. GPU Instancing
 
@@ -446,13 +441,11 @@ Outline Image effect is, essentially, a contour on the objects on the scene. It 
 - _Use Depth_ enables or disables taking the scene's depth data into calculating the outlines. This parameter outlines the outer contour of the objects with depth threshold control.  
 - _Use Normals_ creates outlines for “inner” parts of the objects, meaning, for those that are inside the boundaries of the object, for every given camera perspective. The effect depends on the geometry of an object. So, having proper normals here is important. There is a Normals Threshold control. It's discussed a bit more a little further down.  
 - _Use Color_ enables or disables taking all color difference data on the scene when calculating the outlines. 
+
+**Advanced settings** section hosts the parameters to adjust the tools above as well as a few more controls. The thresholds parameters are basically the limits that determine the ranges in which the effects take places. For example, the higher Min Depth value is, the further away from camera the outline will be generated. The lower Max Depth value is, the sooner outlines stop occurring.  
+
 - _Min Depth Threshold_ and _Max Depth Threshold_ determine the range of depth differences where outline should be applied. Lower values draw lines “inside” the scene resulting in a more beveled image. Higher values have more flat effect.  
-- _Min Normals Threshold_ and _Max Normals Threshold_ determine the range of normals edges to be outlined. Lower values increase the amount of affected normals, leading to more stroked effect. Higher values decrease the amount of affected normals, leading to flatter look.  
-
-**Advanced settings** section hosts the parameters to adjust the tools above.  
-
-- _Advanced Settings_ let you adjust the parameters listed above. The thresholds parameters are basically the limits that determine the ranges in which the effects take places. For example, the higher Min Depth value is, the further away from camera the outline will be generated. The lower Max Depth value is, the sooner outlines stop occurring.  
-- _Normals Thresholds_ determine min and max angles of the normals for the outlines to occur.  
+- _Min Normals Threshold_ and _Max Normals Threshold_ determine the range of normals edges to be outlined. Lower values increase the amount of affected normals, leading to more stroked effect. Higher values decrease the amount of affected normals, leading to flatter look. Basically, it determines min and max angles of the normals for the outlines to occur.  
 - _Min_ and _Max Color Thresholds_ let you set the least and the strongest differences in color of the mesh to make the outline appear.  
 - _Outline Only_ renders the outlines without meshes themselves, making it a kind of wireframe renderer.  
 - _Render Events_ This is one quite powerful feature available on the interface. It lets you choose an event after which the outlines are applied. It allows to apply outlines over the transparent objects. Also, it allows you to stack the _Outline Image Effect_ with other post effects.
