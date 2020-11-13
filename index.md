@@ -429,23 +429,35 @@ Gradient editor controls the colors of the gradient. To open it, click on Distan
 ## 4.2. Outline Image Effect
 Outline Image effect is, essentially, a contour on the objects on the scene. It can draw outer outlines, inner ones or both outer and inner outlines of the objects.
 
-![Outline Forward Renderer in URP. Inspector interface.](FlatKit_Manual_Images/outline_image_effect_interace.png)
+![Outline Forward Renderer in URP. Inspector interface.](FlatKit_Manual_Images/outline-image-effect-interface.png)
 > Outline Forward Renderer in URP. Inspector interface.
 
-**Main settings** are the following.  
+**Main settings** are the following.
+
 _Edge Color_ lets you choose the color of the outline.  
+
 _Thickness_ makes the outline thicker or thinner. It controls how wide or narrow the line of the outline is.  
+
 _Use Depth_ enables or disables taking the scene's depth data into calculating the outlines. This parameter outlines the outer contour of the objects with depth threshold control.  
+
 _Use Normals_ creates outlines for “inner” parts of the objects, meaning, for those that are inside the boundaries of the object, for every given camera perspective. The effect depends on the geometry of an object. So, having proper normals here is important. There is a Normals Threshold control. It's discussed a bit more a little further down.  
+
 _Use Color_ enables or disables taking all color difference data on the scene when calculating the outlines. 
+
 _Min Depth Threshold_ and _Max Depth Threshold_ determine the range of depth differences where outline should be applied. Lower values draw lines “inside” the scene resulting in a more beveled image. Higher values have more flat effect.  
+
 _Min Normals Threshold_ and _Max Normals Threshold_ determine the range of normals edges to be outlined. Lower values increase the amount of affected normals, leading to more stroked effect. Higher values decrease the amount of affected normals, leading to flatter look.  
 
 **Advanced settings** section hosts the parameters to adjust the tools above.  
+
 _Advanced Settings_ let you adjust the parameters listed above. The thresholds parameters are basically the limits that determine the ranges in which the effects take places. For example, the higher Min Depth value is, the further away from camera the outline will be generated. The lower Max Depth value is, the sooner outlines stop occurring.  
+
 _Normals Thresholds_ determine min and max angles of the normals for the outlines to occur.  
+
 _Min_ and _Max Color Thresholds_ let you set the least and the strongest differences in color of the mesh to make the outline appear.  
+
 _Outline Only_ renders the outlines without meshes themselves, making it a kind of wireframe renderer.  
+
 _Render Events_ This is one quite powerful feature available on the interface. It lets you choose an event after which the outlines are applied. It allows to apply outlines over the transparent objects. Also, it allows you to stack the _Outline Image Effect_ with other post effects.
 
 ![Outline Image Effect Render Events list](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/outline-image-effect-render-events.png)
