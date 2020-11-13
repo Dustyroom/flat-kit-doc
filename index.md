@@ -161,7 +161,9 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 **Specular.** You can make a, well, specular with this parameter. Also it can be used as another layer of shadow.
 
 _Specular Color_ picks up the color of your glare, the parameter works in HDR.  
+
 _Specular Size_ determines how big the specular is. Higher values mean bigger specular.  
+
 _Specular Edge Smoothness_ — moving slider to the left decreases blurriness and makes specular sharper.
 
 ![Specular. Inspector interface](FlatKit_Manual_Images/specular_parameters.png)
@@ -171,8 +173,11 @@ _Specular Edge Smoothness_ — moving slider to the left decreases blurriness an
 **Rim.** Rim was designed as one of the ways to make outlines.
 
 _Rim Color_ selects the color of the parameter. It works in HDR.  
+
 _Light Align_ parameter rotates the rim.  
+
 _Rim Size_ controls how big the Rim is. Very high values can serve you as an unlit effect.  
+
 _Rim Edge Smoothness_ — moving slider to the left sharpens the Rim, to the right — makes Rim blurry. 
 
 ![Rim. Inspector interface](FlatKit_Manual_Images/rim_parameters.png)
@@ -295,7 +300,9 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 ‘Stylized Surface with Outline’ shader, being the same as the regular ‘Stylized Surface’ shader in a nutshell, has an additional option of... outlines.
 
 _Outline Color_ picks up the color of the outline.  
+
 _Outline Width_ determines how thick the outline is.  
+
 _Outline Depth Offset_ moves the outline inwards or outwards an object.
 
 Remember, in addition to this shader Flat Kit has also a global Outline effect applied per scene (in URP) and per camera (in Built-In RP).  
@@ -309,8 +316,11 @@ In the Outline Image Effect chapter in this manual you can find some useful spec
 This is a simple method to fill the sky of your scene.
 
 _Top Color_ and _Bottom Color_ define two colors to be blended.  
+
 _Intensity_ is a darkness/brightness controller of the skybox. 
+
 _Exponent accentuates_ the effect in favour of either Top Color or Bottom Color.
+
 _Direction X angle_ and _Direction Y angle_ rotate the effect along the corresponding axis.
 
 > **TIP.** Make Top Color and Bottom Color identical colors or move the Exponent parameter to one of the extremes if you want a flat background.
@@ -472,7 +482,7 @@ Some general info. Manipulating the normals of the mesh can be a very efficient 
 ![Rotating normals in Blender](FlatKit_Manual_Images/normals-rotation1.png)
 > Rotating normals in Blender. Manipulating the normals angle is one of the ways to make Flat Kit generate outlines where you want them.
 
-> **TIP:** Combinations of these settings let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using _‘Stylized Surface with Outline’_ shader in addition to the global Outline effect. Also, _Rim_ parameter of _Stulized Surface_ and _Stylized Surface with Outline_ shaders can accentuate object's edges, often it looks like a partial outline, which can be helpful.
+> **TIP:** Combinations of the settings in Outline Image Effect let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using _‘Stylized Surface with Outline’_ shader in addition to the global Outline effect. Also, _Rim_ parameter of _Stylized Surface_ and _Stylized Surface with Outline_ shaders can accentuate object's edges, often it looks like a partial outline, which can be helpful.
 
 
 # 5. Additional scripts
