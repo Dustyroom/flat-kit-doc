@@ -460,10 +460,7 @@ Here is an example of choosing when to render the outlines. We took _Wanderer_ d
 !['After Rendering Skybox' chosen in Render Event list](FlatKit_Manual_Images/after_rendering_skybox.png)
 > _'After Rendering Skybox'_ chosen in Render Event list
 
-!['Before Rendering Post Processing' chosen in Render Event list](FlatKit_Manual_Images/before_rendering_post_processing.png)
-> _'Before Rendering Post Processing'_ chosen in _Render Event_ list
-
-!['Before Rendering Post Processing' chosen in Render Event list, 'Outlines Only' parameter ticked](FlatKit_Manual_Images/FlatKit_Manual_Images/before_rendering_post_processing_outlines_only.png)
+!['Before Rendering Post Processing' chosen in Render Event list, 'Outlines Only' parameter ticked](FlatKit_Manual_Images/before_rendering_post_processing_outlines_only.png)
 > _'Before Rendering Post Processing'_ chosen in _Render Event_ list, _'Outlines Only'_ parameter ticked
 
 Also, in URP you have an ability to chain and change the orders of Image effects. More info in the chapter [Flat Kit Image Effects in URP](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#83-flat-kit-image-effects-in-urp)
