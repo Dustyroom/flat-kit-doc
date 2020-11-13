@@ -516,14 +516,19 @@ However, you can find there more experimental stuff, too. It has been a temptati
 Blueprint Grid is a descriptive one, there is a text telling what we used to get the displayed materials.
 Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits across all scenes and each scene is dedicated to some specific look, thus uses a different set of materials.
 
-* Tree Island scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or Any other arcade game.
+* _Tree Island_ scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or Any other arcade game.
 
-* Room. We just had to include a room.
+* _Room_. We just had to include a room.
 
-* Retro Cars. Retro cars are curvy. What a possibility to show how shiny (or rough) shaders can be.
+* _Retro Cars_. Retro cars are curvy. A great opportunity to show how shiny (or rough) shaders can be.
 
-* Normal Map Tree. An example of normal maps application.
+* _Normal Map Tree_. An example of normal maps application.
 
+* _Ocean Water_. This is a demo scene showcasing the _Water_ shader in a way the game would look like. A non-toon-shading application for _Stylized Surface_ is showed in this scene, too. You can choose various water looks in the Hierarchy tab by switching different Water objects on.
+
+* _Pool_ scene shows more various versions of the _Water_ shader. In the Hierarchy tab you can choose between different water objects. Each of these objects has its own _Water_ material.
+
+* _Water Vessels_ is an attempt to show a few basic and more non-obvious _Water_ shader parameters, all at once. Having these materials, you can use them as starting points in you own projects.
 
 # 7. Presets
 
@@ -617,14 +622,17 @@ Enable the Post Processing flat on the camera inspector:
 
 # 9. Contact information and links
 
-![Flat Kit at the Asset Store](https://assetstore.unity.com/packages/vfx/shaders/flat-kit-cel-toon-shading-143368)
+Flat Kit at the Asset Store
+https://assetstore.unity.com/packages/vfx/shaders/flat-kit-cel-toon-shading-143368
 
 Email  
 info@dustyroom.com
 
-![Dustyroom website](http://dustyroom.com)
+Dustyroom website
+dustyroom.com
 
-![Twitter](https://twitter.com/_dstrm)
+Twitter
+twitter.com/_dstrm
 
 
 
