@@ -315,13 +315,10 @@ In the Outline Image Effect chapter in this manual you can find some useful spec
 
 This is a simple method to fill the sky of your scene.
 
-_Top Color_ and _Bottom Color_ define two colors to be blended.  
-
-_Intensity_ is a darkness/brightness controller of the skybox. 
-
-_Exponent accentuates_ the effect in favour of either Top Color or Bottom Color.
-
-_Direction X angle_ and _Direction Y angle_ rotate the effect along the corresponding axis.
+ _Top Color_ and _Bottom Color_ define two colors to be blended.  
+ _Intensity_ is a darkness/brightness controller of the skybox. 
+ _Exponent_ accentuates the effect in favour of either Top Color or Bottom Color.
+ _Direction X angle_ and _Direction Y angle_ rotate the effect along the corresponding axis.
 
 > **TIP.** Make Top Color and Bottom Color identical colors or move the Exponent parameter to one of the extremes if you want a flat background.
 
