@@ -450,10 +450,21 @@ Outline Image effect is, essentially, a contour on the objects on the scene. It 
 - _Min Normals Threshold_ and _Max Normals Threshold_ determine the range of normals edges to be outlined. Lower values increase the amount of affected normals, leading to more stroked effect. Higher values decrease the amount of affected normals, leading to flatter look. Basically, it determines min and max angles of the normals for the outlines to occur.  
 - _Min_ and _Max Color Thresholds_ let you set the least and the strongest differences in color of the mesh to make the outline appear.  
 - _Outline Only_ renders the outlines without meshes themselves, making it a kind of wireframe renderer.  
-- _Render Events_ This is one quite powerful feature available on the interface. It lets you choose an event after which the outlines are applied. It allows to apply outlines over the transparent objects. Also, it allows you to stack the _Outline Image Effect_ with other post effects.
+- _Render Event_ This is one quite powerful feature available on the interface. It lets you choose an event after which the outlines are applied. It allows to apply outlines over the transparent objects. Also, it allows you to stack the _Outline Image Effect_ with other post effects.
 
-![Outline Image Effect Render Events list](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/outline-image-effect-render-events.png)
-> Outline Image Effect Render Events list
+![Outline Image Effect Render Event list](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/outline-image-effect-render-events.png)
+> Outline Image Effect Render Event list
+
+Here is an example of choosing when to render the outlines. We took _Wanderer_ demo scene and applied an example _Outline_ Image Effect. After that we tried a few different items from the _Render Event_ list.
+
+!['After Rendering Skybox' chosen in Render Event list](FlatKit_Manual_Images/after_rendering_skybox.png)
+> _'After Rendering Skybox'_ chosen in Render Event list
+
+!['Before Rendering Post Processing' chosen in Render Event list](FlatKit_Manual_Images/before_rendering_post_processing.png)
+> _'Before Rendering Post Processing'_ chosen in _Render Event_ list
+
+!['Before Rendering Post Processing' chosen in Render Event list, 'Outlines Only' parameter ticked](FlatKit_Manual_Images/FlatKit_Manual_Images/before_rendering_post_processing_outlines_only.png)
+> _'Before Rendering Post Processing'_ chosen in _Render Event_ list, _'Outlines Only'_ parameter ticked
 
 Also, in URP you have an ability to chain and change the orders of Image effects. More info in the chapter [Flat Kit Image Effects in URP](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#83-flat-kit-image-effects-in-urp)
 
