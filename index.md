@@ -429,7 +429,7 @@ Gradient editor controls the colors of the gradient. To open it, click on Distan
 ## 4.2. Outline Image Effect
 Outline Image effect is, essentially, a contour on the objects on the scene. It can draw outer outlines, inner ones or both outer and inner outlines of the objects.
 
-![Outline Forward Renderer in URP. Inspector interface.](FlatKit_Manual_Images/outline_image_effect_interace_01.png)
+![Outline Forward Renderer in URP. Inspector interface.](FlatKit_Manual_Images/outline_image_effect_interace.png)
 > Outline Forward Renderer in URP. Inspector interface.
 
 **Main settings** are the following.  
