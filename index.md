@@ -189,17 +189,17 @@ Although _Rim_ option is creatively useful, there are two more obvious ways to a
  
 > **TIP.** Animate Cel layer size, Specular size or Rim size — to get a neat transition effect.
 
-**Height Gradient.** This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is absolute, it depends on the position of the object on the scene. If you would like to make a relative height gradient, duplicate the material and adjust the height gradient.
+**Height Gradient.** This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is global (absolute) per material, it doesn't depend on obejct's boundaries. If you would like to make a relative gradient (for instance, each object holding one material to contain an entire gradient within itself), duplicate the material and adjust the height gradient. Alternatively, you can use a _Curve_ mode of _Stylized Surface_.
 
 ![Height Gradient. Inspector interface](FlatKit_Manual_Images/gradient_height_parameters.png)
 > _Height Gradient._ Inspector interface
 
-_Gradient Color_ picks the parameter’s own color to fade into from transparency.  
-_Center X_ and _Y_ are initial points from where the effect takes effect. Adjust these to move the gradient across the scene. Center X is useful if you engage _Gradient Angle_, which means the rotation of the Gradient.  
-_Size_ determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.  
-_Gradient Angle_ rotates the gradient.
+- _Gradient Color_ picks the parameter’s own color to fade into from transparency.  
+- _Center X_ and _Y_ are initial points from where the effect takes effect. Adjust these to move the gradient across the scene. Center X is useful if you engage - _Gradient Angle_, which means the rotation of the Gradient.  
+- _Size_ determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.  
+- _Gradient Angle_ rotates the gradient.
 
-More about the nature and use of _Height Gradient_ is covered in the _‘Terrain’ Shader_ section of this manual.
+A bit more about the nature and use of _Height Gradient_ is covered in the [_‘Terrain’ Shader_](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#36-terrain-shader) section of this manual.
 
 *_Setting the colors from scripts_*. The following are the color field names for manipulation via the code for tweening, randomization etc:
 *   `_Color`: the primary color, “Color” in the inspector,
@@ -340,7 +340,7 @@ Let's float through the parameters of the shader.
 - _Amplitude._ Sets deviation amount, or, how high it is.  
 - _Frequency._ Density of the effect.  
 - _Direction._ Direction of the motion.  
-- _Noise._ Nonlinearity to the shape. Use it to make things more chaotic.  
+- _Noise._ Adds nonlinearity to the _Shape_. Use it to make _Grid_, for example, more chaotic.  
 - _Source._ How the foam is being made — from texture or generated from noise.  
 - _Color._ Color value. Can be opaque or transparent.  
 - _Min Depth._ TBD.  
@@ -351,6 +351,8 @@ Let's float through the parameters of the shader.
 - _Stretch Y._ How stretched the foam is along Y axis.  
 - _Power._ Makes specular thin or thick. _Power_ value is a multiplier of 'Strength' parameter.  
 - _Strength._ How prominent the specular is.  
+
+We've included a component called _Buoyancy_. The _Water_ shader deforms the water mesh, which in its turn moves the objects that have _Buoyancy_ component on them. More info can be found in the Buoyancy part of Additional Scripts section of this manual.
 
 > **TIP.** Place the plane somewhere behind of in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
 
@@ -479,6 +481,14 @@ Linear Motion is a simple script that translates (moves) and rotates any object.
 > Linear motion script. Inspector interface.
 
 > **TIP.** Use a couple of instances of this component if you want to translate and rotate along more than one axis and make more complex automations.
+
+## 5.3. Buoyancy
+
+This script is used with _Water_ shader specifially when there is an object on the water surface, and you want it to phisically flow on this surface. The object will replicate the water's shape, while water is being deformed. This scripts is added on the object as a component. You'll need to point to the water object mesh this object is interacting with (in _Water_ field of the script interface).
+
+- _Water_ field is where you choose the mesh of the water surface. The object holding this script will be afloat on this mesh.
+- _Size_ parameter sets the definition of the movement, meaning, how many of the _Water_ object's vertices it takes into account.
+- _Amplitude_ is how far the object travels from its initial point on the water while foating.
 
 # 6. Demo Scenes
 
