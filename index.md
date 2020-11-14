@@ -5,38 +5,38 @@ If you’ve got a question regarding Flat Kit, please read through the Frequentl
 
 # Frequently Asked Questions (FAQs)
 
-##### Q. Does Flat Kit support URP?  <!-- omit in toc -->
-A. Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see FlatKit in URP. As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
+#### Q. Does Flat Kit support URP?
+> **A.** Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see FlatKit in URP. As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
 
-##### Q. There are missing scripts in some demo scenes on the main camera in URP.  <!-- omit in toc -->
-A. This is an old one, so if you see the missing scripts, please update to the newer version of Flat Kit. In Built-In RP our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
+#### Q. There are missing scripts in some demo scenes on the main camera in URP.
+> **A.** This is an old one, so if you see the missing scripts, please update to the newer version of Flat Kit. In Built-In RP our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
 
-Q. Is it easy to use Flat Kit for a beginner?  
-A. Yes, there's nothing complicated about it on the front-end. Yes, there are lots of parameters but they are well-structured and laid-out in an intuitive way. Moreover, there are mouse-over tooltips with little hints on all parameters.
+#### Q. Is it easy to use Flat Kit for a beginner?  
+> **A.** Yes, there's nothing complicated about it on the front-end. Yes, there are lots of parameters but they are well-structured and laid-out in an intuitive way. Moreover, there are mouse-over tooltips with little hints on all parameters.
 
-Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
-A. In Flat Kit indirect sources of light influence the colors of the scene by default, which can be turned off. The shaders do not support parameters required for the photorealistic look such as metallicness and translucency and subsurface scattering.
+#### Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
+> **A.** In Flat Kit indirect sources of light influence the colors of the scene by default, which can be turned off. The shaders do not support parameters required for the photorealistic look such as metallicness and translucency and subsurface scattering.
 
-Q. Does Flat Kit support normal maps?  
-A. Yes, it does. It is in Bump map section of the interface.
+#### Q. Does Flat Kit support normal maps?  
+> **A.** Yes, it does. It is in Bump map section of the interface.
 
-Q. Does Flat Kit work with Post-processing stack v.2?  
-A. Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See FlatKit in URP if you are willing to know more.
+#### Q. Does Flat Kit work with Post-processing stack v.2?  
+> **A.** Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See FlatKit in URP if you are willing to know more.
 
-Q. Does it work with Unity version 20XX.x?  
-A. As soon as you’ve got a stable Unity version, it does.
+#### Q. Does it work with Unity version 20XX.x?  
+> **A.** As soon as you’ve got a stable Unity version, it does.
 
-Q. What platforms can I build for? What about VR?  
-A. Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile. Please, note, the Outline image effect currently is not optimized for VR.
+#### Q. What platforms can I build for? What about VR?  
+> **A.** Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile. Please, note, the Outline image effect currently is not optimized for VR.
 
-Q. Can I use the scenes from Flat Kit in a commercial project?  
-A. Yes, you can. As soon as you purchase it, you can use anything from Flat Kit in the private and commercial projects without a need to credit authors of the asset (us). What you can’t do is to re-sell, give away or place on public repositories any part of the asset uncompiled, i.e. publicly accessible source code or models. More info here — https://unity3d.com/legal/as_terms
+#### Q. Can I use the scenes from Flat Kit in a commercial project?  
+> **A.** Yes, you can. As soon as you purchase it, you can use anything from Flat Kit in the private and commercial projects without a need to credit authors of the asset (us). What you can’t do is to re-sell, give away or place on public repositories any part of the asset uncompiled, i.e. publicly accessible source code or models. More info here — https://unity3d.com/legal/as_terms
 
-Q. I’ve got errors just after importing Flat Kit. Why?  
-A. First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, shoot a mail to info@dustyroom.com
+#### Q. I’ve got errors just after importing Flat Kit. Why?  
+> **A.** First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, shoot a mail to info@dustyroom.com
 
-Q. How do I get projectors to work with the Stylized Surface shader?  
-A. Please uncomment this line in the StylizedSurface.shader:
+#### Q. How do I get projectors to work with the Stylized Surface shader?  
+> **A.** Please uncomment this line in the StylizedSurface.shader:
 ```
 #pragma skip_variants POINT_COOKIE DIRECTIONAL_COOKIE
 ```
