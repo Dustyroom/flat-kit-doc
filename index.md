@@ -41,14 +41,14 @@ If you’ve got a question regarding Flat Kit, please read through the Frequentl
 #pragma skip_variants POINT_COOKIE DIRECTIONAL_COOKIE
 ```
 
-Q. What is the Shader Compilation Target Level of Flat Kit shaders?  
-A. The object shaders target 3.5 (or es 3.0 and WebGL 2.0).
+#### Q. What is the Shader Compilation Target Level of Flat Kit shaders?  
+> **A.** The object shaders target 3.5 (or es 3.0 and WebGL 2.0).
 
-Q. It takes very long to import Flat Kit into Unity in Built-in RP.  
-A. FlatKit Built-in RP uses shader variants to achieve high flexibility and best performance. However it can take time to import the asset and build the game binary. In URP importing takes seconds, so we encourage you to use the URP version of Flat Kit. If you have to use Built-In RP, though, to speed things up, uncheck unneeded elements when importing the asset.
+#### Q. It takes very long to import Flat Kit into Unity in Built-in RP.  
+> **A.** FlatKit Built-in RP uses shader variants to achieve high flexibility and best performance. However it can take time to import the asset and build the game binary. In URP importing takes seconds, so we encourage you to use the URP version of Flat Kit. If you have to use Built-In RP, though, to speed things up, uncheck unneeded elements when importing the asset.
 
-Q. Is it possible to apply all these awesome effects just onto the camera while using my own shaders?  
-A. Cel shading is shader-driven, not camera, which means that Stylized Surface shaders have to be used for this. Outline and Fog image effects are used as camera components (Built-In RP) or as Render Features per scene (URP).
+#### Q. Is it possible to apply all these awesome effects just onto the camera while using my own shaders?  
+> **A.** Cel shading is shader-driven, not camera, which means that Stylized Surface shaders have to be used for this. Outline and Fog image effects are used as camera components (Built-In RP) or as Render Features per scene (URP).
 
 
 
