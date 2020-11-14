@@ -5,10 +5,10 @@ If you’ve got a question regarding Flat Kit, please read through the Frequentl
 
 # Frequently Asked Questions (FAQs)
 
-Q. Does Flat Kit support URP?  
+##### Q. Does Flat Kit support URP?  
 A. Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see FlatKit in URP. As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
 
-Q. There are missing scripts in some demo scenes on the main camera in URP.  
+##### Q. There are missing scripts in some demo scenes on the main camera in URP.  
 A. This is an old one, so if you see the missing scripts, please update to the newer version of Flat Kit. In Built-In RP our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
 
 Q. Is it easy to use Flat Kit for a beginner?  
@@ -452,7 +452,7 @@ Outline Image effect is, essentially, a contour on the objects on the scene. It 
 - _Outline Only_ renders the outlines without meshes themselves, making it a kind of wireframe renderer.  
 - _Render Event_ This is one quite powerful feature available on the interface. It lets you choose an event after which the outlines are applied. It allows to apply outlines over the transparent objects. Also, it allows you to stack the _Outline Image Effect_ with other post effects.
 
-![Outline Image Effect Render Event list](https://github.com/Dustyroom/flat-kit-doc/blob/master/FlatKit_Manual_Images/outline-image-effect-render-events.png)
+![Outline Image Effect Render Event list](FlatKit_Manual_Images/outline-image-effect-render-events.png)
 > Outline Image Effect Render Event list
 
 Here is an example of choosing when to render the outlines. We took _Wanderer_ demo scene and applied an example _Outline_ Image Effect. After that we tried a few different items from the _Render Event_ list.
