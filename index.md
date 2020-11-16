@@ -324,9 +324,12 @@ Water shader lets you create a stylized water surface. That's is primary functio
 
 First of all, you'll need a surface to place a material with _Water_ shader on. A plane with vertex grid will do fine. The more high resolution the mesh is the smoother the waves will be. For extra interest you can slightly displace the vertices while editing the mesh. With Flat Kit you get a few such models.
 
-Let's float through the parameters of the shader.
+The controls are grouped in the logical sections. Let's float through the parameters of the shader.
 
-**Shallow.** Color at the top of the water.  
+----------------------
+### Colors
+
+**Shallow.** Color at the top of the water. 
 
 **Deep.** Color below the surface.  
 
@@ -344,19 +347,25 @@ Below is a little chart, which may came handy for understanding the meaning of t
 
 **Crest transition.** How smoothly the accentuated wave blends into overall color of the water.
 
+### Depth
+
 **Fade distance.** TBD.
 
 **Depth.** TBD.
 
-**Shape.** The formula that determine how the waves are shaped and distributed across the mesh.
 
+----------------------
+### Wave geometry
+
+**Shape.** The formula that determine how the waves are shaped and distributed across the mesh.
+*   **None** turns waves off. The surface becomes flat.
 *   **Round** is for concentric round-shaped ripples;
 *   **Grid** is more linear (comb-looking) movement;
 *   **Pointy** is for more pronounced individual wave peaks.  
 
 **Speed.** How fast it moves along the Direction parameter.  
 
-**Direction.** Direction of the motion. This parameter works tightly with _Speed_. Using these two you can make ponds, pools, seas etc (static water) and rivers, waterfalls etc (streaming water)
+**Direction.** Direction of the motion. This parameter works tightly with _Speed_. Using these two you can make ponds, pools, seas etc (static water) and rivers, waterfalls etc (streaming water). Please, note, there's an independent set of parameters _Speed_ and _Direction_ for foam as well, described a bit further.
 
 **Amplitude.** Sets deviation amount, or, how high it is. Use this parameter to set the height of the waves. Positive values 'raise' the waves effect above the base point, negative values make the waves lower than the initial base point.
 
@@ -364,21 +373,52 @@ Below is a little chart, which may came handy for understanding the meaning of t
 
 **Noise.** Adds nonlinearity to the _Shape_. Use it to make _Grid_, for example, more chaotic.  
 
+----------------------
+### Foam
+
 **Source.** How the foam is being made — from texture or generated from noise. Please, select one of the following parameters.
+*   **None.** Turns off the foam.
+*   **GradientNoise.** The foam shape comes from generative noise.
 *   **Texture.** If you choose _Texture_ source, you'll have an option to import your own, preferrably seamlessly tiling, texture, or use one of the included ones — we shortlisted the best from dozens of originally pre-generated .png textures to come with Flat Kit. If you are planning to use your own textures, we suggest you to put them into a single (red) color in the import settings to save memory.
-*   **Noise.** The foam shape comes from generative noise.
 
 **Color.** Color value of the foam. Can be opaque or transparent.  
+
 **Min Depth.** TBD.  
+
 **Amount.** How often 'grains' occur.  
+
 **Sharpness.** How smooth or sharp the foam is.  
+
 **Scale.** How big the foam 'chunks' are.  
-**Stretch X.** How stretched the foam is along X axis. 
+
+**Stretch X.** How stretched the foam is along X axis.
+
 **Stretch Y.** How stretched the foam is along Y axis.
 
 > **TIP.** Sometimes we find it useful to generously stretch the foam along one of the axis, so that the foam becomes a set of straight lines. This effect definitely can have its use.
 
+**Speed.** How fast it moves along the Direction parameter.  
+
+**Direction.** Direction of the motion. This parameter works tightly with _Speed_. Using these two you can make ponds, pools, seas etc (static water) and rivers, waterfalls etc (streaming water)
+
+----------------------
+### Refraction
+
+**Frequency.**
+
+**Amplitude.**
+
+**Speed.**
+
+**Scale.**
+
+----------------------
+### Specular
+
+**Color.**
+
 **Power.** Makes specular thin or thick. _Power_ value is a multiplier of 'Strength' parameter.  
+
 **Strength.** How prominent the specular is.  
 
 We've included a component called _Buoyancy_. The _Water_ shader deforms the water mesh, which in its turn moves the objects that have _Buoyancy_ component on them. More info can be found in the [Buoyancy](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#53-buoyancy) part of Additional Scripts section of this manual.
