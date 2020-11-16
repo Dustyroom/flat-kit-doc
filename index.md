@@ -327,7 +327,7 @@ The controls are grouped into the logical sections. Let's float through the para
 ----------------------
 ### Colors
 
-There are two modes of the color input.
+**Source** There are two modes of the color input — _Linear_ and _Gradient Texture_.
 
 ![Water color source dropdown](FlatKit_Manual_Images/water-color-source-dropdown.png)
 > Water color source dropdown
@@ -337,35 +337,37 @@ There are two modes of the color input.
 ![Water color source dropdown](FlatKit_Manual_Images/water-color-source-linear.png)
 > Water color source - linear
 
-*   **Gradient Texture.** Use this one if you are looking for something fancy. You create a gradient using a usual color ramp, add up to 8 color stops onto the ramp and save it as a texture. Now you have a _Shallow_ color, _Deep_ color and anything you want in between.
-
-![Water color source dropdown](FlatKit_Manual_Images/water-color-source-gradient.png)
-> Water color source - linear
+If _Linear_ color source is chosen, two exclusive to this mode parameters appear to select colors:
 
 **Shallow.** Color at the top of the water. 
 
 **Deep.** Color below the surface.  
 
-Below is a little chart, which may came handy for understanding the meaning of the parameters for the coloring part of the _Water_ shader.
+*   **Gradient Texture.** Use this one if you are looking for something fancy. You create a gradient using a usual color ramp, add up to 8 color stops onto the ramp and save it as a texture. Now you have a _Shallow_ color, _Deep_ color and anything you want in between.
+
+![Water color source dropdown](FlatKit_Manual_Images/water-color-source-gradient.png)
+> Water color source - linear
+
+**Shallow Depth.** This is a lowest point of _Shallow_ part. It is a point where _Shallow_ part merges with the top of the gradient.
+
+**Gradient Size.** This is the lowest (deepest) point ot the gradient. It is a point where it merges with the _Deep_ part.
+
+To Below is a little chart, which may came handy for understanding the meaning of the parameters for the coloring part of the _Water_ shader.
 ![Water Gradient Chart](FlatKit_Manual_Images/water-gradient-chart.png)
 > Water Gradient chart
 
-**Clearness.** How transparent the color of the water is. The transparency doesn't affect other parameters like foam or refractions. This allows you to achieve awesome weird optical effects.
+**Transparency.** How clear (transparent) the color of the water is. The transparency doesn't affect other parameters like foam or refractions. This allows you to achieve awesome weird optical effects.
 
 **Shadow Strength.** How visible the shadow is.
 
-**Crest.** The color of the wave. It helps accentuate individual waves.
-
-**Crest size.** How big of a part of a wave is colored (accentuated).
-
-**Crest transition.** How smoothly the accentuated wave blends into overall color of the water.
-
 ----------------------
-### Depth
+### Crest
 
-**Fade distance.** TBD.
+**Color.** The color of the wave. It helps accentuate individual waves.
 
-**Depth.** TBD.
+**Size.** How big of a part of a wave is colored (accentuated).
+
+**Sharp transition.** How smoothly the accentuated wave blends into overall color of the water.
 
 ----------------------
 ### Wave geometry
@@ -384,11 +386,11 @@ Below is a little chart, which may came handy for understanding the meaning of t
 
 **Speed.** How fast it moves along the Direction parameter.  
 
-**Direction.** Direction of the motion. This parameter works tightly with _Speed_. Using these two you can make ponds, pools, seas etc (static water) and rivers, waterfalls etc (streaming water). Please, note, there's an independent set of parameters _Speed_ and _Direction_ for foam as well, described a bit further.
-
 **Amplitude.** Sets deviation amount, or, how high it is. Use this parameter to set the height of the waves. Positive values 'raise' the waves effect above the base point, negative values make the waves lower than the initial base point.
 
 **Frequency.** Density of the effect.  
+
+**Direction.** Direction of the motion. This parameter works tightly with _Speed_. Using these two you can make ponds, pools, seas etc (static water) and rivers, waterfalls etc (streaming water). Please, note, there's an independent set of parameters _Speed_ and _Direction_ for foam as well, described a bit further.
 
 **Noise.** Adds nonlinearity to the _Shape_. Use it to make _Grid_, for example, more chaotic.  
 
@@ -402,13 +404,13 @@ Below is a little chart, which may came handy for understanding the meaning of t
 
 **Color.** Color value of the foam. Can be opaque or transparent.  
 
-**Min Depth.** TBD.  
+**Shore Depth.** The maximum point where the water is detecting the edges to create a foam 'outline'.  
 
 **Amount.** How often 'grains' occur.  
 
-**Sharpness.** How smooth or sharp the foam is.  
-
 **Scale.** How big the foam 'chunks' are.  
+
+**Sharpness.** How smooth or sharp the foam is.  
 
 **Stretch X.** How stretched the foam is along X axis.
 
@@ -423,25 +425,16 @@ Below is a little chart, which may came handy for understanding the meaning of t
 ----------------------
 ### Refraction
 
-**Frequency.**
+**Frequency.** The frequency of noise that creates the refraction.
 
-**Amplitude.**
+**Amplitude.** The deviation from the initial point.
 
-**Speed.**
+**Speed.** How fast the refraction moves on the water.
 
-**Scale.**
-
-----------------------
-### Specular
-
-**Color.**
-
-**Power.** Makes specular thin or thick. _Power_ value is a multiplier of 'Strength' parameter.  
-
-**Strength.** How prominent the specular is.  
+**Scale.** How big is the noise that creates the refraction.
 
 ----------------------
-We've included a component called _Buoyancy_. The _Water_ shader deforms the water mesh, which in its turn moves the objects that have _Buoyancy_ component on them. More info can be found in the [Buoyancy](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#53-buoyancy) part of Additional Scripts section of this manual.
+We included a component called _Buoyancy_. The _Water_ shader deforms the water mesh, which in its turn moves the objects that have _Buoyancy_ component on them. More info can be found in the [Buoyancy](flat-kit-doc/blob/master/index.md#53-buoyancy) part of Additional Scripts section of this manual.
 
 > **TIP.** Place the plane somewhere behind of in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
 
