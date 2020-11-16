@@ -327,6 +327,21 @@ The controls are grouped into the logical sections. Let's float through the para
 ----------------------
 ### Colors
 
+There are two modes of the color input.
+
+![Water color source dropdown](FlatKit_Manual_Images/water-color-source-dropdown.png)
+> Water color source dropdown
+
+*   **Linear.** This one allows to use just colors for _Shallow_ and _Deep_ parts of water. The effect is simple as there is no interpolation between these two.
+
+![Water color source dropdown](FlatKit_Manual_Images/water-color-source-linear.png)
+> Water color source - linear
+
+*   **Gradient Texture.** Use this one if you are looking for something fancy. You create a gradient using a usual color ramp, add up to 8 color stops onto the ramp and save it as a texture. Now you have a _Shallow_ color, _Deep_ color and anything you want in between.
+
+![Water color source dropdown](FlatKit_Manual_Images/water-color-source-gradient.png)
+> Water color source - linear
+
 **Shallow.** Color at the top of the water. 
 
 **Deep.** Color below the surface.  
