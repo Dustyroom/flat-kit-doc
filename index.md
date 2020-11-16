@@ -320,9 +320,9 @@ This is a simple method to fill the sky of your scene.
 
 Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird things with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated at first, it is intuitive and has helping tooltips on the parameters. 
 
-First of all, you'll need a surface to place a material with _Water_ shader on. A plane with vertex grid will do fine. The more high resolution the mesh is the smoother the waves will be. For extra interest you can slightly displace the vertices while editing the mesh. With Flat Kit you get a few such models.
+First of all, you'll need a surface to place a material with _Water_ shader on. A plane with vertex grid will do fine. The more high resolution the water mesh is the smoother and well-defined the waves will be. For extra interest you can slightly displace the vertices while editing the mesh. With Flat Kit you get a few such models.
 
-The controls are grouped in the logical sections. Let's float through the parameters of the shader.
+The controls are grouped into the logical sections. Let's float through the parameters of the shader.
 
 ----------------------
 ### Colors
@@ -355,11 +355,17 @@ Below is a little chart, which may came handy for understanding the meaning of t
 ----------------------
 ### Wave geometry
 
-**Shape.** The formula that determine how the waves are shaped and distributed across the mesh.
-*   **None** turns waves off. The surface becomes flat.
-*   **Round** is for concentric round-shaped ripples;
-*   **Grid** is more linear (comb-looking) movement;
-*   **Pointy** is for more pronounced individual wave peaks.  
+**Shape.** The formula that determine how the displacement of the waves is shaped and distributed across the mesh.
+*   **None** turns displacement waves off. As no waves are visible, the surface becomes flat.
+*   **Round** is linear (comb-looking) shape with rounded tips;
+![Shape parameter — 'Round'](FlatKit_Manual_Images/wave_shape_round.png)
+> Shape parameter — 'Round'
+*   **Grid** is glid-like (checkerboard-looking) shape;
+![Shape parameter — 'Grid'](FlatKit_Manual_Images/wave_shape_grid.png)
+> Shape parameter — 'Grid'
+*   **Pointy** is more linear (comb-looking) movement with sharp tips.
+![Shape parameter — 'Pointy'](FlatKit_Manual_Images/wave_shape_pointy.png)
+> Shape parameter — 'Pointy'
 
 **Speed.** How fast it moves along the Direction parameter.  
 
