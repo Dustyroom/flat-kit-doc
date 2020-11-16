@@ -292,7 +292,7 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 
 ## 3.3. ‘Stylized Surface with Outline’ Shader
 
-_Stylized Surface with Outline_ shader, being the same as the regular _Stylized Surface_ shader in a nutshell, has an additional option of... outlines.
+_Stylized Surface with Outline_ shader, being the same as the regular _Stylized Surface_ shader in a nutshell, has an additional option of... outlines. [_Stylized Surface_ info is here](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#31-stylized-surface-shader).
 
 - _Outline Color_ picks up the color of the outline.  
 - _Outline Width_ determines how thick the outline is.  
@@ -326,33 +326,62 @@ First of all, you'll need a surface to place a material with _Water_ shader on. 
 
 Let's float through the parameters of the shader.
 
-- _Shallow._ Color at the top of the water.  
-- _Deep._ Color below the surface.  
-- _Clearness._ How transparent the color of the water is. The transparency doesn't affect other parameters like foam or refractions. This allows you to achieve awesome weird optical effects.  
-- _Shadow Strength._ How visible the shadow is.  
-- _Crest._ The color of the wave. It helps accentuate individual waves.  
-- _Crest size._ How big of a part of a wave is colored.  
-- _Crest transition._ How smoothly the accentuated wave blends into overall color of the water.  
-- _Fade distance._ TBD.  
-- _Depth._ TBD.  
-- _Shape._ The formula that determine how the waves are shaped and distributed across the mesh. Round is for concentric round-shaped ripples; Grid is more linear movement; Pointy is for more pronounced individual wave peaks.  
-- _Speed._ How fast it moves along the Direction parameter.  
-- _Amplitude._ Sets deviation amount, or, how high it is.  
-- _Frequency._ Density of the effect.  
-- _Direction._ Direction of the motion.  
-- _Noise._ Adds nonlinearity to the _Shape_. Use it to make _Grid_, for example, more chaotic.  
-- _Source._ How the foam is being made — from texture or generated from noise.  
-- _Color._ Color value. Can be opaque or transparent.  
-- _Min Depth._ TBD.  
-- _Amount._ How often 'grains' occur.  
-- _Sharpness._ How smooth or sharp the foam is.  
-- _Scale._ How big the foam 'chunks' are.  
-- _Stretch X._ How stretched the foam is along X axis.  
-- _Stretch Y._ How stretched the foam is along Y axis.  
-- _Power._ Makes specular thin or thick. _Power_ value is a multiplier of 'Strength' parameter.  
-- _Strength._ How prominent the specular is.  
+**Shallow.** Color at the top of the water.  
 
-We've included a component called _Buoyancy_. The _Water_ shader deforms the water mesh, which in its turn moves the objects that have _Buoyancy_ component on them. More info can be found in the Buoyancy part of Additional Scripts section of this manual.
+**Deep.** Color below the surface.  
+
+Below is a little chart, which may came handy for understanding the meaning of the parameters for the coloring part of the _Water_ shader.
+![Water Gradient Chart](FlatKit_Manual_Images/water-gradient-chart.png)
+> Water Gradient chart
+
+**Clearness.** How transparent the color of the water is. The transparency doesn't affect other parameters like foam or refractions. This allows you to achieve awesome weird optical effects.
+
+**Shadow Strength.** How visible the shadow is.
+
+**Crest.** The color of the wave. It helps accentuate individual waves.
+
+**Crest size.** How big of a part of a wave is colored (accentuated).
+
+**Crest transition.** How smoothly the accentuated wave blends into overall color of the water.
+
+**Fade distance.** TBD.
+
+**Depth.** TBD.
+
+**Shape.** The formula that determine how the waves are shaped and distributed across the mesh.
+
+*   **Round** is for concentric round-shaped ripples;
+*   **Grid** is more linear (comb-looking) movement;
+*   **Pointy** is for more pronounced individual wave peaks.  
+
+**Speed.** How fast it moves along the Direction parameter.  
+
+**Direction.** Direction of the motion. This parameter works tightly with _Speed_. Using these two you can make ponds, pools, seas etc (static water) and rivers, waterfalls etc (streaming water)
+
+**Amplitude.** Sets deviation amount, or, how high it is. Use this parameter to set the height of the waves. Positive values 'raise' the waves effect above the base point, negative values make the waves lower than the initial base point.
+
+**Frequency.** Density of the effect.  
+
+**Noise.** Adds nonlinearity to the _Shape_. Use it to make _Grid_, for example, more chaotic.  
+
+**Source.** How the foam is being made — from texture or generated from noise. Please, select one of the following parameters.
+*   **Texture.** If you choose _Texture_ source, you'll have an option to import your own, preferrably seamlessly tiling, texture, or use one of the included ones — we shortlisted the best from dozens of originally pre-generated .png textures to come with Flat Kit. If you are planning to use your own textures, we suggest you to put them into a single (red) color in the import settings to save memory.
+*   **Noise.** The foam shape comes from generative noise.
+
+**Color.** Color value of the foam. Can be opaque or transparent.  
+**Min Depth.** TBD.  
+**Amount.** How often 'grains' occur.  
+**Sharpness.** How smooth or sharp the foam is.  
+**Scale.** How big the foam 'chunks' are.  
+**Stretch X.** How stretched the foam is along X axis. 
+**Stretch Y.** How stretched the foam is along Y axis.
+
+> **TIP.** Sometimes we find it useful to generously stretch the foam along one of the axis, so that the foam becomes a set of straight lines. This effect definitely can have its use.
+
+**Power.** Makes specular thin or thick. _Power_ value is a multiplier of 'Strength' parameter.  
+**Strength.** How prominent the specular is.  
+
+We've included a component called _Buoyancy_. The _Water_ shader deforms the water mesh, which in its turn moves the objects that have _Buoyancy_ component on them. More info can be found in the [Buoyancy](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#53-buoyancy) part of Additional Scripts section of this manual.
 
 > **TIP.** Place the plane somewhere behind of in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
 
@@ -360,7 +389,7 @@ We've included a component called _Buoyancy_. The _Water_ shader deforms the wat
 
 Terrains are great in Unity. But it’s not so trivial to work with terrain materials, that is why we added a separate shader that deals with the Unity Terrain system.
 
-If you are not familiar with Unity Terrains, please refer to their documentation. In two words, terrain uses Terrain Layers, something like containers of all textures — diffuse, normal, bump etc. FlatKit _Terrain_ shader sees those textures and applies its own colors onto the layers. Since we are talking about the flat look, no normal or bump maps are required. In order to have full control over colors of the terrain, you can load a plain white texture as your terrain layer (on _Valley demo_ scene we did so). All the colors will be available from the shader interface, they will be multiplied with your white texture, resulting in the pure color you choose. If you are already familiar with _Stylized Surface_ shader, _Terrain_ shader interface won’t be news to you.
+If you are not familiar with Unity Terrains, please refer to their documentation. In two words, terrain uses Terrain Layers, something like containers of all textures — diffuse, normal, bump etc. FlatKit _Terrain_ shader sees those textures and applies its own colors onto the layers. Since we are talking about the flat look, no normal or bump maps are required. In order to have full control over colors of the terrain, you can load a plain white texture as your terrain layer (on _Valley demo_ scene we did so). All the colors will be available from the shader interface, they will be multiplied with your white texture, resulting in the pure color you choose. If you are already familiar with _Stylized Surface_ shader, _Terrain_ shader interface won’t be news to you. [_Stylized Surface_ info is here](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#31-stylized-surface-shader).
 
 This is an appropriate time to talk about Height Gradient parameter Flat Kit offers. You can use it as a part of Stylized Surface, Stylized Surface Cutout and Terrain shaders. Height Gradient works wonders on terrain in context of flat shading.
 
@@ -380,6 +409,8 @@ The _Wanderer_ demo scene includes _LightPlane_ shader implemented not only as f
 
 ![LightPlane Shader. Inspector panel interface](FlatKit_Manual_Images/light_plane_interface.png)
 > LightPlane Shader. Inspector panel interface
+
+The parameters of the _LightPlane_ shader are:
 
 - _Depth Fade Distance_ ;  
 - _Camera Distance Fade Far_ ;  
