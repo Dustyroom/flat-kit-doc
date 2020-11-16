@@ -178,12 +178,10 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 ![Rim. Inspector interface](FlatKit_Manual_Images/rim_parameters.png)
 > _Rim_. Inspector interface
 
-
 You can think of Rim as some kind of inner shadow and/or as inner glow. In one of the _Fruit Vase_ demo scenes, there is an example of extensive use of Rim as an outline. On _Blueprint Grid_ demo scene _Rim_ is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute _Curve mode_ or _Extra Cel parameter_. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, most of them have many use cases.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of _Stylized Surface_ shader with _None_ mode selected (meaning no straightforward shadows are applied), using orange color, and only _Rim_ parameter enabled. The results are variations of Rim section only. As you see, the _Rim_ alone is quite a creative tool. Imagine adding some creative _Specular_ and _Height Gradient_...
 
 ![Rim only, usage axamples](FlatKit_Manual_Images/rim_examples_suzanne.png)
 > Variety of uses of _Rim_ parameter alone on Suzanne the Blender Monkey. Interface of _Stylized Surface_ shader with _‘None’_ cel shading mode
-
 
 Although _Rim_ option is creatively useful, there are two more obvious ways to add an outline using Flat Kit: to use _‘Stylized Surface with Outline’_ shader and/or to use _‘Outline Image Effect’_ camera component/renderer feature. We’ll talk about both of them later in this manual.
  
@@ -347,12 +345,12 @@ Below is a little chart, which may came handy for understanding the meaning of t
 
 **Crest transition.** How smoothly the accentuated wave blends into overall color of the water.
 
+----------------------
 ### Depth
 
 **Fade distance.** TBD.
 
 **Depth.** TBD.
-
 
 ----------------------
 ### Wave geometry
@@ -421,6 +419,7 @@ Below is a little chart, which may came handy for understanding the meaning of t
 
 **Strength.** How prominent the specular is.  
 
+----------------------
 We've included a component called _Buoyancy_. The _Water_ shader deforms the water mesh, which in its turn moves the objects that have _Buoyancy_ component on them. More info can be found in the [Buoyancy](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#53-buoyancy) part of Additional Scripts section of this manual.
 
 > **TIP.** Place the plane somewhere behind of in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
@@ -698,11 +697,9 @@ Enable the Post Processing flat on the camera inspector:
 Email  
 info@dustyroom.com
 
-Dustyroom website
-dustyroom.com
+[Dustyroom website](http://dustyroom.com)
 
-Twitter
-twitter.com/_dstrm
+[Twitter](https://twitter.com/_dstrm)
 
 
 
