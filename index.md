@@ -434,7 +434,7 @@ To Below is a little chart, which may came handy for understanding the meaning o
 **Scale.** How big is the noise that creates the refraction.
 
 ----------------------
-We included a component called _Buoyancy_. The _Water_ shader deforms the water mesh, which in its turn moves the objects that have _Buoyancy_ component on them. More info can be found in the [Buoyancy](flat-kit-doc/blob/master/index.md#53-buoyancy) part of Additional Scripts section of this manual.
+We included a component called _Buoyancy_. The _Water_ shader deforms the water mesh, which in its turn moves the objects that have _Buoyancy_ component on them. More info can be found in the [Buoyancy](index.md#53-buoyancy) part of Additional Scripts section of this manual.
 
 > **TIP.** Place the plane somewhere behind of in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
 
