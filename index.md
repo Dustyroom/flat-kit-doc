@@ -197,7 +197,7 @@ Although _Rim_ option is creatively useful, there are two more obvious ways to a
 - _Size_ determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.  
 - _Gradient Angle_ rotates the gradient.
 
-A bit more about the nature and use of _Height Gradient_ is covered in the [_‘Terrain’ Shader_](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#36-terrain-shader) section of this manual.
+A bit more about the nature and use of _Height Gradient_ is covered in the [_‘Terrain’ Shader_](index.md#36-terrain-shader) section of this manual.
 
 *_Setting the colors from scripts_*. The following are the color field names for manipulation via the code for tweening, randomization etc:
 *   `_Color`: the primary color, “Color” in the inspector,
@@ -290,14 +290,14 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 
 ## 3.3. ‘Stylized Surface with Outline’ Shader
 
-_Stylized Surface with Outline_ shader, being the same as the regular _Stylized Surface_ shader in a nutshell, has an additional option of... outlines. [_Stylized Surface_ info is here](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#31-stylized-surface-shader).
+_Stylized Surface with Outline_ shader, being the same as the regular _Stylized Surface_ shader in a nutshell, has an additional option of... outlines. [_Stylized Surface_ info is here](index.md#31-stylized-surface-shader).
 
 - _Outline Color_ picks up the color of the outline.  
 - _Outline Width_ determines how thick the outline is.  
 - _Outline Depth Offset_ moves the outline inwards or outwards an object.
 
 Remember, in addition to this shader Flat Kit has also a global _Outline_ Image Effect applied per scene (in URP) and per camera (in Built-In RP).  
-In the [Outline Image Effect](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#42-outline-image-effect) chapter in this manual you can find some useful specific and general info.
+In the [Outline Image Effect](index.md#42-outline-image-effect) chapter in this manual you can find some useful specific and general info.
 
 ![‘Stylized Surface with Outline’ shader](FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
 > ‘Stylized Surface with Outline’ shader
@@ -442,7 +442,7 @@ We included a component called _Buoyancy_. The _Water_ shader deforms the water 
 
 Terrains are great in Unity. But it’s not so trivial to work with terrain materials, that is why we added a separate shader that deals with the Unity Terrain system.
 
-If you are not familiar with Unity Terrains, please refer to their documentation. In two words, terrain uses Terrain Layers, something like containers of all textures — diffuse, normal, bump etc. FlatKit _Terrain_ shader sees those textures and applies its own colors onto the layers. Since we are talking about the flat look, no normal or bump maps are required. In order to have full control over colors of the terrain, you can load a plain white texture as your terrain layer (on _Valley demo_ scene we did so). All the colors will be available from the shader interface, they will be multiplied with your white texture, resulting in the pure color you choose. If you are already familiar with _Stylized Surface_ shader, _Terrain_ shader interface won’t be news to you. [_Stylized Surface_ info is here](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#31-stylized-surface-shader).
+If you are not familiar with Unity Terrains, please refer to their documentation. In two words, terrain uses Terrain Layers, something like containers of all textures — diffuse, normal, bump etc. FlatKit _Terrain_ shader sees those textures and applies its own colors onto the layers. Since we are talking about the flat look, no normal or bump maps are required. In order to have full control over colors of the terrain, you can load a plain white texture as your terrain layer (on _Valley demo_ scene we did so). All the colors will be available from the shader interface, they will be multiplied with your white texture, resulting in the pure color you choose. If you are already familiar with _Stylized Surface_ shader, _Terrain_ shader interface won’t be news to you. [_Stylized Surface_ info is here](index.md#31-stylized-surface-shader).
 
 This is an appropriate time to talk about Height Gradient parameter Flat Kit offers. You can use it as a part of Stylized Surface, Stylized Surface Cutout and Terrain shaders. Height Gradient works wonders on terrain in context of flat shading.
 
@@ -547,7 +547,7 @@ Here is an example of choosing when to render the outlines. We took _Wanderer_ d
 !['Before Rendering Post Processing' chosen in Render Event list, 'Outlines Only' parameter ticked](FlatKit_Manual_Images/before_rendering_post_processing_outlines_only.png)
 > _'Before Rendering Post Processing'_ chosen in _Render Event_ list, _'Outlines Only'_ parameter ticked
 
-Also, in URP you have an ability to chain and change the orders of Image effects. More info in the chapter [Flat Kit Image Effects in URP](https://github.com/Dustyroom/flat-kit-doc/blob/master/index.md#83-flat-kit-image-effects-in-urp)
+Also, in URP you have an ability to chain and change the orders of Image effects. More info in the chapter [Flat Kit Image Effects in URP](index.md#83-flat-kit-image-effects-in-urp)
 
 Please, note that _Outline Image Effect_ is a global effect, as it is used as the camera component in Built-In RP and as a scene's Renderer Feature in URP, which is suitable for a consistent look of your project. If you would like to outline a particular object on your scene, you can engage the shader instead — ‘Stylized Surface with Outline’ shader.
 
