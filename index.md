@@ -485,12 +485,31 @@ The _Wanderer_ demo scene includes _LightPlane_ shader implemented not only as f
 
 The parameters of the _LightPlane_ shader are:
 
-- _Depth Fade Distance_ ;  
-- _Camera Distance Fade Far_ ;  
-- _Camera Distance Fade Close_ ;  
-- _UV Fade X_ ;  
-- _UV Fade Y_ ;  
-- _Allow Alpha Overflow_ .
+- _Depth Fade Distance_ determines how the shader's transparency behaves depending on camera's distance; 
+
+- _Camera Distance Fade Far_ controls the farther edge of the gradient from opaque to transparent (see pic below).
+
+- _Camera Distance Fade Close_ controls the closer edge of the gradient from opaque to transparent (see pic below).
+
+![LightPlane — Camera Distance parameters](FlatKit_Manual_Images/lightplane-camera-dist.png)
+> _LightPlane_ — _Camera Distance X and Y_ parameters
+
+- _UV Fade X_ controls transparency on the sides along X axis of the plane/mesh (see pic below);  
+
+![LightPlane — UV Fade X parameter](FlatKit_Manual_Images/lightplane-uv-fade-dist-x.png)
+> _LightPlane_ — _UV Fade X_ parameter
+
+- _UV Fade Y_ controls transparency on the sides along Y axis of the plane/mesh (see pic below); 
+
+![LightPlane — UV Fade Y parameter](FlatKit_Manual_Images/lightplane-uv-fade-dist-y.png)
+> _LightPlane_ — _UV Fade Y_ parameter
+
+When combined, _UV Fade X_ and _UV Fade Y_ can make a fluffy blob.
+
+![LightPlane — UV Fade X and UV Fade Y parameters combined](FlatKit_Manual_Images/lightplane-uv-fade-dist-x-y.png)
+> _LightPlane_ — _UV Fade X_ and _UV Fade Y_ parameters combined
+
+- _Allow Alpha Overflow_ makes alpha more than '1', used for HDR, looks nice with some bloom.
 
 ## 3.8. GPU Instancing
 
