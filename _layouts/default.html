@@ -47,10 +47,14 @@
         
       </header>
       <section>
-
-      {% include toc.html html=content h_min=1 h_max=2 %}
-      {{ content }}
-
+        <div style="witdh: 100%;">
+          <div style="float:left; width: 50%;">
+            {% include toc.html html=content h_min=1 h_max=2 %}
+          </div>
+          <div style="float:left; width: 50%;">
+            {{ content }}
+          </div>
+        </div>
       </section>
       <footer>
         {% if site.github.is_project_page %}
