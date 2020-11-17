@@ -320,6 +320,9 @@ This is a simple method to fill the sky of your scene.
 
 Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird things with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated at first, it is intuitive and has helping tooltips on the parameters. 
 
+![Water shader interface](FlatKit_Manual_Images/water-shader-interface.png)
+> _Water_ shader interface
+
 First of all, you'll need a surface to place a material with _Water_ shader on. A plane with vertex grid will do fine. The more high resolution the water mesh is the smoother and well-defined the waves will be. For extra interest you can slightly displace the vertices while editing the mesh. With Flat Kit you get a few such models.
 
 The controls are grouped into the logical sections. Let's float through the parameters of the shader.
@@ -332,7 +335,7 @@ The controls are grouped into the logical sections. Let's float through the para
 ![Water color source dropdown](FlatKit_Manual_Images/water-color-source-dropdown.png)
 > Water color source dropdown
 
-*   **Linear.** This one allows to use just colors for _Shallow_ and _Deep_ parts of water. The effect is simple as there is no interpolation between these two.
+*   **Linear.** This one allows to use just colors for _Shallow_ and _Deep_ parts of water. This effect is simple one — just two colors.
 
 ![Water color source dropdown](FlatKit_Manual_Images/water-color-source-linear.png)
 > Water color source - linear
@@ -343,10 +346,21 @@ If _Linear_ color source is chosen, two exclusive to this mode parameters appear
 
 **Deep.** Color below the surface.  
 
-*   **Gradient Texture.** Use this one if you are looking for something fancy. You create a gradient using a usual color ramp, add up to 8 color stops onto the ramp and save it as a texture. Now you have a _Shallow_ color, _Deep_ color and anything you want in between.
+*   **Gradient Texture.** Use this one if you are looking for something fancy. You create a gradient using a usual color ramp, add up to 8 color stops onto the ramp and save it as a texture. Now you have a _Shallow_ color, _Deep_ color and anything you want in between (see _Pool_ demo scene).
 
 ![Water color source — gradient](FlatKit_Manual_Images/water-color-source-gradient.png)
-> Water color source - gradient. Clicking on the color window opens the ramp editor.
+> Water color source - gradient. Clicking on the color window opens the Gradient Editor.
+
+When you click on the white color field, the Gradient Editor will show up.
+
+![Gradient Editor](FlatKit_Manual_Images/water-color-gradient-editor.png)
+> Gradient Editor. Edit the gradient and close the window, then save the texture.
+
+After you finished editing the color gradient, click the 'Export' button to save the texture somewhere on the disk. We recommend to name the textures with the names beginning on something like 'water_*' or 'awesome_gradient_*' because later you'll have these textures stacked up one below another in the texture selection window, and it will be much quicker to scroll through them.  
+When you have your texture saved, the material will be instantly filled with this gradient.
+
+![Export Button](FlatKit_Manual_Images/water-gradient-export-button.png)
+> Export Button. Click it and save the texture to the disk.
 
 **Shallow Depth.** This is a lowest point of _Shallow_ part. It is a point where _Shallow_ part merges with the top of the gradient.
 
