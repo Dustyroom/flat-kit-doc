@@ -346,7 +346,7 @@ If _Linear_ color source is chosen, two exclusive to this mode parameters appear
 
 **Deep.** Color below the surface.  
 
-*   **Gradient Texture.** Use this one if you are looking for something fancy. You create a gradient using a usual color ramp, add up to 8 color stops onto the ramp and save it as a texture. Now you have a _Shallow_ color, _Deep_ color and anything you want in between (see _Pool_ demo scene).
+*   **Gradient Texture.** Use this one if you are looking for something fancy. You can create a depth gradient consisting of several colors. Using a Gradient Editor ramp, you can add up to 8 color stops onto the ramp. Now you have a _Shallow_ color, _Deep_ color and anything you want in between (see _Pool_ demo scene).
 
 ![Water color source — gradient](FlatKit_Manual_Images/water-color-source-gradient.png)
 > Water color source - gradient. Clicking on the color window opens the Gradient Editor.
