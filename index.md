@@ -356,7 +356,7 @@ When you click on the white color field, the Gradient Editor will show up.
 ![Gradient Editor](FlatKit_Manual_Images/water-gradient-editor.png)
 > Gradient Editor. Edit the gradient and close the window, then save the texture.
 
-After you finished editing the color gradient, click the 'Export' button to save the texture somewhere on the disk. We recommend to name the textures with the names beginning on something like 'water_*' or 'awesome_gradient_*' because later you'll have these textures stacked up one below another in the texture selection window, and it will be much quicker to scroll through them.  
+After you finished editing the color gradient, click the 'Export' button to save the texture somewhere on the disk. We recommend to name the textures with the names beginning on something like 'water...' or 'awesome_gradient...' because later you'll have these textures stacked up one below another in the texture selection window, and it will be much quicker to scroll through them.  
 When you have your texture saved, the material will be instantly filled with this gradient.
 
 ![Export Button](FlatKit_Manual_Images/water-gradient-export-button.png)
@@ -555,6 +555,8 @@ Outline Image effect is, essentially, a contour on the objects on the scene. It 
 - _Min_ and _Max Color Thresholds_ let you set the least and the strongest differences in color of the mesh to make the outline appear. This feature is URP only.  
 - _Outline Only_ renders the outlines without meshes themselves, making it a kind of wireframe renderer. This feature is URP only.
 - _Render Event_ This is one quite powerful feature available on the interface. It lets you choose an event after which the outlines are applied. It allows to apply outlines over the transparent objects. Also, it allows you to stack the _Outline Image Effect_ with other post effects. This feature is URP only.
+
+You'll need to *press 'Play'* to see the effect of _Render Event_.
 
 ![Outline Image Effect Render Event list](FlatKit_Manual_Images/outline-image-effect-render-events.png)
 > Outline Image Effect Render Event list
