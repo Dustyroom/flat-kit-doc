@@ -4,8 +4,10 @@
 @import "{{ site.theme }}";
 
 // https://github.com/pages-themes/minimal/blob/master/_sass/jekyll-theme-minimal.scss
-/*
-section {
-  width:800px;
+.wrapper {
+  width:960px;  // default: 860px
 }
-*/
+
+section {
+  width:650px;  // default: 500px
+}
