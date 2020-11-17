@@ -3,6 +3,7 @@
 
 @import "{{ site.theme }}";
 
-.inner {
-  max-width: 75%;
+// https://github.com/pages-themes/minimal/blob/master/_sass/jekyll-theme-minimal.scss
+section {
+  width:800px;
 }
