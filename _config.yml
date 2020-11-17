@@ -1,4 +1,13 @@
+# https://github.com/mmistakes/jekyll-theme-basically-basic/blob/master/_config.yml
 title: Flat Kit - Toon Shading and Water
 description: Documentation
 show_downloads: false
+google_analytics:
+logo: FlatKit_Manual_Images/flat_kit_manual_header.png
+search: true
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
 theme: jekyll-theme-minimal
