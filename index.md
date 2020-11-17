@@ -1,7 +1,5 @@
 
-![header](FlatKit_Manual_Images/flat_kit_manual_header.png)
-
-If you’ve got a question regarding Flat Kit, please read through the Frequently Asked Questions, and try searching for the answers here. If the question is not covered, please shoot an email to info@dustyroom.com. If you find a bug, it really helps us if you include steps to reproduce it. Please mind that we get lots of messages daily, be patient - we’re getting to it. Also, if you've got a feature you’d like to see implemented, let us know — some of the great ones came from the suggestions. Flat Kit is a vast field of stylistic possibilities, so please make sure you skim trough this manual, it may help you understand all the features better and give you a few ideas.
+If you’ve got a question regarding Flat Kit, **please read through the Frequently Asked Questions**, and try searching for the answers here. If the question is not covered, please shoot an email to *info@dustyroom.com*. If you find a bug, it really helps us if you include steps to reproduce it. Please mind that we get lots of messages daily, be patient - we’re getting to it. Also, if you've got a feature you’d like to see implemented, let us know — some of the great ones came from the suggestions. Flat Kit is a vast field of stylistic possibilities, so please make sure you skim trough this manual, it may help you understand all the features better and give you a few ideas.
 
 # Frequently Asked Questions (FAQs)
 
@@ -36,7 +34,7 @@ If you’ve got a question regarding Flat Kit, please read through the Frequentl
 > **A.** First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, shoot a mail to info@dustyroom.com
 
 #### Q. How do I get projectors to work with the Stylized Surface shader?  
-> **A.** Please uncomment this line in the StylizedSurface.shader:
+> **A.** Please comment out this line in the StylizedSurface.shader:
 ```
 #pragma skip_variants POINT_COOKIE DIRECTIONAL_COOKIE
 ```
