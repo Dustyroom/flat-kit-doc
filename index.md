@@ -67,14 +67,14 @@ Flat Kit was made with optimized and fast workflow in mind, so that one could fu
 * One task could be done in different ways. It is a multi-purpose set of shaders;
 * Some outstanding graphical results can be achieved in minutes (given that you have your models ready, there are lots in FlatKit);
 * There is always an element of you-didn’t-think-it-can-be-done-this-way surprise thanks to FlatKit deep yet streamlined interface.  
-For example, let’s take fog. Fog is usually a big part of any 3D environment, isn’t it? There are lots of methods to implement fog into the scene, often complex and complicated. With Flat Kit, we decided to make it as convenient as possible for the user end. So, the fog can be done in two ways: using **Fog Image Effect** post-effect / camera component or/and using **LightPlane** shader.
+For example, let’s take fog. Fog is usually a big part of any 3D environment, isn’t it? There are lots of methods to implement fog into the scene, often complex and complicated. With Flat Kit, we decided to make it as convenient as possible for the user end. So, the fog can be done in two ways: using **Fog Image Effect** post-effect/camera component/renderer feature or/and using **LightPlane** shader (see _Wanderer_ demo scene). One more way would be to use **Water** shader. Although the latter is not necessarily an obvious choice, it still is capable of doing this.
 
 We are going to explain how these work and what they are down in the manual. Both ways suit different needs, but they really do compliment each other.
 
-Another example of the multi-purpose nature of our shaders is cel shading itself. Now, it’s going to take a whole chapter of this manual to elaborate on cel shading. For now it’s only worth mentioning that the same or similar results can be made using different parameters of the shader’s interface.
-It’s important, because apart from the expected ‘Cel Shade parameter’, Flat Kit also has a bunch of additional settings to explore. Each additional parameter of the shader adds an extra dimension of possibilities. It’s like having purple color paint, then you have red, and blue, and yellow. Purple is cool by itself and you already have it, but you can make it up by mixing blue and red. Or you can spare blue to match with yellow — to get green. In any case you get your purple, and also, simultaneously — other combinations, often surprising and inspiring. We’ll talk about the importance of such potential later in the manual.
+Another example of the multi-purpose nature of our shaders is cel shading itself. Now, it would take a whole chapter of this manual to elaborate on cel shading. For now it’s only worth mentioning that the same or similar results can be made using different parameters of the shader’s interface.
+It’s important, because apart from the expected ‘Cel Shade parameter’, Flat Kit also has a bunch of additional settings to explore. Each additional parameter of the shader adds an extra dimension of possibilities. All the tools designed for cel shading can do bread and butter stuff, as well as add lots of juice. But what's important is that when these cel shading tools are combined, they are much more than the sum of the components — they synergize. We’ll talk about the importance of such a potential later in the manual.
 
-One of the big advantages of using these shaders is the fact that you don’t have to guess how the colors will look on your scene. If you want precision and accuracy — you have it. Moreover, if you want something unpredictable and you are trying to make your scene look different to spark your inspiration and imagination, but not sure how, you can do this too! Remember, this is a set of shaders selected to complement each other.
+One of the big advantages of using these shaders is the fact that you don’t have to guess how the colors will look on your scene. If you want precision and accuracy — you have it. Moreover, if you want something unpredictable and you are trying to make your scene look different to spark your inspiration and imagination, but not sure how, you can do this, too! Sometimes you'll find youself saving lots of temporary 'cool stuff' in 'later' folder while working on something specific, because pleasant surprises will keep popping. Remember, this is a set of shaders selected to complement each other.
 
 ![Flat Kit structural view chart](FlatKit_Manual_Images/FlatKit-Structure-Chart.png)
 > Flat Kit structural view chart. 
@@ -85,8 +85,8 @@ One of the big advantages of using these shaders is the fact that you don’t ha
 Flat Kit is fully self-contained and does not depend on any external assets.  
 If you do not need demo scenes, example materials and models you may skip importing the Demos directory in the asset.  
 The easiest way to get started with the asset is to dig into the demo scenes.  
-For Built-In RP it may take a while for Unity to import the asset — this is normal. Under the hood, Unity needs to generate all shader variants that are used in the demo scenes.  
-On the 3D models side, it’s important that you make normals ‘smooth’ for your meshes. If you import someone else's models and can’t edit the object in 3D editor, at least try to calculate normals in Unity — in the import settings of the model. It should work anyway, but sometimes the difference can be obvious, especially on objects with rounded corners.  
+For Built-In RP it may take a while for Unity to import the asset — this is normal. Under the hood, Unity needs to generate all shader variants that are used in the demo scenes. For URP it is virtually immediate.  
+On the 3D models side, it’s important that you decide whether you would like making normals ‘smooth’ or 'sharp' for your meshes in a 3D editor, as the result will be different in either case. If you import someone else's models and can’t edit the object in 3D editor, at least try to calculate normals in Unity — in the import settings of the model. The shaders should work regardless, but sometimes the difference can be obvious, especially on objects with rounded corners.  
 **Note:** Our demos were created in **Linear color space** (a setting found in Project Settings). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
 
 Below are the instructions on how to import Flat Kit.
@@ -526,15 +526,15 @@ Outline Image effect is, essentially, a contour on the objects on the scene. It 
 - _Thickness_ makes the outline thicker or thinner. It controls how wide or narrow the line of the outline is.  
 - _Use Depth_ enables or disables taking the scene's depth data into calculating the outlines. This parameter outlines the outer contour of the objects with depth threshold control.  
 - _Use Normals_ creates outlines for “inner” parts of the objects, meaning, for those that are inside the boundaries of the object, for every given camera perspective. The effect depends on the geometry of an object. So, having proper normals here is important. There is a Normals Threshold control. It's discussed a bit more a little further down.  
-- _Use Color_ enables or disables taking all color difference data on the scene when calculating the outlines. 
+- _Use Color_ enables or disables taking all color difference data on the scene when calculating the outlines. This feature is URP only.
 
 **Advanced settings** section hosts the parameters to adjust the tools above as well as a few more controls. The thresholds parameters are basically the limits that determine the ranges in which the effects take places. For example, the higher Min Depth value is, the further away from camera the outline will be generated. The lower Max Depth value is, the sooner outlines stop occurring.  
 
 - _Min Depth Threshold_ and _Max Depth Threshold_ determine the range of depth differences where outline should be applied. Lower values draw lines “inside” the scene resulting in a more beveled image. Higher values have more flat effect.  
 - _Min Normals Threshold_ and _Max Normals Threshold_ determine the range of normals edges to be outlined. Lower values increase the amount of affected normals, leading to more stroked effect. Higher values decrease the amount of affected normals, leading to flatter look. Basically, it determines min and max angles of the normals for the outlines to occur.  
-- _Min_ and _Max Color Thresholds_ let you set the least and the strongest differences in color of the mesh to make the outline appear.  
-- _Outline Only_ renders the outlines without meshes themselves, making it a kind of wireframe renderer.  
-- _Render Event_ This is one quite powerful feature available on the interface. It lets you choose an event after which the outlines are applied. It allows to apply outlines over the transparent objects. Also, it allows you to stack the _Outline Image Effect_ with other post effects.
+- _Min_ and _Max Color Thresholds_ let you set the least and the strongest differences in color of the mesh to make the outline appear. This feature is URP only.  
+- _Outline Only_ renders the outlines without meshes themselves, making it a kind of wireframe renderer. This feature is URP only.
+- _Render Event_ This is one quite powerful feature available on the interface. It lets you choose an event after which the outlines are applied. It allows to apply outlines over the transparent objects. Also, it allows you to stack the _Outline Image Effect_ with other post effects. This feature is URP only.
 
 ![Outline Image Effect Render Event list](FlatKit_Manual_Images/outline-image-effect-render-events.png)
 > Outline Image Effect Render Event list
@@ -542,14 +542,16 @@ Outline Image effect is, essentially, a contour on the objects on the scene. It 
 Here is an example of choosing when to render the outlines. We took _Wanderer_ demo scene and applied an example _Outline_ Image Effect. After that we tried a few different items from the _Render Event_ list.
 
 !['After Rendering Skybox' chosen in Render Event list](FlatKit_Manual_Images/after_rendering_skybox.png)
-> _'After Rendering Skybox'_ chosen in Render Event list
+> _'After Rendering Skybox'_ chosen in Render Event list. _Wanderer_ demo scene.
 
 !['Before Rendering Post Processing' chosen in Render Event list, 'Outlines Only' parameter ticked](FlatKit_Manual_Images/before_rendering_post_processing_outlines_only.png)
-> _'Before Rendering Post Processing'_ chosen in _Render Event_ list, _'Outlines Only'_ parameter ticked
+> _'Before Rendering Post Processing'_ chosen in _Render Event_ list, _'Outlines Only'_ parameter ticked.
 
-Also, in URP you have an ability to chain and change the orders of Image effects. More info in the chapter [Flat Kit Image Effects in URP](index.md#83-flat-kit-image-effects-in-urp)
+Also, in URP you have an ability to chain and change the orders of Image effects, but it's a general Unity information. More info in the chapter [Flat Kit Image Effects in URP](index.md#83-flat-kit-image-effects-in-urp)
 
 Please, note that _Outline Image Effect_ is a global effect, as it is used as the camera component in Built-In RP and as a scene's Renderer Feature in URP, which is suitable for a consistent look of your project. If you would like to outline a particular object on your scene, you can engage the shader instead — ‘Stylized Surface with Outline’ shader.
+
+If you would like to exclude an object from an outline pass, considering that you are using one of the Stylized Surface shaders, and you are in a URP project, please go to the interface of the shader and switch rendering to 'Transparent'. It won't change the look of the shader but will exclude it from the outline pass. You can control this too as described a few paragraphs above in Render Event list part.
 
 Some general info. Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. It can be done in a 3d editor. For example, here's how to do it in Blender.
 
