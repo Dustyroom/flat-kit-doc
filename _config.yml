@@ -1,6 +1,8 @@
 # https://github.com/mmistakes/jekyll-theme-basically-basic/blob/master/_config.yml
 title: Flat Kit - Toon Shading and Water
 description: Documentation
+twitter_username: _dstrm
+email: info@dustyroom.com
 show_downloads: false
 google_analytics:
 logo: FlatKit_Manual_Images/flat_kit_manual_header.png
