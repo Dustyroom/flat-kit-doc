@@ -353,7 +353,7 @@ If _Linear_ color source is chosen, two exclusive to this mode parameters appear
 
 When you click on the white color field, the Gradient Editor will show up.
 
-![Gradient Editor](FlatKit_Manual_Images/water-color-gradient-editor.png)
+![Gradient Editor](FlatKit_Manual_Images/water-gradient-editor.png)
 > Gradient Editor. Edit the gradient and close the window, then save the texture.
 
 After you finished editing the color gradient, click the 'Export' button to save the texture somewhere on the disk. We recommend to name the textures with the names beginning on something like 'water_*' or 'awesome_gradient_*' because later you'll have these textures stacked up one below another in the texture selection window, and it will be much quicker to scroll through them.  
@@ -366,7 +366,7 @@ When you have your texture saved, the material will be instantly filled with thi
 
 **Gradient Size.** This is the lowest (deepest) point ot the gradient. It is a point where it merges with the _Deep_ part.
 
-To Below is a little chart, which may came handy for understanding the meaning of the parameters for the coloring part of the _Water_ shader.
+Below is a little chart, which may came handy for understanding the parameters for the coloring part of the _Water_ shader.
 ![Water Gradient Chart](FlatKit_Manual_Images/water-gradient-chart.png)
 > Water Gradient chart
 
@@ -377,6 +377,8 @@ To Below is a little chart, which may came handy for understanding the meaning o
 ----------------------
 ### Crest
 
+Crest parameter colors the tips of the waves.
+
 **Color.** The color of the wave. It helps accentuate individual waves.
 
 **Size.** How big of a part of a wave is colored (accentuated).
@@ -385,6 +387,8 @@ To Below is a little chart, which may came handy for understanding the meaning o
 
 ----------------------
 ### Wave geometry
+
+This section determines the overall shape of the waves. All the controls for the mesh displacement can be found here.
 
 **Shape.** The formula that determine how the displacement of the waves is shaped and distributed across the mesh.
 *   **None** turns displacement waves off. As no waves are visible, the surface becomes flat.
@@ -438,6 +442,8 @@ To Below is a little chart, which may came handy for understanding the meaning o
 
 ----------------------
 ### Refraction
+
+Use these parameters to control the optical distortion of the water.
 
 **Frequency.** The frequency of noise that creates the refraction.
 
