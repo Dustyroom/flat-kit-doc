@@ -6,9 +6,6 @@ If you’ve got a question regarding Flat Kit, **please read through the Frequen
 #### Q. Does Flat Kit support URP?
 > **A.** Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see FlatKit in URP. As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
 
-#### Q. Why don't my lightmaps work properly?
-> **A.** This question is applicable to URP, in Built-In RP they work normally. It's our high-priority issue, so it should be fixed in one of the following updates.
-
 #### Q. There are missing scripts in some demo scenes on the main camera in URP.
 > **A.** This is an old one, so if you see the missing scripts, please update to the newer version of Flat Kit. In Built-In RP our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
 
