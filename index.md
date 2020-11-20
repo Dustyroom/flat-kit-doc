@@ -6,6 +6,9 @@ If you’ve got a question regarding Flat Kit, **please read through the Frequen
 #### Q. Does Flat Kit support URP?
 > **A.** Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see FlatKit in URP. As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
 
+#### Q. I get OutputAlpha error. What should I do?
+> **A.** Please, update Universal RP to 8.2 and/or update Unity to v. 2020.1
+
 #### Q. There are missing scripts in some demo scenes on the main camera in URP.
 > **A.** This is an old one, so if you see the missing scripts, please update to the newer version of Flat Kit. In Built-In RP our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
 
@@ -717,7 +720,7 @@ Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](in
 
 In URP, 'Fog' and 'Outline' image effects, included in Flat Kit, are no longer image effects, they have been adapted to become Render Features. Unlike the conventional image effects that are added to the camera game object, Render Features are added as stages to the Forward Renderer.
 
-To use Flat Kit effects, please first update the Universal RP to the version higher than 7.2.0.
+To use Flat Kit effects, please first update the Universal RP to the version higher than 8.2.0.
 
 Go to Window ▶︎ Package Manager ▶︎ Universal RP ▶︎ Select the version to upgrade to ▶︎ click Upgrade
 
