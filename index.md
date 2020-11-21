@@ -6,6 +6,9 @@ If you’ve got a question regarding Flat Kit, **please read through the Frequen
 #### Q. Does Flat Kit support URP?
 > **A.** Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see FlatKit in URP. As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
 
+#### Q. I get 'URP/Water/Editor/WaterEditor.cs(6,29): error CS0234 ...' error. What should I do?
+> **A.** Please import PostPtocessing v.2 into the project using the Package Manager. It's a temporary issue on our side, will be fixed in the next update.
+
 #### Q. I get OutputAlpha error. What should I do?
 > **A.** Please, update Universal RP to 8.2 and/or update Unity to v. 2020.1
 
