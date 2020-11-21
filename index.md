@@ -10,7 +10,7 @@ If you’ve got a question regarding Flat Kit, **please read through the Frequen
 > **A.** Please import PostPtocessing v.2 into the project using the Package Manager. It's a temporary issue on our side, will be fixed in the next update.
 
 #### Q. I get OutputAlpha error. What should I do?
-> **A.** Please, update Universal RP to 8.2 and/or update Unity to v. 2020.1
+> **A.** Please, update Universal RP to 8.2 and/or update Unity to v. 2020.1. This issue will be fixed in the coming update.
 
 #### Q. There are missing scripts in some demo scenes on the main camera in URP.
 > **A.** This is an old one, so if you see the missing scripts, please update to the newer version of Flat Kit. In Built-In RP our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
