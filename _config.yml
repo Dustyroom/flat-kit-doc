@@ -1,4 +1,5 @@
-# https://github.com/mmistakes/jekyll-theme-basically-basic/blob/master/_config.yml
+# https://github.com/mmistakes/minimal-mistakes/blob/master/_config.yml
+
 title: Flat Kit - Toon Shading and Water
 description: Documentation
 twitter_username: _dstrm
@@ -6,4 +7,10 @@ email: info@dustyroom.com
 show_downloads: false
 google_analytics: UA-53337407-20
 logo: FlatKit_Manual_Images/flat_kit_manual_header.png
+
+plugins:
+  - jekyll-include-cache
+
+
 theme: jekyll-theme-minimal
+# remote_theme: "mmistakes/minimal-mistakes@4.21.0"
