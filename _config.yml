@@ -12,5 +12,5 @@ plugins:
   - jekyll-include-cache
 
 
-# theme: jekyll-theme-minimal
-remote_theme: "mmistakes/minimal-mistakes@4.21.0"
+theme: jekyll-theme-minimal
+# remote_theme: "mmistakes/minimal-mistakes@4.21.0"
