@@ -54,8 +54,6 @@ If you’ve got a question regarding Flat Kit, **please read through the Frequen
 #### Q. Is it possible to apply all these awesome effects just onto the camera while using my own shaders?  
 > **A.** Cel shading is shader-driven, not camera, which means that Stylized Surface shaders have to be used for this. Outline and Fog image effects are used as camera components (Built-In RP) or as Render Features per scene (URP).
 
-
-
 # 1. Quick Overview
 
 Thank you for purchasing Flat Kit. We hope it will bring you some serious streams of inspiration and suit your wide variety of design needs.
@@ -83,7 +81,6 @@ One of the big advantages of using these shaders is the fact that you don’t ha
 ![Flat Kit structural view chart](FlatKit_Manual_Images/FlatKit-Structure-Chart.png)
 > Flat Kit structural view chart. 
 
-
 # 2. Quick start. Beginning to work with Flat Kit
 
 Flat Kit is fully self-contained and does not depend on any external assets.  
@@ -95,10 +92,10 @@ On the 3D models side, it’s important that you decide whether you would like m
 
 Below are the instructions on how to import Flat Kit.
 
-**Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.  
-**Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one.  
-**Step 3.** Once imported, go to Project tab ▶︎ Assets ▶︎ Flat Kit. You'll find the Flat Kit unitypackage file of your preferred RP. Double-click it.  
-**Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.
+- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.  
+- **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one.  
+- **Step 3.** Once imported, go to Project tab ▶︎ Assets ▶︎ Flat Kit. You'll find the Flat Kit unitypackage file of your preferred RP. Double-click it.  
+- **Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.
 
 ![Flat Kit import instructions](FlatKit_Manual_Images/flat-kit-import-1-instructions.png)
 > Flat Kit import instructions.  
@@ -331,7 +328,7 @@ First of all, you'll need a surface to place a material with _Water_ shader on. 
 
 The controls are grouped into the logical sections. Let's float through the parameters of the shader.
 
-----------------------
+----------------------------
 ### Colors
 
 **Source** There are two modes of the color input — _Linear_ and _Gradient Texture_.
@@ -462,6 +459,7 @@ We included a component called _Buoyancy_. The _Water_ shader deforms the water 
 
 > **TIP.** Place the plane somewhere behind of in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
 
+
 ## 3.6. ‘Terrain’ Shader
 
 Terrains are great in Unity. But it’s not so trivial to work with terrain materials, that is why we added a separate shader that deals with the Unity Terrain system.
@@ -476,7 +474,6 @@ If you work on some kind of an environmental landscape object but do not use Uni
 
 ![Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene](FlatKit_Manual_Images/height-gradient-example-01.png)
 > Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene
-
 
 ## 3.7. ‘LightPlane’ Shader
 
@@ -517,20 +514,21 @@ When combined, _UV Fade X_ and _UV Fade Y_ can make a fluffy blob.
 
 ## 3.8. GPU Instancing
 
-When the “Enable Instancing” option is enabled on a material, the shaders will perform GPU Instancing of the following fields that are common across all FlatKit shaders:
+When the `Enable Instancing` option is enabled on a material, the shaders will perform GPU Instancing of the following fields that are common across all Flat Kit shaders:
 
-- 1. _Color_ value (property name `_Color`),  
-- 2. Parameters of the cel shading mode _“Single”_  
-  - a. _Shaded Color_ value (property name `_ColorDim`),  
-- 3. Specular parameters, active when _“Enable Specular”_ is checked  
-  - a. _Specular Color_ value (property name `_FlatSpecularColor`),  
-  - b. _Specular Size_ value (property name `_FlatSpecularSize`),  
-  - c. _Edge Smoothness_ value (property name `_FlatSpecularEdgeSmoothness`),  
-- 4. Rim light parameters, active when _“Enable Rim”_ is checked  
-  - a. _Rim color_ value (property name `_FlatRimColor`),  
-  - b. _Rim size_ value (property name `_FlatRimSize`),  
-  - c. _Edge Smoothness_ value (property name `_FlatRimEdgeSmoothness`),  
-  - d. _Light Align_ value (property name `_FlatRimLightAlign`).
+1. _Color_ value (property name `_Color`),  
+1. Parameters of the cel shading mode _“Single”_  
+    - _Shaded Color_ value (property name `_ColorDim`),  
+1. Specular parameters, active when _“Enable Specular”_ is checked  
+    - _Specular Color_ value (property name `_FlatSpecularColor`),  
+    - _Specular Size_ value (property name `_FlatSpecularSize`),  
+    - _Edge Smoothness_ value (property name `_FlatSpecularEdgeSmoothness`),  
+1. Rim light parameters, active when _“Enable Rim”_ is checked  
+    - _Rim color_ value (property name `_FlatRimColor`),  
+    - _Rim size_ value (property name `_FlatRimSize`),  
+    - _Edge Smoothness_ value (property name `_FlatRimEdgeSmoothness`),  
+    - _Light Align_ value (property name `_FlatRimLightAlign`).
+
 
 # 4. Image Effects
 
@@ -632,6 +630,7 @@ This script is used with _Water_ shader specifially when there is an object on t
 - _Size_ parameter sets the definition of the movement, meaning, how many of the _Water_ object's vertices it takes into account.
 - _Amplitude_ is how far the object travels from its initial point on the water while foating.
 
+
 # 6. Demo Scenes
 
 We tried to depict the big spectrum of possibilities using various scenes. They are one of ten million examples of possible Flat Kit use cases. Consider viewing them as starting points or macro-preset objects for your own project.
@@ -661,6 +660,7 @@ Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits a
 
 * _Water Vessels_ is an attempt to show a few basic and more non-obvious _Water_ shader parameters, all at once. Having these materials, you can use them as starting points in you own projects.
 
+
 # 7. Presets
 
 Unity has its own Preset management system. The preset is the saved current state of the shader, in our case, the Flat Kit material. The presets are available across scenes and can be saved whenever you want inside the current project. For convenience, we saved the most useful presets inside a shared presets folder (Assets/FlatKit/PresetsShared).
@@ -679,7 +679,7 @@ Save, recall, experiment, discard bad results, save great results, all by using 
 
 # 8. Flat Kit in URP
 
-FlatKit requires URP version 7.2.0 or higher.
+FlatKit requires URP version `7.2.0` or higher.
 
 Generally, Flat Kit looks identical between the Built-in and Universal Rendering Pipelines. The exceptions to this rule are described in the 'known limitations' list below. The differences are becoming inevitable for a couple of reasons. Built-in RP is being deprecated by Unity, URP is faster and it is a way to go, URP offers the tools Built-In RP is lacking. One of the differences is in post-processing. Flat Kit Built-In RP uses Post-Processing Stack v.2. Flat Kit URP uses URP's native Volume toolkit. Both of these offer similar post-processing tools but they behave differently. Even when using the same values for Color grading section in Built-In RP and URP, the outcome is slightly diffrent.
 
@@ -697,23 +697,15 @@ The current limitations are:
 
 To be able to use URP, we've included the URP version alongside the Built-in pipeline version, in a single package. In order to use URP, you need to unpack it first.
 
-If you have not installed Unity's Universal RP native package before, it's time to do so.
-
-Go to Window ▶︎ Package Manager ▶︎ All Packages ▶︎ Universal RP ▶︎ Install.
-
-Import the URP version of Flat Kit scripts and shaders
-
-Go to Assets (in Project tab) ▶︎ “URP Package” folder ▶︎ FlatKit URP ▶︎ unpack.
-
-NOTE: If the “URP Package” folder does not appear, please re-import Flat Kit from the Package Manager instead of the Asset Store in Unity: Window ▶︎ Package Manager ▶︎ Locate 'My Assets' drop-down menu ▶︎ Choose Flat Kit there.
-
-Once you've got it installed, select URP as a working rendering pipeline for your project.
-
-Go to Edit ▶︎ Project Settings ▶︎ Graphics ▶︎ Scriptable Render Pipeline Settings ▶︎ select your rendering pipeline asset. We've got an example included in the asset.
-
-Then you'll have to create a URP asset to work with.
-
-Right click on Assets (in Project tab) ▶︎ Create ▶︎ Rendering ▶︎ URP ▶︎ Pipeline Asset.
+1. If you have not installed Unity's Universal RP native package before, it's time to do so.
+    - Go to Window ▶︎ Package Manager ▶︎ All Packages ▶︎ Universal RP ▶︎ Install.
+1. Import the URP version of Flat Kit scripts and shaders
+    - Go to Assets (in Project tab) ▶︎ “URP Package” folder ▶︎ FlatKit URP ▶︎ unpack.
+    > **NOTE:** If the “URP Package” folder does not appear, please re-import Flat Kit from the Package Manager instead of the Asset Store in Unity: Window ▶︎ Package Manager ▶︎ Locate 'My Assets' drop-down menu ▶︎ Choose Flat Kit there.
+1. Once you've got it installed, select URP as a working rendering pipeline for your project.
+    - Go to Edit ▶︎ Project Settings ▶︎ Graphics ▶︎ Scriptable Render Pipeline Settings ▶︎ select your rendering pipeline asset. We've got an example included in the asset.
+1. Then you'll have to create a URP asset to work with.
+    - Right click on Assets (in Project tab) ▶︎ Create ▶︎ Rendering ▶︎ URP ▶︎ Pipeline Asset.
 
 Once you do it, the Asset and Forward Renderer are created.
 
