@@ -6,10 +6,4 @@ email: info@dustyroom.com
 show_downloads: false
 google_analytics: UA-53337407-20
 logo: FlatKit_Manual_Images/flat_kit_manual_header.png
-search: true
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-paginate
 theme: jekyll-theme-minimal
