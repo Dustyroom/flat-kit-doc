@@ -9,9 +9,6 @@ If you’ve got a question regarding Flat Kit, **please read through the Frequen
 #### Q. I get 'URP/Water/Editor/WaterEditor.cs(6,29): error CS0234 ...' error. What should I do?
 > **A.** Please import PostPtocessing v.2 into the project using the Package Manager. It's a temporary issue on our side, will be fixed in the next update.
 
-#### Q. I get OutputAlpha error. What should I do?
-> **A.** Please, update Universal RP to 8.2 and/or update Unity to v. 2020.1. This issue will be fixed in the coming update.
-
 #### Q. There are missing scripts in some demo scenes on the main camera in URP.
 > **A.** This is an old one, so if you see the missing scripts, please update to the newer version of Flat Kit. In Built-In RP our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
 
@@ -23,9 +20,6 @@ If you’ve got a question regarding Flat Kit, **please read through the Frequen
 
 #### Q. Does Flat Kit support normal maps?  
 > **A.** Yes, it does. It is in Bump map section of the interface.
-
-#### Q. Does Flat Kit work with Post-processing stack v.2?  
-> **A.** Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See FlatKit in URP if you are willing to know more.
 
 #### Q. Does it work with Unity version 20XX.x?  
 > **A.** As soon as you’ve got a stable Unity version, it does.
@@ -53,6 +47,9 @@ If you’ve got a question regarding Flat Kit, **please read through the Frequen
 
 #### Q. Is it possible to apply all these awesome effects just onto the camera while using my own shaders?  
 > **A.** Cel shading is shader-driven, not camera, which means that Stylized Surface shaders have to be used for this. Outline and Fog image effects are used as camera components (Built-In RP) or as Render Features per scene (URP).
+
+#### Q. Does Flat Kit work with Post-processing stack v.2?  
+> **A.** Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See FlatKit in URP if you are willing to know more.
 
 # 1. Quick Overview
 
