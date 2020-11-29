@@ -1,37 +1,48 @@
 
-If you’ve got a question regarding Flat Kit, **please read through the Frequently Asked Questions**, and try searching for the answers here. If the question is not covered, please shoot an email to *info@dustyroom.com*. If you find a bug, it really helps us if you include steps to reproduce it. Please mind that we get lots of messages daily, be patient - we’re getting to it. Also, if you've got a feature you’d like to see implemented, let us know — some of the great ones came from the suggestions. Flat Kit is a vast field of stylistic possibilities, so please make sure you skim trough this manual, it may help you understand all the features better and give you a few ideas.
+If you’ve got a question regarding Flat Kit, **please read through the Frequently Asked Questions**, and try searching for the answers here. If the question is not covered, please [report an issue](https://github.com/Dustyroom/flat-kit-doc/issues) or shoot an email to *info@dustyroom.com*.
+
+If you find a bug, it really helps us if you include steps to reproduce it. Please mind that we get lots of messages daily, be patient - we’re getting to it. Also, if you've got a feature you’d like to see implemented, let us know — some of the great ones came from the suggestions. Flat Kit is a vast field of stylistic possibilities, so please make sure you skim trough this manual, it may help you understand all the features better and give you a few ideas.
 
 # Frequently Asked Questions (FAQs)
 
-#### Q. Does Flat Kit support URP?
-> **A.** Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see FlatKit in URP. As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
-
-#### Q. I get 'URP/Water/Editor/WaterEditor.cs(6,29): error CS0234 ...' error. What should I do?
-> **A.** Please import PostPtocessing v.2 into the project using the Package Manager. It's a temporary issue on our side, will be fixed in the next update.
-
-#### Q. There are missing scripts in some demo scenes on the main camera in URP.
-> **A.** This is an old one, so if you see the missing scripts, please update to the newer version of Flat Kit. In Built-In RP our demo scenes use Unity’s PostProcessing Stack V2. It is not required if you are not using the demo scenes.
-
 #### Q. Is it easy to use Flat Kit for a beginner?  
-> **A.** Yes, there's nothing complicated about it on the front-end. Yes, there are lots of parameters but they are well-structured and laid-out in an intuitive way. Moreover, there are mouse-over tooltips with little hints on all parameters.
+> **A.** Yes, there's nothing complicated about it from the user perspective. Although there are lots of parameters but they have good default values and well-structured interface. Moreover, there are mouse-over tooltips with little hints on all parameters.
 
-#### Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
-> **A.** In Flat Kit indirect sources of light influence the colors of the scene by default, which can be turned off. The shaders do not support parameters required for the photorealistic look such as metallicness and translucency and subsurface scattering.
-
-#### Q. Does Flat Kit support normal maps?  
-> **A.** Yes, it does. It is in Bump map section of the interface.
+#### Q. Is it possible to apply the Flat Kit look while using my own shaders?  
+> **A.** The cel shading (`Flat Kit\Stylized Surface`) is implemented as object shaders, which means that they are used on regular materials. However, the *Outline* and *Fog* are _image effects_ applied globally (as camera components in the Built-In RP and as Render Features in URP).
 
 #### Q. Does it work with Unity version 20XX.x?  
 > **A.** As soon as you’ve got a stable Unity version, it does.
 
 #### Q. What platforms can I build for? What about VR?  
-> **A.** Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile. Please, note, the Outline image effect currently is not optimized for VR.
+> **A.** Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile. Please, note, the _Outline image effect_ currently is not optimized for VR.
+
+#### Q. There are missing scripts in some demo scenes on the main camera.
+> **A.** Unity has some camera scripts that are available only in a particular RP. Because we use the same scenes for the URP and Built-In RP demos in Flat Kit, it may appear that a script is missing from the camera in our demos. This warning is harmless and can be safely ignored, or you may remove the missing script from the camera.
+
+#### Q. Does Flat Kit support URP?
+> **A.** Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see FlatKit in URP. As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
+
+#### Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
+> **A.** In Flat Kit indirect sources of light influence the colors of the scene by default, which can be turned off. The shaders do not support parameters required for the photorealistic look such as glossiness, metallic or subsurface scattering.
+
+#### Q. Does Flat Kit support normal maps?  
+> **A.** Yes, it does. It is in Bump map section of the interface.
 
 #### Q. Can I use the scenes from Flat Kit in a commercial project?  
-> **A.** Yes, you can. As soon as you purchase it, you can use anything from Flat Kit in the private and commercial projects without a need to credit authors of the asset (us). What you can’t do is to re-sell, give away or place on public repositories any part of the asset uncompiled, i.e. publicly accessible source code or models. More info here — https://unity3d.com/legal/as_terms
+> **A.** Yes, you can. As soon as you purchase it, you can use anything from Flat Kit in the a commercial projects without a need to credit authors of the asset (us). What you can’t do is to re-sell, give away or place on public repositories any part of the asset uncompiled, i.e. publicly accessible source code or models. More info here — https://unity3d.com/legal/as_terms
 
 #### Q. I’ve got errors just after importing Flat Kit. Why?  
-> **A.** First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, shoot a mail to info@dustyroom.com
+> **A.** First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, shoot a mail to `info@dustyroom.com`.
+
+#### Q. What is the Shader Compilation Target Level of Flat Kit shaders?  
+> **A.** The object shaders target 3.5 (or es 3.0 and WebGL 2.0).
+
+#### Q. It takes very long to import Flat Kit into Unity in Built-in RP.  
+> **A.** FlatKit Built-in RP uses shader variants to achieve high flexibility and best performance. This comes at a cost of increased time to import the asset and build the game binary. In URP importing is much shorter, so we encourage you to use the URP version of Flat Kit if possible. If you have to use Built-In RP, though, to speed things up, uncheck unneeded elements when importing the asset.
+
+#### Q. Does Flat Kit work with Post-processing stack v.2?  
+> **A.** Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See FlatKit in URP if you are willing to know more.
 
 #### Q. How do I get projectors to work with the Stylized Surface shader?  
 > **A.** Please comment out this line in the StylizedSurface.shader:
@@ -39,23 +50,9 @@ If you’ve got a question regarding Flat Kit, **please read through the Frequen
 #pragma skip_variants POINT_COOKIE DIRECTIONAL_COOKIE
 ```
 
-#### Q. What is the Shader Compilation Target Level of Flat Kit shaders?  
-> **A.** The object shaders target 3.5 (or es 3.0 and WebGL 2.0).
-
-#### Q. It takes very long to import Flat Kit into Unity in Built-in RP.  
-> **A.** FlatKit Built-in RP uses shader variants to achieve high flexibility and best performance. However it can take time to import the asset and build the game binary. In URP importing takes seconds, so we encourage you to use the URP version of Flat Kit. If you have to use Built-In RP, though, to speed things up, uncheck unneeded elements when importing the asset.
-
-#### Q. Is it possible to apply all these awesome effects just onto the camera while using my own shaders?  
-> **A.** Cel shading is shader-driven, not camera, which means that Stylized Surface shaders have to be used for this. Outline and Fog image effects are used as camera components (Built-In RP) or as Render Features per scene (URP).
-
-#### Q. Does Flat Kit work with Post-processing stack v.2?  
-> **A.** Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See FlatKit in URP if you are willing to know more.
-
 # 1. Quick Overview
 
-Thank you for purchasing Flat Kit. We hope it will bring you some serious streams of inspiration and suit your wide variety of design needs.
-
-We’ve spent hundreds of hours to research, design and implement the right set of assets needed to achieve a slick minimalist look. We hope it works for your project out of the box. If you have questions after reading this guide, let us know at info@dustyroom.com.
+Flat Kit has everything you need to achieve a slick minimalist look in your project. We’ve spent hundreds of hours to research, design and implement the right set of assets needed to allow lots of customisation without sacrificing performance. We hope it works for your project out of the box, but if you have questions after reading this guide, let us know at `info@dustyroom.com`.
 
 To name Flat Kit a set of flat shaders, cel shaders or toon ones, would be a serious underestimation. Yes, these all can be easily done. As well as countless other (maybe unseen before) styles. It can be sharp flat, it can have one, two, nine steps of hard shadow, or soft-shaded, or gradient-shaded — with pale or acid colors, it can have three gradient effects (when you start thinking out of the box, the parameter like ‘Specular’, usual for, well, a specularity or glare, here can act as your fourth shadow, or a gradient etc).
 
