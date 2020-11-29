@@ -6,7 +6,7 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 # Frequently Asked Questions (FAQs)
 
 #### Q. Is it easy to use Flat Kit for a beginner?  
-> **A.** Yes, there's nothing complicated about it from the user perspective. Although there are lots of parameters but they have good default values and well-structured interface. Moreover, there are mouse-over tooltips with little hints on all parameters.
+> **A.** Yes, there's nothing complicated about it from the user perspective. Even though there are lots of parameters, they all have good default values and well-structured interface. Additionally, there are mouse-over tooltips with little hints on all parameters.
 
 #### Q. Is it possible to apply the Flat Kit look while using my own shaders?  
 > **A.** The cel shading (`Flat Kit\Stylized Surface`) is implemented as object shaders, which means that they are used on regular materials. However, the *Outline* and *Fog* are _image effects_ applied globally (as camera components in the Built-In RP and as Render Features in URP).
