@@ -508,7 +508,7 @@ When combined, _UV Fade X_ and _UV Fade Y_ can make a fluffy blob.
 
 ## 3.8. GPU Instancing
 
-When the `Enable Instancing` option is enabled on a material, the shaders will perform GPU Instancing of the following fields that are common across all Flat Kit shaders:
+When the `Enable Instancing` option is enabled on a material, the shaders can perform [GPU Instancing](https://docs.unity3d.com/Manual/GPUInstancing.html) of the following fields that are common across all Flat Kit shaders:
 
 1. _Color_ value (property name `_Color`),  
 1. Parameters of the cel shading mode _“Single”_  
@@ -521,7 +521,9 @@ When the `Enable Instancing` option is enabled on a material, the shaders will p
     - _Rim color_ value (property name `_FlatRimColor`),  
     - _Rim size_ value (property name `_FlatRimSize`),  
     - _Edge Smoothness_ value (property name `_FlatRimEdgeSmoothness`),  
-    - _Light Align_ value (property name `_FlatRimLightAlign`).
+    - _Light Align_ value (property name `_FlatRimLightAlign`),
+1. Unity shadow parameters, located in the _“Unity Built-in Shadows”_ section  
+    - _Color_ value (property name `_UnityShadowColor`).
 
 
 # 4. Image Effects
