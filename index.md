@@ -94,6 +94,9 @@ Below are the instructions on how to import Flat Kit.
 ![Flat Kit import instructions](FlatKit_Manual_Images/flat-kit-import-1-instructions.png)
 > Flat Kit import instructions.  
 
+- **Step 5.** Navigate to _Project Settings_ -> _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field.
+Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit.  
+If you are using yours settins file insead, make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found in URP settings file.
 
 # 3. Shaders. In-Depth Overview
 When you create a material, you’ll choose a shader. By default, Unity has the standard shader picked up. Once installed, all Flat Kit material shaders are located under the Flat Kit sub-menu of the Shader drop-down menu. Please choose the one that would work for your current task. Below is the description of all the shaders.
