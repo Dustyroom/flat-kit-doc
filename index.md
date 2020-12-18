@@ -5,6 +5,10 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 
 # Frequently Asked Questions (FAQs)
 
+#### Q. Flat Kit does not work in Unity 2020.2.
+> **A.** It works, but there is a one step you need to do to in 2020.2. Please open any demo from Flat Kit and select any object on the scene, expanding the material Inspector. [Here is a short video showing the workaround](https://drive.google.com/file/d/1SOqeO6ufVgH24Oyih6Gq3RoX8y64J5Iy).  
+This is a temporary workaround until Unity releases a new version of "Asset Store Tools" for publishers. We're in touch with Unity and they're "aware of this issue and are prioritizing it."
+
 #### Q. Is it easy to use Flat Kit for a beginner?  
 > **A.** Yes, there's nothing complicated about it from the user perspective. Even though there are lots of parameters, they all have good default values and well-structured interface. Additionally, there are mouse-over tooltips with little hints on all parameters.
 
