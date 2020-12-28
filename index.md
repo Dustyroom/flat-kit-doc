@@ -19,7 +19,7 @@ This is a temporary workaround until Unity releases a new version of "Asset Stor
 > **A.** As soon as you’ve got a stable Unity version, it does.
 
 #### Q. What platforms can I build for? What about VR?  
-> **A.** Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile. Please, note, the _Outline image effect_ currently is not optimized for VR.
+> **A.** Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile. We are working on _Outline image effect_ to work better with VR, so if you stumble upon any issue, please, send us a message.
 
 #### Q. There are missing scripts in some demo scenes on the main camera.
 > **A.** Unity has some camera scripts that are available only in a particular RP. Because we use the same scenes for the URP and Built-In RP demos in Flat Kit, it may appear that a script is missing from the camera in our demos. This warning is harmless and can be safely ignored, or you may remove the missing script from the camera.
