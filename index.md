@@ -5,10 +5,6 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 
 # Frequently Asked Questions (FAQs)
 
-#### Q. Flat Kit does not work in Unity 2020.2.
-> **A.** It works, but there is a one step you need to do to in 2020.2. Please open any demo from Flat Kit and select any object on the scene, expanding the material Inspector. [Here is a short video showing the workaround](https://drive.google.com/file/d/1SOqeO6ufVgH24Oyih6Gq3RoX8y64J5Iy).  
-This is a temporary workaround until Unity releases a new version of "Asset Store Tools" for publishers. We're in touch with Unity and they're "aware of this issue and are prioritizing it."
-
 #### Q. Is it easy to use Flat Kit for a beginner?  
 > **A.** Yes, there's nothing complicated about it from the user perspective. Even though there are lots of parameters, they all have good default values and well-structured interface. Additionally, there are mouse-over tooltips with little hints on all parameters.
 
@@ -94,13 +90,12 @@ Below are the instructions on how to import Flat Kit.
 - **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one.  
 - **Step 3.** Once imported, go to Project tab ▶︎ Assets ▶︎ Flat Kit. You'll find the Flat Kit unitypackage file of your preferred RP. Double-click it.  
 - **Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.
-
-![Flat Kit import instructions](FlatKit_Manual_Images/flat-kit-import-1-instructions.png)
-> Flat Kit import instructions.  
-
 - **Step 5.** Navigate to _Project Settings_ -> _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field.
 Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit.  
 If you are using your settings file insead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
+
+![Flat Kit import instructions](FlatKit_Manual_Images/flat-kit-import-1-instructions.png)
+> Flat Kit import instructions.  
 
 # 3. Shaders. In-Depth Overview
 When you create a material, you’ll choose a shader. By default, Unity has the standard shader picked up. Once installed, all Flat Kit material shaders are located under the Flat Kit sub-menu of the Shader drop-down menu. Please choose the one that would work for your current task. Below is the description of all the shaders.
@@ -303,6 +298,13 @@ In the [Outline Image Effect](index.md#42-outline-image-effect) chapter in this 
 
 ![‘Stylized Surface with Outline’ shader](FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
 > ‘Stylized Surface with Outline’ shader
+
+Sometimes it is useful to manipulate the normals of your model in order to force the shader to render outlines where it wouldn't do so otherwise.
+More on this is covered in [Outline Image Effect](index.md#42-outline-image-effect) chapter. But here's one thing you can try without using 3d editor software. Among the other parameters of the import settings of the model, there is a section where is it possible to change the angle detection threshold for normals. It may come handy in adding or removing some of the outlines where they wouldn't appear normally. Also, slight adjustments to these parameters may resolve some of the visual issues. If you have gaps in the outline, for instance, try tweaking these controls (but remember to backup the project first, it's always a good idea to backup things. In fact, if you are working on something, do it now).
+
+![Import settings of the model](FlatKit_Manual_Images/mesh-import-settings.png)
+> Import settings of the model has a section for manipulationg the normals, which is useful for the _Stylized Surface with Outline_ shader as well as for _Outline_ global effect.
+
 
 ## 3.4. ‘Gradient Skybox’ Shader
 
@@ -588,10 +590,10 @@ You'll need to *press 'Play'* to see the effect of _Render Event_.
 Here is an example of choosing when to render the outlines. We took _Wanderer_ demo scene and applied an example _Outline_ Image Effect. After that we tried a few different items from the _Render Event_ list.
 
 !['After Rendering Skybox' chosen in Render Event list](FlatKit_Manual_Images/after_rendering_skybox.png)
-> _'After Rendering Skybox'_ chosen in Render Event list. _Wanderer_ demo scene.
+> _'After Rendering Skybox'_ chosen in Render Event list. _Wanderer_ demo scene
 
 !['Before Rendering Post Processing' chosen in Render Event list, 'Outlines Only' parameter ticked](FlatKit_Manual_Images/before_rendering_post_processing_outlines_only.png)
-> _'Before Rendering Post Processing'_ chosen in _Render Event_ list, _'Outlines Only'_ parameter ticked.
+> _'Before Rendering Post Processing'_ chosen in _Render Event_ list, _'Outlines Only'_ parameter ticked
 
 Also, in URP you have an ability to chain and change the orders of Image effects, but it's a general Unity information. More info in the chapter [Flat Kit Image Effects in URP](index.md#83-flat-kit-image-effects-in-urp)
 
@@ -599,10 +601,15 @@ Please, note that _Outline Image Effect_ is a global effect, as it is used as th
 
 If you would like to exclude an object from an outline pass, considering that you are using one of the Stylized Surface shaders, and you are in a URP project, please go to the interface of the shader and switch rendering to 'Transparent'. It won't change the look of the shader but will exclude it from the outline pass. You can control this too as described a few paragraphs above in Render Event list part.
 
+If you would like to use depth and normals data as sources for outlines, please enable the _Flat Kit Depth Normals_ renderer feature on the forward renderer interface.
+
+![Flat Kit Depth Normals renderer feature](FlatKit_Manual_Images/flat-kit-depth-normals.png)
+> Flat Kit Depth Normals Renderer Feature
+
 Some general info. Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. It can be done in a 3d editor. For example, here's how to do it in Blender.
 
 ![Rotating normals in Blender](FlatKit_Manual_Images/normals-rotation1.png)
-> Rotating normals in Blender. Manipulating the normals angle is one of the ways to make Flat Kit generate outlines where you want them.
+> Rotating normals in Blender. Manipulating the normals angle is one of the ways to make Flat Kit generate outlines where you want them
 
 > **TIP:** Combinations of the settings in Outline Image Effect let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using _‘Stylized Surface with Outline’_ shader in addition to the global Outline effect. Also, _Rim_ parameter of _Stylized Surface_ and _Stylized Surface with Outline_ shaders can accentuate object's edges, often it looks like a partial outline, which can be helpful.
 
