@@ -94,9 +94,9 @@ Below are the instructions on how to import Flat Kit.
 Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit.  
 If you are using your settings file insead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
 
-Please, note, if you don't see any part of Flat Kit after reimporting or updating the package, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cche files can be found here:  
-Mac OS: ~/Library/Unity/Asset Store-5.x  
-Windows: C:\Users\accountName\AppData\Roaming\Unity\Asset Store
+Please, note, if you don't see any part of Flat Kit after reimporting or updating the package, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
+_Mac OS: ~/Library/Unity/Asset Store-5.x_  
+_Windows: C:\Users\accountName\AppData\Roaming\Unity\Asset Store_
 
 ![Flat Kit import instructions](FlatKit_Manual_Images/flat-kit-import-1-instructions.png)
 > Flat Kit import instructions.  
