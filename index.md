@@ -5,6 +5,9 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 
 # Frequently Asked Questions (FAQs)
 
+#### Q. I am trying to import Flat Kit but can't find URP package / it downloads ol version of flat Kit?  
+> **A.** It is an issue with Unity's Package Manager. Sometimes it won't let you download the latest versions of the assets. The team at Unity is aware of this and a lot of publishers are requesting to get this fixed. Meanwhile, there is a workaround do get Flat Kit and other assets to work. First of all, close Unity Editor, navigate to the folder with Unity's cache and delete its content (_Mac OS:_ ~/Library/Unity/Asset Store-5.x _Windows:_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x), load the 2020.2 version of Unity (if you don't have it installed, please do so), create either the new project of upgrade your existing one to 2020.2, go to the Window -> Package Manager -> My Assets and import Flat Kit. If you need to return to 2019.1.x version of Unity, you'll be able to copy it from 2020.2. If, for some reason, you can't do the above mentioned workaround, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
+
 #### Q. Is it easy to use Flat Kit for a beginner?  
 > **A.** Yes, there's nothing complicated about it from the user perspective. Even though there are lots of parameters, they all have good default values and well-structured interface. Additionally, there are mouse-over tooltips with little hints on all parameters.
 
