@@ -92,29 +92,27 @@ Below are the instructions on how to import Flat Kit.
 - **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.
 ![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_2.png)
 
-- **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one. If you don't see this step, see the note below. 
-![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_3.png)
+- **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one. If you don't see this step, see the note below.  
+![Flat Kit import instructions - Step 2](FlatKit_Manual_Images/manual_import_instructions_3.png)
 
 - **Step 3.** Once imported, go to Project tab ▶︎ Assets ▶︎ Flat Kit. You'll find the Flat Kit unitypackage file of your preferred RP. Double-click it.  
-![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_4.png)
+![Flat Kit import instructions - Step 3](FlatKit_Manual_Images/manual_import_instructions_4.png)
 
-- **Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.
-![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_5.png)
+- **Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.  
+![Flat Kit import instructions - Step 4](FlatKit_Manual_Images/manual_import_instructions_5.png)
 
 - **Step 5.** Navigate to _Project Settings_ -> _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field.
-If you are using your settings file insead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
-![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_6.png)
+If you are using your settings file insead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
+![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_6.png)
 
-- **Step 6.** Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file.
-![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_7.png)
+- **Step 6.** Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file.  
+![Flat Kit import instructions - Step 6](FlatKit_Manual_Images/manual_import_instructions_7.png)
 
 
 NOTE. If you don't see _step 2_ while importing, or URP unitypackage is missing, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
 _Mac OS:_ ~/Library/Unity/Asset Store-5.x  
 _Windows:_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x
 
-![Flat Kit import instructions](FlatKit_Manual_Images/flat-kit-import-1-instructions.png)
-> Flat Kit import instructions.  
 
 # 3. Shaders. In-Depth Overview
 When you create a material, you’ll choose a shader. By default, Unity has the standard shader picked up. Once installed, all Flat Kit material shaders are located under the Flat Kit sub-menu of the Shader drop-down menu. Please choose the one that would work for your current task. Below is the description of all the shaders.
