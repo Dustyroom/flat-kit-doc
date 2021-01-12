@@ -6,7 +6,7 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 # Frequently Asked Questions (FAQs)
 
 #### Q. I am trying to import Flat Kit but can't find URP package / it downloads old version of Flat Kit?  
-> **A.** It is an issue with Unity's Package Manager. Sometimes it won't let you download the latest versions of the assets. The team at Unity is aware of this and a lot of publishers are requesting to get this fixed. Meanwhile, there is a workaround do get Flat Kit and other assets to work. First of all, close Unity Editor, navigate to the folder with Unity's cache and delete its content (_Mac OS:_ ~/Library/Unity/Asset Store-5.x _Windows:_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x), load the 2020.2 version of Unity (if you don't have it installed, please do so), create either the new project of upgrade your existing one to 2020.2, go to the Window -> Package Manager -> My Assets and import Flat Kit. If you need to return to 2019.1.x version of Unity, you'll be able to copy it from 2020.2. If, for some reason, you can't do the above mentioned workaround, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
+> **A.** It is an issue with Unity's Package Manager. Sometimes it won't let you download the latest versions of the assets if you use Unity v. 2019.1.x. The team at Unity is aware of this and a lot of publishers are requesting to get this fixed. Meanwhile, there is a workaround do get Flat Kit and other assets to work. First of all, close Unity Editor, navigate to the folder with Unity's cache and delete its content (_Mac OS:_ ~/Library/Unity/Asset Store-5.x _Windows:_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x), load the 2020.2 version of Unity (if you don't have it installed, please do so), create either the new project of upgrade your existing one to 2020.2, go to the Window -> Package Manager -> My Assets and import Flat Kit. If you need to return to 2019.1.x version of Unity, you'll be able to copy it from 2020.2. If, for some reason, you can't do the above mentioned workaround, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
 
 #### Q. Is it easy to use Flat Kit for a beginner?  
 > **A.** Yes, there's nothing complicated about it from the user perspective. Even though there are lots of parameters, they all have good default values and well-structured interface. Additionally, there are mouse-over tooltips with little hints on all parameters.
@@ -89,13 +89,25 @@ On the 3D models side, it’s important that you decide whether you would like m
 
 Below are the instructions on how to import Flat Kit.
 
-- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import. 
-- **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one. If you don't see this step, see the note below.  
+- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.
+![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_2.png)
+
+- **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one. If you don't see this step, see the note below. 
+![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_3.png)
+
 - **Step 3.** Once imported, go to Project tab ▶︎ Assets ▶︎ Flat Kit. You'll find the Flat Kit unitypackage file of your preferred RP. Double-click it.  
+![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_4.png)
+
 - **Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.
+![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_5.png)
+
 - **Step 5.** Navigate to _Project Settings_ -> _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field.
-Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit.  
 If you are using your settings file insead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
+![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_6.png)
+
+- **Step 6.** Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file.
+![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_7.png)
+
 
 NOTE. If you don't see _step 2_ while importing, or URP unitypackage is missing, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
 _Mac OS:_ ~/Library/Unity/Asset Store-5.x  
