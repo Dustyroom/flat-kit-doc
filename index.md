@@ -6,10 +6,10 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 # Frequently Asked Questions (FAQs)
 
 #### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
-> **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the issue tracker:
-https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates
+> **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the issue tracker:  
+https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates  
 In short, it is fixed for the Unity versions listed in the issue tracker (linked above). To get this bug resolved for your project before Unity fixes stuff, you'll either have to update to the latest version of Unity within your major range (the latest of 2019s, or 2020's) **Currently the minimum versions with the bug fixed are 2019.4.19f1 and 2020.2.2f1 or later**.  
-Additionally, if you are using Unity 2019.x or 2020.1, you need Flat Kit version 2.1.3 or later (please reach out if it’s not on the Asset Store yet). Any version of Flat Kit works with Unity 2020.2 or later.  
+Additionally, if you are using Unity 2019.x or 2020.1, you need Flat Kit version 2.1.3 or later. Any version of Flat Kit works with Unity 2020.2 or later.  
 If you updated to the latest version of Unity, and still haven't resolved it, please restart Unity. If after restart the errors didn’t go away, clean the cache of the Package Manager and re-import Flat Kit, as it is another one symptom of this Unity's problem. You can find the cache here (_Mac OS:_ ~/Library/Unity/Asset Store-5.x _Windows:_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x)
 
 #### Q. I am trying to import Flat Kit but can't find URP package / it downloads old version of Flat Kit?  
@@ -315,8 +315,9 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 
 _Stylized Surface with Outline_ shader, being the same as the regular _Stylized Surface_ shader in a nutshell, has an additional option of... outlines. [_Stylized Surface_ info is here](index.md#31-stylized-surface-shader).
 
-- _Outline Color_ picks up the color of the outline.  
-- _Outline Width_ determines how thick the outline is.  
+- _Color_ picks up the color of the outline.  
+- _Width_ determines how thick the outline is.  
+- _Scale_ adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).
 - _Outline Depth Offset_ moves the outline inwards or outwards an object.
 
 Remember, in addition to this shader Flat Kit has also a global _Outline_ Image Effect applied per scene (in URP) and per camera (in Built-In RP).  
