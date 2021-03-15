@@ -349,6 +349,8 @@ This is a simple method to fill the sky of your scene.
 
 ## 3.5. 'Water' Shader
 
+Water shader works in URP only. There is no Built-In version of a Water shader in Flat Kit.
+
 Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird things with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated at first, it is intuitive and has helping tooltips on the parameters. 
 
 ![Water shader interface](FlatKit_Manual_Images/water-shader-interface.png)
@@ -693,11 +695,14 @@ Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits a
 
 * _Normal Map Tree_. An example of normal maps application.
 
-* _Ocean Water_. This is a demo scene showcasing the _Water_ shader in a way the game would look like. A non-toon-shading application for _Stylized Surface_ is showed in this scene, too. You can choose various water looks in the Hierarchy tab by switching different Water objects on.
+* _Ocean Water_. This is a demo scene showcasing the _Water_ shader in a way the game would look like. A non-toon-shading application for _Stylized Surface_ is showed in this scene, too. You can choose various water looks in the Hierarchy tab by switching different Water objects on.  
+**NOTE:** This scene will work in Universal RP only.
 
-* _Pool_ scene shows more various versions of the _Water_ shader. In the Hierarchy tab you can choose between different water objects. Each of these objects has its own _Water_ material.
+* _Pool_ scene shows more various versions of the _Water_ shader. In the Hierarchy tab you can choose between different water objects. Each of these objects has its own _Water_ material.  
+**NOTE:** This scene will work in Universal RP only.
 
-* _Water Vessels_ is an attempt to show a few basic and more non-obvious _Water_ shader parameters, all at once. Having these materials, you can use them as starting points in you own projects.
+* _Water Vessels_ is an attempt to show a few basic and more non-obvious _Water_ shader parameters, all at once. Having these materials, you can use them as starting points in you own projects.  
+**NOTE:** This scene will work in Universal RP only.
 
 
 # 7. Presets
@@ -718,9 +723,7 @@ Save, recall, experiment, discard bad results, save great results, all by using 
 
 # 8. Flat Kit in URP
 
-FlatKit requires URP version `7.2.0` or higher.
-
-Generally, Flat Kit looks identical between the Built-in and Universal Rendering Pipelines. The exceptions to this rule are described in the 'known limitations' list below. The differences are becoming inevitable for a couple of reasons. Built-in RP is being deprecated by Unity, URP is faster and it is a way to go, URP offers the tools Built-In RP is lacking. One of the differences is in post-processing. Flat Kit Built-In RP uses Post-Processing Stack v.2. Flat Kit URP uses URP's native Volume toolkit. Both of these offer similar post-processing tools but they behave differently. Even when using the same values for Color grading section in Built-In RP and URP, the outcome is slightly diffrent.
+Although many of the features in Flat Kit look identiacally in URP and in Built-In RP versions, the differences are becoming inevitable for a couple of reasons. Built-in RP is being deprecated by Unity, URP is faster and it is a way to go, URP offers the tools Built-In RP is lacking. One of the differences is in post-processing. Flat Kit Built-In RP uses Post-Processing Stack v.2. Flat Kit URP uses URP's native Volume toolkit. Both of these offer similar post-processing tools but they behave differently. Even when using the same values for Color grading section in Built-In RP and URP, the outcome is slightly diffrent.
 
 Please note, Flat Kit had been initially created for the Built-in Rendering Pipeline. To keep the visual results as close to the original as possible, the URP version of Flat Kit is using HLSL code rather than shader graph. It means you can switch a Flat Kit project between URP and Built-in RP at any point without extra work. However if you’d like to edit the shaders, you'll need some programming skills.
 
@@ -734,21 +737,21 @@ The current limitations are:
 
 ## 8.2. URP Installation
 
-To be able to use URP, we've included the URP version alongside the Built-in pipeline version, in a single package. In order to use URP, you need to unpack it first.
+In order to have a working Flat Kit in Universal RP (we've included the URP version alongside the Built-in pipeline version, in a single package), you'll need to have Unity's Universal RP package installed in your project.
 
 1. If you have not installed Unity's Universal RP native package before, it's time to do so.
     - Go to Window ▶︎ Package Manager ▶︎ All Packages ▶︎ Universal RP ▶︎ Install.
 1. Import the URP version of Flat Kit scripts and shaders
     - Go to Assets (in Project tab) ▶︎ “URP Package” folder ▶︎ FlatKit URP ▶︎ unpack.
-    > **NOTE:** If the “URP Package” folder does not appear, please re-import Flat Kit from the Package Manager instead of the Asset Store in Unity: Window ▶︎ Package Manager ▶︎ Locate 'My Assets' drop-down menu ▶︎ Choose Flat Kit there.
+    > **NOTE:** If the “URP Package” folder does not appear, it may be because you are importing Flat Kit from Asset Store. Please re-import Flat Kit from the Package Manager instead of the Asset Store in Unity: Window ▶︎ Package Manager ▶︎ Locate 'My Assets' drop-down menu ▶︎ Choose Flat Kit there.
 1. Once you've got it installed, select URP as a working rendering pipeline for your project.
-    - Go to Edit ▶︎ Project Settings ▶︎ Graphics ▶︎ Scriptable Render Pipeline Settings ▶︎ select your rendering pipeline asset. We've got an example included in the asset.
-1. Then you'll have to create a URP asset to work with.
+    - Go to Edit ▶︎ Project Settings ▶︎ Graphics ▶︎ Scriptable Render Pipeline Settings ▶︎ select your rendering pipeline asset. We've got an example included in the asset called _[Flat Kit] Example URP Settings_.
+1. Alternatively, you can create your own URP asset to work with.
     - Right click on Assets (in Project tab) ▶︎ Create ▶︎ Rendering ▶︎ URP ▶︎ Pipeline Asset.
 
 Once you do it, the Asset and Forward Renderer are created.
 
-Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more information.
+Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more important information.
 
 ## 8.3. Flat Kit Image Effects in URP
 
