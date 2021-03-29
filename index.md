@@ -95,7 +95,7 @@ On the 3D models side, it’s important that you decide whether you would like m
 **Note:** Our demos were created in **Linear color space** (a setting found in Project Settings). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
 
 **Here's a video how to import a Universal RP (URP) version of Flat Kit in a Universal RP project.**  
-[![](http://img.youtube.com/vi/8yiihlFPmGg/0.jpg)](http://www.youtube.com/watch?v=8yiihlFPmGg "")
+[![Flat Kit Import Process into a URP Project](http://img.youtube.com/vi/8yiihlFPmGg/0.jpg)](http://www.youtube.com/watch?v=8yiihlFPmGg)
 
 Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
 
