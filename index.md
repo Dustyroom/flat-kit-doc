@@ -94,7 +94,10 @@ For Built-In RP it may take a while for Unity to import the asset — this is no
 On the 3D models side, it’s important that you decide whether you would like making normals ‘smooth’ or 'sharp' for your meshes in a 3D editor, as the result will be different in either case. If you import someone else's models and can’t edit the object in 3D editor, at least try to calculate normals in Unity — in the import settings of the model. The shaders should work regardless, but sometimes the difference can be obvious, especially on objects with rounded corners.  
 **Note:** Our demos were created in **Linear color space** (a setting found in Project Settings). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
 
-Below are the instructions on how to import Flat Kit.
+**Here's a video how to import a Universal RP (URP) version of Flat Kit in a Universal RP project.**  
+[![](http://img.youtube.com/vi/8yiihlFPmGg/0.jpg)](http://www.youtube.com/watch?v=8yiihlFPmGg "")
+
+Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
 
 - **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.
 ![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_2.png)
@@ -112,7 +115,7 @@ Below are the instructions on how to import Flat Kit.
 If you are using your settings file insead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
 ![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_6.png)
 
-- **Step 6.** Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file.  
+- **Step 6.** Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file. Do it for all Quality levels.  
 ![Flat Kit import instructions - Step 6](FlatKit_Manual_Images/manual_import_instructions_7.png)
 
 
