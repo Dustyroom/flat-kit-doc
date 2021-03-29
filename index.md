@@ -95,7 +95,8 @@ For Built-In RP it may take a while for Unity to import the asset — this is no
 On the 3D models side, it’s important that you decide whether you would like making normals ‘smooth’ or 'sharp' for your meshes in a 3D editor, as the result will be different in either case. If you import someone else's models and can’t edit the object in 3D editor, at least try to calculate normals in Unity — in the import settings of the model. The shaders should work regardless, but sometimes the difference can be obvious, especially on objects with rounded corners.  
 **Note:** Our demos were created in **Linear color space** (a setting found in Project Settings). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
 
-**Here's a video how to import a Universal RP (URP) version of Flat Kit in a Universal RP project.**  
+**Here's a video showing how to import a Universal RP (URP) version of Flat Kit in a Universal RP project.**   
+
 [![Flat Kit Import Process into a URP Project](http://img.youtube.com/vi/8yiihlFPmGg/0.jpg)](http://www.youtube.com/watch?v=8yiihlFPmGg)
 
 Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
