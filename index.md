@@ -235,7 +235,7 @@ A bit more about the nature and use of _Height Gradient_ is covered in the [_‘
 
 ### 3.1.2. The Additional Parameters of the Shader
 
-*Advanced Lighting (Light Color Contribution).* Light Color Contribution defines how much the color of the light source of the scene impacts the color of the object. The value of 0.0 results in completely ignoring scene lights, the value of 1.0 results in full multiplication between scene light color and the object color. As an example, imagine the winter morning light. Usually it is blue-tinted, thus all the snow around can’t be white but rather blueish. 
+**Advanced Lighting (Light Color Contribution).** Light Color Contribution defines how much the color of the light source of the scene impacts the color of the object. The value of 0.0 results in completely ignoring scene lights, the value of 1.0 results in full multiplication between scene light color and the object color. As an example, imagine the winter morning light. Usually it is blue-tinted, thus all the snow around can’t be white but rather blueish. 
 
 Please note that the effect is visible only if the color of the light is anything but white.
 
@@ -269,6 +269,8 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 
 ![Particles emitting light on Flat Kit shaders](FlatKit_Manual_Images/lighting_particles_lights.png)
 > Particles emitting light on Flat Kit shaders.
+
+**Advanced Lighting (Override light direction).** It is a way to make the material have an independent direction of the light from the Directional Light. This can be useful in cases when you need to align the position of the cels or Rim or Specular. Normally, to adjust these parameters globally, you should rotate the Directional light. Once _Override light direction_ parameter is enabled, the material no longer obeys the Directional Light, it now has independent mapping vectors for the light-dependent parameters (e.g. mentioned earlier cels, Rim, Specular) that you can ajust with _Pitch_ and _Yaw_ parameters. Simply put, you can rotate the the cels, Rim and Specular.  
 
 **Unity Built-in Shadows.** If the object has the ‘Receive Shadows’ option turned on in Mesh Renderer, you have an ability to use Unity-processed shadows on it, as you would do in Unity Standard Material shader, with a few extra-options.
 
