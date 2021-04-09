@@ -26,7 +26,7 @@ _Windows: (replace accountName with your actual account name)_ C:\Users\accountN
 > **A.** As soon as you’ve got a stable Unity version, it does.
 
 #### Q. What platforms can I build for? What about VR?  
-> **A.** Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile. We are working on _Outline image effect_ to work better with VR, so if you stumble upon any issue, please, send us a message.
+> **A.** Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile. Currently there is a limitation where _Fog_ and _Outline_ image effects work only in the _Multi-Pass_ render mode. We are working to add support of the VR _Single-Pass_ render mode to the image effects in Flat Kit.
 
 #### Q. There are missing scripts in some demo scenes on the main camera.
 > **A.** Unity has some camera scripts that are available only in a particular RP. Because we use the same scenes for the URP and Built-In RP demos in Flat Kit, it may appear that a script is missing from the camera in our demos. This warning is harmless and can be safely ignored, or you may remove the missing script from the camera.
@@ -54,12 +54,6 @@ _Windows: (replace accountName with your actual account name)_ C:\Users\accountN
 
 #### Q. Does Flat Kit work with Post-processing stack v.2?  
 > **A.** Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See FlatKit in URP if you are willing to know more.
-
-#### Q. How do I get projectors to work with the Stylized Surface shader?  
-> **A.** Please comment out this line in the StylizedSurface.shader:
-```
-#pragma skip_variants POINT_COOKIE DIRECTIONAL_COOKIE
-```
 
 # 1. Quick Overview
 
