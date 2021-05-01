@@ -567,8 +567,11 @@ When the `Enable Instancing` option is enabled on a material, the shaders can pe
 
 # 4. Image Effects
 
-Both _Fog_ and _Outline_ image effects rely on image-based anti-aliasing, like the one in Unity's Post-processing stack. Camera effects are used in Built-in rendering pipeline. For using these in URP — you must use ‘Renderer Features’.
+Both _Fog_ and _Outline_ image effects rely on image-based anti-aliasing, like the one in Unity's Post-processing stack. 
 
+  * In Universal RP (URP) — post-processing effects are called ‘Renderer Features’ of the Forward Renderer.
+  * In Built-In RP: Post-processing is made of Camera effects placed onto the camera in the scene as Components.
+  
 ## 4.1. Fog Image Effect
 
 Fog Image Effect camera component can be reviewed as a post-processing effect. It can be subtle, like a mist in the lower part of the valley, or a dominant effect, as in a completely hazed environment. Simply put, it works in the following way. You decide whether you need only length fog or height fog or both. Then you determine the bounds where it would take effect. Then you choose colors along each dimension. And after that, blend between distance and height. This effect starts from camera position up to the Near/Far, Low/High bounds, meaning, your camera is the zero coordinate from where the fog spreads. Each camera on the scene can have a separate independent instance of an effect.
@@ -595,6 +598,37 @@ Outline Image effect is, essentially, a contour on the objects on the scene. It 
 
 ![Outline Forward Renderer in URP. Inspector interface.](FlatKit_Manual_Images/outline-image-effect-interface.png)
 > Outline Forward Renderer in URP. Inspector interface.
+
+### Setting up Flat Kit Outline (URP)
+
+If you are working in a Universal Rendering Pipeline (URP) project, the post processing components you used to put on the camera in the old Built-In RP ('Standard', '3D' project) — they are called 'Renderer Features' in URP and can be found in the settings of the Forward Renderer.  
+
+Please, make sure that you installed Flat Kit properly as described [in this manual above](https://flatkit.dustyroom.com/#2-quick-start-beginning-to-work-with-flat-kit).  
+
+Particularly, to make Universal RP generate post-effects (aka Renderer Features), please pay attention to the steps 5 and 6 in [the guide in the manual](https://flatkit.dustyroom.com/#2-quick-start-beginning-to-work-with-flat-kit). 
+In short, you'll need to set **[Flat Kit] Example Settings URP file** in **Graphics panel** (Edit ▶︎ Project Settings ▶︎ Graphics panel) and in **Quality panel** (Edit ▶︎ Project Settings ▶︎ Quality panel).  
+
+After that you'll be able to load, for example, _Wanderer_ demo scene that comes with Flat Kit, launch the scene (press Play) and see the outlines displayed.  
+
+To be able to use Flat Kit's Outline in your own scene, you can either go from scratch:  
+
+1. Create a new **Forward Renderer**. To avoid further confusion, name it, for example, _MyNewAwesomeForwardRenderer_. (Go to Assets menu on top ▶︎ Create ▶︎ Rendering Universal Rendering Pipeline ▶︎ Forward Renderer).   
+2. Add it to the **Renderer List** of the **[Flat Kit] Example Settings URP** file in the Inspector panel. To do this, go to Project panel ▶︎ Flat Kit ▶︎ ExampleSettings -> [FlatKit] Example Settings URP. Select it, look at the Inspector panel, see the 'Renderer List' section, press **'+'** button and drag _MyNewAwesomeForwardRenderer_ Forward Renderer you created in step 1 — into the created line.  
+3. Select that newly created _MyNewAwesomeForwardRenderer_ Forward Renderer, press **'Add Renderer Feature'** and Select **Flat Kit Outline**.  
+4. Go **Assets menu on top ▶︎ Create ▶︎ FlatKit ▶︎ Outline Settings**. This creates an Outline settings file. Name it _MyNewOutlinesSettings_.  
+5. Add this _'MyNewOutlinesSettings'_ settings file to **Flat Kit Outline** Renderer Feature you created in step 3 — into the **Settings** field.  
+6. In your scene select the camera (Main Camera) in Hierarchy panel, look at Inspector panel, find **Rendering** section and in the **Renderer** drop down menu select _MyNewAwesomeForwardRenderer_ Forward Renderer you created in step 1.  
+7. You may need to launch the scene by pressing Play.  
+
+Or, you can do it the easy way.  
+
+1. In your scene select the camera (Main Camera) in Hierarchy panel, look at Inspector panel, find **Rendering** section and in the **Renderer** drop down menu select _[FlatKit] Wanderer-ForwardRenderer_ or _[FlatKit] FruitVaseScene-Var-ForwardRenderer_. They both have outlines already engaged.  
+2. You may need to press Play.  
+
+To change the parameters of the outlines then, please: 
+  * Press _Ctrl + F (Windows)_ or _Cmd + F (macOS)_ and type _[FlatKit] Wanderer-Var-OutlineSettings_ in the search field that becomes active in Project Panel. Select the found file and change the parameters in the Inspector panel.
+
+### Parameters of Flat Kit Outline
 
 **Main settings** are the following.
 
