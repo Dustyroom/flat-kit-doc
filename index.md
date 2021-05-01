@@ -613,8 +613,8 @@ After that you'll be able to load, for example, _Wanderer_ demo scene that comes
 To be able to use Flat Kit's Outline in your own scene, you can either go from scratch:  
 
 1. Create a new **Forward Renderer**. To avoid further confusion, name it, for example, _MyNewAwesomeForwardRenderer_. (Go to Assets menu on top ▶︎ Create ▶︎ Rendering Universal Rendering Pipeline ▶︎ Forward Renderer).   
-2. Add it to the **Renderer List** of the **[Flat Kit] Example Settings URP** file in the Inspector panel. To do this, go to Project panel ▶︎ Flat Kit ▶︎ ExampleSettings -> [FlatKit] Example Settings URP. Select it, look at the Inspector panel, see the 'Renderer List' section, press **'+'** button and drag _MyNewAwesomeForwardRenderer_ Forward Renderer you created in step 1 — into the created line.  
-3. Select that newly created _MyNewAwesomeForwardRenderer_ Forward Renderer, press **'Add Renderer Feature'** and Select **Flat Kit Outline**.  
+2. Add it to the **Renderer List** of the **[Flat Kit] Example Settings URP** file in the Inspector panel. To do this, go to **Project panel ▶︎ Flat Kit ▶︎ ExampleSettings ▶︎ [FlatKit] Example Settings URP**. Select it, look at the Inspector panel, see the **Renderer List** section, press **'+'** button and drag _MyNewAwesomeForwardRenderer_ Forward Renderer you created in step 1 — into the created line of the **Renderer List**.  
+3. Select that newly created _MyNewAwesomeForwardRenderer_ Forward Renderer, press **'Add Renderer Feature'** and Select **Flat Kit Outline**. This will add the Outline Renderer feature. But to be able to adjust parameters, like width, color of the outlines, you'll need to create the Outline Settings file.  
 4. Go **Assets menu on top ▶︎ Create ▶︎ FlatKit ▶︎ Outline Settings**. This creates an Outline settings file. Name it _MyNewOutlinesSettings_.  
 5. Add this _'MyNewOutlinesSettings'_ settings file to **Flat Kit Outline** Renderer Feature you created in step 3 — into the **Settings** field.  
 6. In your scene select the camera (Main Camera) in Hierarchy panel, look at Inspector panel, find **Rendering** section and in the **Renderer** drop down menu select _MyNewAwesomeForwardRenderer_ Forward Renderer you created in step 1.  
@@ -774,19 +774,12 @@ The current limitations are:
 
 In order to have a working Flat Kit in Universal RP (we've included the URP version alongside the Built-in pipeline version, in a single package), you'll need to have Unity's Universal RP package installed in your project.
 
-1. If you have not installed Unity's Universal RP native package before, it's time to do so.
-    - Go to Window ▶︎ Package Manager ▶︎ All Packages ▶︎ Universal RP ▶︎ Install.
-1. Import the URP version of Flat Kit scripts and shaders
-    - Go to Assets (in Project tab) ▶︎ “URP Package” folder ▶︎ FlatKit URP ▶︎ unpack.
-    > **NOTE:** If the “URP Package” folder does not appear, it may be because you are importing Flat Kit from Asset Store. Please re-import Flat Kit from the Package Manager instead of the Asset Store in Unity: Window ▶︎ Package Manager ▶︎ Locate 'My Assets' drop-down menu ▶︎ Choose Flat Kit there.
-1. Once you've got it installed, select URP as a working rendering pipeline for your project.
-    - Go to Edit ▶︎ Project Settings ▶︎ Graphics ▶︎ Scriptable Render Pipeline Settings ▶︎ select your rendering pipeline asset. We've got an example included in the asset called _[Flat Kit] Example URP Settings_.
-1. Alternatively, you can create your own URP asset to work with.
-    - Right click on Assets (in Project tab) ▶︎ Create ▶︎ Rendering ▶︎ URP ▶︎ Pipeline Asset.
+After that, you will need to use a Universal RP Asset file. You can either use the one that comes with Flat Kit, called **_[Flat Kit] Example Settings URP_**, or you can create your own URP asset file to work with.
+  * Right click on Assets (in Project tab) ▶︎ Create ▶︎ Rendering ▶︎ URP ▶︎ Pipeline Asset.
 
 Once you do it, the Asset and Forward Renderer are created.
 
-Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more important information.
+**IMPORTANT** Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more important information about setting up Flat Kit and using URP Pipeline Asset files.
 
 ## 8.3. Flat Kit Image Effects in URP
 
