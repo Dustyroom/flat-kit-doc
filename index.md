@@ -91,7 +91,8 @@ On the 3D models side, it’s important that you decide whether you would like m
 
 **Here's a video showing how to import a Universal RP (URP) version of Flat Kit in a Universal RP project.**   
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EuDdSFXnibc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EuDdSFXnibc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
 
 Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
 
@@ -803,6 +804,9 @@ If you are using your settings file insead, please make sure to have _Opaque tex
 - **Manual Step 2.** Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file. Do it for all Quality levels.  
 ![Flat Kit import instructions - Step 6](FlatKit_Manual_Images/manual_import_instructions_7.png)
 
+Here's a video showing setting it up.  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8yiihlFPmGg?start=108" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
 
 
 ## 8.3. Flat Kit Image Effects in URP
