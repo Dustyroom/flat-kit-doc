@@ -95,7 +95,7 @@ On the 3D models side, it’s important that you decide whether you would like m
 
 Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
 
-- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.
+- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.  
 ![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_2.png)
 
 - **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one. If you don't see this step, see the note below.  
@@ -107,18 +107,17 @@ Below are the written instructions on how to import Flat Kit. You can watch the 
 - **Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.  
 ![Flat Kit import instructions - Step 4](FlatKit_Manual_Images/manual_import_instructions_5.png)
 
-- **Step 5.** Navigate to _Project Settings_ -> _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field.
-If you are using your settings file insead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
-![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_6.png)
-
-- **Step 6.** Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file. Do it for all Quality levels.  
-![Flat Kit import instructions - Step 6](FlatKit_Manual_Images/manual_import_instructions_7.png)
-
+- **Step 5.** Locate a _[Readme]_ file that comes with Flat Kit and press _Configure for URP_ button on its Inspector panel to finish the installation. The _[Readme]_ file can be found in _Project_ panel ▶︎ _Assets_ folder ▶︎ _Flat Kit_ folder ▶︎ _[Readme]_.  
+![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_readme_1.png)
 
 NOTE. If you don't see _step 2_ while importing, or URP unitypackage is missing, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
-_Mac OS:_ ~/Library/Unity/Asset Store-5.x  
-_Windows:_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x
+_Mac OS: (press Cmd + Shift + G in any Finder window or find the 'Go' menu on the top bar and press 'Go to Folder', type/copy the path)_  
+~/Library/Unity/Asset Store-5.x  
+_Windows: (replace accountName with your actual account name)_ 
+C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x
+More info about the Unity cache can be found in the Unity community answers page [here](https://answers.unity.com/questions/45050/where-unity-store-saves-the-packages.html).  
 
+NOTE. The _Step 5_ from the guide above automatically sets **[Flat Kit] Example Settings URP** Universal RP Rendering Asset file that comes with Flat Kit into **Graphics** and **Quality Settings** panels. It's made for convenience, but if you want to modify or change the settings in the Graphics and Quality Panels, you can do so in _Edit_ ▶︎ _Project Settings_ menu. For more information with screenshots please navigate to [this chapter (Flat Kit in URP)](index.md#8-flat-kit-in-urp).  
 
 # 3. Shaders. In-Depth Overview
 When you create a material, you’ll choose a shader. By default, Unity has the standard shader picked up. Once installed, all Flat Kit material shaders are located under the Flat Kit sub-menu of the Shader drop-down menu. Please choose the one that would work for your current task. Below is the description of all the shaders.
@@ -779,7 +778,17 @@ After that, you will need to use a Universal RP Asset file. You can either use t
 
 Once you do it, the Asset and Forward Renderer are created.
 
-**IMPORTANT** Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more important information about setting up Flat Kit and using URP Pipeline Asset files.
+Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more important information about setting up Flat Kit and using URP Pipeline Asset files.  
+
+The last step of the installation shown in the video in a chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) was pressing _Configure for URP_ button in a _[Readme]_ file that came with Flat Kit. This automatic step replaces two manual steps of setting up Flat Kit in Universal RP:
+- **Manual Step 1.** Navigate to _Project Settings_ -> _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field.
+If you are using your settings file insead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
+![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_6.png)
+
+- **Manual Step 2.** Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file. Do it for all Quality levels.  
+![Flat Kit import instructions - Step 6](FlatKit_Manual_Images/manual_import_instructions_7.png)
+
+
 
 ## 8.3. Flat Kit Image Effects in URP
 
