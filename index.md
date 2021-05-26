@@ -91,7 +91,7 @@ On the 3D models side, it’s important that you decide whether you would like m
 
 **Here's a video showing how to import a Universal RP (URP) version of Flat Kit in a Universal RP project.**   
 
-[![Flat Kit Import Process into a URP Project](http://img.youtube.com/vi/8yiihlFPmGg/0.jpg)](http://www.youtube.com/watch?v=8yiihlFPmGg)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EuDdSFXnibc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
 
