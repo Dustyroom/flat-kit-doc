@@ -14,7 +14,7 @@ _Mac OS: (press Shift+Cmd+G in any Finder Window and paste this path)_ ~/Library
 _Windows: (replace accountName with your actual account name)_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x)
 
 #### Q. I am trying to import Flat Kit but can't find URP package / it downloads old version of Flat Kit?  
-> **A.** It is an issue with Unity's Package Manager. Sometimes it won't let you download the latest versions of the assets if you use Unity v. 2019.1.x. The team at Unity is aware of this and a lot of publishers are requesting to get this fixed. Meanwhile, there is a workaround do get Flat Kit and other assets to work. First of all, close Unity Editor, navigate to the folder with Unity's cache and delete its content (_Mac OS:_ ~/Library/Unity/Asset Store-5.x _Windows:_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x), load the 2020.2 version of Unity (if you don't have it installed, please do so), create either the new project of upgrade your existing one to 2020.2, go to the Window -> Package Manager -> My Assets and import Flat Kit. If you need to return to 2019.1.x version of Unity, you'll be able to copy it from 2020.2. If, for some reason, you can't do the above mentioned workaround, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
+> **A.** It is an issue with Unity's Package Manager. Sometimes it won't let you download the latest versions of the assets if you use Unity v. 2019.1.x. The team at Unity is aware of this and a lot of publishers are requesting to get this fixed. Meanwhile, there is a workaround do get Flat Kit and other assets to work. First of all, close Unity Editor, navigate to the folder with Unity's cache and delete its content (_Mac OS:_ ~/Library/Unity/Asset Store-5.x _Windows:_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x), load the 2020.2 version of Unity (if you don't have it installed, please do so), create either the new project of upgrade your existing one to 2020.2, go to the Window ▶︎ Package Manager ▶︎ My Assets and import Flat Kit. If you need to return to 2019.1.x version of Unity, you'll be able to copy it from 2020.2. If, for some reason, you can't do the above mentioned workaround, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
 
 #### Q. Is it easy to use Flat Kit for a beginner?  
 > **A.** Yes, there's nothing complicated about it from the user perspective. Even though there are lots of parameters, they all have good default values and well-structured interface. Additionally, there are mouse-over tooltips with little hints on all parameters.
@@ -32,7 +32,7 @@ _Windows: (replace accountName with your actual account name)_ C:\Users\accountN
 > **A.** Unity has some camera scripts that are available only in a particular RP. Because we use the same scenes for the URP and Built-In RP demos in Flat Kit, it may appear that a script is missing from the camera in our demos. This warning is harmless and can be safely ignored, or you may remove the missing script from the camera.
 
 #### Q. Does Flat Kit support URP?
-> **A.** Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see FlatKit in URP. As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
+> **A.** Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see [FlatKit in URP chapter](index.md#8-flat-kit-in-urp). As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
 
 #### Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
 > **A.** In Flat Kit indirect sources of light influence the colors of the scene by default, which can be turned off. The shaders do not support parameters required for the photorealistic look such as glossiness, metallic or subsurface scattering.
@@ -113,11 +113,26 @@ Below are the written instructions on how to import Flat Kit. You can watch the 
 NOTE. If you don't see _step 2_ while importing, or URP unitypackage is missing, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
 _Mac OS: (press Cmd + Shift + G in any Finder window or find the 'Go' menu on the top bar and press 'Go to Folder', type/copy the path)_  
 ~/Library/Unity/Asset Store-5.x  
-_Windows: (replace accountName with your actual account name)_ 
-C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x
+_Windows: (replace accountName with your actual account name)_  
+C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x  
 More info about the Unity cache can be found in the Unity community answers page [here](https://answers.unity.com/questions/45050/where-unity-store-saves-the-packages.html).  
 
 NOTE. The _Step 5_ from the guide above automatically sets **[Flat Kit] Example Settings URP** Universal RP Rendering Asset file that comes with Flat Kit into **Graphics** and **Quality Settings** panels. It's made for convenience, but if you want to modify or change the settings in the Graphics and Quality Panels, you can do so in _Edit_ ▶︎ _Project Settings_ menu. For more information with screenshots please navigate to [this chapter (Flat Kit in URP)](index.md#8-flat-kit-in-urp).  
+
+We included a **Readme** tool, which is a useful debugging helper. It does the following:
+  * Shows the stats like Unity, Universal RP and Flat Kit's versions;
+  * Detects what RP the project belongs to (Universal RP or Built-In RP);
+  * Checks for available updates;
+  * Configures Flat Kit for the pipeline of the project;
+  * Opens this documentation as well as redirects to Git where you can open a support ticket;
+  * Copies debug info which is useful for in-depth troubleshooting.  
+
+The _[Readme]_ file can be found in _Project_ panel ▶︎ _Assets_ folder ▶︎ _Flat Kit_ folder ▶︎ _[Readme]_.  
+
+![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/flat-kit-readme-file.png)
+
+
+
 
 # 3. Shaders. In-Depth Overview
 When you create a material, you’ll choose a shader. By default, Unity has the standard shader picked up. Once installed, all Flat Kit material shaders are located under the Flat Kit sub-menu of the Shader drop-down menu. Please choose the one that would work for your current task. Below is the description of all the shaders.
