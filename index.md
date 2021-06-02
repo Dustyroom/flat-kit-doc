@@ -5,6 +5,9 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 
 # Frequently Asked Questions (FAQs)
 
+#### Q. Why is Flat Kit giving errors in Unity 2019?
+> **A.** The difference between Unity Universal RP packages in versions 2019s and 2020s of Unity became so drastic that it became virtually impossible for us to keep supporting Flat Kit for 2019 version of Unity. That is why **Flat Kit v. 2.2.0 bacame the last version compatible with Unity 2019.** The newer features and bug fixes are implemented for Unity 2020 and later. The Package Manager in Unity 2019 should offer Flat Kit v. 2.2.0 for the download. If the Package Manager in your project doesn't allow you to download Flat Kit v. 2.2.0, please, let us know by sending a mail to info@dustyroom.com.  
+
 #### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
 > **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the [issue tracker](https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates).  
 In short, it is fixed for the Unity versions listed in the issue tracker. To get this bug resolved for your project before Unity fixes stuff, you'll either have to update to the latest version of Unity within your major range (the latest of 2019s, or 2020's) **Currently the minimum versions with the bug fixed are 2019.4.19f1 and 2020.2.2f1 or later**.  
