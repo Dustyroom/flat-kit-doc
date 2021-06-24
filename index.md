@@ -41,9 +41,9 @@ _Windows: (replace accountName with your actual account name)_ C:\Users\accountN
 > **A.** In Flat Kit indirect sources of light influence the colors of the scene by default, which can be turned off. The shaders do not support parameters required for the photorealistic look such as glossiness, metallic or subsurface scattering.
 
 #### Q. Does Flat Kit support normal maps?  
-> **A.** Yes, it does. It is in Bump map section of the interface.
+> **A.** Yes, it does. It is in Normal map section of the interface.
 
-#### Q. Does Flat Kit support emmission maps?  
+#### Q. Does Flat Kit support emission maps?  
 > **A.** Yes, it does.
 
 #### Q. Can I use the scenes from Flat Kit in a commercial project?  
