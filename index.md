@@ -43,6 +43,9 @@ _Windows: (replace accountName with your actual account name)_ C:\Users\accountN
 #### Q. Does Flat Kit support normal maps?  
 > **A.** Yes, it does. It is in Bump map section of the interface.
 
+#### Q. Does Flat Kit support emmission maps?  
+> **A.** Yes, it does.
+
 #### Q. Can I use the scenes from Flat Kit in a commercial project?  
 > **A.** Yes, you can. As soon as you purchase it, you can use anything from Flat Kit in the a commercial projects without a need to credit authors of the asset (us). What you can’t do is to re-sell, give away or place on public repositories any part of the asset uncompiled, i.e. publicly accessible source code or models. More info here — https://unity3d.com/legal/as_terms
 
@@ -218,7 +221,7 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 
 You can think of Rim as some kind of inner shadow and/or as inner glow. In one of the _Fruit Vase_ demo scenes, there is an example of extensive use of Rim as an outline. On _Blueprint Grid_ demo scene _Rim_ is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute _Curve mode_ or _Extra Cel parameter_. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, most of them have many use cases.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of _Stylized Surface_ shader with _None_ mode selected (meaning no straightforward shadows are applied), using orange color, and only _Rim_ parameter enabled. The results are variations of Rim section only. As you see, the _Rim_ alone is quite a creative tool. Imagine adding some creative _Specular_ and _Height Gradient_...
 
-![Rim only, usage axamples](FlatKit_Manual_Images/rim_examples_suzanne.png)
+![Rim only, usage examples](FlatKit_Manual_Images/rim_examples_suzanne.png)
 > Variety of uses of _Rim_ parameter alone on Suzanne the Blender Monkey. Interface of _Stylized Surface_ shader with _‘None’_ cel shading mode
 
 Although _Rim_ option is creatively useful, there are two more obvious ways to add an outline using Flat Kit: to use _‘Stylized Surface with Outline’_ shader and/or to use _‘Outline Image Effect’_ camera component/renderer feature. We’ll talk about both of them later in this manual.
@@ -282,7 +285,7 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 ![Particles emitting light on Flat Kit shaders](FlatKit_Manual_Images/lighting_particles_lights.png)
 > Particles emitting light on Flat Kit shaders.
 
-**Advanced Lighting (Override light direction).** It is a way to make the material have an independent direction of the light from the Directional Light. This can be useful in cases when you need to align the position of the cels or Rim or Specular. Normally, to adjust these parameters globally, you should rotate the Directional light. Once _Override light direction_ parameter is enabled, the material no longer obeys the Directional Light, it now has independent mapping vectors for the light-dependent parameters (e.g. mentioned earlier cels, Rim, Specular) that you can ajust with _Pitch_ and _Yaw_ parameters. Simply put, you can rotate the the cels, Rim and Specular.  
+**Advanced Lighting (Override light direction).** It is a way to make the material have an independent direction of the light from the Directional Light. This can be useful in cases when you need to align the position of the cels or Rim or Specular. Normally, to adjust these parameters globally, you should rotate the Directional light. Once _Override light direction_ parameter is enabled, the material no longer obeys the Directional Light, it now has independent mapping vectors for the light-dependent parameters (e.g. mentioned earlier cels, Rim, Specular) that you can adjust with _Pitch_ and _Yaw_ parameters. Simply put, you can rotate the the cels, Rim and Specular.  
 
 **Unity Built-in Shadows.** If the object has the ‘Receive Shadows’ option turned on in Mesh Renderer, you have an ability to use Unity-processed shadows on it, as you would do in Unity Standard Material shader, with a few extra-options.
 
@@ -298,23 +301,40 @@ First, you have to select what mode to work with.
 ![Height Gradient in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
 > _Height Gradient_ in _Color_ mode. Inspector interface
 
-**Texture.** If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you work with transparency in textures in Built-In RP, please use _Stylized Shader Cutout_ shader. It can see alpha on the texture as transparency. URP supports alpha by default.
+**Texture Maps** If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you work with transparency in textures in Built-In RP, please use _Stylized Shader Cutout_ shader. It can see alpha on the texture as transparency. URP supports alpha by default.
 
-- _Texture selection slot_ lets you pick a texture;
-- _Tiling_ repeats the texture along X and Y axis;
-- _Blending Mode_ lets you choose between 'Multiply' or 'Add' blending modes.
-- _Texture Impact_ parameter controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.
+**Albedo** Allows to use the albedo, or diffuse texture. In URP this slot supports transparent textures by default. Can be used together with _Alpha Clipping_ parameter (explained below).
 
-**Bump Map.** To make an impression of a low-poly mesh having many details, you can use normal maps. Add one to _Bump Map_ slot in the Inspector panel.
+- _Texture selection slot_ lets you pick a texture;  
+- _Tiling_ repeats the texture along X and Y axis;  
+- _Offset_ shifts the texture along X and Y axis within the UV map of the mesh;  
+- _Blending Mode_ lets you choose between 'Multiply' or 'Add' blending modes.  
+- _Texture Impact_ parameter controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.  
+
+**Normal Map** To make an impression of a low-poly mesh having many details, you can use normal maps. Add one to _Bump Map_ slot in the Inspector panel.
 
 ![‘Stylized Surface’ shader — normal map applied](FlatKit_Manual_Images/normalmap-interface.png)
 > ‘Stylized Surface’ shader — normal map applied
 
-- _Texture selection slot_ lets you pick a texture;
-- _Tiling_ repeats the texture along X and Y axis.
+- _Texture selection slot_ lets you pick a texture;  
+- _Tiling_ repeats the texture along X and Y axis;  
+- _Offset_ shifts the texture along X and Y axis within the UV map of the mesh;  
 
 ![‘Normal Map Tree’ demo scene, a tree without and with a normal map](FlatKit_Manual_Images/normalmap-trees.png)
 > ‘Normal Map Tree’ demo scene, a tree without and with a normal map
+
+**Emission** Enables Emission map part of the shader.  
+
+**Emission Map** Allows to use custom emission maps to designate the parts of the meshes to have a 'glow' effect.  
+
+- _Texture selection slot_ lets you pick a texture;  
+- _Tiling_ repeats the texture along X and Y axis;  
+- _Offset_ shifts the texture along X and Y axis within the UV map of the mesh;  
+- _Emission Color_ chooses the color of the 'glowing' effect.  
+
+![Emission map part of the Stylized Surface interface](FlatKit_Manual_Images/stylized-surface-emission-interface.png)
+> Emission map part of the Stylized Surface interface  
+
 
 
 ## 3.2. ‘Stylized Surface Cutout’ Shader
@@ -349,7 +369,7 @@ Sometimes it is useful to manipulate the normals of your model in order to force
 More on this is covered in [Outline Image Effect](index.md#42-outline-image-effect) chapter. But here's one thing you can try without using 3d editor software. Among the other parameters of the import settings of the model, there is a section where is it possible to change the angle detection threshold for normals. It may come handy in adding or removing some of the outlines where they wouldn't appear normally. Also, slight adjustments to these parameters may resolve some of the visual issues. If you have gaps in the outline, for instance, try tweaking these controls (but remember to backup the project first, it's always a good idea to backup things. In fact, if you are working on something, do it now).
 
 ![Import settings of the model](FlatKit_Manual_Images/mesh-import-settings.png)
-> Import settings of the model has a section for manipulationg the normals, which is useful for the _Stylized Surface with Outline_ shader as well as for _Outline_ global effect.
+> Import settings of the model has a section for manipulating the normals, which is useful for the _Stylized Surface with Outline_ shader as well as for _Outline_ global effect.
 
 
 ## 3.4. ‘Gradient Skybox’ Shader
