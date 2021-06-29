@@ -6,18 +6,23 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 # Frequently Asked Questions (FAQs)
 
 #### Q. Why is Flat Kit giving errors in Unity 2019?
-> **A.** The difference between Unity Universal RP packages in versions 2019s and 2020s of Unity became so drastic that it became virtually impossible for us to keep supporting Flat Kit for 2019 version of Unity. That is why **Flat Kit v. 2.2.0 bacame the last version compatible with Unity 2019.** The newer features and bug fixes are implemented for Unity 2020 and later. The Package Manager in Unity 2019 should offer Flat Kit v. 2.2.0 for the download. If the Package Manager in your project doesn't allow you to download Flat Kit v. 2.2.0, please, let us know by sending a mail to info@dustyroom.com.  
+> **A.** The difference between Unity Universal RP packages in versions 2019s and 2020s of Unity became so drastic that it became virtually impossible for us to keep supporting Flat Kit for 2019 version of Unity. That is why **Flat Kit v. 2.2.0 became the last version compatible with Unity 2019.** The newer features and bug fixes are implemented for Unity 2020 and later. The Package Manager in Unity 2019 should offer Flat Kit v. 2.2.0 for the download. If the Package Manager in your project doesn't allow you to download Flat Kit v. 2.2.0, please, let us know by sending a mail to info@dustyroom.com.  
 
 #### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
 > **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the [issue tracker](https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates).  
 In short, it is fixed for the Unity versions listed in the issue tracker. To get this bug resolved for your project before Unity fixes stuff, you'll either have to update to the latest version of Unity within your major range (the latest of 2019s, or 2020's) **Currently the minimum versions with the bug fixed are 2019.4.19f1 and 2020.2.2f1 or later**.  
 Additionally, if you are using Unity 2019.x or 2020.1, you need Flat Kit version 2.1.3 or later. Any version of Flat Kit works with Unity 2020.2 or later.  
 If you updated to the latest version of Unity, and still haven't resolved it, please restart Unity. If after restart the errors won’t go away, clean the cache of the Package Manager and re-import Flat Kit, as it is another one symptom of this Unity's problem. You can find the cache here  
-_Mac OS: (press Shift+Cmd+G in any Finder Window and paste this path)_ ~/Library/Unity/Asset Store-5.x  
-_Windows: (replace accountName with your actual account name)_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x)
+_Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)
+_Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
+_Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
 
 #### Q. I am trying to import Flat Kit but can't find URP package / it downloads old version of Flat Kit?  
-> **A.** It is an issue with Unity's Package Manager. Sometimes it won't let you download the latest versions of the assets if you use Unity v. 2019.1.x. The team at Unity is aware of this and a lot of publishers are requesting to get this fixed. Meanwhile, there is a workaround do get Flat Kit and other assets to work. First of all, close Unity Editor, navigate to the folder with Unity's cache and delete its content (_Mac OS:_ ~/Library/Unity/Asset Store-5.x _Windows:_ C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x), load the 2020.2 version of Unity (if you don't have it installed, please do so), create either the new project of upgrade your existing one to 2020.2, go to the Window ▶︎ Package Manager ▶︎ My Assets and import Flat Kit. If you need to return to 2019.1.x version of Unity, you'll be able to copy it from 2020.2. If, for some reason, you can't do the above mentioned workaround, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
+> **A.** It is an issue with Unity's Package Manager. Sometimes it won't let you download the latest versions of the assets if you use Unity v. 2019.4.x. The team at Unity is aware of this and a lot of publishers are requesting to get this fixed. Meanwhile, there is a workaround do get Flat Kit and other assets to work. First of all, close Unity Editor, navigate to the folder with Unity's cache and delete its content:  
+_Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)
+_Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
+_Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
+Then load the 2020.3 version of Unity (if you don't have it installed, please do so), create either the new project of upgrade your existing one to 2020.3, go to the Window ▶︎ Package Manager ▶︎ My Assets and import Flat Kit. If you need to return to 2019.1.x version of Unity, you'll be able to copy it from 2020.3. If, for some reason, you can't do the above mentioned workaround, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
 
 #### Q. Is it easy to use Flat Kit for a beginner?  
 > **A.** Yes, there's nothing complicated about it from the user perspective. Even though there are lots of parameters, they all have good default values and well-structured interface. Additionally, there are mouse-over tooltips with little hints on all parameters.
@@ -34,8 +39,9 @@ _Windows: (replace accountName with your actual account name)_ C:\Users\accountN
 #### Q. There are missing scripts in some demo scenes on the main camera.
 > **A.** Unity has some camera scripts that are available only in a particular RP. Because we use the same scenes for the URP and Built-In RP demos in Flat Kit, it may appear that a script is missing from the camera in our demos. This warning is harmless and can be safely ignored, or you may remove the missing script from the camera.
 
-#### Q. Does Flat Kit support URP?
-> **A.** Flat Kit supports URP as well as Built-In RP. There are a few known limitations, please see [FlatKit in URP chapter](index.md#8-flat-kit-in-urp). As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features mostly for URP. Please note, there is no HDRP version of Flat Kit.
+#### Q. Does Flat Kit support URP?  
+#### Q. Why is the feature X is available in Universal RP but not in Built-In RP?
+> **A.** Flat Kit supports URP as well as Built-In RP, although Built-In RP is not being developed after Flat Kit v.2.0. There are a few known limitations in URP, please see [FlatKit in URP chapter](index.md#8-flat-kit-in-urp). As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features only for URP. Please note, there is no HDRP version of Flat Kit.
 
 #### Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
 > **A.** In Flat Kit indirect sources of light influence the colors of the scene by default, which can be turned off. The shaders do not support parameters required for the photorealistic look such as glossiness, metallic or subsurface scattering.
@@ -81,7 +87,7 @@ We are going to explain how these work and what they are down in the manual. Bot
 Another example of the multi-purpose nature of our shaders is cel shading itself. Now, it would take a whole chapter of this manual to elaborate on cel shading. For now it’s only worth mentioning that the same or similar results can be made using different parameters of the shader’s interface.
 It’s important, because apart from the expected ‘Cel Shade parameter’, Flat Kit also has a bunch of additional settings to explore. Each additional parameter of the shader adds an extra dimension of possibilities. All the tools designed for cel shading can do bread and butter stuff, as well as add lots of juice. But what's important is that when these cel shading tools are combined, they are much more than the sum of the components — they synergize. We’ll talk about the importance of such a potential later in the manual.
 
-One of the big advantages of using these shaders is the fact that you don’t have to guess how the colors will look on your scene. If you want precision and accuracy — you have it. Moreover, if you want something unpredictable and you are trying to make your scene look different to spark your inspiration and imagination, but not sure how, you can do this, too! Sometimes you'll find youself saving lots of temporary 'cool stuff' in 'later' folder while working on something specific, because pleasant surprises will keep popping. Remember, this is a set of shaders selected to complement each other.
+One of the big advantages of using these shaders is the fact that you don’t have to guess how the colors will look on your scene. If you want precision and accuracy — you have it. Moreover, if you want something unpredictable and you are trying to make your scene look different to spark your inspiration and imagination, but not sure how, you can do this, too! Sometimes you'll find yourself saving lots of temporary 'cool stuff' in 'later' folder while working on something specific, because pleasant surprises will keep popping. Remember, this is a set of shaders selected to complement each other.
 
 ![Flat Kit structural view chart](FlatKit_Manual_Images/FlatKit-Structure-Chart.png)
 > Flat Kit structural view chart. 
@@ -169,7 +175,7 @@ The **additional** parameters are:
 * Unity Built-in Shadows,
 * Texture.
 
-**Note:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add unuseful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html
+**Note:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html
 
 ![‘Stylized Surface’ shader in Single mode. Simple use case](FlatKit_Manual_Images/stylized-surface-1.png)
 > ‘Stylized Surface’ shader in Single mode. Simple use case.  
@@ -228,7 +234,7 @@ Although _Rim_ option is creatively useful, there are two more obvious ways to a
  
 > **TIP.** Animate Cel layer size, Specular size or Rim size — to get a neat transition effect.
 
-**Height Gradient.** This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is global (absolute) per material, it doesn't depend on obejct's boundaries. If you would like to make a relative gradient (for instance, each object holding one material to contain an entire gradient within itself), duplicate the material and adjust the height gradient. Alternatively, you can use a _Curve_ mode of _Stylized Surface_.
+**Height Gradient.** This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is global (absolute) per material, it doesn't depend on object's boundaries. If you would like to make a relative gradient (for instance, each object holding one material to contain an entire gradient within itself), duplicate the material and adjust the height gradient. Alternatively, you can use a _Curve_ mode of _Stylized Surface_.
 
 ![Height Gradient. Inspector interface](FlatKit_Manual_Images/gradient_height_parameters.png)
 > _Height Gradient._ Inspector interface
@@ -348,7 +354,7 @@ The _Base Alpha cutout_ parameter determines how much of the alpha portion of th
 ![‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface](FlatKit_Manual_Images/stylized_surface_cutout_screenshot.png)
 > ‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface
 
-Use this shader if you work with transparency in Built-In RP. In URP you are good to go with the _Stylized Surface_ shader instead of this one. It will spare a few cycles off your CPU.
+Use this shader if you work with transparency in Built-In RP. In URP you are good to go with the _Stylized Surface_ shader instead of this one. It will spare a few cycles from your CPU.
 
 ## 3.3. ‘Stylized Surface with Outline’ Shader
 
@@ -356,8 +362,9 @@ _Stylized Surface with Outline_ shader, being the same as the regular _Stylized 
 
 - _Color_ picks up the color of the outline.  
 - _Width_ determines how thick the outline is.  
-- _Scale_ adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).
-- _Outline Depth Offset_ moves the outline inwards or outwards an object.
+- _Scale_ adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modeling, adjusting the normals, adjusting camera distance etc).  
+- _Depth Offset_ moves the outline inwards or outwards an object.  
+- _Camera Distance Impact_ **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.  
 
 Remember, in addition to this shader Flat Kit has also a global _Outline_ Image Effect applied per scene (in URP) and per camera (in Built-In RP).  
 In the [Outline Image Effect](index.md#42-outline-image-effect) chapter in this manual you can find some useful specific and general info.
@@ -436,7 +443,7 @@ When you have your texture saved, the material will be instantly filled with thi
 
 **Shallow Depth.** This is a lowest point of _Shallow_ part. It is a point where _Shallow_ part merges with the top of the gradient.
 
-**Gradient Size.** This is the lowest (deepest) point ot the gradient. It is a point where it merges with the _Deep_ part.
+**Gradient Size.** This is the lowest (deepest) point of the gradient. It is a point where it merges with the _Deep_ part.
 
 Below is a little chart, which may came handy for understanding the parameters for the coloring part of the _Water_ shader.
 ![Water Gradient Chart](FlatKit_Manual_Images/water-gradient-chart.png)
@@ -467,7 +474,7 @@ This section determines the overall shape of the waves. All the controls for the
 *   **Round** is linear (comb-looking) shape with rounded tips;
 ![Shape parameter — 'Round'](FlatKit_Manual_Images/wave_shape_round.png)
 > Shape parameter — 'Round'
-*   **Grid** is glid-like (checkerboard-looking) shape;
+*   **Grid** is grid-like (checkerboard-looking) shape;
 ![Shape parameter — 'Grid'](FlatKit_Manual_Images/wave_shape_grid.png)
 > Shape parameter — 'Grid'
 *   **Pointy** is more linear (comb-looking) movement with sharp tips.
@@ -528,7 +535,7 @@ Use these parameters to control the optical distortion of the water.
 ----------------------
 We included a component called _Buoyancy_. The _Water_ shader deforms the water mesh, which in its turn moves the objects that have _Buoyancy_ component on them. More info can be found in the [Buoyancy](index.md#53-buoyancy) part of Additional Scripts section of this manual.
 
-> **TIP.** Place the plane somewhere behind of in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
+> **TIP.** Place the plane somewhere behind or in front of your scene objects. Place the _Water_ shader on it. Set _Clearness_ to max, set foam _scale_ to very high, lower the _frequency_, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
 
 
 ## 3.6. ‘Terrain’ Shader
@@ -735,14 +742,14 @@ Linear Motion is a simple script that translates (moves) and rotates any object.
 
 ## 5.3. Buoyancy
 
-This script is used with _Water_ shader specifially when there is an object on the water surface, and you want it to phisically flow on this surface. The object will replicate the water's shape, while water is being deformed. This scripts is added on the object as a component. You'll need to point to the water object mesh this object is interacting with (in _Water_ field of the script interface).
+This script is used with _Water_ shader specifically when there is an object on the water surface, and you want it to phisically flow on this surface. The object will replicate the water's shape, while water is being deformed. This scripts is added on the object as a component. You'll need to point to the water object mesh this object is interacting with (in _Water_ field of the script interface).
 
 ![Buoyancy script interface](FlatKit_Manual_Images/buoyancy_interface.png)
 > _Buoyancy_ script interface
 
 - _Water_ field is where you choose the mesh of the water surface. The object holding this script will be afloat on this mesh.
 - _Size_ parameter sets the definition of the movement, meaning, how many of the _Water_ object's vertices it takes into account.
-- _Amplitude_ is how far the object travels from its initial point on the water while foating.
+- _Amplitude_ is how far the object travels from its initial point on the water while floating.
 
 
 # 6. Demo Scenes
@@ -756,7 +763,7 @@ In a _Valley_ scene, please, note that although the ground is made with Unity na
 
 * _Blueprint Grid (Mugs)_ and _Fruit Vase_ scenes are an exhibition of most sought use cases of cel / toon shading.
 
-However, you can find there more experimental stuff, too. It has been a temptation to overpopulate the scenes with content, because while making these included materials — literally dozens of interesting by-product or work-in-progress materials showed up, but we had to discard them to keep the scenes clean.
+However, you can find more experimental stuff there, too. It has been a temptation to overpopulate the scenes with content, because while making these included materials — literally dozens of interesting by-product or work-in-progress materials showed up, but we had to discard them to keep the scenes clean.
 Blueprint Grid is a descriptive one, there is a text telling what we used to get the displayed materials.
 Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits across all scenes and each scene is dedicated to some specific look, thus uses a different set of materials.
 
@@ -796,7 +803,7 @@ Save, recall, experiment, discard bad results, save great results, all by using 
 
 # 8. Flat Kit in URP
 
-Although many of the features in Flat Kit look identiacally in URP and in Built-In RP versions, the differences are becoming inevitable for a couple of reasons. Built-in RP is being deprecated by Unity, URP is faster and it is a way to go, URP offers the tools Built-In RP is lacking. One of the differences is in post-processing. Flat Kit Built-In RP uses Post-Processing Stack v.2. Flat Kit URP uses URP's native Volume toolkit. Both of these offer similar post-processing tools but they behave differently. Even when using the same values for Color grading section in Built-In RP and URP, the outcome is slightly diffrent.
+Although many of the features in Flat Kit look identically in URP and in Built-In RP versions, the differences are becoming inevitable for a couple of reasons. Built-in RP is being deprecated by Unity, URP is faster and it is a way to go, URP offers the tools Built-In RP is lacking. One of the differences is in post-processing. Flat Kit Built-In RP uses Post-Processing Stack v.2. Flat Kit URP uses URP's native Volume toolkit. Both of these offer similar post-processing tools but they behave differently. Even when using the same values for Color grading section in Built-In RP and URP, the outcome is slightly different.
 
 Please note, Flat Kit had been initially created for the Built-in Rendering Pipeline. To keep the visual results as close to the original as possible, the URP version of Flat Kit is using HLSL code rather than shader graph. It means you can switch a Flat Kit project between URP and Built-in RP at any point without extra work. However if you’d like to edit the shaders, you'll need some programming skills.
 
@@ -821,7 +828,7 @@ Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](in
 
 The last step of the installation shown in the video in a chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) was pressing _Configure for URP_ button in a _[Readme]_ file that came with Flat Kit. This automatic step replaces two manual steps of setting up Flat Kit in Universal RP:
 - **Manual Step 1.** Navigate to _Project Settings_ -> _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field.
-If you are using your settings file insead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
+If you are using your settings file instead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
 ![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_6.png)
 
 - **Manual Step 2.** Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file. Do it for all Quality levels.  
