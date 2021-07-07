@@ -13,13 +13,13 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 In short, it is fixed for the Unity versions listed in the issue tracker. To get this bug resolved for your project before Unity fixes stuff, you'll either have to update to the latest version of Unity within your major range (the latest of 2019s, or 2020's) **Currently the minimum versions with the bug fixed are 2019.4.19f1 and 2020.2.2f1 or later**.  
 Additionally, if you are using Unity 2019.x or 2020.1, you need Flat Kit version 2.1.3 or later. Any version of Flat Kit works with Unity 2020.2 or later.  
 If you updated to the latest version of Unity, and still haven't resolved it, please restart Unity. If after restart the errors won’t go away, clean the cache of the Package Manager and re-import Flat Kit, as it is another one symptom of this Unity's problem. You can find the cache here  
-_Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)
+_Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)  
 _Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
 _Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
 
 #### Q. I am trying to import Flat Kit but can't find URP package / it downloads old version of Flat Kit?  
 > **A.** It is an issue with Unity's Package Manager. Sometimes it won't let you download the latest versions of the assets if you use Unity v. 2019.4.x. The team at Unity is aware of this and a lot of publishers are requesting to get this fixed. Meanwhile, there is a workaround do get Flat Kit and other assets to work. First of all, close Unity Editor, navigate to the folder with Unity's cache and delete its content:  
-_Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)
+_Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)  
 _Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
 _Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
 Then load the 2020.3 version of Unity (if you don't have it installed, please do so), create either the new project of upgrade your existing one to 2020.3, go to the Window ▶︎ Package Manager ▶︎ My Assets and import Flat Kit. If you need to return to 2019.1.x version of Unity, you'll be able to copy it from 2020.3. If, for some reason, you can't do the above mentioned workaround, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
@@ -39,8 +39,7 @@ Then load the 2020.3 version of Unity (if you don't have it installed, please do
 #### Q. There are missing scripts in some demo scenes on the main camera.
 > **A.** Unity has some camera scripts that are available only in a particular RP. Because we use the same scenes for the URP and Built-In RP demos in Flat Kit, it may appear that a script is missing from the camera in our demos. This warning is harmless and can be safely ignored, or you may remove the missing script from the camera.
 
-#### Q. Does Flat Kit support URP?  
-#### Q. Why is the feature X is available in Universal RP but not in Built-In RP?
+#### Q. Does Flat Kit support URP? Why is the feature X is available in Universal RP but not in Built-In RP?  
 > **A.** Flat Kit supports URP as well as Built-In RP, although Built-In RP is not being developed after Flat Kit v.2.0. There are a few known limitations in URP, please see [FlatKit in URP chapter](index.md#8-flat-kit-in-urp). As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features only for URP. Please note, there is no HDRP version of Flat Kit.
 
 #### Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
@@ -124,10 +123,9 @@ Below are the written instructions on how to import Flat Kit. You can watch the 
 ![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_readme_1.png)
 
 NOTE. If you don't see _step 2_ while importing, or URP unitypackage is missing, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
-_Mac OS: (press Cmd + Shift + G in any Finder window or find the 'Go' menu on the top bar and press 'Go to Folder', type/copy the path)_  
-~/Library/Unity/Asset Store-5.x  
-_Windows: (replace accountName with your actual account name)_  
-C:\Users\accountName\AppData\Roaming\Unity\Asset Store-5.x  
+_Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)  
+_Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
+_Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
 More info about the Unity cache can be found in the Unity community answers page [here](https://answers.unity.com/questions/45050/where-unity-store-saves-the-packages.html).  
 
 NOTE. The _Step 5_ from the guide above automatically sets **[Flat Kit] Example Settings URP** Universal RP Rendering Asset file that comes with Flat Kit into **Graphics** and **Quality Settings** panels. It's made for convenience, but if you want to modify or change the settings in the Graphics and Quality Panels, you can do so in _Edit_ ▶︎ _Project Settings_ menu. For more information with screenshots please navigate to [this chapter (Flat Kit in URP)](index.md#8-flat-kit-in-urp).  
@@ -497,7 +495,7 @@ This section determines the overall shape of the waves. All the controls for the
 **Source.** How the foam is being made — from texture or generated from noise. Please, select one of the following parameters.
 *   **None.** Turns off the foam.
 *   **GradientNoise.** The foam shape comes from generative noise.
-*   **Texture.** If you choose _Texture_ source, you'll have an option to import your own, preferrably seamlessly tiling, texture, or use one of the included ones — we shortlisted the best from dozens of originally pre-generated .png textures to come with Flat Kit. If you are planning to use your own textures, we suggest you to put them into a single (red) color in the import settings to save memory.
+*   **Texture.** If you choose _Texture_ source, you'll have an option to import your own, preferably seamlessly tiling, texture, or use one of the included ones — we shortlisted the best from dozens of originally pre-generated .png textures to come with Flat Kit. If you are planning to use your own textures, we suggest you to put them into a single (red) color in the import settings to save memory.
 
 **Color.** Color value of the foam. Can be opaque or transparent.  
 
@@ -683,7 +681,7 @@ To change the parameters of the outlines then, please:
 - _Use Normals_ creates outlines for “inner” parts of the objects, meaning, for those that are inside the boundaries of the object, for every given camera perspective. The effect depends on the geometry of an object. So, having proper normals here is important. There is a Normals Threshold control. It's discussed a bit more a little further down.  
 - _Use Color_ enables or disables taking all color difference data on the scene when calculating the outlines. This feature is URP only.
 
-**NOTE:** If you see that _Use Depth_ and _Use Normals_ have no effect in your project, please navigate to Project Settings -> Graphics and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field. If you are using your own settings file insead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
+**NOTE:** If you see that _Use Depth_ and _Use Normals_ have no effect in your project, please navigate to Project Settings -> Graphics and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field. If you are using your own settings file instead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
 
 **Advanced settings** section hosts the parameters to adjust the tools above as well as a few more controls. The thresholds parameters are basically the limits that determine the ranges in which the effects take places. For example, the higher Min Depth value is, the further away from camera the outline will be generated. The lower Max Depth value is, the sooner outlines stop occurring.  
 
@@ -742,7 +740,7 @@ Linear Motion is a simple script that translates (moves) and rotates any object.
 
 ## 5.3. Buoyancy
 
-This script is used with _Water_ shader specifically when there is an object on the water surface, and you want it to phisically flow on this surface. The object will replicate the water's shape, while water is being deformed. This scripts is added on the object as a component. You'll need to point to the water object mesh this object is interacting with (in _Water_ field of the script interface).
+This script is used with _Water_ shader specifically when there is an object on the water surface, and you want it to physically flow on this surface. The object will replicate the water's shape, while water is being deformed. This scripts is added on the object as a component. You'll need to point to the water object mesh this object is interacting with (in _Water_ field of the script interface).
 
 ![Buoyancy script interface](FlatKit_Manual_Images/buoyancy_interface.png)
 > _Buoyancy_ script interface
