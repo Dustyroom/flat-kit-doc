@@ -157,7 +157,7 @@ At the moment, there are the following shaders included into Flat Kit: _Stylized
 > Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader.   
 
 ## 3.1. ‘Stylized Surface’ Shader
-This is a versatile shader to be used on rigid object materials. To use it on a material select the shader “FlatKit/Stylized Surface” or “FlatKit/Stylized Surface Cutout”. This is your main go-to shader. It works for the vast majority of cases.  
+This is a versatile lit shader to be used on rigid object materials. To use it on a material select the shader “FlatKit/Stylized Surface” or “FlatKit/Stylized Surface Cutout” (Built-In RP only). This is your main go-to shader. It works for the vast majority of cases.  
 Stylized Surface shader consists of the following **main** building blocks:
 
 * Color,
@@ -173,7 +173,7 @@ The **additional** parameters are:
 * Unity Built-in Shadows,
 * Texture.
 
-**Note:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html
+**NOTE:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html
 
 ![‘Stylized Surface’ shader in Single mode. Simple use case](FlatKit_Manual_Images/stylized-surface-1.png)
 > ‘Stylized Surface’ shader in Single mode. Simple use case.  
@@ -213,7 +213,7 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 > _Specular_. Inspector interface
 
 
-**Rim.** Rim was designed as one of the ways to make outlines.
+**Rim.** Rim was designed as one of the ways to make a specific version of outlines.  
 
 - _Rim Color_ selects the color of the parameter. It works in HDR.  
 - _Light Align_ parameter rotates the rim.  
@@ -223,12 +223,12 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 ![Rim. Inspector interface](FlatKit_Manual_Images/rim_parameters.png)
 > _Rim_. Inspector interface
 
-You can think of Rim as some kind of inner shadow and/or as inner glow. In one of the _Fruit Vase_ demo scenes, there is an example of extensive use of Rim as an outline. On _Blueprint Grid_ demo scene _Rim_ is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute _Curve mode_ or _Extra Cel parameter_. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, most of them have many use cases.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of _Stylized Surface_ shader with _None_ mode selected (meaning no straightforward shadows are applied), using orange color, and only _Rim_ parameter enabled. The results are variations of Rim section only. As you see, the _Rim_ alone is quite a creative tool. Imagine adding some creative _Specular_ and _Height Gradient_...
+You can think of Rim as some kind of inner shadow and/or as inner glow, if used on smoothened curvy models. In one of the _Fruit Vase_ demo scenes, there is an example of extensive use of Rim as an outline. On _Blueprint Grid_ demo scene _Rim_ is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute _Curve mode_ or _Extra Cel parameter_. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, most of them have many use cases.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of _Stylized Surface_ shader with _None_ mode selected (meaning no straightforward shadows are applied), using orange color, and only _Rim_ parameter enabled. The results are variations of Rim section only. As you see, the _Rim_ alone is quite a creative tool. Imagine adding some creative _Specular_ and _Height Gradient_...
 
 ![Rim only, usage examples](FlatKit_Manual_Images/rim_examples_suzanne.png)
 > Variety of uses of _Rim_ parameter alone on Suzanne the Blender Monkey. Interface of _Stylized Surface_ shader with _‘None’_ cel shading mode
 
-Although _Rim_ option is creatively useful, there are two more obvious ways to add an outline using Flat Kit: to use _‘Stylized Surface with Outline’_ shader and/or to use _‘Outline Image Effect’_ camera component/renderer feature. We’ll talk about both of them later in this manual.
+Although _Rim_ option is creatively useful and sometimes can remind an outline effect, there are two more obvious ways to add an outline using Flat Kit: to use [Stylized Surface with Outline](index.md#33-stylized-surface-with-outline-shader) shader and/or to use [Outline Image Effect](index.md#42-outline-image-effect) camera component in Built-In RP/Forward Renderer's Renderer Feature in URP. We’ll talk about both of them later in this manual.
  
 > **TIP.** Animate Cel layer size, Specular size or Rim size — to get a neat transition effect.
 
@@ -343,7 +343,7 @@ First, you have to select what mode to work with.
 
 ## 3.2. ‘Stylized Surface Cutout’ Shader
 
-**NOTE** '_Stylized Surface Cutout_' shader has been deprecated in Flat Kit 2.1.2 for Universal RP version. Because URP supports transparency by default, there's no need for this separate shader in URP. The _Stylized Surface_ and _Stylized Surface with Outline_ shaders can do everything _Stylized Surface Cutout_ could — using _Rendering options_ part of the shaders in the bottom of the interface. There you can find an option to set the shading in transparency mode (_Surface Type_ drop down menu ▶︎ _Transparent_. The default type is _Opaque_) '_Stylized Surface Cutout_' is still available in Built-In RP version.
+**NOTE:** '_Stylized Surface Cutout_' shader has been deprecated in Flat Kit 2.1.2 for Universal RP version. Because URP supports transparency by default, there's no need for this separate shader in URP. The _Stylized Surface_ and _Stylized Surface with Outline_ shaders can do everything _Stylized Surface Cutout_ could — using _Rendering options_ part of the shaders in the bottom of the interface. There you can find an option to set the shading in transparency mode (_Surface Type_ drop down menu ▶︎ _Transparent_. The default type is _Opaque_) '_Stylized Surface Cutout_' is still available in Built-In RP version.
 
 This is a version of _Stylized Surface_ shader with an option to treat alpha as transparency on a texture. The rest of the shader is the same.
 
@@ -364,7 +364,7 @@ _Stylized Surface with Outline_ shader, being the same as the regular _Stylized 
 - _Depth Offset_ moves the outline inwards or outwards an object.  
 - _Camera Distance Impact_ **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.  
 
-Remember, in addition to this shader Flat Kit has also a global _Outline_ Image Effect applied per scene (in URP) and per camera (in Built-In RP).  
+Remember, in addition to this shader Flat Kit has also a global _Outline Image Effect_ applied per Forward Renderer (in URP) and per camera (in Built-In RP).  
 In the [Outline Image Effect](index.md#42-outline-image-effect) chapter in this manual you can find some useful specific and general info.
 
 ![‘Stylized Surface with Outline’ shader](FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
@@ -491,6 +491,8 @@ This section determines the overall shape of the waves. All the controls for the
 
 ----------------------
 ### Foam
+
+**NOTE:** In order to see the foam, the model must be UV-unwrapped.
 
 **Source.** How the foam is being made — from texture or generated from noise. Please, select one of the following parameters.
 *   **None.** Turns off the foam.
@@ -706,7 +708,7 @@ Here is an example of choosing when to render the outlines. We took _Wanderer_ d
 
 Also, in URP you have an ability to chain and change the orders of Image effects, but it's a general Unity information. More info in the chapter [Flat Kit Image Effects in URP](index.md#83-flat-kit-image-effects-in-urp)
 
-Please, note that _Outline Image Effect_ is a global effect, as it is used as the camera component in Built-In RP and as a scene's Renderer Feature in URP, which is suitable for a consistent look of your project. If you would like to outline a particular object on your scene, you can engage the shader instead — ‘Stylized Surface with Outline’ shader.
+Please, note that _Outline Image Effect_ is a global effect, as it is used as the camera component in Built-In RP and as a scene's Renderer Feature in URP, which is suitable for a consistent look of your project. If you would like to outline a particular object on your scene, you can engage the shader instead — [Stylized Surface with Outline](index.md#33-stylized-surface-with-outline-shader) shader.
 
 If you would like to exclude an object from an outline pass, considering that you are using one of the Stylized Surface shaders, and you are in a URP project, please go to the interface of the shader and switch rendering to 'Transparent'. It won't change the look of the shader but will exclude it from the outline pass. You can control this too as described a few paragraphs above in Render Event list part.
 
