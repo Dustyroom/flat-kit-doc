@@ -213,7 +213,7 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 > _Specular_. Inspector interface
 
 
-**Rim.** Rim was designed as one of the ways to make a specific version of outlines.  
+**Rim.** Rim was designed as one of the ways to make a specific effect of a color 'wrapping' from behind the object. In some cases it can remind an outline effect.  
 
 - _Rim Color_ selects the color of the parameter. It works in HDR.  
 - _Light Align_ parameter rotates the rim.  
