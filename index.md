@@ -205,9 +205,9 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 
 **Specular.** You can make a, well, specular with this parameter. Also it can be used as another layer of shadow.
 
-- _Specular Color_ picks up the color of your glare, the parameter works in HDR.  
-- _Specular Size_ determines how big the specular is. Higher values mean bigger specular.  
-- _Specular Edge Smoothness_ — moving slider to the left decreases blurriness and makes specular sharper.
+- **Specular Color** picks up the color of your glare, the parameter works in HDR.  
+- **Specular Size** determines how big the specular is. Higher values mean bigger specular.  
+- **Specular Edge Smoothness** — moving slider to the left decreases blurriness and makes specular sharper.
 
 ![Specular. Inspector interface](FlatKit_Manual_Images/specular_parameters.png)
 > _Specular_. Inspector interface
@@ -215,10 +215,10 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 
 **Rim.** Rim was designed as one of the ways to make a specific effect of a color 'wrapping' from behind the object. In some cases it can remind an outline effect.  
 
-- _Rim Color_ selects the color of the parameter. It works in HDR.  
-- _Light Align_ parameter rotates the rim.  
-- _Rim Size_ controls how big the Rim is. Very high values can serve you as an unlit effect.  
-- _Rim Edge Smoothness_ — moving slider to the left sharpens the Rim, to the right — makes Rim blurry. 
+- **Rim Color** selects the color of the parameter. It works in HDR.  
+- **Light Align** parameter rotates the rim.  
+- **Rim Size** controls how big the Rim is. Very high values can serve you as an unlit effect.  
+- **Rim Edge Smoothness** — moving slider to the left sharpens the Rim, to the right — makes Rim blurry. 
 
 ![Rim. Inspector interface](FlatKit_Manual_Images/rim_parameters.png)
 > _Rim_. Inspector interface
@@ -237,10 +237,10 @@ Although _Rim_ option is creatively useful and sometimes can remind an outline e
 ![Height Gradient. Inspector interface](FlatKit_Manual_Images/gradient_height_parameters.png)
 > _Height Gradient._ Inspector interface
 
-- _Gradient Color_ picks the parameter’s own color to fade into from transparency.  
-- _Center X_ and _Y_ are initial points from where the effect takes effect. Adjust these to move the gradient across the scene. Center X is useful if you engage - _Gradient Angle_, which means the rotation of the Gradient.  
-- _Size_ determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.  
-- _Gradient Angle_ rotates the gradient.
+- **Gradient Color** picks the parameter’s own color to fade into from transparency.  
+- **Center X** and **Y** are initial points from where the effect takes effect. Adjust these to move the gradient across the scene. Center X is useful if you engage - _Gradient Angle_, which means the rotation of the Gradient.  
+- **Size** determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.  
+- **Gradient Angle** rotates the gradient.
 
 A bit more about the nature and use of _Height Gradient_ is covered in the [_‘Terrain’ Shader_](index.md#36-terrain-shader) section of this manual.
 
@@ -296,10 +296,11 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 ![Unity Built-in Shadows mode menu. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_modes.png)
 > Unity Built-in Shadows mode menu. Inspector interface
 
-- _Mode_ lets you choose the coloring and blending parameters for the built-in shadows. **None** mode turns the built-in shadow parameter off. **Multiply** mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'. **Color** mode lets you choose the color of the cast shadow. The blending mode is 'Normal'.
-- _Power_ sets how visible the Unity built-in shadow is.
-- _Sharpness_ defines how blurred or crisp the shadow edge is.
-- _Shadow Occlusion_ masks received Unity shadows in areas where normals face away from the light. **Useful to remove shadows that 'go through' objects.**
+- **Mode** lets you choose the coloring and blending parameters for the built-in shadows. **None** mode turns the built-in shadow parameter off. 
+**Multiply** mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'. **Color** mode lets you choose the color of the cast shadow. The blending mode is 'Normal'.
+- **Power** sets how visible the Unity built-in shadow is.
+- **Sharpness** defines how blurred or crisp the shadow edge is.
+- **Shadow Occlusion** masks received Unity shadows in areas where normals face away from the light. **Useful to remove shadows that 'go through' objects.**
 
 ![Height Gradient in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
 > _Height Gradient_ in _Color_ mode. Inspector interface
@@ -308,20 +309,20 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 
 **Albedo** Allows to use the albedo, or diffuse texture. In URP this slot supports transparent textures by default. Can be used together with _Alpha Clipping_ parameter (explained below).
 
-- _Texture selection slot_ lets you pick a texture;  
-- _Tiling_ repeats the texture along X and Y axis;  
-- _Offset_ shifts the texture along X and Y axis within the UV map of the mesh;  
-- _Blending Mode_ lets you choose between 'Multiply' or 'Add' blending modes.  
-- _Texture Impact_ parameter controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.  
+- **Texture selection slot** lets you pick a texture;  
+- **Tiling** repeats the texture along X and Y axis;  
+- **Offset** shifts the texture along X and Y axis within the UV map of the mesh;  
+- **Blending Mode** lets you choose between 'Multiply' or 'Add' blending modes.  
+- **Texture Impact** controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.  
 
 **Normal Map** To make an impression of a low-poly mesh having many details, you can use normal maps. Add one to _Bump Map_ slot in the Inspector panel.
 
 ![‘Stylized Surface’ shader — normal map applied](FlatKit_Manual_Images/normalmap-interface.png)
 > ‘Stylized Surface’ shader — normal map applied
 
-- _Texture selection slot_ lets you pick a texture;  
-- _Tiling_ repeats the texture along X and Y axis;  
-- _Offset_ shifts the texture along X and Y axis within the UV map of the mesh;  
+- **Texture selection slot** lets you pick a texture;  
+- **Tiling** repeats the texture along X and Y axis;  
+- **Offset** shifts the texture along X and Y axis within the UV map of the mesh;  
 
 ![‘Normal Map Tree’ demo scene, a tree without and with a normal map](FlatKit_Manual_Images/normalmap-trees.png)
 > ‘Normal Map Tree’ demo scene, a tree without and with a normal map
@@ -330,10 +331,10 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 
 **Emission Map** Allows to use custom emission maps to designate the parts of the meshes to have a 'glow' effect.  
 
-- _Texture selection slot_ lets you pick a texture;  
-- _Tiling_ repeats the texture along X and Y axis;  
-- _Offset_ shifts the texture along X and Y axis within the UV map of the mesh;  
-- _Emission Color_ chooses the color of the 'glowing' effect.  
+- **Texture selection slot** lets you pick a texture;  
+- **Tiling** repeats the texture along X and Y axis;  
+- **Offset** shifts the texture along X and Y axis within the UV map of the mesh;  
+- **Emission Color** chooses the color of the 'glowing' effect.  
 
 ![Emission map part of the Stylized Surface interface](FlatKit_Manual_Images/stylized-surface-emission-interface.png)
 > Emission map part of the Stylized Surface interface  
@@ -342,11 +343,8 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 
 ## 3.2. ‘Stylized Surface Cutout’ Shader
 
-
---- | --- | ---
-  | **NOTE:** '_Stylized Surface Cutout_' shader has been deprecated in Flat Kit 2.1.2 for Universal RP version. Because URP supports transparency by default, there's no need for this separate shader in URP. The _Stylized Surface_ and _Stylized Surface with Outline_ shaders can do everything _Stylized Surface Cutout_ could — using _Rendering options_ part of the shaders in the bottom of the interface. There you can find an option to set the shading in transparency mode (_Surface Type_ drop down menu ▶︎ _Transparent_. The default type is _Opaque_) '_Stylized Surface Cutout_' is still available in Built-In RP version.
+> **NOTE:** '_Stylized Surface Cutout_' shader has been deprecated in Flat Kit 2.1.2 for Universal RP version. Because URP supports transparency by default, there's no need for this separate shader in URP. The _Stylized Surface_ and _Stylized Surface with Outline_ shaders can do everything _Stylized Surface Cutout_ could — using _Rendering options_ part of the shaders in the bottom of the interface. There you can find an option to set the shading in transparency mode (_Surface Type_ drop down menu ▶︎ _Transparent_. The default type is _Opaque_) '_Stylized Surface Cutout_' is still available in Built-In RP version.
 {: .notice--warning}
- |  
 
 
 This is a version of _Stylized Surface_ shader with an option to treat alpha as transparency on a texture. The rest of the shader is the same.
@@ -360,18 +358,18 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 
 ## 3.3. ‘Stylized Surface with Outline’ Shader
 
-**NOTE:** _Stylized Surface with Outline_ shader has been deprecated in Universal RP version of Flat Kit: the outline functionality has been moved to the _Stylized Surface_ shader. _Stylized Surface with Outline_ remains available and working for the sake of compatibility with existing projects, but it is advised to use _Stylized Surface_ for the new projects instead. _Stylized Surface with Outline_ has not been deprecated in Built-In LTS version of Flat Kit.
+> **NOTE:** _Stylized Surface with Outline_ shader has been deprecated in Universal RP version of Flat Kit: the outline functionality has been moved to the _Stylized Surface_ shader. _Stylized Surface with Outline_ remains available and working for the sake of compatibility with existing projects, but it is advised to use _Stylized Surface_ for the new projects instead. _Stylized Surface with Outline_ has not been deprecated in Built-In LTS version of Flat Kit.
 {: .notice--warning}
 
 _Stylized Surface with Outline_ shader, being the same as the regular _Stylized Surface_ shader in a nutshell, has an additional option of... outlines. [_Stylized Surface_ info is here](index.md#31-stylized-surface-shader).
 
-- _Color_ picks up the color of the outline.  
-- _Width_ determines how thick the outline is.  
-- _Scale_ adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modeling, adjusting the normals, adjusting camera distance etc).  
-- _Depth Offset_ moves the outline inwards or outwards an object.  
-- _Camera Distance Impact_ **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.  
+- **Color** picks up the color of the outline.  
+- **Width** determines how thick the outline is.  
+- **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modeling, adjusting the normals, adjusting camera distance etc).  
+- **Depth Offset** moves the outline inwards or outwards an object.  
+- **Camera Distance Impact** **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.  
 
-Remember, in addition to this shader Flat Kit has also a global _Outline Image Effect_ applied per Forward Renderer (in URP) and per camera (in Built-In RP).  
+Please, remember that in addition to this shader Flat Kit has also a global _Outline Image Effect_ applied per Forward Renderer (in URP) and per camera (in Built-In RP).  
 In the [Outline Image Effect](index.md#42-outline-image-effect) chapter in this manual you can find some useful specific and general info.
 
 ![‘Stylized Surface with Outline’ shader](FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
@@ -388,10 +386,10 @@ More on this is covered in [Outline Image Effect](index.md#42-outline-image-effe
 
 This is a simple method to fill the sky of your scene.
 
-- _Top Color_ and _Bottom Color_ define two colors to be blended.  
-- _Intensity_ is a darkness/brightness controller of the skybox.  
-- _Exponent_ accentuates the effect in favour of either Top Color or Bottom Color.  
-- _Direction X angle_ and _Direction Y angle_ rotate the effect along the corresponding axis.  
+- **Top Color** and **Bottom Color** define two colors to be blended.  
+- **Intensity** is a darkness/brightness controller of the skybox.  
+- **Exponent** accentuates the effect in favour of either _Top Color_ or _Bottom Color_.  
+- **Direction X angle** and **Direction Y angle** rotate the effect along the corresponding axis.  
 
 > **TIP.** Make _Top Color_ and _Bottom Color_ identical colors or move the _Exponent_ parameter to one of the extremes if you want a flat background.
 
