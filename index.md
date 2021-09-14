@@ -345,9 +345,6 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 **NOTE:** '_Stylized Surface Cutout_' shader has been deprecated in Flat Kit 2.1.2 for Universal RP version. Because URP supports transparency by default, there's no need for this separate shader in URP. The _Stylized Surface_ and _Stylized Surface with Outline_ shaders can do everything _Stylized Surface Cutout_ could — using _Rendering options_ part of the shaders in the bottom of the interface. There you can find an option to set the shading in transparency mode (_Surface Type_ drop down menu ▶︎ _Transparent_. The default type is _Opaque_) '_Stylized Surface Cutout_' is still available in Built-In RP version.
 {: .notice--warning}
 
-| :exclamation:  This is very important   |
-|-----------------------------------------|
-
 This is a version of _Stylized Surface_ shader with an option to treat alpha as transparency on a texture. The rest of the shader is the same.
 
 The _Base Alpha cutout_ parameter determines how much of the alpha portion of the texture is going to be transparent.
