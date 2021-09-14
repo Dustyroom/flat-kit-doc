@@ -223,7 +223,7 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 ![Rim. Inspector interface](FlatKit_Manual_Images/rim_parameters.png)
 > _Rim_. Inspector interface
 
-You can think of Rim as some kind of inner shadow and/or as inner glow, if used on smoothened curvy models. In one of the _Fruit Vase_ demo scenes, there is an example of extensive use of Rim as an outline. On _Blueprint Grid_ demo scene _Rim_ is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute _Curve mode_ or _Extra Cel parameter_. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, most of them have many use cases.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of _Stylized Surface_ shader with _None_ mode selected (meaning no straightforward shadows are applied), using orange color, and only _Rim_ parameter enabled. The results are variations of Rim section only. As you see, the _Rim_ alone is quite a creative tool. Imagine adding some creative _Specular_ and _Height Gradient_...
+You can think of Rim as some kind of inner shadow and/or as inner glow, if used on smoothened curvy models. In one of the _Fruit Vase_ demo scenes, there is an example of extensive use of Rim as an outline. On _Blueprint Grid_ demo scene _Rim_ is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute _Curve mode_ or _Extra Cel parameter_. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, they can do more than that.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of _Stylized Surface_ shader with _None_ mode selected (meaning no straightforward shadows are applied), using orange color, and only _Rim_ parameter enabled. The results are variations of Rim section only. As you see, the _Rim_ alone is quite a creative tool. Imagine adding some creative _Specular_ and _Height Gradient_...
 
 ![Rim only, usage examples](FlatKit_Manual_Images/rim_examples_suzanne.png)
 > Variety of uses of _Rim_ parameter alone on Suzanne the Blender Monkey. Interface of _Stylized Surface_ shader with _‘None’_ cel shading mode
@@ -296,11 +296,10 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 ![Unity Built-in Shadows mode menu. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_modes.png)
 > Unity Built-in Shadows mode menu. Inspector interface
 
-First, you have to select what mode to work with.  
-
-- _None_ mode turns the Built-in shadow parameter off.
-- _Multiply_ mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'.
-- _Color_ mode lets you choose the color of the cast shadow. The blending mode is 'Normal'.
+- _Mode_ lets you choose the coloring and blending parameters for the built-in shadows. **None** mode turns the built-in shadow parameter off. **Multiply** mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'. **Color** mode lets you choose the color of the cast shadow. The blending mode is 'Normal'.
+- _Power_ sets how visible the Unity built-in shadow is.
+- _Sharpness_ defines how blurred or crisp the shadow edge is.
+- _Shadow Occlusion_ masks received Unity shadows in areas where normals face away from the light. *Useful to remove shadows that 'go through' objects.
 
 ![Height Gradient in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
 > _Height Gradient_ in _Color_ mode. Inspector interface
@@ -344,6 +343,7 @@ First, you have to select what mode to work with.
 ## 3.2. ‘Stylized Surface Cutout’ Shader
 
 **NOTE:** '_Stylized Surface Cutout_' shader has been deprecated in Flat Kit 2.1.2 for Universal RP version. Because URP supports transparency by default, there's no need for this separate shader in URP. The _Stylized Surface_ and _Stylized Surface with Outline_ shaders can do everything _Stylized Surface Cutout_ could — using _Rendering options_ part of the shaders in the bottom of the interface. There you can find an option to set the shading in transparency mode (_Surface Type_ drop down menu ▶︎ _Transparent_. The default type is _Opaque_) '_Stylized Surface Cutout_' is still available in Built-In RP version.
+{: .notice--warning}
 
 This is a version of _Stylized Surface_ shader with an option to treat alpha as transparency on a texture. The rest of the shader is the same.
 
@@ -355,6 +355,9 @@ The _Base Alpha cutout_ parameter determines how much of the alpha portion of th
 Use this shader if you work with transparency in Built-In RP. In URP you are good to go with the _Stylized Surface_ shader instead of this one. It will spare a few cycles from your CPU.
 
 ## 3.3. ‘Stylized Surface with Outline’ Shader
+
+**NOTE:** _Stylized Surface with Outline_ shader has been deprecated in Universal RP version of Flat Kit: the outline functionality has been moved to the _Stylized Surface_ shader. _Stylized Surface with Outline_ remains available and working for the sake of compatibility with existing projects, but it is advised to use _Stylized Surface_ for the new projects instead. _Stylized Surface with Outline_ has not been deprecated in Built-In LTS version of Flat Kit.
+{: .notice--warning}
 
 _Stylized Surface with Outline_ shader, being the same as the regular _Stylized Surface_ shader in a nutshell, has an additional option of... outlines. [_Stylized Surface_ info is here](index.md#31-stylized-surface-shader).
 
