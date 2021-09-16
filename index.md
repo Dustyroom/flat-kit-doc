@@ -1,5 +1,5 @@
 
-If you’ve got a question regarding Flat Kit, **please read through the Frequently Asked Questions**, and try searching for the answers here. If the question is not covered, please [report an issue](https://github.com/Dustyroom/flat-kit-doc/issues) or shoot an email to *info@dustyroom.com*.
+If you’ve got a question regarding Flat Kit, **please read through the Frequently Asked Questions**, and try searching for the answers here in this documentation. Also, many questions have been already covered in the [issues page](https://github.com/Dustyroom/flat-kit-doc/issues). If the question is not covered, please [report an issue](https://github.com/Dustyroom/flat-kit-doc/issues) or shoot an email to *info@dustyroom.com*.
 
 If you find a bug, it really helps us if you include steps to reproduce it. Please mind that we get lots of messages daily, be patient - we’re getting to it. Also, if you've got a feature you’d like to see implemented, let us know — some of the great ones came from the suggestions. Flat Kit is a vast field of stylistic possibilities, so please make sure you skim trough this manual, it may help you understand all the features better and give you a few ideas.
 
@@ -7,6 +7,9 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 
 #### Q. Why is Flat Kit giving errors in Unity 2019?
 > **A.** The difference between Unity Universal RP packages in versions 2019s and 2020s of Unity became so drastic that it became virtually impossible for us to keep supporting Flat Kit for 2019 version of Unity. That is why **Flat Kit v. 2.2.0 became the last version compatible with Unity 2019.** The newer features and bug fixes are implemented for Unity 2020 and later. The Package Manager in Unity 2019 should offer Flat Kit v. 2.2.0 for the download. If the Package Manager in your project doesn't allow you to download Flat Kit v. 2.2.0, please, let us know by sending a mail to info@dustyroom.com.  
+
+#### Q. What is the difference between Flat Kit and Quibli?
+Flat Kit is a set of tools for bread-and-butter toon shading end effects. Quibli was designed to be more open in regards to non-photorealistic stylization, while including the tools for the anime style works. The detailed comparison can be found [here](https://quibli.dustyroom.com/quibli-or-flat-kit/).
 
 #### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
 > **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the [issue tracker](https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates).  
