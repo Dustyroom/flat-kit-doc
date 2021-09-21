@@ -6,7 +6,7 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 # Frequently Asked Questions (FAQs)
 
 #### Q. Why is Flat Kit giving errors in Unity 2019?
-> **A.** The difference between Unity Universal RP packages in versions 2019s and 2020s of Unity became so drastic that it became virtually impossible for us to keep supporting Flat Kit for 2019 version of Unity. That is why **Flat Kit v. 2.2.0 became the last version compatible with Unity 2019.** The newer features and bug fixes are implemented for Unity 2020 and later. The Package Manager in Unity 2019 should offer Flat Kit v. 2.2.0 for the download. If the Package Manager in your project doesn't allow you to download Flat Kit v. 2.2.0, please, let us know by sending a mail to info@dustyroom.com.  
+> **A.** The difference between Unity Universal RP packages in versions 2019s and 2020s of Unity became so drastic that it became virtually impossible for us to keep supporting Flat Kit for 2019 version of Unity. That is why **Flat Kit v. 2.2.0 became the last version compatible with Unity 2019.** The newer features and bug fixes are implemented for Unity 2020 and later. The Package Manager in Unity 2019 should serve you with Flat Kit v. 2.2.0 for the download. If the Package Manager in your project doesn't allow you to download Flat Kit v. 2.2.0, please, let us know by sending a mail to info@dustyroom.com, include your invoice number and we'll send you the package directly.  
 
 #### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
 > **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the [issue tracker](https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates).  
@@ -22,7 +22,7 @@ _Linux:_ ~/.local/share/unity3d/Asset Store-5.x
 _Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)  
 _Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
 _Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
-Then load the 2020.3 version of Unity or newer (if you don't have it installed, please do so), create either the new project of upgrade your existing one to 2020.3, go to the Window ▶︎ Package Manager ▶︎ My Assets and import Flat Kit. If you need to return to 2019.1.x version of Unity, you'll be able to copy it from 2020.3. If, for some reason, you can't do the above mentioned workaround, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
+Then load Unity v. 2020.3 or newer (if you don't have it installed, please do so), create either a new project or upgrade your existing one to 2020.3 or newer, go to the Window ▶︎ Package Manager ▶︎ My Assets, download and import Flat Kit. If you need to return to 2019.4.x version of Unity, you'll be able to copy it from 2020.3. If, for some reason, you can't do the above mentioned workaround, please, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
 
 #### Q. What is the difference between Flat Kit and Quibli?
 > **A.**Flat Kit is a set of tools for bread-and-butter toon shading end effects. Quibli was designed to be more open in regards to non-photorealistic stylization, while including the tools for the anime style works. The detailed comparison can be found [here](https://quibli.dustyroom.com/quibli-or-flat-kit/).
@@ -32,9 +32,6 @@ Then load the 2020.3 version of Unity or newer (if you don't have it installed, 
 
 #### Q. Is it possible to apply the Flat Kit look while using my own shaders?  
 > **A.** The cel shading (`Flat Kit\Stylized Surface`) is implemented as object shaders, which means that they are used on regular materials. However, the *Outline* and *Fog* are _image effects_ applied globally (as camera components in the Built-In RP and as Render Features in URP).
-
-#### Q. Does it work with Unity version 20XX.x?  
-> **A.** As soon as you’ve got a stable Unity version, it does.
 
 #### Q. What platforms can I build for? What about VR?  
 > **A.** Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile. Currently there is a limitation where _Fog_ and _Outline_ image effects work only in the _Multi-Pass_ render mode. We are working to add support of the VR _Single-Pass_ render mode to the image effects in Flat Kit.
