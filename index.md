@@ -49,10 +49,7 @@ Then load Unity v. 2020.3 or newer (if you don't have it installed, please do so
 > **A.** Yes, it does. It is in Normal map section of the interface.
 
 #### Q. Does Flat Kit support emission maps?  
-> **A.** Yes, it does.
-
-#### Q. Can I use the scenes from Flat Kit in a commercial project?  
-> **A.** Yes, you can. As soon as you purchase it, you can use anything from Flat Kit in the a commercial projects without a need to credit authors of the asset (us). What you can’t do is to re-sell, give away or place on public repositories any part of the asset uncompiled, i.e. publicly accessible source code or models. More info here — https://unity3d.com/legal/as_terms
+> **A.** Yes, the URP version. There is no support for emission maps in Built-In RP version of Flat Kit.
 
 #### Q. I’ve got errors just after importing Flat Kit. Why?  
 > **A.** First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, shoot a mail to `info@dustyroom.com`.
@@ -328,6 +325,7 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 > ‘Normal Map Tree’ demo scene, a tree without and with a normal map
 
 **Emission** Enables Emission map part of the shader.  
+> **NOTE.** Please, note that Emission map support is available in Universal RP version of Flat Kit only, there is no Emission map parameter in Built-In version of Flat Kit.  
 
 **Emission Map** Allows to use custom emission maps to designate the parts of the meshes to have a 'glow' effect.  
 
