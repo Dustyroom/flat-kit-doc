@@ -25,7 +25,7 @@ _Linux:_ ~/.local/share/unity3d/Asset Store-5.x
 Then load Unity v. 2020.3 or newer (if you don't have it installed, please do so), create either a new project or upgrade your existing one to 2020.3 or newer, go to the Window ▶︎ Package Manager ▶︎ My Assets, download and import Flat Kit. If you need to return to 2019.4.x version of Unity, you'll be able to copy it from 2020.3. If, for some reason, you can't do the above mentioned workaround, please, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
 
 #### Q. What is the difference between Flat Kit and Quibli?
-> **A.**Flat Kit is a set of tools for bread-and-butter toon shading end effects. Quibli was designed to be more open in regards to non-photorealistic stylization, while including the tools for the anime style works. The detailed comparison can be found [here](https://quibli.dustyroom.com/quibli-or-flat-kit/).
+> **A.**Flat Kit is a set of tools for bread-and-butter toon shading end effects. Quibli was designed to be more open in regards to non-photorealistic stylization, while including the tools for the anime style works. The detailed comparison can be found [here](https://quibli.dustyroom.com/quibli-flat-kit/).
 
 #### Q. Is it easy to use Flat Kit for a beginner?  
 > **A.** Yes, there's nothing complicated about it from the user perspective. Even though there are lots of parameters, they all have good default values and well-structured interface. Additionally, there are mouse-over tooltips with little hints on all parameters.
