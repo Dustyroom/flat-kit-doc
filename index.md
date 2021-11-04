@@ -239,7 +239,9 @@ Although _Rim_ option is creatively useful and sometimes can remind an outline e
 - **Size** determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.  
 - **Gradient Angle** rotates the gradient.
 
-A bit more about the nature and use of _Height Gradient_ is covered in the [_‘Terrain’ Shader_](index.md#36-terrain-shader) section of this manual.
+A bit more about the nature and use of _Height Gradient_ is covered in the [_‘Terrain’ Shader_](index.md#36-terrain-shader) section of this manual.  
+
+**Enable Vertex Colors** If enabled, the final shading of the object is multiplied by the mesh’s vertex color values. It is a debug parameter, usually this is not used for changing the look.  
 
 *_Setting the colors from scripts_*. The following are the color field names for manipulation via the code for tweening, randomization etc:
 *   `_Color`: the primary color, “Color” in the inspector,
