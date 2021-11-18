@@ -10,8 +10,6 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 
 #### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
 > **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the [issue tracker](https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates).  
-In short, it is fixed for the Unity versions listed in the issue tracker. To get this bug resolved for your project before Unity fixes stuff, you'll either have to update to the latest version of Unity within your major range (the latest of 2019s, or 2020's) **Currently the minimum versions with the bug fixed are 2019.4.19f1 and 2020.2.2f1 or later**.  
-Additionally, if you are using Unity 2019.x or 2020.1, you need Flat Kit version 2.1.3 or later. Any version of Flat Kit works with Unity 2020.2 or later.  
 If you updated to the latest version of Unity, and still haven't resolved it, please restart Unity. If after restart the errors won’t go away, clean the cache of the Package Manager and re-import Flat Kit, as it is another one symptom of this Unity's problem. You can find the cache here  
 _Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)  
 _Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
@@ -22,7 +20,7 @@ _Linux:_ ~/.local/share/unity3d/Asset Store-5.x
 _Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)  
 _Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
 _Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
-Then load Unity v. 2020.3 or newer (if you don't have it installed, please do so), create either a new project or upgrade your existing one to 2020.3 or newer, go to the Window ▶︎ Package Manager ▶︎ My Assets, download and import Flat Kit. If you need to return to 2019.4.x version of Unity, you'll be able to copy it from 2020.3. If, for some reason, you can't do the above mentioned workaround, please, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
+Then load Unity v. 2020.3.21 or newer (if you don't have it installed, please do so), create either a new project or upgrade your existing one to 2020.3.21 or newer, go to the Window ▶︎ Package Manager ▶︎ My Assets, download and import Flat Kit. If you need to return to 2019.4.x version of Unity, and for some reason cannot find the appropriate Flat Kit version in the Package Manager, please, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
 
 #### Q. What is the difference between Flat Kit and Quibli?
 > **A.**Flat Kit is a set of tools for bread-and-butter toon shading end effects. Quibli was designed to be more open in regards to non-photorealistic stylization, while including the tools for the anime style works. The detailed comparison can be found [here](https://quibli.dustyroom.com/quibli-flat-kit/).
@@ -71,7 +69,7 @@ To name Flat Kit a set of flat shaders, cel shaders or toon ones, would be a ser
 
 In case you already use any other flat-looking shaders, you will still find a variety of useful tools for quick image processing. Particularly, later in the manual we’ll overview the Height Gradient mode of the Stylized Surface Shader, the Fog Image Effect camera component, LightPlane shader effect etc. They have quite little related to toon or cell shading, but in conjunction with a stylish flat or cel look, they add a whole new life to your scene. Plus, they can be used out of context of non-photorealistic aesthetics. It is a spice that can dramatically make your dish sweeter (tastier).
 
-Flat Kit was made with optimized and fast workflow in mind, so that one could fulfill the picture popped up in the mind — as quickly as possible, in various ways. This means:
+Flat Kit was made with optimised and fast workflow in mind, so that one could fulfil the picture popped up in the mind — as quickly as possible, in various ways. This means:
 
 * One task could be done in different ways. It is a multi-purpose set of shaders;
 * Some outstanding graphical results can be achieved in minutes (given that you have your models ready, there are lots in FlatKit);
@@ -104,7 +102,7 @@ On the 3D models side, it’s important that you decide whether you would like m
 
 Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
 
-- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.  
+- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Please, make sure you have Unity v. 2020.3.21 or later running. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.  
 ![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_2.png)
 
 - **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one. If you don't see this step, see the note below.  
