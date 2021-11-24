@@ -309,7 +309,7 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 - **Power** sets how visible the Unity built-in shadow is.
 - **Sharpness** defines how blurred or crisp the shadow edge is.
 - **Shadow Occlusion** masks received Unity shadows in areas where normals face away from the light. **Useful to remove shadows that 'go through' objects.** 
-> **NOTE.** Please, note that _Shadow Occludion_ parameter is available in URP version of Flat Kit only
+> **NOTE.** Please, note that _Shadow Occludion_ parameter is available in the URP version of Flat Kit only.
 
 ![Unity Built-in Shadows in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
 > _Unity Built-in Shadows_ in _Color_ mode. Inspector interface
@@ -324,7 +324,7 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 - **Blending Mode** lets you choose between 'Multiply' or 'Add' blending modes.  
 - **Texture Impact** controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.  
 
-**Normal Map** To make an impression of a low-poly mesh having many details, you can use normal maps. Add one to _Bump Map_ slot in the Inspector panel.
+**Normal Map** To make an impression of a relatively low-poly mesh having many details of a high-poly one, you can use normal maps. Add one to _Bump Map_ slot in the Inspector panel.
 
 ![‘Stylized Surface’ shader — normal map applied](FlatKit_Manual_Images/normalmap-interface.png)
 > ‘Stylized Surface’ shader — normal map applied
