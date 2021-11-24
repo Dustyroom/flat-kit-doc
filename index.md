@@ -6,13 +6,13 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 # Frequently Asked Questions (FAQs)
 
 #### Q. Why is Flat Kit giving errors in Unity 2019?
-> **A.** The difference between Unity Universal RP packages in versions 2019s and 2020s of Unity became so drastic that it became virtually impossible for us to keep supporting Flat Kit for 2019 version of Unity. That is why **Flat Kit v. 2.2.0 became the last version compatible with Unity 2019.** The newer features and bug fixes are implemented for Unity 2020 and later. The Package Manager in Unity 2019 should serve you with Flat Kit v. 2.2.0 for the download. If the Package Manager in your project doesn't allow you to download Flat Kit v. 2.2.0, please, let us know by sending a mail to info@dustyroom.com, include your invoice number and we'll send you the package directly.  
+> **A.** Flat Kit is compatible with Unity minimum version of 2020.3.21, the minimum minor versions for all major versions are listed on the [Flat Kit's Asset Store](https://assetstore.unity.com/packages/vfx/shaders/flat-kit-toon-shading-and-water-143368) page, under 'Render pipeline compatibility' paragraph.
 
 #### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
 > **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the [issue tracker](https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates).  
 If you updated to the latest version of Unity, and still haven't resolved it, please restart Unity. If after restart the errors won’t go away, clean the cache of the Package Manager and re-import Flat Kit, as it is another one symptom of this Unity's problem. You can find the cache here  
-_Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)  
-_Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
+_Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window or press Go -> Go to Folder on the top bar and paste this path)  
+_Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder, press Win+R to open 'Run' window and paste this path)  
 _Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
 
 #### Q. I am trying to import Flat Kit but can't find URP package / it downloads old version of Flat Kit?  
