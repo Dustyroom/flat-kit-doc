@@ -311,8 +311,8 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 - **Shadow Occlusion** masks received Unity shadows in areas where normals face away from the light. **Useful to remove shadows that 'go through' objects.** 
 > **NOTE.** Please, note that _Shadow Occludion_ parameter is available in URP version of Flat Kit only
 
-![Height Gradient in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
-> _Height Gradient_ in _Color_ mode. Inspector interface
+![Unity Built-in Shadows in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
+> _Unity Built-in Shadows_ in _Color_ mode. Inspector interface
 
 **Texture Maps** If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you work with transparency in textures in Built-In RP, please use _Stylized Shader Cutout_ shader. It can see alpha on the texture as transparency. URP supports alpha by default.
 
