@@ -160,13 +160,14 @@ Stylized Surface shader consists of the following **main** building blocks:
 * Extra Cel layer,
 * Specular,
 * Rim,
-* Height Gradient.
+* Height Gradient,
+* Outline.
 
 The **additional** parameters are:
 
 * Advanced Lighting,
 * Unity Built-in Shadows,
-* Texture.
+* Textures (Albedo, Normal, Emission).
 
 **NOTE:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html
 
@@ -248,6 +249,16 @@ A bit more about the nature and use of _Height Gradient_ is covered in the [_‘
 *   `_FlatRimColor`: rim color, requires _“Enable Rim Color”_,
 *   `_FlatSpecularColor`: specular color, requires _“Enable Specular Color”_,
 *   `_ColorGradient`: the gradient color used along with the `_Color` parameter when _“Enable Height Color”_ feature is active.
+
+**Outline.**
+![Outline part of Stylized Surface shader. Inspector interface](FlatKit_Manual_Images/stylized-surface-outline-interface.png)
+> _Outline_ part of Stylized Surface shader. Inspector interface
+
+- **Color** picks up the color of the outline.  
+- **Width** determines how thick the outline is.  
+- **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).  
+- **Depth Offset** moves the outline inwards or outwards an object.  
+- **Camera Distance Impact** **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.
 
 ### 3.1.2. The Additional Parameters of the Shader
 
@@ -363,7 +374,7 @@ _Stylized Surface with Outline_ shader, being the same as the regular _Stylized 
 
 - **Color** picks up the color of the outline.  
 - **Width** determines how thick the outline is.  
-- **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modeling, adjusting the normals, adjusting camera distance etc).  
+- **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).  
 - **Depth Offset** moves the outline inwards or outwards an object.  
 - **Camera Distance Impact** **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.  
 
@@ -624,7 +635,7 @@ Both _Fog_ and _Outline_ image effects rely on image-based anti-aliasing, like t
 
 Fog Image Effect camera component can be reviewed as a post-processing effect. It can be subtle, like a mist in the lower part of the valley, or a dominant effect, as in a completely hazed environment. Simply put, it works in the following way. You decide whether you need only length fog or height fog or both. Then you determine the bounds where it would take effect. Then you choose colors along each dimension. And after that, blend between distance and height. This effect starts from camera position up to the Near/Far, Low/High bounds, meaning, your camera is the zero coordinate from where the fog spreads. Each camera on the scene can have a separate independent instance of an effect.
 
-Because Unity’s MSAA (multi-sample anti-aliasing, which is an option in the Quality Settings of your project) does not apply to depth texture, there may be inconsistencies between the anti-aliased color image and the unprocessed depth image. This may look as aliasing if fog intensity is set to a high value. *Such artifacts may only occur if using MSAA*, so we recommend using screen-space anti-aliasing, such as in Unity’s post-processing stack that you can import by going to Window ▶︎ Package Manager in Unity 2018+.
+Because Unity’s MSAA (multi-sample anti-aliasing, which is an option in the Quality Settings of your project) does not apply to depth texture, there may be inconsistencies between the anti-aliased color image and the unprocessed depth image. This may look as aliasing if fog intensity is set to a high value. *Such artefacts may only occur if using MSAA*, so we recommend using screen-space anti-aliasing, such as in Unity’s post-processing stack that you can import by going to Window ▶︎ Package Manager in Unity 2018+.
 
 When you click on any of the color ramps (Distance or Height Gradient), the Gradient Editor pops up.
 
