@@ -130,6 +130,7 @@ We included a **Readme** tool, which is a useful debugging helper. It does the f
   * Detects what RP the project belongs to (Universal RP or Built-In RP);
   * Checks for available updates;
   * Configures Flat Kit for the pipeline of the project;
+  * Clears Flat Kit's Package Manager cache, which can be useful in re-importing Flat Kit during troubleshooting;
   * Opens this documentation as well as redirects to Git where you can open a support ticket;
   * Copies debug info which is useful for in-depth troubleshooting.  
 
@@ -250,7 +251,8 @@ A bit more about the nature and use of _Height Gradient_ is covered in the [_‘
 *   `_FlatSpecularColor`: specular color, requires _“Enable Specular Color”_,
 *   `_ColorGradient`: the gradient color used along with the `_Color` parameter when _“Enable Height Color”_ feature is active.
 
-**Outline.**
+**Outline.**  
+
 ![Outline part of Stylized Surface shader. Inspector interface](FlatKit_Manual_Images/stylized-surface-outline-interface.png)
 > _Outline_ part of Stylized Surface shader. Inspector interface
 
