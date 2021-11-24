@@ -308,7 +308,8 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 **Multiply** mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'. **Color** mode lets you choose the color of the cast shadow. The blending mode is 'Normal'.
 - **Power** sets how visible the Unity built-in shadow is.
 - **Sharpness** defines how blurred or crisp the shadow edge is.
-- **Shadow Occlusion** masks received Unity shadows in areas where normals face away from the light. **Useful to remove shadows that 'go through' objects.**
+- **Shadow Occlusion** masks received Unity shadows in areas where normals face away from the light. **Useful to remove shadows that 'go through' objects.** 
+> **NOTE.** Please, note that _Shadow Occludion_ parameter is available in URP version of Flat Kit only
 
 ![Height Gradient in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
 > _Height Gradient_ in _Color_ mode. Inspector interface
