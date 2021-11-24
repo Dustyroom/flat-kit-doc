@@ -5,6 +5,9 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 
 # Frequently Asked Questions (FAQs)
 
+#### Q. I have purchased Quibli. How do I get the discount for Flat Kit?
+> **A.** Once you log into the account you have purchased Quibli from, and load the Flat Kit Asset Store page, you should see the automatic 50% off discount for Flat Kit.
+
 #### Q. Why is Flat Kit giving errors in Unity 2019?
 > **A.** Flat Kit is compatible with Unity minimum version of 2020.3.21, the minimum minor versions for all major versions are listed on the [Flat Kit's Asset Store](https://assetstore.unity.com/packages/vfx/shaders/flat-kit-toon-shading-and-water-143368) page, under 'Render pipeline compatibility' paragraph.
 
