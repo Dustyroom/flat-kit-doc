@@ -821,7 +821,7 @@ Save, recall, experiment, discard bad results, save great results, all by using 
 
 Although many of the features in Flat Kit look identically in URP and in Built-In RP versions, the differences are becoming inevitable for a couple of reasons. Built-in RP is being deprecated by Unity, URP is faster and it is a way to go, URP offers the tools Built-In RP is lacking. One of the differences is in post-processing. Flat Kit Built-In RP uses Post-Processing Stack v.2. Flat Kit URP uses URP's native Volume toolkit. Both of these offer similar post-processing tools but they behave differently. Even when using the same values for Color grading section in Built-In RP and URP, the outcome is slightly different.
 
-Please note, Flat Kit had been initially created for the Built-in Rendering Pipeline. To keep the visual results as close to the original as possible, the URP version of Flat Kit is using HLSL code rather than shader graph. It means you can switch a Flat Kit project between URP and Built-in RP at any point without extra work. However if you’d like to edit the shaders, you'll need some programming skills.
+Please note, Flat Kit had been initially created for the Built-in Rendering Pipeline. To keep the visual results as close to the original as possible, the URP version of Flat Kit is using HLSL code rather than shader graph. It means you can switch a Flat Kit project between URP and Built-in RP at any point without extra work. However if you’d like to edit the shaders, you'll need some programming skills. Although you can switch between the Rendering Pipelines, we cannot guarantee that all Unity versions will let you do it flawlessly. That is why, to make Flat Kit work out of the box, we highly recommended that you created a Universal RP project to begin with.
 
 ## 8.1. Known Limitations
 
@@ -830,6 +830,7 @@ Although we did our best to make Flat Kit support URP, the pipeline itself is no
 The current limitations are:
 
 * SRP Batcher is not yet supported by the Stylized Surface shaders.
+* Currently VR works in multi-pass mode only. We are working on it, it is our prioritised feature to implement.
 
 ## 8.2. URP Installation
 
