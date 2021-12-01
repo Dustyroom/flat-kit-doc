@@ -18,13 +18,6 @@ _Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Windo
 _Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder, press Win+R to open 'Run' window and paste this path)  
 _Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
 
-#### Q. I am trying to import Flat Kit but can't find URP package / it downloads old version of Flat Kit?  
-> **A.** It is an issue with Unity's Package Manager. Sometimes it won't let you download the latest versions of the assets if you use Unity v. 2019.4.x. The team at Unity is aware of this and a lot of publishers are requesting to get this fixed. Meanwhile, there is a workaround do get Flat Kit and other assets to work. First of all, close Unity Editor, navigate to the folder with Unity's cache and delete its content:  
-_Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)  
-_Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
-_Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
-Then load Unity v. 2020.3.21 or newer (if you don't have it installed, please do so), create either a new project or upgrade your existing one to 2020.3.21 or newer, go to the Window ▶︎ Package Manager ▶︎ My Assets, download and import Flat Kit. If you need to return to 2019.4.x version of Unity, and for some reason cannot find the appropriate Flat Kit version in the Package Manager, please, send us an email to info@dustyroom.com and we'll provide you with the direct link to the package.
-
 #### Q. What is the difference between Flat Kit and Quibli?
 > **A.**Flat Kit is a set of tools for bread-and-butter toon shading end effects. Quibli was designed to be more open in regards to non-photorealistic stylization, while including the tools for the anime style works. The detailed comparison can be found [here](https://quibli.dustyroom.com/quibli-flat-kit/).
 
@@ -95,6 +88,7 @@ Flat Kit is fully self-contained and does not depend on any external assets.
 If you do not need demo scenes, example materials and models you may skip importing the Demos directory in the asset.  
 The easiest way to get started with the asset is to dig into the demo scenes.  
 For Built-In RP it may take a while for Unity to import the asset — this is normal. Under the hood, Unity needs to generate all shader variants that are used in the demo scenes. For URP it is virtually immediate.  
+For URP, it is important that you created the project in URP initially, as opposed to creating a Built-in RP project and 'upgrading' it to URP one.  
 On the 3D models side, it’s important that you decide whether you would like making normals ‘smooth’ or 'sharp' for your meshes in a 3D editor, as the result will be different in either case. If you import someone else's models and can’t edit the object in 3D editor, at least try to calculate normals in Unity — in the import settings of the model. The shaders should work regardless, but sometimes the difference can be obvious, especially on objects with rounded corners.  
 **Note:** Our demos were created in **Linear color space** (a setting found in Project Settings). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
 
@@ -105,7 +99,7 @@ On the 3D models side, it’s important that you decide whether you would like m
 
 Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
 
-- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Please, make sure you have Unity v. 2020.3.21 or later running. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Import.  
+- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Please, make sure you have Unity v. 2020.3.21 or later running. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Download, then Import.  
 ![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_2.png)
 
 - **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one. If you don't see this step, see the note below.  
@@ -127,6 +121,8 @@ _Linux:_ ~/.local/share/unity3d/Asset Store-5.x
 More info about the Unity cache can be found in the Unity community answers page [here](https://answers.unity.com/questions/45050/where-unity-store-saves-the-packages.html).  
 
 NOTE. The _Step 5_ from the guide above automatically sets **[Flat Kit] Example Settings URP** Universal RP Rendering Asset file that comes with Flat Kit into **Graphics** and **Quality Settings** panels. It's made for convenience, but if you want to modify or change the settings in the Graphics and Quality Panels, you can do so in _Edit_ ▶︎ _Project Settings_ menu. For more information with screenshots please navigate to [this chapter (Flat Kit in URP)](index.md#8-flat-kit-in-urp).  
+
+NOTE. If you are going to use the URP version of Flat Kit, it is highly advised that you created an originally URP project, **NOT** a URP project 'upgraded' from a Built-in RP one.  
 
 We included a **Readme** tool, which is a useful debugging helper. It does the following:
   * Shows the stats like Unity, Universal RP and Flat Kit's versions;
