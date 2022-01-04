@@ -9,7 +9,7 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 > **A.** Once you log into the account you have purchased Quibli from, and load the Flat Kit Asset Store page, you should see the automatic 50% off discount for Flat Kit.
 
 #### Q. Why is Flat Kit giving errors in Unity 2019?
-> **A.** Flat Kit is compatible with Unity minimum version of 2020.3.21, the minimum minor versions for all major versions are listed on the [Flat Kit's Asset Store](https://assetstore.unity.com/packages/vfx/shaders/flat-kit-toon-shading-and-water-143368) page, under 'Render pipeline compatibility' paragraph.
+> **A.** Flat Kit is compatible with Unity minimum version of 2020.3.24f1, the minimum minor versions for all major versions are listed on the [Flat Kit's Asset Store](https://assetstore.unity.com/packages/vfx/shaders/flat-kit-toon-shading-and-water-143368) page, under 'Render pipeline compatibility' paragraph.
 
 #### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
 > **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the [issue tracker](https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates).  
@@ -99,7 +99,7 @@ On the 3D models side, it’s important that you decide whether you would like m
 
 Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
 
-- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Please, make sure you have Unity v. 2020.3.21 or later running. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Download, then Import.  
+- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Please, make sure you have Unity v. 2020.3.24f1 or later running. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Download, then Import.  
 ![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_2.png)
 
 - **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one. If you don't see this step, see the note below.  
