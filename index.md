@@ -832,7 +832,6 @@ Although we did our best to make Flat Kit support URP, the pipeline itself is no
 
 The current limitations are:
 
-* SRP Batcher is not yet supported by the Stylized Surface shaders.
 * Currently VR works in multi-pass mode only. We are working on it, it is our prioritised feature to implement.
 
 ## 8.2. URP Installation
