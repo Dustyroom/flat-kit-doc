@@ -255,11 +255,27 @@ A bit more about the nature and use of _Height Gradient_ is covered in the [_‘
 ![Outline part of Stylized Surface shader. Inspector interface](FlatKit_Manual_Images/stylized-surface-outline-interface.png)
 > _Outline_ part of Stylized Surface shader. Inspector interface
 
+The _Outline_ part of the _Stylized Surface_ shader allows you to add pseudo-outlines to your models. 
+
 - **Color** picks up the color of the outline.  
 - **Width** determines how thick the outline is.  
 - **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).  
 - **Depth Offset** moves the outline inwards or outwards an object.  
 - **Camera Distance Impact** **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.
+
+Please, remember that in addition to this shader Flat Kit has also a global _Outline Image Effect_ applied per Forward Renderer (in URP) and per camera (in Built-In RP).  
+In the [Outline Image Effect](index.md#42-outline-image-effect) chapter in this manual you can find some useful specific and general info.
+
+![‘Stylized Surface with Outline’ shader](FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
+> ‘Stylized Surface with Outline’ shader
+
+Sometimes it is useful to manipulate the normals of your model in order to force the shader to render outlines where it wouldn't do so otherwise.
+More on this is covered in [Outline Image Effect](index.md#42-outline-image-effect) chapter. But here's one thing you can try without using 3d editor software. Among the other parameters of the import settings of the model, there is a section where is it possible to change the angle detection threshold for normals. It may come handy in adding or removing some of the outlines where they wouldn't appear normally. Also, slight adjustments to these parameters may resolve some of the visual issues. If you have gaps in the outline, for instance, try tweaking these controls (but remember to backup the project first, it's always a good idea to backup things. In fact, if you are working on something, do it now).
+
+![Import settings of the model](FlatKit_Manual_Images/mesh-import-settings.png)
+> Import settings of the model has a section for manipulating the normals, which is useful for the _Stylized Surface with Outline_ shader as well as for _Outline_ global effect.
+
+Please, note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. There are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
 
 ### 3.1.2. The Additional Parameters of the Shader
 
@@ -373,25 +389,6 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 {: .notice--warning}
 
 _Stylized Surface with Outline_ shader, being the same as the regular _Stylized Surface_ shader in a nutshell, has an additional option of... outlines. [_Stylized Surface_ info is here](index.md#31-stylized-surface-shader).
-
-- **Color** picks up the color of the outline.  
-- **Width** determines how thick the outline is.  
-- **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).  
-- **Depth Offset** moves the outline inwards or outwards an object.  
-- **Camera Distance Impact** **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.  
-
-Please, remember that in addition to this shader Flat Kit has also a global _Outline Image Effect_ applied per Forward Renderer (in URP) and per camera (in Built-In RP).  
-In the [Outline Image Effect](index.md#42-outline-image-effect) chapter in this manual you can find some useful specific and general info.
-
-![‘Stylized Surface with Outline’ shader](FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
-> ‘Stylized Surface with Outline’ shader
-
-Sometimes it is useful to manipulate the normals of your model in order to force the shader to render outlines where it wouldn't do so otherwise.
-More on this is covered in [Outline Image Effect](index.md#42-outline-image-effect) chapter. But here's one thing you can try without using 3d editor software. Among the other parameters of the import settings of the model, there is a section where is it possible to change the angle detection threshold for normals. It may come handy in adding or removing some of the outlines where they wouldn't appear normally. Also, slight adjustments to these parameters may resolve some of the visual issues. If you have gaps in the outline, for instance, try tweaking these controls (but remember to backup the project first, it's always a good idea to backup things. In fact, if you are working on something, do it now).
-
-![Import settings of the model](FlatKit_Manual_Images/mesh-import-settings.png)
-> Import settings of the model has a section for manipulating the normals, which is useful for the _Stylized Surface with Outline_ shader as well as for _Outline_ global effect.
-
 
 ## 3.4. ‘Gradient Skybox’ Shader
 
