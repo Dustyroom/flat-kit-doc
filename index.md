@@ -583,7 +583,7 @@ The _Wanderer_ demo scene includes _LightPlane_ shader implemented not only as f
 
 The parameters of the _LightPlane_ shader are:
 
-- _Depth Fade Distance_ determines how the shader's transparency behaves depending on camera's distance; 
+- _Depth Fade Distance_ controls how quickly the light plane becomes opaque. Imagine you are looking at a frosted glass window. Any objects that are very close to the window on the other side are clearly visible, but anything that's far behind the window is completely blurred out. _Depth Fade Distance_ defines how far the objects need to be from the window to become completely invisible.
 
 - _Camera Distance Fade Far_ controls the farther edge of the gradient from opaque to transparent (see pic below).
 
