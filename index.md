@@ -34,7 +34,7 @@ _Linux:_ ~/.local/share/unity3d/Asset Store-5.x
 > **A.** Unity has some camera scripts that are available only in a particular RP. Because we use the same scenes for the URP and Built-In RP demos in Flat Kit, it may appear that a script is missing from the camera in our demos. This warning is harmless and can be safely ignored, or you may remove the missing script from the camera.
 
 #### Q. Does Flat Kit support URP? Why is the feature X is available in Universal RP but not in Built-In RP?  
-> **A.** Flat Kit supports URP as well as Built-In RP, although Built-In RP is not being developed after Flat Kit v.2.0. There are a few known limitations in URP, please see [FlatKit in URP chapter](index.md#8-flat-kit-in-urp). As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features only for URP. Please note, there is no HDRP version of Flat Kit.
+> **A.** Flat Kit supports URP as well as Built-In RP, although Built-In RP is not being developed after Flat Kit v.2.0. There are a few known limitations in URP, please see [FlatKit in URP chapter](index.md#8-flat-kit-in-urp). As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features only for URP, instead of supporting an obsolete technology. Please note, there is no HDRP version of Flat Kit yet.
 
 #### Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
 > **A.** In Flat Kit indirect sources of light influence the colors of the scene by default, which can be turned off. The shaders do not support parameters required for the photorealistic look such as glossiness, metallic or subsurface scattering.
