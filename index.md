@@ -744,6 +744,16 @@ Some general info. Manipulating the normals of the mesh can be a very efficient 
 > **TIP:** One of the commonly asked questions is if some of the objects can be rendered without the Outline Renderer Feature applied. Outline image effect is global and is not designed to be selective to objects — it is applied per Renderer (in URP). However, moving object to be rendered in the transparent pass can solve this problem. In Flat Kit Stylized Surface there is such an option. If you are using non-Flat Kit shaders, please refer to their documentation to see whether it is possible — to enable transparency without affecting the look. In Flat Kit there is an option of Render Event. It lets you choose when to render the lines. Take a look at [this chapter](#42-outline-image-effect) in our manual.  
 Another way of excluding something from rendering outlines on — is to render it with a separate camera in a camera stack: one camera is for non-outlined objects and another one is for everything else (outlined). Please, refer to Unity documentation on camera stacking to get to know more about this general Unity technique.
 
+#### Making Outline to be not rendered on some objects 
+
+One of the more frequently asked questions is whether Flat Kit Outline can be bypassed on some of the objects on a scene. Although the Outline is global and it is applied on everything on the screen, there are a few ways to overcome it and exclude some parts from being affected by the Outline. Please, note that these methods are not perfect and can impact the performance, not are they official — it is just a part of the general Unity workflow.
+
+- You can stack the cameras. Each one of the cameras has a separate forward renderer selected. Each of these forward renderers has its own Outline image effect, of course, with different settings. When stacked, these cameras result in multiple Outline image effects placed on top of each other. If you need one camera not to render the outlines, you can disable the Outline. This method allow to have different outlines within a single scene.
+
+- If you set any material to transparent, the Outline Image Effect can bypass transparency and not render the outline for that material. This won't affect the look but will let the material to be rendered without the outlines. For the [**Stylized Surface**](#31-stylized-surface-shader) shader, transparent rendering can be set the bottom of the interface: under the _Rendering options_ part, in the _Surface Type_ menu, use _Transparent_ menu item. For other (3rd party) shaders, please consult their respective documentation.
+
+
+
 # 5. Additional scripts
 
 ## 5.1. UV Scroller
