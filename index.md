@@ -335,10 +335,10 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 - **Texture selection slot** lets you pick a texture;  
 - **Tiling** repeats the texture along X and Y axis;  
 - **Offset** shifts the texture along X and Y axis within the UV map of the mesh;  
-- **Blending Mode** lets you choose between 'Multiply' or 'Add' blending modes.  
+- **Blending Mode** lets you choose between 'Multiply' or 'Add' blending modes. 'Multiply' Blending Mode multiplies the luminosity of the base color by the blend color. Multiplication by white produces no change, while the black pixels remain, making the material darker. 'Add' Blending Mode is a little bit different from 'Multiply' — blending with black color produces no change, while generally it brightens the bright colors.  
 - **Texture Impact** controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.  
 
-> **TIP.** If you would like to have a material with a texture with a cel shading on top of this texture, you can set the _Stylized Surface_ to _Single_ **Cel Shading Mode**, set the base *Color* to white or light grey, set the  **Color Shaded** parameter to a bit darker one, set the Albedo texture (if your texture is not mostly white) to _Multiply_ **Blending mode**, Texture Impact to the maximum value. You should get the model filled with a texture and with cel shadows combined.
+> **TIP.** If you would like to have a material with a texture with a cel shading on top of this texture, you can set the _Stylized Surface_ to _Single_ **Cel Shading Mode**, set the base **Color** to white or light grey, set the  **Color Shaded** parameter to a bit darker one, set the Albedo texture (if your texture is not mostly white) to _Multiply_ **Blending mode**, Texture Impact to the maximum value. You should get the model filled with a texture and with cel shadows combined.
 
 **Normal Map** To make an impression of a relatively low-poly mesh having many details of a high-poly one, you can use normal maps. Add one to _Bump Map_ slot in the Inspector panel.
 
