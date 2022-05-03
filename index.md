@@ -697,7 +697,8 @@ To change the parameters of the outlines then, please:
 **Main settings** are the following.
 
 - _Edge Color_ lets you choose the color of the outline.  
-- _Thickness_ makes the outline thicker or thinner. It controls how wide or narrow the line of the outline is.  
+- _Thickness_ makes the outline thicker or thinner. It controls how wide or narrow the line of the outline is.
+- _Resolution Invariant_ if enabled, the line width will stay constant regardless of the rendering resolution. However, some of the lines may appear blurry.  
 - _Use Depth_ enables or disables taking the scene's depth data into calculating the outlines. This parameter outlines the outer contour of the objects with depth threshold control.  
 - _Use Normals_ creates outlines for “inner” parts of the objects, meaning, for those that are inside the boundaries of the object, for every given camera perspective. The effect depends on the geometry of an object. So, having proper normals here is important. There is a Normals Threshold control. It's discussed a bit more a little further down.  
 - _Use Color_ enables or disables taking all color difference data on the scene when calculating the outlines. This feature is URP only.
@@ -710,7 +711,7 @@ To change the parameters of the outlines then, please:
 - _Min Normals Threshold_ and _Max Normals Threshold_ determine the range of normals edges to be outlined. Lower values increase the amount of affected normals, leading to more stroked effect. Higher values decrease the amount of affected normals, leading to flatter look. Basically, it determines min and max angles of the normals for the outlines to occur.  
 - _Min_ and _Max Color Thresholds_ let you set the least and the strongest differences in color of the mesh to make the outline appear. This feature is URP only.  
 - _Outline Only_ renders the outlines without meshes themselves, making it a kind of wireframe renderer. This feature is URP only.
-- _Render Event_ This is one quite powerful feature available on the interface. It lets you choose an event after which the outlines are applied. It allows to apply outlines over the transparent objects. Also, it allows you to stack the _Outline Image Effect_ with other post effects. This feature is URP only.
+- _Render Event_ This is one quite powerful feature available on the interface. It lets you choose a stage at which the outlines are applied. It allows to apply outlines over the transparent objects. If you want to exclude transparent objects like Water or UI elements, set this to 'Before Transparent'. Also, it allows you to stack the _Outline Image Effect_ with other post effects. This feature is URP only.
 
 You'll need to *press 'Play'* to see the effect of _Render Event_.
 
