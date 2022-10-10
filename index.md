@@ -243,12 +243,12 @@ A bit more about the nature and use of _Height Gradient_ is covered in the [_‘
 **Enable Vertex Colors** If enabled, the final shading of the object is multiplied by the mesh’s vertex color values. It is a debug parameter, usually this is not used for changing the look.  
 
 *_Setting the colors from scripts_*. The following are the color field names for manipulation via the code for tweening, randomization etc:
-*   `_Color`: the primary color, “Color” in the inspector. The alpha value controls transparency of the object if `Surface Type` is set to `Transparent`
+*   `_BaseColor` (in URP), `_Color` (in Built-in RP): the primary color, “Color” in the inspector. The alpha value controls transparency of the object if `Surface Type` is set to `Transparent`
 *   `_ColorDim` (and `_ColorDimSteps`, `_ColorDimCurve` in the corresponding cel shading modes): Color Shaded in the Inspector
 *   `_ColorDimExtra`: the shaded color of the _“Extra Cel Layer”_ feature
 *   `_FlatRimColor`: rim color, requires _“Enable Rim Color”_
 *   `_FlatSpecularColor`: specular color, requires _“Enable Specular Color”_
-*   `_ColorGradient`: the gradient color used along with the `_Color` parameter when _“Enable Height Color”_ feature is active
+*   `_ColorGradient`: the gradient color used along with the `_BaseColor` parameter when _“Enable Height Color”_ feature is active
 
 **Outline.**  
 
