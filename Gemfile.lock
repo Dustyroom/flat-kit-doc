@@ -32,7 +32,7 @@ GEM
     ffi (1.15.5)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
-    github-pages (209)
+    github-pages (227)
       github-pages-health-check (= 1.16.1)
       jekyll (= 3.9.0)
       jekyll-avatar (= 0.7.0)
