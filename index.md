@@ -114,15 +114,15 @@ Below are the written instructions on how to import Flat Kit. You can watch the 
 - **Step 5.** Locate a _[Readme]_ file that comes with Flat Kit and press _Configure for URP_ button on its Inspector panel to finish the installation. The _[Readme]_ file can be found in _Project_ panel ▶︎ _Assets_ folder ▶︎ _Flat Kit_ folder ▶︎ _[Readme]_.  
 ![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_readme_1.png)
 
-NOTE. If you don't see _step 2_ while importing, or URP unitypackage is missing, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
+> **NOTE.** If you don't see _step 2_ while importing, or URP unitypackage is missing, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
 _Mac OS:_ ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)  
 _Windows:_ %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
 _Linux:_ ~/.local/share/unity3d/Asset Store-5.x  
 More info about the Unity cache can be found in the Unity community answers page [here](https://answers.unity.com/questions/45050/where-unity-store-saves-the-packages.html).  
 
-NOTE. The _Step 5_ from the guide above automatically sets **[Flat Kit] Example Settings URP** Universal RP Rendering Asset file that comes with Flat Kit into **Graphics** and **Quality Settings** panels. It's made for convenience, but if you want to modify or change the settings in the Graphics and Quality Panels, you can do so in _Edit_ ▶︎ _Project Settings_ menu. For more information with screenshots please navigate to [this chapter (Flat Kit in URP)](index.md#8-flat-kit-in-urp).  
+> **NOTE.** The _Step 5_ from the guide above automatically sets **[Flat Kit] Example Settings URP** Universal RP Rendering Asset file that comes with Flat Kit into **Graphics** and **Quality Settings** panels. It's made for convenience, but if you want to modify or change the settings in the Graphics and Quality Panels, you can do so in _Edit_ ▶︎ _Project Settings_ menu. For more information with screenshots please navigate to [this chapter (Flat Kit in URP)](index.md#8-flat-kit-in-urp).  
 
-NOTE. If you are going to use the URP version of Flat Kit, it is highly advised that you created an originally URP project, **NOT** a URP project 'upgraded' from a Built-in RP one.  
+> **NOTE.** If you are going to use the URP version of Flat Kit, it is highly advised that you created an originally URP project, **NOT** a URP project 'upgraded' from a Built-in RP one.  
 
 We included a **Readme** tool, which is a useful debugging helper. It does the following:
   * Shows the stats like Unity, Universal RP and Flat Kit's versions;
