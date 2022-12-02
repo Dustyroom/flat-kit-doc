@@ -99,7 +99,7 @@ On the 3D models side, it’s important that you decide whether you would like m
 
 Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
 
-- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Please, make sure you have Unity v. 2020.3.37f1, 2021.3.12f1 or 2022.1.16f1 or later running. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Download, then Import.  
+- **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Please make sure you have Unity v. 2020.3.37f1, 2021.3.12f1 or 2022.1.16f1 or later running. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Download, then Import.  
 ![Flat Kit import instructions - Step 1](FlatKit_Manual_Images/manual_import_instructions_2.png)
 
 - **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one. If you don't see this step, see the note below.  
@@ -242,13 +242,16 @@ A bit more about the nature and use of _Height Gradient_ is covered in the [_‘
 
 **Enable Vertex Colors** If enabled, the final shading of the object is multiplied by the mesh’s vertex color values. It is a debug parameter, usually this is not used for changing the look.  
 
-*_Setting the colors from scripts_*. The following are the color field names for manipulation via the code for tweening, randomization etc:
+*Setting the colors from scripts*. The following are the color field names for manipulation via the code for tweening, randomization etc:
 *   `_BaseColor` (in URP), `_Color` (in Built-in RP): the primary color, “Color” in the inspector. The alpha value controls transparency of the object if `Surface Type` is set to `Transparent`
 *   `_ColorDim` (and `_ColorDimSteps`, `_ColorDimCurve` in the corresponding cel shading modes): Color Shaded in the Inspector
 *   `_ColorDimExtra`: the shaded color of the _“Extra Cel Layer”_ feature
 *   `_FlatRimColor`: rim color, requires _“Enable Rim Color”_
 *   `_FlatSpecularColor`: specular color, requires _“Enable Specular Color”_
 *   `_ColorGradient`: the gradient color used along with the `_BaseColor` parameter when _“Enable Height Color”_ feature is active
+*   The full list of parameters is at the top of the file `Assets/FlatKit/Shaders/StylizedSurface/StylizedSurface.shader`.
+
+> **NOTE.** The outline toggle is implemented as a [shader keyword](https://docs.unity3d.com/Manual/shader-keywords.html), so unfortunately it can't be toggled at runtime. However, you can enable the outline in the material inspector and toggle its visibility in code by setting the outline width (0 will visually disable the outline). Or, you can create two identical materials with the only difference being the outline toggle, and switch between these materials at runtime with `renderer.material = myMaterial`.
 
 **Outline.**  
 
@@ -263,7 +266,7 @@ The _Outline_ part of the _Stylized Surface_ shader allows you to add pseudo-out
 - **Depth Offset** moves the outline inwards or outwards an object.  
 - **Camera Distance Impact** **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.
 
-Please, remember that in addition to this shader Flat Kit has also a global _Outline Image Effect_ applied per Forward Renderer (in URP) and per camera (in Built-In RP).  
+Please remember that in addition to this shader Flat Kit has also a global _Outline Image Effect_ applied per Forward Renderer (in URP) and per camera (in Built-In RP).  
 In the [Outline Image Effect](index.md#42-outline-image-effect) chapter in this manual you can find some useful specific and general info.
 
 Sometimes it is useful to manipulate the normals of your model in order to force the shader to render outlines where it wouldn't do so otherwise.
@@ -272,7 +275,7 @@ More on this is covered in [Outline Image Effect](index.md#42-outline-image-effe
 ![Import settings of the model](FlatKit_Manual_Images/mesh-import-settings.png)
 > Import settings of the model has a section for manipulating the normals, which is useful for the _Stylized Surface with Outline_ shader as well as for _Outline_ global effect.
 
-Please, note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. There are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
+Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. There are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
 
 ### 3.1.2. The Additional Parameters of the Shader
 
@@ -323,7 +326,7 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 - **Power** sets how visible the Unity built-in shadow is.
 - **Sharpness** defines how blurred or crisp the shadow edge is.
 - **Shadow Occlusion** masks received Unity shadows in areas where normals face away from the light. **Useful to remove shadows that 'go through' objects.** 
-> **NOTE.** Please, note that _Shadow Occludion_ parameter is available in the URP version of Flat Kit only.
+> **NOTE.** _Shadow Occludion_ parameter is available in the URP version of Flat Kit only.
 
 ![Unity Built-in Shadows in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
 > _Unity Built-in Shadows_ in _Color_ mode. Inspector interface
@@ -353,7 +356,7 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 > ‘Normal Map Tree’ demo scene, a tree without and with a normal map
 
 **Emission** Enables Emission map part of the shader.  
-> **NOTE.** Please, note that Emission map support is available in Universal RP version of Flat Kit only, there is no Emission map parameter in Built-In version of Flat Kit.  
+> **NOTE.** Emission map support is available in Universal RP version of Flat Kit only, there is no Emission map parameter in Built-In version of Flat Kit.  
 
 **Emission Map** Allows to use custom emission maps to designate the parts of the meshes to have a 'glow' effect.  
 
@@ -506,7 +509,7 @@ This section determines the overall shape of the waves. All the controls for the
 
 **Frequency.** Density of the effect.  
 
-**Direction.** Direction of the motion. This parameter works tightly with _Speed_. Using these two you can make ponds, pools, seas etc (static water) and rivers, waterfalls etc (streaming water). Please, note, there's an independent set of parameters _Speed_ and _Direction_ for foam as well, described a bit further.
+**Direction.** Direction of the motion. This parameter works tightly with _Speed_. Using these two you can make ponds, pools, seas etc (static water) and rivers, waterfalls etc (streaming water). Please note, there's an independent set of parameters _Speed_ and _Direction_ for foam as well, described a bit further.
 
 **Noise.** Adds nonlinearity to the _Shape_. Use it to make _Grid_, for example, more chaotic.  
 
@@ -515,7 +518,7 @@ This section determines the overall shape of the waves. All the controls for the
 
 **NOTE:** In order to see the foam, the model must be UV-unwrapped.
 
-**Source.** How the foam is being made — from texture or generated from noise. Please, select one of the following parameters.
+**Source.** How the foam is being made — from texture or generated from noise. Please select one of the following parameters:
 *   **None.** Turns off the foam.
 *   **GradientNoise.** The foam shape comes from generative noise.
 *   **Texture.** If you choose _Texture_ source, you'll have an option to import your own, preferably seamlessly tiling, texture, or use one of the included ones — we shortlisted the best from dozens of originally pre-generated .png textures to come with Flat Kit. If you are planning to use your own textures, we suggest you to put them into a single (red) color in the import settings to save memory.
@@ -667,7 +670,7 @@ Outline Image effect is, essentially, a contour on the objects on the scene. It 
 
 If you are working in a Universal Rendering Pipeline (URP) project, the post processing components you used to put on the camera in the old Built-In RP ('Standard', '3D' project) — they are called 'Renderer Features' in URP and can be found in the settings of the Forward Renderer.  
 
-Please, make sure that you installed Flat Kit properly as described [in this manual above](https://flatkit.dustyroom.com/#2-quick-start-beginning-to-work-with-flat-kit).  
+Please make sure that you installed Flat Kit properly as described [in this manual above](https://flatkit.dustyroom.com/#2-quick-start-beginning-to-work-with-flat-kit).  
 
 Particularly, to make Universal RP generate post-effects (aka Renderer Features), please pay attention to the steps 5 and 6 in [the guide in the manual](https://flatkit.dustyroom.com/#2-quick-start-beginning-to-work-with-flat-kit). 
 In short, you'll need to set **[Flat Kit] Example Settings URP file** in **Graphics panel** (Edit ▶︎ Project Settings ▶︎ Graphics panel) and in **Quality panel** (Edit ▶︎ Project Settings ▶︎ Quality panel).  
@@ -728,7 +731,7 @@ Here is an example of choosing when to render the outlines. We took _Wanderer_ d
 
 Also, in URP you have an ability to chain and change the orders of Image effects, but it's a general Unity information. More info in the chapter [Flat Kit Image Effects in URP](index.md#83-flat-kit-image-effects-in-urp)
 
-Please, note that _Outline Image Effect_ is a global effect, as it is used as the camera component in Built-In RP and as a scene's Renderer Feature in URP, which is suitable for a consistent look of your project. If you would like to outline a particular object on your scene, you can engage the shader instead — [Stylized Surface with Outline](index.md#33-stylized-surface-with-outline-shader) shader.
+Please note that _Outline Image Effect_ is a global effect, as it is used as the camera component in Built-In RP and as a scene's Renderer Feature in URP, which is suitable for a consistent look of your project. If you would like to outline a particular object on your scene, you can engage the shader instead — [Stylized Surface with Outline](index.md#33-stylized-surface-with-outline-shader) shader.
 
 If you would like to exclude an object from an outline pass, considering that you are using one of the Stylized Surface shaders, and you are in a URP project, please go to the interface of the shader and switch rendering to 'Transparent'. It won't change the look of the shader but will exclude it from the outline pass. You can control this too as described a few paragraphs above in Render Event list part.
 
@@ -745,7 +748,7 @@ Some general info. Manipulating the normals of the mesh can be a very efficient 
 > **TIP:** Combinations of the settings in Outline Image Effect let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using _‘Stylized Surface with Outline’_ shader in addition to the global Outline effect. Also, _Rim_ parameter of _Stylized Surface_ and _Stylized Surface with Outline_ shaders can accentuate object's edges, often it looks like a partial outline, which can be helpful.
 
 > **TIP:** One of the commonly asked questions is if some of the objects can be rendered without the Outline Renderer Feature applied. Outline image effect is global and is not designed to be selective to objects — it is applied per Renderer (in URP). However, moving object to be rendered in the transparent pass can solve this problem. In Flat Kit Stylized Surface there is such an option. If you are using non-Flat Kit shaders, please refer to their documentation to see whether it is possible — to enable transparency without affecting the look. In Flat Kit there is an option of Render Event. It lets you choose when to render the lines. Take a look at [this chapter](#42-outline-image-effect) in our manual.  
-Another way of excluding something from rendering outlines on — is to render it with a separate camera in a camera stack: one camera is for non-outlined objects and another one is for everything else (outlined). Please, refer to Unity documentation on camera stacking to get to know more about this general Unity technique.
+Another way of excluding something from rendering outlines on — is to render it with a separate camera in a camera stack: one camera is for non-outlined objects and another one is for everything else (outlined). Please refer to Unity documentation on camera stacking to get to know more about this general Unity technique.
 
 
 
@@ -783,7 +786,7 @@ We tried to depict the big spectrum of possibilities using various scenes. They 
 * _Valley_, _Wanderer_ scenes are environmental. There we tried to show the work of both fog systems of Flat Kit. Also it is one of the perspectives of displaying the shaders — how these would look in a large scene.
 
 Valley uses Terrain shader and transparent textures inside a Stylized Surface Cutout shader. Valley demo scene is also an example of obvious, rather than subtle, use of _Fog_ Image Effect. Once the scene is loaded, you can scan through the _Fog_ Image Effect presets to find which one you like more. There is a Presets chapter later in this manual with explanation of how to use them.
-In a _Valley_ scene, please, note that although the ground is made with Unity native terrain, the trees on it are populated manually, not using the terrain system.
+In a _Valley_ scene, please note that although the ground is made with Unity native terrain, the trees on it are populated manually, not using the terrain system.
 
 * _Blueprint Grid (Mugs)_ and _Fruit Vase_ scenes are an exhibition of most sought use cases of cel / toon shading.
 
@@ -840,14 +843,14 @@ After that, you will need to use a Universal RP Asset file. You can either use t
 
 Once you do it, the Asset and Forward Renderer are created.
 
-Please, refer to the chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more important information about setting up Flat Kit and using URP Pipeline Asset files.  
+Please refer to the chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) in the beginning of this manual for more important information about setting up Flat Kit and using URP Pipeline Asset files.  
 
 The last step of the installation shown in the video in a chapter ['Quick start. Beginning to work with Flat Kit'](index.md#2-quick-start-beginning-to-work-with-flat-kit) was pressing _Configure for URP_ button in a _[Readme]_ file that came with Flat Kit. This automatic step replaces two manual steps of setting up Flat Kit in Universal RP:
 - **Manual Step 1.** Navigate to _Project Settings_ -> _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field.
 If you are using your settings file instead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
 ![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_6.png)
 
-- **Manual Step 2.** Please, do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file. Do it for all Quality levels.  
+- **Manual Step 2.** Please do this in _Quality_ tab's _Rendering_ field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file. Do it for all Quality levels.  
 ![Flat Kit import instructions - Step 6](FlatKit_Manual_Images/manual_import_instructions_7.png)
 
 Here's a video showing setting it up.  
@@ -872,7 +875,7 @@ The order of the effects can be managed like this.
 ![Managing the order of renderer layers in URP](FlatKit_Manual_Images/URP-renderer-layers-01.png)
 > Managing the order of renderer layers in URP
 
-It's a default URP thing. What is worth noting is that for Outlines we made an option to choose the order of Renderer Events within Outline Image Effect interface. Please, refer to the corresponding chapter of this manual, [Outline Image Effect](index.md#42-outline-image-effect).
+It's a default URP thing. What is worth noting is that for Outlines we made an option to choose the order of Renderer Events within Outline Image Effect interface. Please refer to the corresponding chapter of this manual, [Outline Image Effect](index.md#42-outline-image-effect).
 
 
 ## 8.4. Post-processing V2 in URP (General Info)
