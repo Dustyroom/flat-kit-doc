@@ -1,5 +1,5 @@
 
-If you’ve got a question regarding Flat Kit, **please read through the Frequently Asked Questions**, and try searching for the answers here in this documentation. Also, many questions have been already covered in the [issues page](https://github.com/Dustyroom/flat-kit-doc/issues). If the question is not covered, please [report an issue](https://github.com/Dustyroom/flat-kit-doc/issues), go to our [Discord](https://discord.gg/kfumMFahBj) or shoot an email to *info@dustyroom.com*.
+If you’ve got a question regarding Flat Kit, **please read through the Frequently Asked Questions**, and try searching for the answers here in this documentation. Also, many questions have been already covered in the [issues page](https://github.com/Dustyroom/flat-kit-doc/issues). If the question is not covered, please [report an issue](https://github.com/Dustyroom/flat-kit-doc/issues), go to our [Discord](https://discord.gg/GBAeuWC9qS) or shoot an email to *info@dustyroom.com*.
 
 If you find a bug, it really helps us if you include steps to reproduce it. Please mind that we get lots of messages daily, be patient - we’re getting to it. Also, if you've got a feature you’d like to see implemented, let us know — some of the great ones came from the suggestions. Flat Kit is a vast field of stylistic possibilities, so please make sure you skim trough this manual, it may help you understand all the features better and give you a few ideas.
 
@@ -894,7 +894,7 @@ Enable the Post Processing flat on the camera inspector:
 
 [Flat Kit at the Asset Store](https://assetstore.unity.com/packages/vfx/shaders/flat-kit-cel-toon-shading-143368)
 
-[Discord](https://discord.gg/kfumMFahBj)  
+[Discord](https://discord.gg/GBAeuWC9qS)  
 
 Email  
 info@dustyroom.com
