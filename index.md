@@ -9,7 +9,7 @@ If you find a bug, it really helps us if you include steps to reproduce it. Plea
 > **A.** Once you log into the account you have purchased Quibli from, and load the Flat Kit Asset Store page, you should see the automatic 50% off discount for Flat Kit.
 
 #### Q. Why is Flat Kit giving errors in Unity 2019?
-> **A.** Flat Kit is compatible with Unity minimum version of 2020.3.37f1, 2021.3.12f1 or 2022.1.16f1, the minimum minor versions for all major versions are listed on the [Flat Kit's Asset Store](https://assetstore.unity.com/packages/vfx/shaders/flat-kit-toon-shading-and-water-143368) page, under 'Render pipeline compatibility' paragraph.
+> **A.** Flat Kit is compatible with Unity minimum version of 2020.3 LTS the minimum minor versions for all major versions are listed on the [Flat Kit's Asset Store](https://assetstore.unity.com/packages/vfx/shaders/flat-kit-toon-shading-and-water-143368) page, under 'Render pipeline compatibility' paragraph.
 
 #### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
 > **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the [issue tracker](https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates).  
@@ -247,19 +247,8 @@ This effect overlays a gradient from opaque selected color to transparent color 
 
 A bit more about the nature and use of _Height Gradient_ is covered in the [_‘Terrain’ Shader_](index.md#36-terrain-shader) section of this manual.  
 
-**Enable Vertex Colors** If enabled, the final shading of the object is multiplied by the mesh’s vertex color values. It is a debug parameter, usually this is not used for changing the look.  
-
-##### Setting the colors from scripts
-The following are the color field names for manipulation via the code for tweening, randomization etc:
-*   `_BaseColor` (in URP), `_Color` (in Built-in RP): the primary color, “Color” in the inspector. The alpha value controls transparency of the object if `Surface Type` is set to `Transparent`
-*   `_ColorDim` (and `_ColorDimSteps`, `_ColorDimCurve` in the corresponding cel shading modes): Color Shaded in the Inspector
-*   `_ColorDimExtra`: the shaded color of the _“Extra Cel Layer”_ feature
-*   `_FlatRimColor`: rim color, requires _“Enable Rim Color”_
-*   `_FlatSpecularColor`: specular color, requires _“Enable Specular Color”_
-*   `_ColorGradient`: the gradient color used along with the `_BaseColor` parameter when _“Enable Height Color”_ feature is active
-*   The full list of parameters is at the top of the file `Assets/FlatKit/Shaders/StylizedSurface/StylizedSurface.shader`.
-
-> **NOTE.** The outline toggle is implemented as a [shader keyword](https://docs.unity3d.com/Manual/shader-keywords.html), so unfortunately it can't be toggled at runtime. However, you can enable the outline in the material inspector and toggle its visibility in code by setting the outline width (0 will visually disable the outline). Or, you can create two identical materials with the only difference being the outline toggle, and switch between these materials at runtime with `renderer.material = myMaterial`.
+#### Enable Vertex Colors
+If enabled, the final shading of the object is multiplied by the mesh’s vertex color values. It is a debug parameter, usually this is not used for changing the look.  
 
 #### Outline
 
@@ -378,6 +367,17 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 ![Emission map part of the Stylized Surface interface](FlatKit_Manual_Images/stylized-surface-emission-interface.png)
 > Emission map part of the Stylized Surface interface  
 
+### 3.1.3. Setting material values from scripts
+The following are the color field names for manipulation via the code for tweening, randomization etc:
+*   `_BaseColor` (in URP), `_Color` (in Built-in RP): the primary color, “Color” in the inspector. The alpha value controls transparency of the object if `Surface Type` is set to `Transparent`
+*   `_ColorDim` (and `_ColorDimSteps`, `_ColorDimCurve` in the corresponding cel shading modes): Color Shaded in the Inspector
+*   `_ColorDimExtra`: the shaded color of the _“Extra Cel Layer”_ feature
+*   `_FlatRimColor`: rim color, requires _“Enable Rim Color”_
+*   `_FlatSpecularColor`: specular color, requires _“Enable Specular Color”_
+*   `_ColorGradient`: the gradient color used along with the `_BaseColor` parameter when _“Enable Height Color”_ feature is active
+*   The full list of parameters is at the top of the file `Assets/FlatKit/Shaders/StylizedSurface/StylizedSurface.shader`.
+
+> **NOTE.** The outline toggle is implemented as a [shader keyword](https://docs.unity3d.com/Manual/shader-keywords.html), so unfortunately it can't be toggled at runtime. However, you can enable the outline in the material inspector and toggle its visibility in code by setting the outline width (0 will visually disable the outline). Or, you can create two identical materials with the only difference being the outline toggle, and switch between these materials at runtime with `renderer.material = myMaterial`.
 
 
 ## 3.2. ‘Stylized Surface Cutout’ Shader
