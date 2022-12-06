@@ -90,7 +90,8 @@ The easiest way to get started with the asset is to dig into the demo scenes.
 For Built-In RP it may take a while for Unity to import the asset — this is normal. Under the hood, Unity needs to generate all shader variants that are used in the demo scenes. For URP it is virtually immediate.  
 For URP, it is important that you created the project in URP initially, as opposed to creating a Built-in RP project and 'upgrading' it to URP one.  
 On the 3D models side, it’s important that you decide whether you would like making normals ‘smooth’ or 'sharp' for your meshes in a 3D editor, as the result will be different in either case. If you import someone else's models and can’t edit the object in 3D editor, at least try to calculate normals in Unity — in the import settings of the model. The shaders should work regardless, but sometimes the difference can be obvious, especially on objects with rounded corners.  
-**Note:** Our demos were created in **Linear color space** (a setting found in Project Settings). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
+
+> **Note.** Our demos were created in **Linear color space** (a setting found in Project Settings). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
 
 **Here's a video showing how to import a Universal RP (URP) version of Flat Kit in a Universal RP project.**   
 
@@ -169,7 +170,7 @@ The **additional** parameters are:
 * Unity Built-in Shadows,
 * Textures (Albedo, Normal, Emission).
 
-**NOTE:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html
+> **NOTE:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html
 
 ![‘Stylized Surface’ shader in Single mode. Simple use case](FlatKit_Manual_Images/stylized-surface-1.png)
 > ‘Stylized Surface’ shader in Single mode. Simple use case.  
@@ -179,9 +180,11 @@ The **additional** parameters are:
 
 ### 3.1.1. The Main Parameters of the Shader
 
-**Color.** This would be the color of your mesh (applicable to most cases, though you can make the shader's other parameters override or mask this main color, if you wish).
+#### Color
+This would be the color of your mesh (applicable to most cases, though you can make the shader's other parameters override or mask this main color, if you wish).
 
-**Cel Shading Mode.** This is where you choose the style (mode) of your shading, the color of the shading, and other respective parameters of the modes. Depending on the mode you choose the parameters will look differently. So, let’s talk about modes.
+#### Cel Shading Mode
+This is where you choose the style (mode) of your shading, the color of the shading, and other respective parameters of the modes. Depending on the mode you choose the parameters will look differently. So, let’s talk about modes.
 
 *   **None.** Use this to achieve a simple flat look or to get any other creative picture not involving cel shading, however, the following parameters of Stylized Surface shader will still let you do this, if you choose so.  
 Note, the flatness and actual representation of colors on the scene depend on the lighting of the scene. In our demos we use Skybox as the source of lighting. Conveniently, there is a Dependency slider on the Lighting panel of Unity, which tells how much of the influence the Skybox provides. At minimum, there won’t be any shadows, as well as the colors will be identical to those you would choose in the _Color_ block of the shader. At maximum, the Skybox heavily dictates what the colors will look like. For more natural (not necessarily realistic — but natural, organic look of the scene, it’s healthy to let Skybox influence the coloring of the scene).
@@ -196,10 +199,12 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 ![Curve shading mode of Stylized Surface shader](FlatKit_Manual_Images/FK-StylizedSurface-Steps-Curves.png)
 > _Steps_ and _Curve_ shading mode of Stylized Surface shader  
 
-**Extra Cel Layer.** This is like another instance of _Single_ mode of _Cel Shading Mode_. Works independently from the _main Cel Shading Mode_. It means, you can make main Cel shading as _None_ (flat), and add an _Extra Cel Layer_. The result will be the same as if you would have used the _Single mode_. Or, make the _main Cel layer_ and _Extra Cel Layer_ almost identical, giving an _Extra Cel Layer_ a darker color, and making it smaller. This would result in stepping, similar to Steps mode with 1 step. Classic toon.
+#### Extra Cel Layer
+This is like another instance of _Single_ mode of _Cel Shading Mode_. Works independently from the _main Cel Shading Mode_. It means, you can make main Cel shading as _None_ (flat), and add an _Extra Cel Layer_. The result will be the same as if you would have used the _Single mode_. Or, make the _main Cel layer_ and _Extra Cel Layer_ almost identical, giving an _Extra Cel Layer_ a darker color, and making it smaller. This would result in stepping, similar to Steps mode with 1 step. Classic toon.
 
 
-**Specular.** You can make a, well, specular with this parameter. Also it can be used as another layer of shadow.
+#### Specular
+You can make a, well, specular with this parameter. Also it can be used as another layer of shadow.
 
 - **Specular Color** picks up the color of your glare, the parameter works in HDR.  
 - **Specular Size** determines how big the specular is. Higher values mean bigger specular.  
@@ -209,7 +214,8 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 > _Specular_. Inspector interface
 
 
-**Rim.** Rim was designed as one of the ways to make a specific effect of a color 'wrapping' from behind the object. In some cases it can remind an outline effect.  
+#### Rim
+Rim was designed as one of the ways to make a specific effect of a color 'wrapping' from behind the object. In some cases it can remind an outline effect.  
 
 - **Rim Color** selects the color of the parameter. It works in HDR.  
 - **Light Align** parameter rotates the rim.  
@@ -228,7 +234,8 @@ Although _Rim_ option is creatively useful and sometimes can remind an outline e
  
 > **TIP.** Animate Cel layer size, Specular size or Rim size — to get a neat transition effect.
 
-**Height Gradient.** This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is global (absolute) per material, it doesn't depend on object's boundaries. If you would like to make a relative gradient (for instance, each object holding one material to contain an entire gradient within itself), duplicate the material and adjust the height gradient. Alternatively, you can use a _Curve_ mode of _Stylized Surface_.
+#### Height Gradient
+This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is global (absolute) per material, it doesn't depend on object's boundaries. If you would like to make a relative gradient (for instance, each object holding one material to contain an entire gradient within itself), duplicate the material and adjust the height gradient. Alternatively, you can use a _Curve_ mode of _Stylized Surface_.
 
 ![Height Gradient. Inspector interface](FlatKit_Manual_Images/gradient_height_parameters.png)
 > _Height Gradient._ Inspector interface
@@ -242,7 +249,8 @@ A bit more about the nature and use of _Height Gradient_ is covered in the [_‘
 
 **Enable Vertex Colors** If enabled, the final shading of the object is multiplied by the mesh’s vertex color values. It is a debug parameter, usually this is not used for changing the look.  
 
-*Setting the colors from scripts*. The following are the color field names for manipulation via the code for tweening, randomization etc:
+##### Setting the colors from scripts
+The following are the color field names for manipulation via the code for tweening, randomization etc:
 *   `_BaseColor` (in URP), `_Color` (in Built-in RP): the primary color, “Color” in the inspector. The alpha value controls transparency of the object if `Surface Type` is set to `Transparent`
 *   `_ColorDim` (and `_ColorDimSteps`, `_ColorDimCurve` in the corresponding cel shading modes): Color Shaded in the Inspector
 *   `_ColorDimExtra`: the shaded color of the _“Extra Cel Layer”_ feature
@@ -253,7 +261,7 @@ A bit more about the nature and use of _Height Gradient_ is covered in the [_‘
 
 > **NOTE.** The outline toggle is implemented as a [shader keyword](https://docs.unity3d.com/Manual/shader-keywords.html), so unfortunately it can't be toggled at runtime. However, you can enable the outline in the material inspector and toggle its visibility in code by setting the outline width (0 will visually disable the outline). Or, you can create two identical materials with the only difference being the outline toggle, and switch between these materials at runtime with `renderer.material = myMaterial`.
 
-**Outline.**  
+#### Outline
 
 ![Outline part of Stylized Surface shader. Inspector interface](FlatKit_Manual_Images/stylized-surface-outline-interface.png)
 > _Outline_ part of Stylized Surface shader. Inspector interface
@@ -278,8 +286,8 @@ More on this is covered in [Outline Image Effect](index.md#42-outline-image-effe
 Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. There are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
 
 ### 3.1.2. The Additional Parameters of the Shader
-
-**Advanced Lighting (Light Color Contribution).** Light Color Contribution defines how much the color of the light source of the scene impacts the color of the object. The value of 0.0 results in completely ignoring scene lights, the value of 1.0 results in full multiplication between scene light color and the object color. As an example, imagine the winter morning light. Usually it is blue-tinted, thus all the snow around can’t be white but rather blueish. 
+#### Advanced Lighting
+**Light Color Contribution.** Light Color Contribution defines how much the color of the light source of the scene impacts the color of the object. The value of 0.0 results in completely ignoring scene lights, the value of 1.0 results in full multiplication between scene light color and the object color. As an example, imagine the winter morning light. Usually it is blue-tinted, thus all the snow around can’t be white but rather blueish. 
 
 Please note that the effect is visible only if the color of the light is anything but white.
 
@@ -314,9 +322,10 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 ![Particles emitting light on Flat Kit shaders](FlatKit_Manual_Images/lighting_particles_lights.png)
 > Particles emitting light on Flat Kit shaders.
 
-**Advanced Lighting (Override light direction).** It is a way to make the material have an independent direction of the light from the Directional Light. This can be useful in cases when you need to align the position of the cels or Rim or Specular. Normally, to adjust these parameters globally, you should rotate the Directional light. Once _Override light direction_ parameter is enabled, the material no longer obeys the Directional Light, it now has independent mapping vectors for the light-dependent parameters (e.g. mentioned earlier cels, Rim, Specular) that you can adjust with _Pitch_ and _Yaw_ parameters. Simply put, you can rotate the the cels, Rim and Specular.  
+**Override light direction** It is a way to make the material have an independent direction of the light from the Directional Light. This can be useful in cases when you need to align the position of the cels or Rim or Specular. Normally, to adjust these parameters globally, you should rotate the Directional light. Once _Override light direction_ parameter is enabled, the material no longer obeys the Directional Light, it now has independent mapping vectors for the light-dependent parameters (e.g. mentioned earlier cels, Rim, Specular) that you can adjust with _Pitch_ and _Yaw_ parameters. Simply put, you can rotate the the cels, Rim and Specular.  
 
-**Unity Built-in Shadows.** If the object has the ‘Receive Shadows’ option turned on in Mesh Renderer, you have an ability to use Unity-processed shadows on it, as you would do in Unity Standard Material shader, with a few extra-options.
+#### Unity Built-in Shadows
+If the object has the ‘Receive Shadows’ option turned on in Mesh Renderer, you have an ability to use Unity-processed shadows on it, as you would do in Unity Standard Material shader, with a few extra-options.
 
 ![Unity Built-in Shadows mode menu. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_modes.png)
 > Unity Built-in Shadows mode menu. Inspector interface
@@ -331,7 +340,8 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 ![Unity Built-in Shadows in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
 > _Unity Built-in Shadows_ in _Color_ mode. Inspector interface
 
-**Texture Maps** If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you work with transparency in textures in Built-In RP, please use _Stylized Shader Cutout_ shader. It can see alpha on the texture as transparency. URP supports alpha by default.
+#### Texture Maps
+If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you work with transparency in textures in Built-In RP, please use _Stylized Shader Cutout_ shader. It can see alpha on the texture as transparency. URP supports alpha by default.
 
 **Albedo** Allows to use the albedo, or diffuse texture. In URP this slot supports transparent textures by default. Can be used together with _Alpha Clipping_ parameter (explained below).
 
