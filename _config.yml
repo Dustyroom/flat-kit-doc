@@ -12,6 +12,8 @@ logo: FlatKit_Manual_Images/flat_kit_manual_header.png
 plugins:
   - jekyll-include-cache
 
+include:
+  - _pages
 
 theme: jekyll-theme-minimal
 # remote_theme: "mmistakes/minimal-mistakes@4.21.0"
