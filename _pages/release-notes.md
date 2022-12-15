@@ -1,7 +1,6 @@
 ---
 title: "Release Notes"
 excerpt: "Notes on Flat Kit updates."
-sitemap: false
 permalink: /release-notes/
 toc: false
 ---
