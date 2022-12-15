@@ -9,7 +9,8 @@ toc: false
 
 - **Water shader** now supports for SRP Batcher.
 - **Water shader** now supports DOTS.
-- **Terrain shader** now supports Height-based blending.
+- **Terrain shader** now supports *Height-based blending*.
+- Fixed an issue where the *Outline* and *Fog* image effects Render Events were not being set correctly.
 
 ## 3.1.0
 
