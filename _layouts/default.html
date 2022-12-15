@@ -65,7 +65,9 @@
         
       </header>
       <section>
-        {% include toc.html html=content h_min=1 h_max=2 %}
+        {% if page.toc %}
+          {% include toc.html html=content h_min=1 h_max=2 %}
+        {% endif %}
         {% include anchor_headings.html html=content anchorBody="#" %} <!-- {{ content }} -->
       </section>
       <footer>
