@@ -130,16 +130,11 @@ Below are the written instructions on how to import Flat Kit. You can watch the 
 * **Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.  
 ![Flat Kit import instructions - Step 4](FlatKit_Manual_Images/manual_import_instructions_5.png)
 
-* **Step 5.** Locate a *[Readme]* file that comes with Flat Kit and press *Configure for URP* button on its Inspector panel to finish the installation. The *[Readme]* file can be found in *Project* panel ▶︎ *Assets* folder ▶︎ *Flat Kit* folder ▶︎ *[Readme]*.  
-![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_readme_1.png)
-
 > **NOTE.** If you don't see *step 2* while importing, or URP unitypackage is missing, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
 *Mac OS:* ~/Library/Unity/Asset Store-5.x (press Shift+Cmd+G in any Finder Window and paste this path)  
 *Windows:* %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
 *Linux:* ~/.local/share/unity3d/Asset Store-5.x  
 More info about the Unity cache can be found in the Unity community answers page [here](https://answers.unity.com/questions/45050/where-unity-store-saves-the-packages.html).  
-
-> **NOTE.** The *Step 5* from the guide above automatically sets **[Flat Kit] Example Settings URP** Universal RP Rendering Asset file that comes with Flat Kit into **Graphics** and **Quality Settings** panels. It's made for convenience, but if you want to modify or change the settings in the Graphics and Quality Panels, you can do so in *Edit* ▶︎ *Project Settings* menu. For more information with screenshots please navigate to [this chapter (Flat Kit in URP)](index.md#8-flat-kit-in-urp).  
 
 > **NOTE.** If you are going to use the URP version of Flat Kit, it is highly advised that you created an originally URP project, **NOT** a URP project 'upgraded' from a Built-in RP one.  
 
