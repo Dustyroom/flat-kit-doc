@@ -1,0 +1,31 @@
+main:
+  - title: Asset Store
+    url: https://u3d.as/1uVy?aid=1101lHzQ
+  - title: Discord
+    url: https://discord.gg/kfumMFahBj
+  - title: Report an issue
+    url: https://github.com/Dustyroom/flat-kit-doc/issues/new/choose
+  - title: FAQs
+    url: /faqs/
+  - title: Contact
+    url: /contact-details/
+
+docs:
+  - title: Getting Started
+    children:
+      - title: What Is Chroma?
+        url: /
+      - title: Getting Started
+        url: /installation/
+      - title: Demo Scenes
+        url: /demo-scenes/
+  - title: Shader Components
+    children:
+      - title: Code Shaders
+        url: /code-shader-macros/
+  - title: Help
+    children:
+      - title: Contact
+        url: /contact-details/
+      - title: FAQs
+        url: /faqs/
