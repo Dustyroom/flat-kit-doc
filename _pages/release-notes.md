@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 3.2.5 <small>(2023-01-02)</small>
+- Fixed **water** rendering in **WebGL** builds.
+- **URP demo scenes now auto-configure** the URP Asset/Renderer. No maual configuration is needed anymore, removed actions from the Readme config section.
+
 ## 3.2.0 <small>(2022-12-15)</small>
 
 - **Water shader** now supports for SRP Batcher.
