@@ -5,8 +5,8 @@ main:
     url: https://discord.gg/kfumMFahBj
   - title: Report an issue
     url: https://github.com/Dustyroom/flat-kit-doc/issues/new/choose
-  - title: FAQs
-    url: /faqs/
+  - title: FAQ
+    url: /faq/
   - title: Contact
     url: /contact-details/
   - title: Release notes
@@ -19,7 +19,7 @@ docs:
         url: /
   - title: Help
     children:
-      - title: FAQs
+      - title: FAQ
         url: /faq/
       - title: Contact
         url: /contact-details/
