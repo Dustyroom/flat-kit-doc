@@ -1,6 +1,5 @@
-# https://github.com/mmistakes/minimal-mistakes/blob/master/_config.yml
-
 title: Flat Kit - Toon Shading and Water
+masthead_title: " " # Disable title on masthead because the graphic logo has the title.
 description: Documentation
 discord: https://discord.gg/kfumMFahBj
 twitter_username: _dstrm
@@ -9,7 +8,11 @@ show_downloads: false
 google_analytics: UA-53337407-20
 logo: FlatKit_Manual_Images/flat_kit_manual_header.png
 
+minimal_mistakes_skin: air
+search: true
+
 plugins:
+  - jekyll-sitemap
   - jekyll-include-cache
 
 include:
@@ -17,3 +20,56 @@ include:
 
 # theme: jekyll-theme-minimal
 remote_theme: "mmistakes/minimal-mistakes@4.21.0"
+
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+
+author:
+  name   : "Dustyroom"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "Tiny studio working on interactive experiences."
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://dustyroom.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/_dstrm"
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/_dstrm"
+    - label: "Discord"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.gg/kfumMFahBj"
+
+atom_feed:
+  hide: true
+
+defaults:
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      toc: true
+      toc_sticky: true
+      # classes: wide
+      sidebar:
+        nav: "docs"
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false
