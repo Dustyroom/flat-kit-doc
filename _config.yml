@@ -6,7 +6,8 @@ twitter_username: _dstrm
 email: info@dustyroom.com
 show_downloads: false
 google_analytics: UA-53337407-20
-logo: FlatKit_Manual_Images/flat_kit_manual_header.png
+
+logo: "FlatKit_Manual_Images/flat_kit_manual_header.png"
 
 minimal_mistakes_skin: default # air
 search: true
@@ -19,7 +20,7 @@ include:
   - _pages
 
 # theme: jekyll-theme-minimal
-remote_theme: "mmistakes/minimal-mistakes@4.21.0"
+remote_theme: "mmistakes/minimal-mistakes"
 
 collections:
   docs:
