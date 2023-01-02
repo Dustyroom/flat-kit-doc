@@ -1,0 +1,57 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+html {
+  .page__content {
+    font-size: $type-size-3;
+
+    @include breakpoint($medium) {
+      font-size: $type-size-4;
+    }
+
+    @include breakpoint($large) {
+      font-size: $type-size-5;
+    }
+
+    @include breakpoint($x-large) {
+      font-size: $type-size-6;
+    }
+  }
+
+  .image-fancy {
+    border-style:solid;
+    border-color:darkgray;
+    border-width:thick;
+    border-radius:1vh;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-simple {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-caption {
+    text-align: center;
+    font-size: .7rem;
+    font-style: italic;
+    color: light-grey;
+    margin-top: -.8rem;
+  }
+
+  .text-small {
+    font-size: .7rem;
+  }
+}
