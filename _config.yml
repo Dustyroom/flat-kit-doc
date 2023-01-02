@@ -8,7 +8,7 @@ show_downloads: false
 google_analytics: UA-53337407-20
 logo: FlatKit_Manual_Images/flat_kit_manual_header.png
 
-minimal_mistakes_skin: air
+minimal_mistakes_skin: default # air
 search: true
 
 plugins:
