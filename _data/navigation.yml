@@ -19,5 +19,7 @@ docs:
         url: /
   - title: Help
     children:
+      - title: FAQs
+        url: /faq/
       - title: Contact
         url: /contact-details/
