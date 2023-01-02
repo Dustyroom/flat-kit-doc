@@ -9,23 +9,15 @@ main:
     url: /faqs/
   - title: Contact
     url: /contact-details/
+  - title: Release notes
+    url: /release-notes/
 
 docs:
   - title: Getting Started
     children:
-      - title: What Is Chroma?
+      - title: Quick Overview
         url: /
-      - title: Getting Started
-        url: /installation/
-      - title: Demo Scenes
-        url: /demo-scenes/
-  - title: Shader Components
-    children:
-      - title: Code Shaders
-        url: /code-shader-macros/
   - title: Help
     children:
       - title: Contact
         url: /contact-details/
-      - title: FAQs
-        url: /faqs/
