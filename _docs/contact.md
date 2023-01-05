@@ -12,7 +12,7 @@ Have questions? Here's how to get support:
 1. If the question is still not answered, please [Report an Issue](https://github.com/Dustyroom/flat-kit-doc/issues/new/choose){:target="_blank"};
 1. If you still need help, please, shoot a letter to _{{ site.email }}_. We always do our best to respond as quickly as possible.
 
-> Please, include as many details as possible such as Unity and Chroma versions, screenshots / recordings etc. Any suggestions and feature requests are welcome, too!
+> Please, include as many details as possible such as Unity and {{ site.title_short }} versions, screenshots / recordings etc. Any suggestions and feature requests are welcome, too!
 
 Email: [{{ site.email }}](mailto:{{ site.email }})
 
