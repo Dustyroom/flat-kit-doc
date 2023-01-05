@@ -38,7 +38,7 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 #### Q. Does Flat Kit support URP? Why is the feature X is available in Universal RP but not in Built-In RP?  
 
-> **A.** Flat Kit supports URP as well as Built-In RP, although Built-In RP is not being developed after Flat Kit v.2.0. There are a few known limitations in URP, please see [FlatKit in URP chapter](index.md#8-flat-kit-in-urp). As Built-In RP is being deprecated by Unity an it has its drawbacks, we continue to support it but we develop new great features only for URP, instead of supporting an obsolete technology. Please note, there is no HDRP version of Flat Kit yet.
+> **A.** Flat Kit supports URP as well as Built-In RP, although Built-In RP is not being developed after Flat Kit v.2.0. There are a few known limitations in URP, please see [FlatKit in URP chapter](/flat-kit-in-urp). As Built-In RP is not being actively developed by Unity anymore an it has its drawbacks, we continue to support it but we develop new great features only for URP, instead of supporting an obsolete technology. Please note, there is no HDRP version of Flat Kit yet.
 
 #### Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
 
@@ -54,7 +54,7 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 #### Q. I’ve got errors just after importing Flat Kit. Why?  
 
-> **A.** First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, shoot a mail to `info@dustyroom.com`.
+> **A.** First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, [get in touch](/contact).
 
 #### Q. What is the Shader Compilation Target Level of Flat Kit shaders?  
 
