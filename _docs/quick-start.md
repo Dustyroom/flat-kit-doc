@@ -54,4 +54,4 @@ The *[Readme]* file can be found in *Project* panel ▶︎ *Assets* folder ▶�
 
 ![Readme tool's interface](FlatKit_Manual_Images/flat-kit-readme-file.png)
 
-> If you have any difficulties during the installation, or at any point while working with Flat Kit, please, [contact us](/contact), we'll be glad to help.
+> If you have any difficulties during the installation, or at any point while working with Flat Kit, please, [contact us](/contact-details), we'll be glad to help.
