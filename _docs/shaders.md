@@ -12,7 +12,7 @@ Because of the fact that these shaders are designed for a stylized look as oppos
 
 At the moment, there are the following shaders included into Flat Kit: *Stylized Surface*, *Stylized Surface Cutout*, *Stylized Surface with Outline*, *Gradient Skybox*, *Water*, *Terrain*, *LightPlane*.
 
-![Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader](FlatKit_Manual_Images/all_shaders.png)
+![Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader](/FlatKit_Manual_Images/all_shaders.png)
 > Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader.
 
 ## 'Stylized Surface' Shader
@@ -36,10 +36,10 @@ The **additional** parameters are:
 
 > **NOTE:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: <https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html>
 
-![‘Stylized Surface’ shader in Single mode. Simple use case](FlatKit_Manual_Images/stylized-surface-1.png)
+![‘Stylized Surface’ shader in Single mode. Simple use case](/FlatKit_Manual_Images/stylized-surface-1.png)
 > ‘Stylized Surface’ shader in Single mode. Simple use case.  
 
-![‘Stylized Surface’ shader in Single mode. More complex use case](FlatKit_Manual_Images/stylized-surface-2.png)
+![‘Stylized Surface’ shader in Single mode. More complex use case](/FlatKit_Manual_Images/stylized-surface-2.png)
 > ‘Stylized Surface’ shader in Single mode. More complex use case with more options engaged, but still, uses only Single mode.  
 
 ### The Main Parameters of the Shader
@@ -62,7 +62,7 @@ Note, the flatness and actual representation of colors on the scene depend on th
 * **Curve.** The gradient, interpolated transition from one color to another.  
 In order to get Steps and Curve modes to work — as soon as you have a number of steps (*Steps* mode) or curve shape (*Curve* mode) chosen — the shader will ask you to save its utility ramp texture somewhere on the disk. It will write the transition onto it. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
-![Curve shading mode of Stylized Surface shader](FlatKit_Manual_Images/FK-StylizedSurface-Steps-Curves.png)
+![Curve shading mode of Stylized Surface shader](/FlatKit_Manual_Images/FK-StylizedSurface-Steps-Curves.png)
 > *Steps* and *Curve* shading mode of Stylized Surface shader  
 
 #### Extra Cel Layer
@@ -77,7 +77,7 @@ You can make a, well, specular with this parameter. Also it can be used as anoth
 * **Specular Size** determines how big the specular is. Higher values mean bigger specular.  
 * **Specular Edge Smoothness** — moving slider to the left decreases blurriness and makes specular sharper.
 
-![Specular. Inspector interface](FlatKit_Manual_Images/specular_parameters.png)
+![Specular. Inspector interface](/FlatKit_Manual_Images/specular_parameters.png)
 > *Specular*. Inspector interface
 
 #### Rim
@@ -89,12 +89,12 @@ Rim was designed as one of the ways to make a specific effect of a color 'wrappi
 * **Rim Size** controls how big the Rim is. Very high values can serve you as an unlit effect.  
 * **Rim Edge Smoothness** — moving slider to the left sharpens the Rim, to the right — makes Rim blurry.
 
-![Rim. Inspector interface](FlatKit_Manual_Images/rim_parameters.png)
+![Rim. Inspector interface](/FlatKit_Manual_Images/rim_parameters.png)
 > *Rim*. Inspector interface
 
 You can think of Rim as some kind of inner shadow and/or as inner glow, if used on smoothened curvy models. In one of the *Fruit Vase* demo scenes, there is an example of extensive use of Rim as an outline. On *Blueprint Grid* demo scene *Rim* is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute *Curve mode* or *Extra Cel parameter*. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, they can do more than that.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of *Stylized Surface* shader with *None* mode selected (meaning no straightforward shadows are applied), using orange color, and only *Rim* parameter enabled. The results are variations of Rim section only. As you see, the *Rim* alone is quite a creative tool. Imagine adding some creative *Specular* and *Height Gradient*...
 
-![Rim only, usage examples](FlatKit_Manual_Images/rim_examples_suzanne.png)
+![Rim only, usage examples](/FlatKit_Manual_Images/rim_examples_suzanne.png)
 > Variety of uses of *Rim* parameter alone on Suzanne the Blender Monkey. Interface of *Stylized Surface* shader with *‘None’* cel shading mode
 
 Although *Rim* option is creatively useful and sometimes can remind an outline effect, there are two more obvious ways to add an outline using Flat Kit: to use [Stylized Surface with Outline](#stylized-surface-with-outline-shader) shader and/or to use [Outline Image Effect](/image-effects/#outline-image-effect) camera component in Built-In RP/Forward Renderer's Renderer Feature in URP. We’ll talk about both of them later in this manual.
@@ -105,7 +105,7 @@ Although *Rim* option is creatively useful and sometimes can remind an outline e
 
 This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is global (absolute) per material, it doesn't depend on object's boundaries. If you would like to make a relative gradient (for instance, each object holding one material to contain an entire gradient within itself), duplicate the material and adjust the height gradient. Alternatively, you can use a *Curve* mode of *Stylized Surface*.
 
-![Height Gradient. Inspector interface](FlatKit_Manual_Images/gradient_height_parameters.png)
+![Height Gradient. Inspector interface](/FlatKit_Manual_Images/gradient_height_parameters.png)
 > *Height Gradient.* Inspector interface
 
 * **Gradient Color** picks the parameter’s own color to fade into from transparency.  
@@ -121,7 +121,7 @@ If enabled, the final shading of the object is multiplied by the mesh’s vertex
 
 #### Outline
 
-![Outline part of Stylized Surface shader. Inspector interface](FlatKit_Manual_Images/stylized-surface-outline-interface.png)
+![Outline part of Stylized Surface shader. Inspector interface](/FlatKit_Manual_Images/stylized-surface-outline-interface.png)
 > *Outline* part of Stylized Surface shader. Inspector interface
 
 The *Outline* part of the *Stylized Surface* shader allows you to add pseudo-outlines to your models.
@@ -138,7 +138,7 @@ In the [Outline Image Effect](/image-effects/#outline-image-effect) chapter in t
 Sometimes it is useful to manipulate the normals of your model in order to force the shader to render outlines where it wouldn't do so otherwise.
 More on this is covered in [Outline Image Effect](/image-effects/#outline-image-effect) chapter. But here's one thing you can try without using 3d editor software. Among the other parameters of the import settings of the model, there is a section where is it possible to change the angle detection threshold for normals. It may come handy in adding or removing some of the outlines where they wouldn't appear normally. Also, slight adjustments to these parameters may resolve some of the visual issues. If you have gaps in the outline, for instance, try tweaking these controls (but remember to backup the project first, it's always a good idea to backup things. In fact, if you are working on something, do it now).
 
-![Import settings of the model](FlatKit_Manual_Images/mesh-import-settings.png)
+![Import settings of the model](/FlatKit_Manual_Images/mesh-import-settings.png)
 > Import settings of the model has a section for manipulating the normals, which is useful for the *Stylized Surface with Outline* shader as well as for *Outline* global effect.
 
 Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. There are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
@@ -153,7 +153,7 @@ Please note that the effect is visible only if the color of the light is anythin
 
 Light Color Contribution works only with directional light. The point and spot lights are contributing to colors and shading of the material regardless of the Light Color Contribution value.
 
-![Light Color Contribution parameter on Flat Kit shaders Inspector panel](FlatKit_Manual_Images/light_color_contribution.png)
+![Light Color Contribution parameter on Flat Kit shaders Inspector panel](/FlatKit_Manual_Images/light_color_contribution.png)
 > *Light Color Contribution* parameter on Flat Kit shaders Inspector panel
 
 Let’s view it in example.  
@@ -163,23 +163,23 @@ Take the first image (below). At first, we turn down the *Intensity* to the very
 Then we change the color of Directional Light from white to red. It has no effect because Directional Light is too “weak” to fill the scene.  
 After raising *Intensity* value back to “1” the scene is now lighter and has a red tint.  
 
-![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png)
+![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png)
 > *Light Color Contribution* at value 0.5. Changing *Intensity* value and color of Directional Light
 
 Once we change *Color Light Contribution* parameter to “0” (pic below), Directional light has no effect light-wise and color-wise. Changing *Intensity* parameter of Directional Light on the Inspector panel has no effect. Both sides of the picture are identical.  
 This way you can achieve a flat look, in other words, the colors on the scene are exactly the same as you choose in the shader parameters.
 
-![Light Color Contribution at value 0. Directional Light intensity at max and min values](FlatKit_Manual_Images/lighting_1_color_contrib_0.png)
+![Light Color Contribution at value 0. Directional Light intensity at max and min values](/FlatKit_Manual_Images/lighting_1_color_contrib_0.png)
 > *Light Color Contribution* at value 0. Directional Light *Intensity* at max and min values
 
 Now, (on the pic below) we raise *Light Color Contribution* to the max value of “1”. If we set Directional Light *Intensity* parameter low, the scene theoretically has no source of direct light. Local lights now act as the only light sources. If the *Intensity* of Directional Light is at its maximum, it’s too hot now.
 
-![Light Color Contribution at value 1. Changing intensity value of Directional Light](FlatKit_Manual_Images/lighting_8.png)
+![Light Color Contribution at value 1. Changing intensity value of Directional Light](/FlatKit_Manual_Images/lighting_8.png)
 > *Light Color Contribution* at value 1. Changing *Intensity* value of Directional Light
 
 If you use a Particle System and choose your particles to emit light, Flat Kit shaders respect that!
 
-![Particles emitting light on Flat Kit shaders](FlatKit_Manual_Images/lighting_particles_lights.png)
+![Particles emitting light on Flat Kit shaders](/FlatKit_Manual_Images/lighting_particles_lights.png)
 > Particles emitting light on Flat Kit shaders.
 
 **Override light direction** It is a way to make the material have an independent direction of the light from the Directional Light. This can be useful in cases when you need to align the position of the cels or Rim or Specular. Normally, to adjust these parameters globally, you should rotate the Directional light. Once *Override light direction* parameter is enabled, the material no longer obeys the Directional Light, it now has independent mapping vectors for the light-dependent parameters (e.g. mentioned earlier cels, Rim, Specular) that you can adjust with *Pitch* and *Yaw* parameters. Simply put, you can rotate the the cels, Rim and Specular.  
@@ -188,7 +188,7 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 
 If the object has the ‘Receive Shadows’ option turned on in Mesh Renderer, you have an ability to use Unity-processed shadows on it, as you would do in Unity Standard Material shader, with a few extra-options.
 
-![Unity Built-in Shadows mode menu. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_modes.png)
+![Unity Built-in Shadows mode menu. Inspector interface](/FlatKit_Manual_Images/unity_built_in_shadows_modes.png)
 > Unity Built-in Shadows mode menu. Inspector interface
 
 * **Mode** lets you choose the coloring and blending parameters for the built-in shadows. **None** mode turns the built-in shadow parameter off.
@@ -199,7 +199,7 @@ If the object has the ‘Receive Shadows’ option turned on in Mesh Renderer, y
 
 > **NOTE.** *Shadow Occludion* parameter is available in the URP version of Flat Kit only.
 
-![Unity Built-in Shadows in Color mode. Inspector interface](FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
+![Unity Built-in Shadows in Color mode. Inspector interface](/FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png)
 > *Unity Built-in Shadows* in *Color* mode. Inspector interface
 
 #### Texture Maps
@@ -218,14 +218,14 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 
 **Normal Map** To make an impression of a relatively low-poly mesh having many details of a high-poly one, you can use normal maps. Add one to *Bump Map* slot in the Inspector panel.
 
-![‘Stylized Surface’ shader — normal map applied](FlatKit_Manual_Images/normalmap-interface.png)
+![‘Stylized Surface’ shader — normal map applied](/FlatKit_Manual_Images/normalmap-interface.png)
 > ‘Stylized Surface’ shader — normal map applied
 
 * **Texture selection slot** lets you pick a texture;  
 * **Tiling** repeats the texture along X and Y axis;  
 * **Offset** shifts the texture along X and Y axis within the UV map of the mesh;  
 
-![‘Normal Map Tree’ demo scene, a tree without and with a normal map](FlatKit_Manual_Images/normalmap-trees.png)
+![‘Normal Map Tree’ demo scene, a tree without and with a normal map](/FlatKit_Manual_Images/normalmap-trees.png)
 > ‘Normal Map Tree’ demo scene, a tree without and with a normal map
 
 **Emission** Enables Emission map part of the shader.  
@@ -264,7 +264,7 @@ This is a version of *Stylized Surface* shader with an option to treat alpha as 
 
 The *Base Alpha cutout* parameter determines how much of the alpha portion of the texture is going to be transparent.
 
-![‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface](FlatKit_Manual_Images/stylized_surface_cutout_screenshot.png)
+![‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface](/FlatKit_Manual_Images/stylized_surface_cutout_screenshot.png)
 > ‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface
 
 Use this shader if you work with transparency in Built-In RP. In URP you are good to go with the *Stylized Surface* shader instead of this one. It will spare a few cycles from your CPU.
@@ -276,7 +276,7 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 
 *Stylized Surface with Outline* shader, being the same as the regular *Stylized Surface* shader in a nutshell, has an additional option of... outlines. [*Stylized Surface* info is here](#stylized-surface-shader).
 
-![‘Stylized Surface with Outline’ shader](FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
+![‘Stylized Surface with Outline’ shader](/FlatKit_Manual_Images/stylized_surface_with_outline_interface.png)
 > ‘Stylized Surface with Outline’ shader
 
 * **Color** picks up the color of the outline.  
@@ -296,7 +296,7 @@ This is a simple method to fill the sky of your scene.
 
 > **TIP.** Make *Top Color* and *Bottom Color* identical colors or move the *Exponent* parameter to one of the extremes if you want a flat background.
 
-![Gradient Skybox. Inspector panel interface](FlatKit_Manual_Images/gradient-skybox-interface.png)
+![Gradient Skybox. Inspector panel interface](/FlatKit_Manual_Images/gradient-skybox-interface.png)
 > Gradient Skybox. Inspector panel interface
 
 ## Water Shader
@@ -305,7 +305,7 @@ Water shader works in URP only. There is no Built-In version of a Water shader i
 
 Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird things with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated at first, it is intuitive and has helping tooltips on the parameters.
 
-![Water shader interface](FlatKit_Manual_Images/water-shader-interface.png)
+![Water shader interface](/FlatKit_Manual_Images/water-shader-interface.png)
 > *Water* shader interface
 
 First of all, you'll need a surface to place a material with *Water* shader on. A plane with vertex grid will do fine. The more high resolution the water mesh is the smoother and well-defined the waves will be. For extra interest you can slightly displace the vertices while editing the mesh. With Flat Kit you get a few such models.
@@ -318,12 +318,12 @@ The controls are grouped into the logical sections. Let's float through the para
 
 **Source** There are two modes of the color input — *Linear* and *Gradient Texture*.
 
-![Water color source dropdown](FlatKit_Manual_Images/water-color-source-dropdown.png)
+![Water color source dropdown](/FlatKit_Manual_Images/water-color-source-dropdown.png)
 > Water color source dropdown
 
 * **Linear.** This one allows to use just colors for *Shallow* and *Deep* parts of water. This effect is simple one — just two colors.
 
-![Water color source dropdown](FlatKit_Manual_Images/water-color-source-linear.png)
+![Water color source dropdown](/FlatKit_Manual_Images/water-color-source-linear.png)
 > Water color source - linear
 
 If *Linear* color source is chosen, two exclusive to this mode parameters appear to select colors:
@@ -334,18 +334,18 @@ If *Linear* color source is chosen, two exclusive to this mode parameters appear
 
 * **Gradient Texture.** Use this one if you are looking for something fancy. You can create a depth gradient consisting of several colors. Using a Gradient Editor ramp, you can add up to 8 color stops onto the ramp. Now you have a *Shallow* color, *Deep* color and anything you want in between (see *Pool* demo scene).
 
-![Water color source — gradient](FlatKit_Manual_Images/water-color-source-gradient.png)
+![Water color source — gradient](/FlatKit_Manual_Images/water-color-source-gradient.png)
 > Water color source - gradient. Clicking on the color window opens the Gradient Editor.
 
 When you click on the white color field, the Gradient Editor will show up.
 
-![Gradient Editor](FlatKit_Manual_Images/water-gradient-editor.png)
+![Gradient Editor](/FlatKit_Manual_Images/water-gradient-editor.png)
 > Gradient Editor. Edit the gradient and close the window, then save the texture.
 
 After you finished editing the color gradient, click the 'Export' button to save the texture somewhere on the disk. We recommend to name the textures with the names beginning on something like 'water...' or 'awesome_gradient...' because later you'll have these textures stacked up one below another in the texture selection window, and it will be much quicker to scroll through them.  
 When you have your texture saved, the material will be instantly filled with this gradient.
 
-![Export Button](FlatKit_Manual_Images/water-gradient-export-button.png)
+![Export Button](/FlatKit_Manual_Images/water-gradient-export-button.png)
 > Export Button. Click it and save the texture to the disk.
 
 **Shallow Depth.** This is a lowest point of *Shallow* part. It is a point where *Shallow* part merges with the top of the gradient.
@@ -353,7 +353,7 @@ When you have your texture saved, the material will be instantly filled with thi
 **Gradient Size.** This is the lowest (deepest) point of the gradient. It is a point where it merges with the *Deep* part.
 
 Below is a little chart, which may came handy for understanding the parameters for the coloring part of the *Water* shader.
-![Water Gradient Chart](FlatKit_Manual_Images/water-gradient-chart.png)
+![Water Gradient Chart](/FlatKit_Manual_Images/water-gradient-chart.png)
 > Water Gradient chart
 
 **Transparency.** How clear (transparent) the color of the water is. The transparency doesn't affect other parameters like foam or refractions. This allows you to achieve awesome weird optical effects.
@@ -382,17 +382,17 @@ This section determines the overall shape of the waves. All the controls for the
 
 * **None** turns displacement waves off. As no waves are visible, the surface becomes flat.
 * **Round** is linear (comb-looking) shape with rounded tips;
-![Shape parameter — 'Round'](FlatKit_Manual_Images/wave_shape_round.png)
+![Shape parameter — 'Round'](/FlatKit_Manual_Images/wave_shape_round.png)
 
 > Shape parameter — 'Round'
 
 * **Grid** is grid-like (checkerboard-looking) shape;
-![Shape parameter — 'Grid'](FlatKit_Manual_Images/wave_shape_grid.png)
+![Shape parameter — 'Grid'](/FlatKit_Manual_Images/wave_shape_grid.png)
 
 > Shape parameter — 'Grid'
 
 * **Pointy** is more linear (comb-looking) movement with sharp tips.
-![Shape parameter — 'Pointy'](FlatKit_Manual_Images/wave_shape_pointy.png)
+![Shape parameter — 'Pointy'](/FlatKit_Manual_Images/wave_shape_pointy.png)
 
 > Shape parameter — 'Pointy'
 
@@ -469,7 +469,7 @@ Usually flat shaded landscape objects lack organic embellishment the real world 
 This effect changes the scene dramatically. Now, the terrain has its shadow work that you set on the interface, and on top of that there is a gradient, subtle or obvious. Immediately, it adds depth and a more professional look to the scene.
 If you work on some kind of an environmental landscape object but do not use Unity Terrain, please use the *Stylized Surface* shader instead of *Terrain*. *Height Gradient* is available there, too.
 
-![Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene](FlatKit_Manual_Images/height-gradient-example-01.png)
+![Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene](/FlatKit_Manual_Images/height-gradient-example-01.png)
 > Height Gradient on Unity Terrain (without on upper image, with — on lower one). Valley Demo Scene
 
 ## ‘LightPlane’ Shader
@@ -478,7 +478,7 @@ This shader is what we are particularly proud of. It looks like a small tool. Bu
 
 The *Wanderer* demo scene includes *LightPlane* shader implemented not only as fog areas, but also as light beams of so-called pick-up objects and even as planets. The *Valley* demo scene has got the *LightPlane* shader used as floating air particles thanks to the Unity particle system.
 
-![LightPlane Shader. Inspector panel interface](FlatKit_Manual_Images/light_plane_interface.png)
+![LightPlane Shader. Inspector panel interface](/FlatKit_Manual_Images/light_plane_interface.png)
 > LightPlane Shader. Inspector panel interface
 
 The parameters of the *LightPlane* shader are:
@@ -487,22 +487,22 @@ The parameters of the *LightPlane* shader are:
 
 * *Camera Distance Fade Close* / *Camera Distance Fade Far* control distance range from the camera at which **the light plane object** transitions from transparent to opaque (see pic below).
 
-![LightPlane — Camera Distance parameters](FlatKit_Manual_Images/lightplane-camera-dist.png)
+![LightPlane — Camera Distance parameters](/FlatKit_Manual_Images/lightplane-camera-dist.png)
 > *LightPlane* — *Camera Distance X and Y* parameters
 
 * *UV Fade X* controls transparency on the sides along X axis of the plane/mesh (see pic below);  
 
-![LightPlane — UV Fade X parameter](FlatKit_Manual_Images/lightplane-uv-fade-dist-x.png)
+![LightPlane — UV Fade X parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-x.png)
 > *LightPlane* — *UV Fade X* parameter
 
 * *UV Fade Y* controls transparency on the sides along Y axis of the plane/mesh (see pic below);
 
-![LightPlane — UV Fade Y parameter](FlatKit_Manual_Images/lightplane-uv-fade-dist-y.png)
+![LightPlane — UV Fade Y parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-y.png)
 > *LightPlane* — *UV Fade Y* parameter
 
 When combined, *UV Fade X* and *UV Fade Y* can make a fluffy blob.
 
-![LightPlane — UV Fade X and UV Fade Y parameters combined](FlatKit_Manual_Images/lightplane-uv-fade-dist-x-y.png)
+![LightPlane — UV Fade X and UV Fade Y parameters combined](/FlatKit_Manual_Images/lightplane-uv-fade-dist-x-y.png)
 > *LightPlane* — *UV Fade X* and *UV Fade Y* parameters combined
 
 * *Allow Alpha Overflow* makes alpha more than '1', used for HDR, looks nice with some bloom.
