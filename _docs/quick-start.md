@@ -1,7 +1,7 @@
 ---
-title: "Quick Start. Beginning to Work with Flat Kit"
+title: "Installation"
 permalink: /quick-start/
-excerpt: "Quick Start. Beginning to Work with Flat Kit"
+excerpt: "Installation"
 toc: false
 ---
 

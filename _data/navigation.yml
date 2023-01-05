@@ -15,9 +15,9 @@ main:
 docs:
   - title: Getting Started
     children:
-      - title: Quick Overview
+      - title: Overview
         url: /
-      - title: Quick Start
+      - title: Installation
         url: /quick-start/
       - title: Shaders
         url: /shaders/

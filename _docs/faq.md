@@ -8,13 +8,13 @@ toc: false
 
 > **A.** Once you log into the account you have purchased Quibli from, and load the Flat Kit Asset Store page, you should see the automatic 50% off discount for Flat Kit.
 
-#### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
+<!-- #### Q. After importing/updating Flat Kit the shaders failed to compile. 'X' shader is missing from the list. Why?
 
 > **A.** Because of the recent Unity's error, there is a mess going on with the packages in the Package Manager. You see one version of the package but in reality it may be another, unsupported one. Also, this bug won't let you install and change the versions of the assets in the Package Manager (which you need to do in this case — **you need to update the version of Universal RP**). Unity is working on it, here's the [issue tracker](https://issuetracker.unity3d.com/issues/package-manager-doesnt-show-available-updates).  
 If you updated to the latest version of Unity, and still haven't resolved it, please restart Unity. If after restart the errors won’t go away, clean the cache of the Package Manager and re-import Flat Kit, as it is another one symptom of this Unity's problem. You can find the cache here  
 *Mac OS:* `~/Library/Unity/Asset Store-5.x` (press `Shift+Cmd+G` in any Finder Window or press Go -> Go to Folder on the top bar and paste this path)  
 *Windows:* `%APPDATA%\Unity\Asset Store-5.x` (hidden folder, press Win+R to open 'Run' window and paste this path)  
-*Linux:* `~/.local/share/unity3d/Asset Store-5.x` 
+*Linux:* `~/.local/share/unity3d/Asset Store-5.x`  -->
 
 #### Q. What is the difference between Flat Kit and Quibli?
 
