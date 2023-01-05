@@ -2,7 +2,7 @@
 title: "Additional Scripts"
 permalink: /additional-scripts/
 excerpt: "Additional Scripts"
-toc: false
+toc: true
 ---
 
 ## UV Scroller
