@@ -262,7 +262,9 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 * **Offset** shifts the texture along X and Y axis within the UV map of the mesh;  
 
 ![‘Normal Map Tree’ demo scene, a tree without and with a normal map](/FlatKit_Manual_Images/normalmap-trees.png){:.image-simple}
-> ‘Normal Map Tree’ demo scene, a tree without and with a normal map
+
+{:.image-caption}
+‘Normal Map Tree’ demo scene, a tree without and with a normal map
 
 **Emission** Enables Emission map part of the shader.  
 > **NOTE.** Emission map support is available in Universal RP version of Flat Kit only, there is no Emission map parameter in Built-In version of Flat Kit.  
@@ -274,7 +276,7 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 * **Offset** shifts the texture along X and Y axis within the UV map of the mesh;  
 * **Emission Color** chooses the color of the 'glowing' effect.  
 
-![Emission map part of the Stylized Surface interface](FlatKit_Manual_Images/stylized-surface-emission-interface.png){:.image-simple}
+![Emission map part of the Stylized Surface interface](/FlatKit_Manual_Images/stylized-surface-emission-interface.png){:.image-simple}
 
 {:.image-caption}
 Emission map part of the Stylized Surface interface
