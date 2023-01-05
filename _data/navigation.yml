@@ -17,10 +17,20 @@ docs:
     children:
       - title: Quick Overview
         url: /
+      - title: Quick Start
+        url: /quick-start/
       - title: Shaders
         url: /shaders/
       - title: Image Effects
         url: /image-effects/
+      - title: Flat Kit in URP
+        url: /flat-kit-in-urp/
+      - title: /Additional Scripts
+        url: /additional-scripts/
+      - title: Demo Scenes
+        url: /demo-scenes/
+      - title: Presets
+        url: /presets/
   - title: Help
     children:
       - title: FAQ
