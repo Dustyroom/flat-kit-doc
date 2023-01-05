@@ -17,6 +17,10 @@ docs:
     children:
       - title: Quick Overview
         url: /
+      - title: Shaders
+        url: /shaders/
+      - title: Image Effects
+        url: /image-effects/
   - title: Help
     children:
       - title: FAQ
