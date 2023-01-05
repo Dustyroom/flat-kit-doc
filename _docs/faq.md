@@ -54,7 +54,7 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 #### Q. I’ve got errors just after importing Flat Kit. Why?  
 
-> **A.** First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, [get in touch](/contact).
+> **A.** First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, [get in touch](/contact-details).
 
 #### Q. What is the Shader Compilation Target Level of Flat Kit shaders?  
 
