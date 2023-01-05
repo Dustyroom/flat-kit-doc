@@ -39,9 +39,11 @@ The **additional** parameters are:
 > **NOTE:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: <https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html>
 
 ![‘Stylized Surface’ shader in Single mode. Simple use case](/FlatKit_Manual_Images/stylized-surface-1.png){:.image-simple}
+
 ‘Stylized Surface’ shader in Single mode. Simple use case{:.image-caption}
 
 ![‘Stylized Surface’ shader in Single mode. More complex use case](/FlatKit_Manual_Images/stylized-surface-2.png){:.image-simple}
+
 ‘Stylized Surface’ shader in Single mode. More complex use case with more options engaged, but still, uses only Single mode{:.image-caption}
 
 ### The Main Parameters of the Shader
