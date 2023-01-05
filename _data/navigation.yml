@@ -19,12 +19,16 @@ docs:
         url: /
       - title: Installation
         url: /quick-start/
+  - title: Components
+    children:
       - title: Shaders
         url: /shaders/
       - title: Image Effects
         url: /image-effects/
       - title: Flat Kit in URP
         url: /flat-kit-in-urp/
+  - title: Bonuses
+    children:
       - title: Additional Scripts
         url: /additional-scripts/
       - title: Demo Scenes
