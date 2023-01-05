@@ -4,7 +4,7 @@ permalink: /
 toc: false
 ---
 
-![](/FlatKit_Manual_Images/overview-intro-pic.jpg){: .image-fancy
+![](/FlatKit_Manual_Images/overview-intro-pic.jpg){: .image-fancy }
 
 If you’ve got a question regarding Flat Kit, **please read through the [Frequently Asked Questions](/faq/)**, and try searching for the answers here in this documentation. Also, many questions have been already covered in the [issues page](https://github.com/Dustyroom/flat-kit-doc/issues). If the question is not covered, please [report an issue](https://github.com/Dustyroom/flat-kit-doc/issues), go to our [Discord](https://discord.gg/GBAeuWC9qS) or shoot an email to *info@dustyroom.com*.
 
