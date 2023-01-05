@@ -41,7 +41,7 @@ Outline Image effect is, essentially, a contour on the objects on the scene. It 
 
 If you are working in a Universal Rendering Pipeline (URP) project, the post processing components you used to put on the camera in the old Built-In RP ('Standard', '3D' project) — they are called 'Renderer Features' in URP and can be found in the settings of the Forward Renderer.  
 
-Please make sure that you installed Flat Kit properly as described [in this manual above](/quick-start).  
+Please make sure that you installed Flat Kit properly as described [here](/quick-start).  
 
 After that you'll be able to load, for example, *Wanderer* demo scene that comes with Flat Kit, launch the scene (press Play) and see the outlines displayed.  
 
