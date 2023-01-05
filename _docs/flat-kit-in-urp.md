@@ -24,10 +24,10 @@ Please refer to the chapter ['Quick start. Beginning to work with Flat Kit'](/qu
 The last step of the installation shown in the video in a chapter ['Quick start. Beginning to work with Flat Kit'](/quick-start) was pressing *Configure for URP* button in a *[Readme]* file that came with Flat Kit. This automatic step replaces two manual steps of setting up Flat Kit in Universal RP:
 * **Manual Step 1.** Navigate to *Project Settings* -> *Graphics* and insert **[FlatKit] Example Settings URP** file into *Scriptable Rendering Pipeline Setting* field.
 If you are using your settings file instead, please make sure to have *Opaque texture* and *Depth texture* checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
-![Flat Kit import instructions - Step 5](FlatKit_Manual_Images/manual_import_instructions_6.png)
+![Flat Kit import instructions - Step 5](/FlatKit_Manual_Images/manual_import_instructions_6.png)
 
 * **Manual Step 2.** Please do this in *Quality* tab's *Rendering* field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file. Do it for all Quality levels.  
-![Flat Kit import instructions - Step 6](FlatKit_Manual_Images/manual_import_instructions_7.png)
+![Flat Kit import instructions - Step 6](/FlatKit_Manual_Images/manual_import_instructions_7.png)
 
 Here's a video showing setting it up.  
 
@@ -47,7 +47,7 @@ To enable outline and fog, select the ForwardRendererConfig and add the 'outline
 
 The order of the effects can be managed like this.
 
-![Managing the order of renderer layers in URP](FlatKit_Manual_Images/URP-renderer-layers-01.png)
+![Managing the order of renderer layers in URP](/FlatKit_Manual_Images/URP-renderer-layers-01.png)
 > Managing the order of renderer layers in URP
 
 It's a default URP thing. What is worth noting is that for Outlines we made an option to choose the order of Renderer Events within Outline Image Effect interface. Please refer to the corresponding chapter of this manual, [Outline Image Effect](/image-effects/#outline-image-effect).
@@ -60,5 +60,5 @@ Go to Assets (in Project tab) ▶︎ Universal Rendering Pipeline asset ▶︎ g
 
 Enable the Post Processing flat on the camera inspector:
 
-![Camera properties. How to enable Post-processing v.2](FlatKit_Manual_Images/enable-post-processing-camera.png)
+![Camera properties. How to enable Post-processing v.2](/FlatKit_Manual_Images/enable-post-processing-camera.png)
 > Camera properties. How to enable Post-processing v.2

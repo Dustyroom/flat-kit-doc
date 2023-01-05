@@ -11,7 +11,7 @@ In Flat Kit you can find presets as .mat Material instances (that you can drag a
 
 To save the preset, select the material or an object with this material you want to save, click on the ‘mixer’ icon on the top right of the shader interface on the Inspector panel. Then, the menu will pop up. Click ‘Save Current to…’. Then you choose the destination. Once created, you can move the actual file wherever you would like. All presets within a project will show up in the ‘Select Preset’ menu.
 
-![Preset menu. How to load.](FlatKit_Manual_Images/preset-button.png)
+![Preset menu. How to load.](/FlatKit_Manual_Images/preset-button.png)
 > Preset menu. How to load.
 
 Save, recall, experiment, discard bad results, save great results, all by using Unity’s preset system. You cat A/B this way and share the shader’s parameters across multiple separate materials. Scan through them and once you stumble upon something close to what you are looking for, adjust the one.

@@ -20,21 +20,21 @@ When you click on any of the color ramps (Distance or Height Gradient), the Grad
 
 Fog Image Effect is being used in the *Wanderer* demo scene (more subtly) and *Valley* Demo scene (more accentuated).
 
-![Fog Image Effect. Inspector panel interface](FlatKit_Manual_Images/fog_image_effect.png)
+![Fog Image Effect. Inspector panel interface](/FlatKit_Manual_Images/fog_image_effect.png)
 > Fog Image Effect. Inspector panel interface
 
 Gradient editor controls the colors of the gradient. To open it, click on Distance Gradient or Height Gradient. The bottom row of breakpoints (pointing up) is the selection of the colors. The above row (pointing down) controls the opacity of the area it points at; the opacity value of one breakpoint fades into the opacity value of the adjacent one. Same for colors.
 
 > **TIP.** If you want the area close to you to be without fog, apart from increasing Near parameter, you can open up the color ramp(s), add a breakpoint next to the leftmost one on the ramp, select leftmost one, make it transparent (see screenshot of Gradient Editor below). The breakpoint you created (opaque, next to the transparent one) becomes your distance or height control.
 
-![Fog Image Effect. Gradient Editor interface.](FlatKit_Manual_Images/fog_image_effect_gradient_editor.png)
+![Fog Image Effect. Gradient Editor interface.](/FlatKit_Manual_Images/fog_image_effect_gradient_editor.png)
 > Fog Image Effect. Gradient Editor interface.
 
 ## Outline Image Effect
 
 Outline Image effect is, essentially, a contour on the objects on the scene. It can draw outer outlines, inner ones or both outer and inner outlines of the objects.
 
-![Outline Forward Renderer in URP. Inspector interface.](FlatKit_Manual_Images/outline-image-effect-interface.png)
+![Outline Forward Renderer in URP. Inspector interface.](/FlatKit_Manual_Images/outline-image-effect-interface.png)
 > Outline Forward Renderer in URP. Inspector interface.
 
 ### Setting up Flat Kit Outline (URP)
@@ -87,15 +87,15 @@ To change the parameters of the outlines then, please:
 
 You'll need to *press 'Play'* to see the effect of *Render Event*.
 
-![Outline Image Effect Render Event list](FlatKit_Manual_Images/outline-image-effect-render-events.png)
+![Outline Image Effect Render Event list](/FlatKit_Manual_Images/outline-image-effect-render-events.png)
 > Outline Image Effect Render Event list
 
 Here is an example of choosing when to render the outlines. We took *Wanderer* demo scene and applied an example *Outline* Image Effect. After that we tried a few different items from the *Render Event* list.
 
-!['After Rendering Skybox' chosen in Render Event list](FlatKit_Manual_Images/after_rendering_skybox.png)
+!['After Rendering Skybox' chosen in Render Event list](/FlatKit_Manual_Images/after_rendering_skybox.png)
 > *'After Rendering Skybox'* chosen in Render Event list. *Wanderer* demo scene
 
-!['Before Rendering Post Processing' chosen in Render Event list, 'Outlines Only' parameter ticked](FlatKit_Manual_Images/before_rendering_post_processing_outlines_only.png)
+!['Before Rendering Post Processing' chosen in Render Event list, 'Outlines Only' parameter ticked](/FlatKit_Manual_Images/before_rendering_post_processing_outlines_only.png)
 > *'Before Rendering Post Processing'* chosen in *Render Event* list, *'Outlines Only'* parameter ticked
 
 Also, in URP you have an ability to chain and change the orders of Image effects, but it's a general Unity information. More info in the chapter [Flat Kit Image Effects in URP](/flat-kit-in-urp/#flat-kit-image-effects-in-urp)
@@ -104,14 +104,14 @@ Please note that *Outline Image Effect* is a global effect, as it is used as the
 
 If you would like to exclude an object from an outline pass, considering that you are using one of the Stylized Surface shaders, and you are in a URP project, please go to the interface of the shader and switch rendering to 'Transparent'. It won't change the look of the shader but will exclude it from the outline pass. You can control this too as described a few paragraphs above in Render Event list part.
 
-![Flat Kit Depth Normals renderer feature](FlatKit_Manual_Images/flat-kit-depth-normals.png)
+![Flat Kit Depth Normals renderer feature](/FlatKit_Manual_Images/flat-kit-depth-normals.png)
 > Flat Kit Depth Normals Renderer Feature
 
 > **NOTE:** The *Flat Kit Depth Normals* is no longer needed starting Unity 2021.1 and will soon be removed.
 
 Some general info. Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. It can be done in a 3d editor. For example, here's how to do it in Blender.
 
-![Rotating normals in Blender](FlatKit_Manual_Images/normals-rotation1.png)
+![Rotating normals in Blender](/FlatKit_Manual_Images/normals-rotation1.png)
 > Rotating normals in Blender. Manipulating the normals angle is one of the ways to make Flat Kit generate outlines where you want them
 
 > **TIP:** Combinations of the settings in Outline Image Effect let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using *‘Stylized Surface with Outline’* shader in addition to the global Outline effect. Also, *Rim* parameter of *Stylized Surface* and *Stylized Surface with Outline* shaders can accentuate object's edges, often it looks like a partial outline, which can be helpful.
