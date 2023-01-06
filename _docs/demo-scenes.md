@@ -18,7 +18,7 @@ However, you can find more experimental stuff there, too. It has been a temptati
 Blueprint Grid is a descriptive one, there is a text telling what we used to get the displayed materials.
 Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits across all scenes and each scene is dedicated to some specific look, thus uses a different set of materials.
 
-* *Tree Island* scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or Any other arcade game.
+* *Tree Island* scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or a ny other arcade game.
 
 * *Room*. We just had to include a room.
 
@@ -32,5 +32,5 @@ Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits a
 * *Pool* scene shows more various versions of the *Water* shader. In the Hierarchy tab you can choose between different water objects. Each of these objects has its own *Water* material.  
 **NOTE:** This scene will work in Universal RP only.
 
-* *Water Vessels* is an attempt to show a few basic and more non-obvious *Water* shader parameters, all at once. Having these materials, you can use them as starting points in you own projects.  
+* *Water Vessels* is an attempt to show a few basic and more non-obvious *Water* shader parameters in a single scene. Having these materials, you can use them as starting points in you own projects.  
 **NOTE:** This scene will work in Universal RP only.

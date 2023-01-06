@@ -36,3 +36,8 @@ This script is used with *Water* shader specifically when there is an object on 
 ## Auto Load Pipeline Asset
 
 This script is set on Camera as a Component. It automatically loads a URP Asset file for this scene only. This way there is no need to create the single URP Asset file for the whole Unity project — every scene can have its own one, which makes each scene in the project portable and easy to move, duplicate, A/B test etc.
+
+![Auto Load Pipeline Asset interface](/FlatKit_Manual_Images/flat-kit-auto-load-pipeline-asset-component.png)
+
+{:.image-caption}
+*Auto Load Pipeline Asset* script interface

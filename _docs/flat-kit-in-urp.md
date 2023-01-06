@@ -19,7 +19,7 @@ After that, you will need to use a Universal RP Asset file, as this file lists t
 
 Once you do it, the _Asset file_ and a _Renderer_ (formerly known _Forward Renderer_) are created.
 
-You can set the _Asset file_ manualy or using the Flat Kit's [Auto Load Pipeline Asset script](/additional-scripts/auto-load-pipeline-asset).
+You can set the _Asset file_ manualy or using the Flat Kit's [Auto Load Pipeline Asset script](/additional-scripts/#auto-load-pipeline-asset).
 
 * **Manual Step 1.** Navigate to *Project Settings* -> *Graphics* and insert **[FlatKit] Example Settings URP** file into *Scriptable Rendering Pipeline Setting* field.
 If you are using your settings file instead, please make sure to have *Opaque texture* and *Depth texture* checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
