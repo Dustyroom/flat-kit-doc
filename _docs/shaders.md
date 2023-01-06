@@ -389,14 +389,14 @@ If *Linear* color source is chosen, two exclusive to this mode parameters appear
 ![Water color source — gradient](/FlatKit_Manual_Images/water-color-source-gradient.png){:.image-simple}
 
 {:.image-caption}
-Water color source - gradient. Clicking on the color window opens the Gradient Editor.
+Water color source - gradient. Clicking on the color window opens the Gradient Editor
 
 When you click on the white color field, the Gradient Editor will show up.
 
 ![Gradient Editor](/FlatKit_Manual_Images/water-gradient-editor.png){:.image-simple}
 
 {:.image-caption}
-Gradient Editor. Edit the gradient and close the window, then save the texture.
+Gradient Editor. Edit the gradient and close the window, then save the texture
 
 After you finished editing the color gradient, click the 'Export' button to save the texture somewhere on the disk. We recommend to name the textures with the names beginning on something like 'water...' or 'awesome_gradient...' because later you'll have these textures stacked up one below another in the texture selection window, and it will be much quicker to scroll through them.  
 When you have your texture saved, the material will be instantly filled with this gradient.
@@ -404,7 +404,7 @@ When you have your texture saved, the material will be instantly filled with thi
 ![Export Button](/FlatKit_Manual_Images/water-gradient-export-button.png){:.image-simple}
 
 {:.image-caption}
-Export Button. Click it and save the texture to the disk.
+Export Button. Click it and save the texture to the disk
 
 **Shallow Depth.** This is a lowest point of *Shallow* part. It is a point where *Shallow* part merges with the top of the gradient.
 

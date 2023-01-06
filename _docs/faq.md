@@ -30,7 +30,7 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 #### Q. What platforms can I build for? What about VR?  
 
-> **A.** Flat Kit shaders work in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile.
+> **A.** Flat Kit works in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile.
 
 #### Q. There are missing scripts in some demo scenes on the main camera
 
@@ -39,10 +39,6 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 #### Q. Does Flat Kit support URP? Why is the feature X is available in Universal RP but not in Built-In RP?  
 
 > **A.** Flat Kit supports URP as well as Built-In RP, although Built-In RP is not being developed after Flat Kit v.2.0. There are a few known limitations in URP, please see [FlatKit in URP chapter](/flat-kit-in-urp). As Built-In RP is not being actively developed by Unity anymore an it has its drawbacks, we continue to support it but we develop new great features only for URP, instead of supporting an obsolete technology. Please note, there is no HDRP version of Flat Kit yet.
-
-#### Q. Does Flat Kit support PBR (Physically-Based Rendering)?  
-
-> **A.** In Flat Kit indirect sources of light influence the colors of the scene by default, which can be turned off. The shaders do not support parameters required for the photorealistic look such as glossiness, metallic or subsurface scattering.
 
 #### Q. Does Flat Kit support normal maps?  
 
