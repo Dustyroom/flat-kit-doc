@@ -12,7 +12,8 @@ We tried to depict the big spectrum of possibilities using various scenes. They 
 Valley uses Terrain shader and transparent textures inside a Stylized Surface Cutout shader. Valley demo scene is also an example of obvious, rather than subtle, use of *Fog* Image Effect. Once the scene is loaded, you can scan through the *Fog* Image Effect presets to find which one you like more. There is a Presets chapter later in this manual with explanation of how to use them.
 In a *Valley* scene, please note that although the ground is made with Unity native terrain, the trees on it are populated manually, not using the terrain system.
 
-![](/Screenshots/Valley1){: .image-fancy }
+![](/Screenshots/Valley1.png){: .image-fancy }
+
 ![](/Screenshots/Wanderer.png){: .image-fancy }
 
 * *Blueprint Grid (Mugs)* and *Fruit Vase* scenes are an exhibition of most sought use cases of cel / toon shading.
@@ -22,6 +23,7 @@ Blueprint Grid is a descriptive one, there is a text telling what we used to get
 Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits across all scenes and each scene is dedicated to some specific look, thus uses a different set of materials.
 
 ![](/Screenshots/Mugs%20-%20Scene1%20-%20OneColorVariousParameters.png){: .image-fancy }
+
 ![](/Screenshots/Mugs%20-%20Scene2%20-%20ColorfulMisc.png){: .image-fancy }
 
 * *Tree Island* scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or a ny other arcade game.
@@ -35,8 +37,11 @@ Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits a
 * *Retro Cars*. Retro cars are curvy. A great opportunity to show how shiny (or rough) shaders can be.
 
 ![](/Screenshots/Car%20-%20Scene%20-%20Set1.png){: .image-fancy }
+
 ![](/Screenshots/Car%20-%20Scene%20-%20Set2.png){: .image-fancy }
+
 ![](/Screenshots/Car%20-%20Scene%20-%20Set3.png){: .image-fancy }
+
 ![](/Screenshots/Car%20-%20Scene%20-%20Set4.png){: .image-fancy }
 
 * *Normal Map Tree*. An example of normal maps application.
