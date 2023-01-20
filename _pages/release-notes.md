@@ -5,6 +5,15 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 3.3.0 <small>(2023-01-20)</small>
+- **BREAKING CHANGE**: If a water material uses foam with a texture, it might look **slightly different** with this update. The foam direction formula had a bug, which caused foam textures to be slightly stretched. This is now fixed.
+- Added support for Unity's new **LOD cross-fade** functionality.
+- Added support for the **Forward+** rendering path.
+- Fixed **depth outlines** in the Outline Renderer Feature.
+- Fixed rendering of **shadows on the Water shader**.
+- Fixed **tiling of water** when using a foam texture.
+- Fixed an issue where sometimes the Outline shader pass was not properly disabled, causing **SRP Batching** to break. 
+
 ## 3.2.5 <small>(2023-01-02)</small>
 - Fixed **water** rendering in **WebGL** builds.
 - **URP demo scenes now auto-configure** the URP Asset/Renderer. No maual configuration is needed anymore, removed actions from the Readme config section.
