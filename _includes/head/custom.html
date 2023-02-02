@@ -10,9 +10,11 @@
 <!--  Paragraph anchor links -->
 <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
 <script>
-  anchors.options.visible = 'always';
-  anchors.options.icon = '❡';
-  anchors.options.placement = 'left';
-  anchors.options.visible = 'hover';
-  anchors.add('.post-content > p');
+  $(function() {
+    anchors.options.visible = 'always';
+    anchors.options.icon = '❡';
+    anchors.options.placement = 'left';
+    anchors.options.visible = 'hover';
+    anchors.add('.post-content > p');
+  });
 </script>
