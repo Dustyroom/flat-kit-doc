@@ -19,7 +19,7 @@
     anchors.options.placement = 'left';
     anchors.add('.page__content > p');
   });
-  $(".post-content > p > img").each(function(idx, el) { 
+  $(".page__content > p > img").each(function(idx, el) { 
     var $el = $(el);
     $el.parent().removeAttr("id"); 
   });
