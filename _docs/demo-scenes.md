@@ -56,18 +56,21 @@ An example of normal maps application.
 
 # Ocean Water
 This is a demo scene showcasing the *Water* shader in a way the game would look like. A non-toon-shading application for *Stylized Surface* is showed in this scene, too. You can choose various water looks in the Hierarchy tab by switching different Water objects on.  
-**NOTE:** This scene will work in Universal RP only.
+
+> **NOTE:** This scene will work in Universal RP only.
 
 ![](/Screenshots/Ocean%20Islands.png){: .image-fancy }
 
 # Pool
 *Pool* scene shows more various versions of the *Water* shader. In the Hierarchy tab you can choose between different water objects. Each of these objects has its own *Water* material.  
-**NOTE:** This scene will work in Universal RP only.
+
+> **NOTE:** This scene will work in Universal RP only.
 
 ![](/Screenshots/Pool.png){: .image-fancy }
 
 # Water Vessels
 *Water Vessels* is an shows a few simple and more non-obvious *Water* shader parameters in a single scene. Having these materials, you can use them as starting points in you own projects.  
-**NOTE:** This scene is in Universal RP only.
+
+> **NOTE:** This scene is in Universal RP only.
 
 ![](/Screenshots/Water%20Vessels%20-%20Various%20Water%20Presets.png){: .image-fancy }
