@@ -21,7 +21,6 @@
   });
   $(".post-content > p > img").each(function(idx, el) { 
     var $el = $(el);
-    var idText = anchors.urlify("img-" + $el.attr("alt") + el.attr("id")); 
-    $el.parent().attr("id", idText); 
+    $el.parent().removeAttr("id"); 
   });
 </script>
