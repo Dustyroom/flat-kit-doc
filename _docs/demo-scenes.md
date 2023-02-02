@@ -29,7 +29,7 @@ Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits a
 ![](/Screenshots/Mugs%20-%20Scene2%20-%20ColorfulMisc.png){: .image-fancy }
 
 # Tree Island
-*Tree Island* scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or a ny other arcade game.
+*Tree Island* scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or any other arcade game.
 
 ![](/Screenshots/IslandWithTrees-Scene.png){: .image-fancy }
 
