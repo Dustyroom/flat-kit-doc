@@ -17,6 +17,11 @@
   $(function() {
     anchors.options.visible = 'hover';
     anchors.options.placement = 'left';
-    anchors.add('.page__content > p').remove('.img')
+    anchors.add('.page__content > p');
+  });
+  $(".post-content > p > img").each(function(idx, el) { 
+    var $el = $(el);
+    var idText = anchors.urlify("img-" + $el.attr("alt") + el.attr("id")); 
+    $el.parent().attr("id", idText); 
   });
 </script>
