@@ -19,7 +19,7 @@
       var $el = $(el);
       var uniqueText = $el.attr("alt") ? $el.attr("alt") : idx;
       var idText = anchors.urlify("img-" + uniqueText); 
-      $el.parent().removeAttr("id"); 
+      $el.parent().attr("id", idText); 
     });
     anchors.options.visible = 'hover';
     anchors.options.placement = 'left';
