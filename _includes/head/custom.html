@@ -6,3 +6,13 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
+
+<!--  Paragraph anchor links -->
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.options.visible = 'always';
+  anchors.options.icon = '❡';
+  anchors.options.placement = 'left';
+  anchors.options.visible = 'hover';
+  anchors.add('.post-content > p');
+</script>
