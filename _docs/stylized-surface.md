@@ -180,7 +180,11 @@ As an extra step, to clean up the result a bit, you go to the material and incre
 ![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)
 {:.image-simple}
 
+{:.image-caption}
+Using the _Depth Offset_ parameter on the shader to clean up the result
+
 Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. This method is called **Inverted hull**, and there are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with very fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
+{: .notice--warning}
 
 ### The Additional Parameters of the Shader
 
