@@ -163,7 +163,7 @@ So, here is one of the ways to get rid of the outline gaps.
 
 Here we see the gaps in the outline on the hard edges.
 
-[![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png)
+[![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png){:.image-fancy}
 
 {:.image-caption}
 Gaps are visible
@@ -172,7 +172,7 @@ In the Import Settings of the mesh, please, find the _Normals_ parameter and cha
 
 ![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png){:.image-simple}
 
-[![Smoothened normals in the Import Settings](FlatKit_Manual_Images/outline-gaps-suzanne-2.png)](FlatKit_Manual_Images/outline-gaps-suzanne-2.png)
+[![Smoothened normals in the Import Settings](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)
 
 {:.image-caption}
 No gaps
