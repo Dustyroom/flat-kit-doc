@@ -75,3 +75,6 @@ defaults:
     values:
       layout: single
       author_profile: false
+
+lunr:
+  search_within_pages: true
