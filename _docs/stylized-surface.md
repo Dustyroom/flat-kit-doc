@@ -170,7 +170,9 @@ Gaps are visible
 
 In the Import Settings of the mesh, please, find the _Normals_ parameter and change it from **Import** to **Calculate**. Then, drag the _Smoothing Angle_ slider to the right. By doing so, you make the mesh smooth instead of sharp. The more you move this control to the right the bigger angle Unity will expect to consider it as sharp. Click _Apply_. The gaps should be gone.
 
-[![Smoothened normals in the Import Settings](FlatKit_Manual_Images/outline-gaps-suzanne-2.png)](FlatKit_Manual_Images/outline-gaps-suzanne-2.png){:.image-simple}
+![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png){:.image-simple}
+
+[![Smoothened normals in the Import Settings](FlatKit_Manual_Images/outline-gaps-suzanne-2.png)](FlatKit_Manual_Images/outline-gaps-suzanne-2.png)
 
 {:.image-caption}
 No gaps
