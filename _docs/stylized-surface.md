@@ -163,26 +163,25 @@ So, here is one of the ways to get rid of the outline gaps.
 
 Here we see the gaps in the outline on the hard edges.
 
-[/FlatKit_Manual_Images/outline-gaps-suzanne-1.png](![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png){:.image-simple})
-
+![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png){:.image-simple}
 
 {:.image-caption}
 Gaps are visible
 
 In the Import Settings of the mesh, please, find the _Normals_ parameter and change it from **Import** to **Calculate**. Then, drag the _Smoothing Angle_ slider to the right. By doing so, you make the mesh smooth instead of sharp. The more you move this control to the right the bigger angle Unity will expect to consider it as sharp. Click _Apply_. The gaps should be gone.
 
-![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png){:.image-simple}
+[![Smoothened normals in the Import Settings](FlatKit_Manual_Images/outline-gaps-suzanne-2.png)](FlatKit_Manual_Images/outline-gaps-suzanne-2.png){:.image-simple}
 
 {:.image-caption}
 No gaps
 
 As an extra step, to clean up the result a bit, you go to the material and increase _Depth Offset_ a bit. This will 'push' the outlines away from the camera.
 
-![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)
+![Depth Offset parameter](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)
 {:.image-simple}
 
 {:.image-caption}
-Using the _Depth Offset_ parameter on the shader to clean up the result
+Using the _Depth Offset_ parameter on the _Stylized Surface_ shader to clean up the result
 
 Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. This method is called **Inverted hull**, and there are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with very fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
 {: .notice--warning}
