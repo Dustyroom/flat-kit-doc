@@ -27,6 +27,10 @@ docs:
         url: /stylized-surface/
       - title: Water
         url: /water/
+      - title: Gradient Skybox
+        url: /skybox/
+      - title: Light Plane
+        url: /light-plane/
   - title: Image Effects
     children:
       - title: Outlines
