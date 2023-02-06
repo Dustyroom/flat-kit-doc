@@ -1,7 +1,6 @@
 ---
-title: "Shaders. In-Depth Overview"
+title: "Stylized Surface Shader"
 permalink: /shaders/
-excerpt: "Shaders. In-Depth Overview"
 toc: true
 ---
 
@@ -19,7 +18,7 @@ Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit su
 
 ## 'Stylized Surface' Shader
 
-This is a versatile lit shader to be used on rigid object materials. To use it on a material select the shader “FlatKit/Stylized Surface” or “FlatKit/Stylized Surface Cutout” (Built-In RP only). This is your main go-to shader. It works for the vast majority of cases.  
+This is a versatile lit shader to be used on rigid object materials. To use it on a material select the shader “FlatKit/Stylized Surface” or “FlatKit/Stylized Surface Cutout” (Built-In RP only). This is your main go-to shader. It works for the vast majority of cases.
 Stylized Surface shader consists of the following **main** building blocks:
 
 * Color,
@@ -58,14 +57,14 @@ This would be the color of your mesh (applicable to most cases, though you can m
 
 This is where you choose the style (mode) of your shading, the color of the shading, and other respective parameters of the modes. Depending on the mode you choose the parameters will look differently. So, let’s talk about modes.
 
-* **None.** Use this to achieve a simple flat look or to get any other creative picture not involving cel shading, however, the following parameters of Stylized Surface shader will still let you do this, if you choose so.  
+* **None.** Use this to achieve a simple flat look or to get any other creative picture not involving cel shading, however, the following parameters of Stylized Surface shader will still let you do this, if you choose so.
 Note, the flatness and actual representation of colors on the scene depend on the lighting of the scene. In our demos we use Skybox as the source of lighting. Conveniently, there is a Dependency slider on the Lighting panel of Unity, which tells how much of the influence the Skybox provides. At minimum, there won’t be any shadows, as well as the colors will be identical to those you would choose in the *Color* block of the shader. At maximum, the Skybox heavily dictates what the colors will look like. For more natural (not necessarily realistic — but natural, organic look of the scene, it’s healthy to let Skybox influence the coloring of the scene).
 
 * **Single.** This mode provides you with one shadow of chosen *Color*. *Self Shading Size* is the size of the cel. Larger values mean larger size of the shadow. *Shadow Edge Size* controls the sharpness of the cel. The lower the value — the sharper the cel. The higher the value — the more blurry is the shadow. *Localized Shading* is basically how condensed the shadow is. Higher values represent sharper cel.
 
 * **Steps.** Basically, you choose the shading color and number of steps to blend from main *Color* into the color you pick up in *Steps* mode.
 
-* **Curve.** The gradient, interpolated transition from one color to another.  
+* **Curve.** The gradient, interpolated transition from one color to another.
 In order to get Steps and Curve modes to work — as soon as you have a number of steps (*Steps* mode) or curve shape (*Curve* mode) chosen — the shader will ask you to save its utility ramp texture somewhere on the disk. It will write the transition onto it. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
 ![Curve shading mode of Stylized Surface shader](/FlatKit_Manual_Images/FK-StylizedSurface-Steps-Curves.png){:.image-simple}
@@ -81,8 +80,8 @@ This is like another instance of *Single* mode of *Cel Shading Mode*. Works inde
 
 You can make a, well, specular with this parameter. Also it can be used as another layer of shadow.
 
-* **Specular Color** picks up the color of your glare, the parameter works in HDR.  
-* **Specular Size** determines how big the specular is. Higher values mean bigger specular.  
+* **Specular Color** picks up the color of your glare, the parameter works in HDR.
+* **Specular Size** determines how big the specular is. Higher values mean bigger specular.
 * **Specular Edge Smoothness** — moving slider to the left decreases blurriness and makes specular sharper.
 
 ![Specular. Inspector interface](/FlatKit_Manual_Images/specular_parameters.png){:.image-simple}
@@ -92,11 +91,11 @@ You can make a, well, specular with this parameter. Also it can be used as anoth
 
 #### Rim
 
-Rim was designed as one of the ways to make a specific effect of a color 'wrapping' from behind the object. In some cases it can remind an outline effect.  
+Rim was designed as one of the ways to make a specific effect of a color 'wrapping' from behind the object. In some cases it can remind an outline effect.
 
-* **Rim Color** selects the color of the parameter. It works in HDR.  
-* **Light Align** parameter rotates the rim.  
-* **Rim Size** controls how big the Rim is. Very high values can serve you as an unlit effect.  
+* **Rim Color** selects the color of the parameter. It works in HDR.
+* **Light Align** parameter rotates the rim.
+* **Rim Size** controls how big the Rim is. Very high values can serve you as an unlit effect.
 * **Rim Edge Smoothness** — moving slider to the left sharpens the Rim, to the right — makes Rim blurry.
 
 ![Rim. Inspector interface](/FlatKit_Manual_Images/rim_parameters.png){:.image-simple}
@@ -124,16 +123,16 @@ This effect overlays a gradient from opaque selected color to transparent color 
 {:.image-caption}
 *Height Gradient.* Inspector interface
 
-* **Gradient Color** picks the parameter’s own color to fade into from transparency.  
-* **Center X** and **Y** are initial points from where the effect takes effect. Adjust these to move the gradient across the scene. Center X is useful if you engage - *Gradient Angle*, which means the rotation of the Gradient.  
-* **Size** determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.  
+* **Gradient Color** picks the parameter’s own color to fade into from transparency.
+* **Center X** and **Y** are initial points from where the effect takes effect. Adjust these to move the gradient across the scene. Center X is useful if you engage - *Gradient Angle*, which means the rotation of the Gradient.
+* **Size** determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.
 * **Gradient Angle** rotates the gradient.
 
-A bit more about the nature and use of *Height Gradient* is covered in the [*‘Terrain’ Shader*](#terrain-shader) section of this manual.  
+A bit more about the nature and use of *Height Gradient* is covered in the [*‘Terrain’ Shader*](#terrain-shader) section of this manual.
 
 #### Enable Vertex Colors
 
-If enabled, the final shading of the object is multiplied by the mesh’s vertex color values. It is a debug parameter, usually this is not used for changing the look.  
+If enabled, the final shading of the object is multiplied by the mesh’s vertex color values. It is a debug parameter, usually this is not used for changing the look.
 
 #### Outline
 
@@ -144,13 +143,13 @@ If enabled, the final shading of the object is multiplied by the mesh’s vertex
 
 The *Outline* part of the *Stylized Surface* shader allows you to add pseudo-outlines to your models.
 
-* **Color** picks up the color of the outline.  
-* **Width** determines how thick the outline is.  
-* **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).  
-* **Depth Offset** moves the outline inwards or outwards an object.  
+* **Color** picks up the color of the outline.
+* **Width** determines how thick the outline is.
+* **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).
+* **Depth Offset** moves the outline inwards or outwards an object.
 * **Camera Distance Impact** **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.
 
-Please remember that in addition to this shader Flat Kit has also a global *Outline Image Effect* applied per Forward Renderer (in URP) and per camera (in Built-In RP).  
+Please remember that in addition to this shader Flat Kit has also a global *Outline Image Effect* applied per Forward Renderer (in URP) and per camera (in Built-In RP).
 In the [Outline Image Effect](/image-effects/#outline-image-effect) chapter in this manual you can find some useful specific and general info.
 
 Sometimes it is useful to manipulate the normals of your model in order to force the shader to render outlines where it wouldn't do so otherwise.
@@ -178,19 +177,19 @@ Light Color Contribution works only with directional light. The point and spot l
 {:.image-caption}
 *Light Color Contribution* parameter on Flat Kit shaders Inspector panel
 
-Let’s view it in example.  
-Three pictures below describe how we change Light Color Contribution values on all (two) used materials: on a sphere and on a plane. Within a picture we change the intensity value of Directional Light as our main source of light.  
-Additionally, there is a point light on each picture. This way it’s visible how local lights work together with the main Directional Light.  
-Take the first image (below). At first, we turn down the *Intensity* to the very low value. White sun now has no impact on the scene brightness, resulting in a darker scene.  
-Then we change the color of Directional Light from white to red. It has no effect because Directional Light is too “weak” to fill the scene.  
-After raising *Intensity* value back to “1” the scene is now lighter and has a red tint.  
+Let’s view it in example.
+Three pictures below describe how we change Light Color Contribution values on all (two) used materials: on a sphere and on a plane. Within a picture we change the intensity value of Directional Light as our main source of light.
+Additionally, there is a point light on each picture. This way it’s visible how local lights work together with the main Directional Light.
+Take the first image (below). At first, we turn down the *Intensity* to the very low value. White sun now has no impact on the scene brightness, resulting in a darker scene.
+Then we change the color of Directional Light from white to red. It has no effect because Directional Light is too “weak” to fill the scene.
+After raising *Intensity* value back to “1” the scene is now lighter and has a red tint.
 
 ![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png){:.image-simple}
 
 {:.image-caption}
 *Light Color Contribution* at value 0.5. Changing *Intensity* value and color of Directional Light
 
-Once we change *Color Light Contribution* parameter to “0” (pic below), Directional light has no effect light-wise and color-wise. Changing *Intensity* parameter of Directional Light on the Inspector panel has no effect. Both sides of the picture are identical.  
+Once we change *Color Light Contribution* parameter to “0” (pic below), Directional light has no effect light-wise and color-wise. Changing *Intensity* parameter of Directional Light on the Inspector panel has no effect. Both sides of the picture are identical.
 This way you can achieve a flat look, in other words, the colors on the scene are exactly the same as you choose in the shader parameters.
 
 ![Light Color Contribution at value 0. Directional Light intensity at max and min values](/FlatKit_Manual_Images/lighting_1_color_contrib_0.png){:.image-simple}
@@ -212,7 +211,7 @@ If you use a Particle System and choose your particles to emit light, Flat Kit s
 {:.image-caption}
 Particles emitting light on Flat Kit shaders
 
-**Override light direction** It is a way to make the material have an independent direction of the light from the Directional Light. This can be useful in cases when you need to align the position of the cels or Rim or Specular. Normally, to adjust these parameters globally, you should rotate the Directional light. Once *Override light direction* parameter is enabled, the material no longer obeys the Directional Light, it now has independent mapping vectors for the light-dependent parameters (e.g. mentioned earlier cels, Rim, Specular) that you can adjust with *Pitch* and *Yaw* parameters. Simply put, you can rotate the the cels, Rim and Specular.  
+**Override light direction** It is a way to make the material have an independent direction of the light from the Directional Light. This can be useful in cases when you need to align the position of the cels or Rim or Specular. Normally, to adjust these parameters globally, you should rotate the Directional light. Once *Override light direction* parameter is enabled, the material no longer obeys the Directional Light, it now has independent mapping vectors for the light-dependent parameters (e.g. mentioned earlier cels, Rim, Specular) that you can adjust with *Pitch* and *Yaw* parameters. Simply put, you can rotate the the cels, Rim and Specular.
 
 #### Unity Built-in Shadows
 
@@ -242,11 +241,11 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 
 **Albedo** Allows to use the albedo, or diffuse texture. In URP this slot supports transparent textures by default. Can be used together with *Alpha Clipping* parameter (explained below).
 
-* **Texture selection slot** lets you pick a texture;  
-* **Tiling** repeats the texture along X and Y axis;  
-* **Offset** shifts the texture along X and Y axis within the UV map of the mesh;  
-* **Blending Mode** lets you choose between 'Multiply' or 'Add' blending modes. 'Multiply' Blending Mode multiplies the luminosity of the base color by the blend color. Multiplication by white produces no change, while the black pixels remain, making the material darker. 'Add' Blending Mode is a little bit different from 'Multiply' — blending with black color produces no change, while generally it brightens the bright colors.  
-* **Texture Impact** controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.  
+* **Texture selection slot** lets you pick a texture;
+* **Tiling** repeats the texture along X and Y axis;
+* **Offset** shifts the texture along X and Y axis within the UV map of the mesh;
+* **Blending Mode** lets you choose between 'Multiply' or 'Add' blending modes. 'Multiply' Blending Mode multiplies the luminosity of the base color by the blend color. Multiplication by white produces no change, while the black pixels remain, making the material darker. 'Add' Blending Mode is a little bit different from 'Multiply' — blending with black color produces no change, while generally it brightens the bright colors.
+* **Texture Impact** controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.
 
 > **TIP.** If you would like to have a material with a texture with a cel shading on top of this texture, you can set the *Stylized Surface* to *Single* **Cel Shading Mode**, set the base **Color** to white or light grey, set the  **Color Shaded** parameter to a bit darker one, set the Albedo texture (if your texture is not mostly white) to *Multiply* **Blending mode**, Texture Impact to the maximum value. You should get the model filled with a texture and with cel shadows combined.
 
@@ -257,24 +256,24 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 {:.image-caption}
 ‘Stylized Surface’ shader — normal map applied
 
-* **Texture selection slot** lets you pick a texture;  
-* **Tiling** repeats the texture along X and Y axis;  
-* **Offset** shifts the texture along X and Y axis within the UV map of the mesh;  
+* **Texture selection slot** lets you pick a texture;
+* **Tiling** repeats the texture along X and Y axis;
+* **Offset** shifts the texture along X and Y axis within the UV map of the mesh;
 
 ![‘Normal Map Tree’ demo scene, a tree without and with a normal map](/FlatKit_Manual_Images/normalmap-trees.png){:.image-simple}
 
 {:.image-caption}
 ‘Normal Map Tree’ demo scene, a tree without and with a normal map
 
-**Emission** Enables Emission map part of the shader.  
-> **NOTE.** Emission map support is available in Universal RP version of Flat Kit only, there is no Emission map parameter in Built-In version of Flat Kit.  
+**Emission** Enables Emission map part of the shader.
+> **NOTE.** Emission map support is available in Universal RP version of Flat Kit only, there is no Emission map parameter in Built-In version of Flat Kit.
 
-**Emission Map** Allows to use custom emission maps to designate the parts of the meshes to have a 'glow' effect.  
+**Emission Map** Allows to use custom emission maps to designate the parts of the meshes to have a 'glow' effect.
 
-* **Texture selection slot** lets you pick a texture;  
-* **Tiling** repeats the texture along X and Y axis;  
-* **Offset** shifts the texture along X and Y axis within the UV map of the mesh;  
-* **Emission Color** chooses the color of the 'glowing' effect.  
+* **Texture selection slot** lets you pick a texture;
+* **Tiling** repeats the texture along X and Y axis;
+* **Offset** shifts the texture along X and Y axis within the UV map of the mesh;
+* **Emission Color** chooses the color of the 'glowing' effect.
 
 ![Emission map part of the Stylized Surface interface](/FlatKit_Manual_Images/stylized-surface-emission-interface.png){:.image-simple}
 
@@ -323,20 +322,20 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 {:.image-caption}
 ‘Stylized Surface with Outline’ shader
 
-* **Color** picks up the color of the outline.  
-* **Width** determines how thick the outline is.  
-* **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).  
-* **Depth Offset** moves the outline inwards or outwards an object.  
+* **Color** picks up the color of the outline.
+* **Width** determines how thick the outline is.
+* **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).
+* **Depth Offset** moves the outline inwards or outwards an object.
 * **Camera Distance Impact** **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.
 
 ## Gradient Skybox Shader
 
 This is a simple method to fill the sky of your scene.
 
-* **Top Color** and **Bottom Color** define two colors to be blended.  
-* **Intensity** is a darkness/brightness controller of the skybox.  
-* **Exponent** accentuates the effect in favour of either *Top Color* or *Bottom Color*.  
-* **Direction X angle** and **Direction Y angle** rotate the effect along the corresponding axis.  
+* **Top Color** and **Bottom Color** define two colors to be blended.
+* **Intensity** is a darkness/brightness controller of the skybox.
+* **Exponent** accentuates the effect in favour of either *Top Color* or *Bottom Color*.
+* **Direction X angle** and **Direction Y angle** rotate the effect along the corresponding axis.
 
 > **TIP.** Make *Top Color* and *Bottom Color* identical colors or move the *Exponent* parameter to one of the extremes if you want a flat background.
 
@@ -382,7 +381,7 @@ If *Linear* color source is chosen, two exclusive to this mode parameters appear
 
 **Shallow.** Color at the top of the water.
 
-**Deep.** Color below the surface.  
+**Deep.** Color below the surface.
 
 * **Gradient Texture.** Use this one if you are looking for something fancy. You can create a depth gradient consisting of several colors. Using a Gradient Editor ramp, you can add up to 8 color stops onto the ramp. Now you have a *Shallow* color, *Deep* color and anything you want in between (see *Pool* demo scene).
 
@@ -398,7 +397,7 @@ When you click on the white color field, the Gradient Editor will show up.
 {:.image-caption}
 Gradient Editor. Edit the gradient and close the window, then save the texture
 
-After you finished editing the color gradient, click the 'Export' button to save the texture somewhere on the disk. We recommend to name the textures with the names beginning on something like 'water...' or 'awesome_gradient...' because later you'll have these textures stacked up one below another in the texture selection window, and it will be much quicker to scroll through them.  
+After you finished editing the color gradient, click the 'Export' button to save the texture somewhere on the disk. We recommend to name the textures with the names beginning on something like 'water...' or 'awesome_gradient...' because later you'll have these textures stacked up one below another in the texture selection window, and it will be much quicker to scroll through them.
 When you have your texture saved, the material will be instantly filled with this gradient.
 
 ![Export Button](/FlatKit_Manual_Images/water-gradient-export-button.png){:.image-simple}
@@ -459,15 +458,15 @@ Shape parameter — 'Grid'
 {:.image-caption}
 Shape parameter — 'Pointy'
 
-**Speed.** How fast it moves along the Direction parameter.  
+**Speed.** How fast it moves along the Direction parameter.
 
 **Amplitude.** Sets deviation amount, or, how high it is. Use this parameter to set the height of the waves. Positive values 'raise' the waves effect above the base point, negative values make the waves lower than the initial base point.
 
-**Frequency.** Density of the effect.  
+**Frequency.** Density of the effect.
 
 **Direction.** Direction of the motion. This parameter works tightly with *Speed*. Using these two you can make ponds, pools, seas etc (static water) and rivers, waterfalls etc (streaming water). Please note, there's an independent set of parameters *Speed* and *Direction* for foam as well, described a bit further.
 
-**Noise.** Adds nonlinearity to the *Shape*. Use it to make *Grid*, for example, more chaotic.  
+**Noise.** Adds nonlinearity to the *Shape*. Use it to make *Grid*, for example, more chaotic.
 
 ----------------------
 
@@ -481,15 +480,15 @@ Shape parameter — 'Pointy'
 * **GradientNoise.** The foam shape comes from generative noise.
 * **Texture.** If you choose *Texture* source, you'll have an option to import your own, preferably seamlessly tiling, texture, or use one of the included ones — we shortlisted the best from dozens of originally pre-generated .png textures to come with Flat Kit. If you are planning to use your own textures, we suggest you to put them into a single (red) color in the import settings to save memory.
 
-**Color.** Color value of the foam. Can be opaque or transparent.  
+**Color.** Color value of the foam. Can be opaque or transparent.
 
-**Shore Depth.** The maximum point where the water is detecting the edges to create a foam 'outline'.  
+**Shore Depth.** The maximum point where the water is detecting the edges to create a foam 'outline'.
 
-**Amount.** How often 'grains' occur.  
+**Amount.** How often 'grains' occur.
 
-**Scale.** How big the foam 'chunks' are.  
+**Scale.** How big the foam 'chunks' are.
 
-**Sharpness.** How smooth or sharp the foam is.  
+**Sharpness.** How smooth or sharp the foam is.
 
 **Stretch X.** How stretched the foam is along X axis.
 
@@ -497,7 +496,7 @@ Shape parameter — 'Pointy'
 
 > **TIP.** Sometimes we find it useful to generously stretch the foam along one of the axis, so that the foam becomes a set of straight lines. This effect definitely can have its use.
 
-**Speed.** How fast it moves along the Direction parameter.  
+**Speed.** How fast it moves along the Direction parameter.
 
 **Direction.** Direction of the motion. This parameter works tightly with *Speed*. Using these two you can make ponds, pools, seas etc (static water) and rivers, waterfalls etc (streaming water)
 
@@ -559,7 +558,7 @@ The parameters of the *LightPlane* shader are:
 {:.image-caption}
 *LightPlane* — *Camera Distance X and Y* parameters
 
-* *UV Fade X* controls transparency on the sides along X axis of the plane/mesh (see pic below);  
+* *UV Fade X* controls transparency on the sides along X axis of the plane/mesh (see pic below);
 
 ![LightPlane — UV Fade X parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-x.png){:.image-simple}
 
@@ -586,17 +585,17 @@ When combined, *UV Fade X* and *UV Fade Y* can make a fluffy blob.
 
 When the `Enable Instancing` option is enabled on a material, the shaders can perform [GPU Instancing](https://docs.unity3d.com/Manual/GPUInstancing.html) of the following fields that are common across all Flat Kit shaders:
 
-1. *Color* value (property name `_Color`),  
-1. Parameters of the cel shading mode *“Single”*  
-    * *Shaded Color* value (property name `_ColorDim`),  
-1. Specular parameters, active when *“Enable Specular”* is checked  
-    * *Specular Color* value (property name `_FlatSpecularColor`),  
-    * *Specular Size* value (property name `_FlatSpecularSize`),  
-    * *Edge Smoothness* value (property name `_FlatSpecularEdgeSmoothness`),  
-1. Rim light parameters, active when *“Enable Rim”* is checked  
-    * *Rim color* value (property name `_FlatRimColor`),  
-    * *Rim size* value (property name `_FlatRimSize`),  
-    * *Edge Smoothness* value (property name `_FlatRimEdgeSmoothness`),  
+1. *Color* value (property name `_Color`),
+1. Parameters of the cel shading mode *“Single”*
+    * *Shaded Color* value (property name `_ColorDim`),
+1. Specular parameters, active when *“Enable Specular”* is checked
+    * *Specular Color* value (property name `_FlatSpecularColor`),
+    * *Specular Size* value (property name `_FlatSpecularSize`),
+    * *Edge Smoothness* value (property name `_FlatSpecularEdgeSmoothness`),
+1. Rim light parameters, active when *“Enable Rim”* is checked
+    * *Rim color* value (property name `_FlatRimColor`),
+    * *Rim size* value (property name `_FlatRimSize`),
+    * *Edge Smoothness* value (property name `_FlatRimEdgeSmoothness`),
     * *Light Align* value (property name `_FlatRimLightAlign`),
-1. Unity shadow parameters, located in the *“Unity Built-in Shadows”* section  
+1. Unity shadow parameters, located in the *“Unity Built-in Shadows”* section
     * *Color* value (property name `_UnityShadowColor`).
