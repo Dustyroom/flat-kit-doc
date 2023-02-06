@@ -1,6 +1,6 @@
 ---
 title: "Stylized Surface Shader"
-permalink: /shaders/
+permalink: /stylized-surface/
 toc: true
 ---
 
@@ -35,7 +35,11 @@ The **additional** parameters are:
 * Unity Built-in Shadows,
 * Textures (Albedo, Normal, Emission).
 
-> **NOTE:** Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes sure that only the used features are included in the build. More information on shader variants: <https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html>
+Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit
+the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes
+sure that only the used features are included in the build. More information on shader variants:
+<https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html>
+{: .notice--info}
 
 ![‘Stylized Surface’ shader in Single mode. Simple use case](/FlatKit_Manual_Images/stylized-surface-1.png){:.image-simple}
 
