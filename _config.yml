@@ -1,6 +1,7 @@
 title: Flat Kit - Toon Shading and Water
 title_short: Flat Kit
 masthead_title: " " # Disable title on masthead because the graphic logo has the title.
+minimal_mistakes_skin: default # air
 description: Documentation
 discord: https://discord.gg/kfumMFahBj
 twitter_username: _dstrm
@@ -10,8 +11,9 @@ google_analytics: UA-53337407-20
 
 logo: "FlatKit_Manual_Images/flat_kit_manual_header.png"
 
-minimal_mistakes_skin: default # air
+# search_provider: algolia
 search: true
+search_full_content: true
 
 plugins:
   - jekyll-sitemap
@@ -75,6 +77,3 @@ defaults:
     values:
       layout: single
       author_profile: false
-
-lunr:
-  search_within_pages: true
