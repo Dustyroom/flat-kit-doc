@@ -170,8 +170,6 @@ Gaps are visible
 
 In the Import Settings of the mesh, please, find the _Normals_ parameter and change it from **Import** to **Calculate**. Then, drag the _Smoothing Angle_ slider to the right. By doing so, you make the mesh smooth instead of sharp. The more you move this control to the right the bigger angle Unity will expect to consider it as sharp. Click _Apply_. The gaps should be gone.
 
-![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png){:.image-simple}
-
 [![Smoothened normals in the Import Settings](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)
 
 {:.image-caption}
@@ -179,8 +177,7 @@ No gaps
 
 As an extra step, to clean up the result a bit, you go to the material and increase _Depth Offset_ a bit. This will 'push' the outlines away from the camera.
 
-![Depth Offset parameter](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)
-{:.image-simple}
+[![Depth Offset parameter](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)
 
 {:.image-caption}
 Using the _Depth Offset_ parameter on the _Stylized Surface_ shader to clean up the result
