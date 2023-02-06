@@ -161,12 +161,12 @@ More on this is covered in [Outline Image Effect](/image-effects/#outline-image-
 
 So, here is one of the ways to get rid of the outline gaps.
 
-Here we see the gaps in the outline on the hard edges
+Here we see the gaps in the outline on the hard edges.
 
 ![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png){:.image-simple}
 
 {:.image-caption}
-Ga_p_s
+Gaps are visible
 
 In the Import Settings of the mesh, please, find the _Normals_ parameter and change it from **Import** to **Calculate**. Then, drag the _Smoothing Angle_ slider to the right. By doing so, you make the mesh smooth instead of sharp. The more you move this control to the right the bigger angle Unity will expect to consider it as sharp. Click _Apply_. The gaps should be gone.
 
