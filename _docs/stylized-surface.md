@@ -157,14 +157,30 @@ Please remember that in addition to this shader Flat Kit has also a global *Outl
 In the [Outline Image Effect](/image-effects/#outline-image-effect) chapter in this manual you can find some useful specific and general info.
 
 Sometimes it is useful to manipulate the normals of your model in order to force the shader to render outlines where it wouldn't do so otherwise.
-More on this is covered in [Outline Image Effect](/image-effects/#outline-image-effect) chapter. But here's one thing you can try without using 3d editor software. Among the other parameters of the import settings of the model, there is a section where is it possible to change the angle detection threshold for normals. It may come handy in adding or removing some of the outlines where they wouldn't appear normally. Also, slight adjustments to these parameters may resolve some of the visual issues. If you have gaps in the outline, for instance, try tweaking these controls (but remember to backup the project first, it's always a good idea to backup things. In fact, if you are working on something, do it now).
+More on this is covered in [Outline Image Effect](/image-effects/#outline-image-effect) chapter. But here's one thing you can try without using 3d editor software. Among the other parameters of the import settings of the model, there is a section where is it possible to change the angle detection threshold for normals smoothing. It may come handy in adding or removing some of the outlines where they wouldn't appear normally. Also, slight adjustments to these parameters may resolve some of the visual issues such as outline gaps on the edges. If you have such breaks in the outline, for instance, try tweaking these controls (but remember to backup the project first, it's always a good idea to backup things. In fact, if you are working on something, do it now).
 
-![Import settings of the model](/FlatKit_Manual_Images/mesh-import-settings.png){:.image-simple}
+So, here is one of the ways to get rid of the outline gaps.
+
+Here we see the gaps in the outline on the hard edges
+
+![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png){:.image-simple}
 
 {:.image-caption}
-Import settings of the model has a section for manipulating the normals, which is useful for the *Stylized Surface with Outline* shader as well as for *Outline* global effect
+Ga_p_s
 
-Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. There are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
+In the Import Settings of the mesh, please, find the _Normals_ parameter and change it from **Import** to **Calculate**. Then, drag the _Smoothing Angle_ slider to the right. By doing so, you make the mesh smooth instead of sharp. The more you move this control to the right the bigger angle Unity will expect to consider it as sharp. Click _Apply_. The gaps should be gone.
+
+![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png){:.image-simple}
+
+{:.image-caption}
+No gaps
+
+As an extra step, to clean up the result a bit, you go to the material and increase _Depth Offset_ a bit. This will 'push' the outlines away from the camera.
+
+![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)
+{:.image-simple}
+
+Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. This method is called **Inverted hull**, and there are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with very fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
 
 ### The Additional Parameters of the Shader
 
