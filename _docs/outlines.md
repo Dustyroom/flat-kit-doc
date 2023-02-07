@@ -91,7 +91,7 @@ Here is an example of choosing when to render the outlines. We took *Wanderer* d
 
 Also, in URP you have an ability to chain and change the orders of Image effects, but it's a general Unity information. More info in the chapter [Flat Kit Image Effects in URP](/flat-kit-in-urp/#flat-kit-image-effects-in-urp)
 
-Please note that *Outline Image Effect* is a global effect, as it is used as the camera component in Built-In RP and as a scene's Renderer Feature in URP, which is suitable for a consistent look of your project. If you would like to outline a particular object on your scene, you can engage the shader instead — [Stylized Surface with Outline](/shaders/stylized-surface-with-outline-shader) shader.
+Please note that *Outline Image Effect* is a global effect. You can use [*Stylized Surface*](/stylized-surface/#outline) shader to outline a particular object. It is a parameter (shader pass) that is built on top of the *Stylized Surface* shader. It has all the features of the *Stylized Surface* shader plus the outline feature.
 
 If you would like to exclude an object from an outline pass, considering that you are using one of the Stylized Surface shaders, and you are in a URP project, please go to the interface of the shader and switch rendering to 'Transparent'. It won't change the look of the shader but will exclude it from the outline pass. You can control this too as described a few paragraphs above in Render Event list part.
 
@@ -115,3 +115,4 @@ Rotating normals in Blender. Manipulating the normals angle is one of the ways t
 > **TIP:** One of the commonly asked questions is if some of the objects can be rendered without the Outline Renderer Feature applied. Outline image effect is global and is not designed to be selective to objects — it is applied per Renderer (in URP). However, moving object to be rendered in the transparent pass can solve this problem. In Flat Kit Stylized Surface there is such an option. If you are using non-Flat Kit shaders, please refer to their documentation to see whether it is possible — to enable transparency without affecting the look. In Flat Kit there is an option of Render Event. It lets you choose when to render the lines. Take a look at [this chapter](#outline-image-effect) in our manual.
 Another way of excluding something from rendering outlines on — is to render it with a separate camera in a camera stack: one camera is for non-outlined objects and another one is for everything else (outlined). Please refer to Unity documentation on camera stacking to get to know more about this general Unity technique.
 {:.notice--success}
+

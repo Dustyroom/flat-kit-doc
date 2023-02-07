@@ -340,7 +340,8 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 > **NOTE:** *Stylized Surface with Outline* shader has been deprecated in Universal RP version of Flat Kit: the outline functionality has been moved to the *Stylized Surface* shader. *Stylized Surface with Outline* remains available and working for the sake of compatibility with existing projects, but it is advised to use *Stylized Surface* for the new projects instead. *Stylized Surface with Outline* has not been deprecated in Built-In LTS version of Flat Kit.
 {: .notice--warning}
 
-*Stylized Surface with Outline* shader, being the same as the regular *Stylized Surface* shader in a nutshell, has an additional option of... outlines. [*Stylized Surface* info is here](#stylized-surface-shader).
+You can use [*Stylized Surface*](/stylized-surface/#outline) shader to outline a particular object. It is a parameter (shader pass) that is built on top of the *Stylized Surface* shader. It has all the features of the *Stylized Surface* shader plus the outline feature.
+{: .notice--info}
 
 ![‘Stylized Surface with Outline’ shader](/FlatKit_Manual_Images/stylized_surface_with_outline_interface.png){:.image-simple}
 
