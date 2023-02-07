@@ -1,7 +1,7 @@
 ---
 title: "Light Plane Shader"
 permalink: /light-plane/
-toc: true
+toc: false
 ---
 
 This shader is what we are particularly proud of. It looks like a small tool. But it has immeasurable possibilities. Fog, mist, delicate scene boundaries, light beams, glow of magic swords, laser beams. These things are what *LightPlane* is for.

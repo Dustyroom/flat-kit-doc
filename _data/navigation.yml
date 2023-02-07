@@ -27,6 +27,8 @@ docs:
         url: /stylized-surface/
       - title: Water
         url: /water/
+      - title: Terrain
+        url: /terrain/
       - title: Gradient Skybox
         url: /skybox/
       - title: Light Plane

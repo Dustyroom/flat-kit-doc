@@ -1,7 +1,7 @@
 ---
 title: "Gradient Skybox"
 permalink: /skybox/
-toc: true
+toc: false
 ---
 
 This is a simple method to fill the sky of your scene.
