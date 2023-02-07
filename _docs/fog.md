@@ -29,8 +29,8 @@ Fog Image Effect. Gradient Editor interface.
 {% capture notice-text %}
 Both *Fog* and *Outline* image effects can use image-based anti-aliasing, like the one in Unity's Post-processing stack.
 
-* In Universal RP (URP) — post-processing effects are called ‘Renderer Features’ of the Forward Renderer.
-* In Built-In RP: Post-processing is made of Camera effects placed onto the camera in the scene as Components.
+* In **Universal RP (URP)**: post-processing effects are called ‘Renderer Features’ of the Forward Renderer.
+* In **Built-In RP**: Post-processing is made of Camera effects placed onto the camera in the scene as Components.
 {% endcapture %}
 
 <div class="notice--info">
