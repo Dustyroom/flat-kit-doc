@@ -117,6 +117,7 @@ Variety of uses of *Rim* parameter alone on Suzanne the Blender Monkey. Interfac
 Although *Rim* option is creatively useful and sometimes can remind an outline effect, there are two more obvious ways to add an outline using Flat Kit: to use [Stylized Surface with Outline](#stylized-surface-with-outline-shader) shader and/or to use [Outline Image Effect](/image-effects/#outline-image-effect) camera component in Built-In RP/Forward Renderer's Renderer Feature in URP. We’ll talk about both of them later in this manual.
 
 > **TIP.** Animate Cel layer size, Specular size or Rim size — to get a neat transition effect.
+{:.notice--success}
 
 #### Height Gradient
 
@@ -271,6 +272,7 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 * **Texture Impact** controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.
 
 > **TIP.** If you would like to have a material with a texture with a cel shading on top of this texture, you can set the *Stylized Surface* to *Single* **Cel Shading Mode**, set the base **Color** to white or light grey, set the  **Color Shaded** parameter to a bit darker one, set the Albedo texture (if your texture is not mostly white) to *Multiply* **Blending mode**, Texture Impact to the maximum value. You should get the model filled with a texture and with cel shadows combined.
+{:.notice--success}
 
 **Normal Map** To make an impression of a relatively low-poly mesh having many details of a high-poly one, you can use normal maps. Add one to *Bump Map* slot in the Inspector panel.
 

@@ -20,6 +20,7 @@ Fog Image Effect. Inspector panel interface
 Gradient editor controls the colors of the gradient. To open it, click on Distance Gradient or Height Gradient. The bottom row of breakpoints (pointing up) is the selection of the colors. The above row (pointing down) controls the opacity of the area it points at; the opacity value of one breakpoint fades into the opacity value of the adjacent one. Same for colors.
 
 > **TIP.** If you want the area close to you to be without fog, apart from increasing Near parameter, you can open up the color ramp(s), add a breakpoint next to the leftmost one on the ramp, select leftmost one, make it transparent (see screenshot of Gradient Editor below). The breakpoint you created (opaque, next to the transparent one) becomes your distance or height control.
+{:.notice--success}
 
 ![Fog Image Effect. Gradient Editor interface.](/FlatKit_Manual_Images/fog_image_effect_gradient_editor.png){: .image-fancy}
 

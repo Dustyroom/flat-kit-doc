@@ -155,6 +155,7 @@ Shape parameter — 'Pointy'
 **Stretch Y.** How stretched the foam is along Y axis.
 
 > **TIP.** Sometimes we find it useful to generously stretch the foam along one of the axis, so that the foam becomes a set of straight lines. This effect definitely can have its use.
+{:.notice--success}
 
 **Speed.** How fast it moves along the Direction parameter.
 

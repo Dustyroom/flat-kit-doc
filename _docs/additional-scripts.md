@@ -19,6 +19,7 @@ Linear Motion is a simple script that translates (moves) and rotates any object.
 *Linear motion* script. Inspector interface
 
 > **TIP.** Use a couple of instances of this component if you want to translate and rotate along more than one axis and make more complex automations.
+{:.notice--success}
 
 ## Buoyancy
 
