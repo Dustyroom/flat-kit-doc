@@ -11,11 +11,15 @@ Outline Image effect is, essentially, a contour on the objects on the scene. It 
 {:.image-caption}
 Outline Forward Renderer in URP. Inspector interface.
 
-<div class="notice--info">
+{% capture notice-text %}
 Both *Fog* and *Outline* image effects can use image-based anti-aliasing, like the one in Unity's Post-processing stack.
 
 * In Universal RP (URP) — post-processing effects are called ‘Renderer Features’ of the Forward Renderer.
 * In Built-In RP: Post-processing is made of Camera effects placed onto the camera in the scene as Components.
+{% endcapture %}
+
+<div class="notice--info">
+  {{ notice-text | markdownify }}
 </div>
 
 ### Setting up Flat Kit Outline (URP)
