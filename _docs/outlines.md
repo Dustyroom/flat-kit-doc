@@ -4,19 +4,19 @@ permalink: /outlines/
 toc: true
 ---
 
-Both *Fog* and *Outline* image effects rely on image-based anti-aliasing, like the one in Unity's Post-processing stack.
-
-* In Universal RP (URP) — post-processing effects are called ‘Renderer Features’ of the Forward Renderer.
-* In Built-In RP: Post-processing is made of Camera effects placed onto the camera in the scene as Components.
-
-## Outline Image Effect
-
 Outline Image effect is, essentially, a contour on the objects on the scene. It can draw outer outlines, inner ones or both outer and inner outlines of the objects.
 
 ![Outline Forward Renderer in URP. Inspector interface.](/FlatKit_Manual_Images/outline-image-effect-interface.png){: .image-fancy style="width: 500px;"}
 
 {:.image-caption}
 Outline Forward Renderer in URP. Inspector interface.
+
+<div class="notice--info">
+Both *Fog* and *Outline* image effects can use image-based anti-aliasing, like the one in Unity's Post-processing stack.
+
+* In Universal RP (URP) — post-processing effects are called ‘Renderer Features’ of the Forward Renderer.
+* In Built-In RP: Post-processing is made of Camera effects placed onto the camera in the scene as Components.
+</div>
 
 ### Setting up Flat Kit Outline (URP)
 
