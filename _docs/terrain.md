@@ -1,7 +1,7 @@
 ---
 title: "Terrain Shader"
 permalink: /terrain/
-toc: true
+toc: false
 ---
 
 Terrains are great in Unity. But it’s not so trivial to work with terrain materials, that is why we added a separate shader that deals with the Unity Terrain system.
