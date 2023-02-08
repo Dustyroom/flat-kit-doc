@@ -34,12 +34,12 @@ sure that only the used features are included in the build. More information on 
 <https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html>
 {: .notice--info}
 
-![‘Stylized Surface’ shader in Single mode. Simple use case](/FlatKit_Manual_Images/stylized-surface-1.png){:.image-simple}
+![‘Stylized Surface’ shader in Single mode. Simple use case](/FlatKit_Manual_Images/stylized-surface-1.png){:.image-fancy}
 
 {:.image-caption}
 ‘Stylized Surface’ shader in Single mode. Simple use case
 
-![‘Stylized Surface’ shader in Single mode. More complex use case](/FlatKit_Manual_Images/stylized-surface-2.png){:.image-simple}
+![‘Stylized Surface’ shader in Single mode. More complex use case](/FlatKit_Manual_Images/stylized-surface-2.png){:.image-fancy}
 
 {:.image-caption}
 ‘Stylized Surface’ shader in Single mode. More complex use case with more options engaged, but still, uses only Single mode
@@ -81,7 +81,7 @@ You can make a, well, specular (glare) with this parameter. Also it can be used 
 * **Specular Size** determines how big the specular is. Higher values mean bigger specular.
 * **Specular Edge Smoothness** — moving slider to the left decreases blurriness and makes specular sharper.
 
-![Specular. Inspector interface](/FlatKit_Manual_Images/specular_parameters.png){:.image-simple}
+![Specular. Inspector interface](/FlatKit_Manual_Images/specular_parameters.png){:.image-fancy}
 
 {:.image-caption}
 *Specular*. Inspector interface
@@ -95,14 +95,14 @@ Rim was designed as one of the ways to make a specific effect of a color 'wrappi
 * **Rim Size** controls how big the Rim is. Very high values can serve you as an unlit effect.
 * **Rim Edge Smoothness** — moving slider to the left sharpens the Rim, to the right — makes Rim blurry.
 
-![Rim. Inspector interface](/FlatKit_Manual_Images/rim_parameters.png){:.image-simple}
+![Rim. Inspector interface](/FlatKit_Manual_Images/rim_parameters.png){:.image-fancy}
 
 {:.image-caption}
 *Rim*. Inspector interface
 
 You can think of Rim as some kind of inner shadow and/or as inner glow, if used on smoothened curvy models. In one of the *Fruit Vase* demo scenes, there is an example of extensive use of Rim as an outline. On *Blueprint Grid* demo scene *Rim* is used as a smooth inner glow. This parameter can be used creatively, for example, to substitute *Curve mode* or *Extra Cel parameter*. **Just reminding you that the name like 'Rim', 'Specular' etc should not be perceived literally, they can do more than that.** In the screenshot below, with the help of Suzanne the Blender Monkey, we tried to show a few instances of *Stylized Surface* shader with *None* mode selected (meaning no straightforward shadows are applied), using orange color, and only *Rim* parameter enabled. The results are variations of Rim section only. As you see, the *Rim* alone is quite a creative tool. Imagine adding some creative *Specular* and *Height Gradient*...
 
-![Rim only, usage examples](/FlatKit_Manual_Images/rim_examples_suzanne.png){:.image-simple}
+![Rim only, usage examples](/FlatKit_Manual_Images/rim_examples_suzanne.png){:.image-fancy}
 
 {:.image-caption}
 Variety of uses of *Rim* parameter alone on Suzanne the Blender Monkey. Interface of *Stylized Surface* shader with *‘None’* cel shading mode
@@ -116,7 +116,7 @@ Although *Rim* option is creatively useful and sometimes can remind an outline e
 
 This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is global (absolute) per material, it doesn't depend on object's boundaries. If you would like to make a relative gradient (for instance, each object holding one material to contain an entire gradient within itself), duplicate the material and adjust the height gradient. Alternatively, you can use a [Curve mode](/stylized-surface/#cel-shading-mode/) of *Stylized Surface shader*.
 
-![Height Gradient. Inspector interface](/FlatKit_Manual_Images/gradient_height_parameters.png){:.image-simple}
+![Height Gradient. Inspector interface](/FlatKit_Manual_Images/gradient_height_parameters.png){:.image-fancy}
 
 {:.image-caption}
 *Height Gradient.* Inspector interface
@@ -134,7 +134,7 @@ If enabled, the final shading of the object is multiplied by the vertex color va
 
 #### Outline
 
-![Outline part of Stylized Surface shader. Inspector interface](/FlatKit_Manual_Images/stylized-surface-outline-interface.png){:.image-simple}
+![Outline part of Stylized Surface shader. Inspector interface](/FlatKit_Manual_Images/stylized-surface-outline-interface.png){:.image-fancy}
 
 {:.image-caption}
 *Outline* part of Stylized Surface shader. Inspector interface
@@ -193,7 +193,7 @@ Please note that the effect is visible only if the color of the light is anythin
 
 Light Color Contribution works only with directional light. The point and spot lights are contributing to colors and shading of the material regardless of the Light Color Contribution value.
 
-![Light Color Contribution parameter on Flat Kit shaders Inspector panel](/FlatKit_Manual_Images/light_color_contribution.png){:.image-simple}
+![Light Color Contribution parameter on Flat Kit shaders Inspector panel](/FlatKit_Manual_Images/light_color_contribution.png){:.image-fancy}
 
 {:.image-caption}
 *Light Color Contribution* parameter on Flat Kit shaders Inspector panel
@@ -205,7 +205,7 @@ Take the first image (below). At first, we turn down the *Intensity* to the very
 Then we change the color of Directional Light from white to red. It has no effect because Directional Light is too “weak” to fill the scene.
 After raising *Intensity* value back to “1” the scene is now lighter and has a red tint.
 
-![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png){:.image-simple}
+[![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png)](/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png){:.image-fancy}
 
 {:.image-caption}
 *Light Color Contribution* at value 0.5. Changing *Intensity* value and color of Directional Light
@@ -213,21 +213,21 @@ After raising *Intensity* value back to “1” the scene is now lighter and has
 Once we change *Color Light Contribution* parameter to “0” (pic below), Directional light has no effect light-wise and color-wise. Changing *Intensity* parameter of Directional Light on the Inspector panel has no effect. Both sides of the picture are identical.
 This way you can achieve a flat look, in other words, the colors on the scene are exactly the same as you choose in the shader parameters.
 
-![Light Color Contribution at value 0. Directional Light intensity at max and min values](/FlatKit_Manual_Images/lighting_1_color_contrib_0.png){:.image-simple}
+[![Light Color Contribution at value 0. Directional Light intensity at max and min values](/FlatKit_Manual_Images/lighting_1_color_contrib_0.png)](/FlatKit_Manual_Images/lighting_1_color_contrib_0.png){:.image-fancy}
 
 {:.image-caption}
 *Light Color Contribution* at value 0. Directional Light *Intensity* at max and min values
 
 Now, (on the pic below) we raise *Light Color Contribution* to the max value of “1”. If we set Directional Light *Intensity* parameter low, the scene theoretically has no source of direct light. Local lights now act as the only light sources. If the *Intensity* of Directional Light is at its maximum, it’s too hot now.
 
-![Light Color Contribution at value 1. Changing intensity value of Directional Light](/FlatKit_Manual_Images/lighting_8.png){:.image-simple}
+[![Light Color Contribution at value 1. Changing intensity value of Directional Light](/FlatKit_Manual_Images/lighting_8.png)](/FlatKit_Manual_Images/lighting_8.png){:.image-fancy}
 
 {:.image-caption}
 *Light Color Contribution* at value 1. Changing *Intensity* value of Directional Light
 
 If you use a Particle System and choose your particles to emit light, Flat Kit shaders respect that!
 
-![Particles emitting light on Flat Kit shaders](/FlatKit_Manual_Images/lighting_particles_lights.png){:.image-simple}
+![Particles emitting light on Flat Kit shaders](/FlatKit_Manual_Images/lighting_particles_lights.png){:.image-fancy}
 
 {:.image-caption}
 Particles emitting light on Flat Kit shaders
@@ -238,7 +238,7 @@ Particles emitting light on Flat Kit shaders
 
 If the object has the ‘Receive Shadows’ option turned on in Mesh Renderer, you have an ability to use Unity-processed shadows on it, as you would do in Unity Standard Material shader, with a few extra-options.
 
-![Unity Built-in Shadows mode menu. Inspector interface](/FlatKit_Manual_Images/unity_built_in_shadows_modes.png){:.image-simple}
+![Unity Built-in Shadows mode menu. Inspector interface](/FlatKit_Manual_Images/unity_built_in_shadows_modes.png){:.image-fancy}
 
 {:.image-caption}
 Unity Built-in Shadows mode menu. Inspector interface
@@ -251,7 +251,7 @@ Unity Built-in Shadows mode menu. Inspector interface
 
 > **NOTE.** *Shadow Occludion* parameter is available in the URP version of Flat Kit only.
 
-![Unity Built-in Shadows in Color mode. Inspector interface](/FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png){:.image-simple}
+![Unity Built-in Shadows in Color mode. Inspector interface](/FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png){:.image-fancy}
 
 {:.image-caption}
 *Unity Built-in Shadows* in *Color* mode. Inspector interface
@@ -273,7 +273,7 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 
 **Normal Map** To make an impression of a relatively low-poly mesh having many details of a high-poly one, you can use normal maps. Add one to *Bump Map* slot in the Inspector panel.
 
-![‘Stylized Surface’ shader — normal map applied](/FlatKit_Manual_Images/normalmap-interface.png){:.image-simple}
+![‘Stylized Surface’ shader — normal map applied](/FlatKit_Manual_Images/normalmap-interface.png){:.image-fancy}
 
 {:.image-caption}
 ‘Stylized Surface’ shader — normal map applied
@@ -282,7 +282,7 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 * **Tiling** repeats the texture along X and Y axis;
 * **Offset** shifts the texture along X and Y axis within the UV map of the mesh;
 
-![‘Normal Map Tree’ demo scene, a tree without and with a normal map](/FlatKit_Manual_Images/normalmap-trees.png){:.image-simple}
+![‘Normal Map Tree’ demo scene, a tree without and with a normal map](/FlatKit_Manual_Images/normalmap-trees.png){:.image-fancy}
 
 {:.image-caption}
 ‘Normal Map Tree’ demo scene, a tree without and with a normal map
@@ -299,7 +299,7 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 * **Offset** shifts the texture along X and Y axis within the UV map of the mesh;
 * **Emission Color** chooses the color of the 'glowing' effect.
 
-![Emission map part of the Stylized Surface interface](/FlatKit_Manual_Images/stylized-surface-emission-interface.png){:.image-simple}
+![Emission map part of the Stylized Surface interface](/FlatKit_Manual_Images/stylized-surface-emission-interface.png){:.image-fancy}
 
 {:.image-caption}
 Emission map part of the Stylized Surface interface
@@ -328,7 +328,7 @@ This is a version of *Stylized Surface* shader with an option to treat alpha as 
 
 The *Base Alpha cutout* parameter determines how much of the alpha portion of the texture is going to be transparent.
 
-![‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface](/FlatKit_Manual_Images/stylized_surface_cutout_screenshot.png){:.image-simple}
+![‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface](/FlatKit_Manual_Images/stylized_surface_cutout_screenshot.png){:.image-fancy}
 
 {:.image-caption}
 ‘Stylized Surface Cutout’ shader — Valley demo scene, tree branches material. Inspector interface
@@ -343,7 +343,7 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 You can use [*Stylized Surface*](/stylized-surface/#outline) shader to outline a particular object. It is a parameter (shader pass) that is built on top of the *Stylized Surface* shader. It has all the features of the *Stylized Surface* shader plus the outline feature.
 {: .notice--info}
 
-![‘Stylized Surface with Outline’ shader](/FlatKit_Manual_Images/stylized_surface_with_outline_interface.png){:.image-simple}
+![‘Stylized Surface with Outline’ shader](/FlatKit_Manual_Images/stylized_surface_with_outline_interface.png){:.image-fancy}
 
 {:.image-caption}
 ‘Stylized Surface with Outline’ shader

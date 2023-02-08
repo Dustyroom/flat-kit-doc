@@ -7,9 +7,12 @@ toc: false
 
 Flat Kit is fully self-contained and does not depend on any external assets.  
 If you do not need demo scenes, example materials and models you may skip importing the Demos directory in the asset.  
+
 The easiest way to get started with the asset is to dig into the demo scenes.  
+
 For Built-In RP it may take a while for Unity to import the asset — this is normal. Under the hood, Unity needs to generate all shader variants that are used in the demo scenes. For URP it is virtually immediate.  
 For URP, it is important that you created the project in URP initially, as opposed to creating a Built-in RP project and 'upgrading' it to URP one.  
+
 On the 3D models side, it’s important that you decide whether you would like making normals ‘smooth’ or 'sharp' for your meshes in a 3D editor, as the result will be different in either case. If you import someone else's models and can’t edit the object in 3D editor, at least try to calculate normals in Unity — in the import settings of the model. The shaders should work regardless, but sometimes the difference can be obvious, especially on objects with rounded corners.  
 
 **Note.** Our demos were created in **Linear color space** (a setting found in _Edit_ ▶︎ _Project Settings_). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
@@ -34,7 +37,7 @@ Below are the written instructions on how to import Flat Kit. You can watch the 
 ![Flat Kit import instructions - Step 4](/FlatKit_Manual_Images/manual_import_instructions_5.png){: .image-fancy}
 
 **NOTE.** If you don't see *step 2* while importing, or URP unitypackage is missing, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
-*Mac OS:* `~/Library/Unity/Asset Store-5.x` (press _Shift+Cmd+G_ in any Finder Window and paste this path)  
+*Mac OS:* `~/Library/Unity/Asset Store-5.x` (press _Shift+Cmd+G_ in Finder and paste this path)  
 *Windows:* `%APPDATA%\Unity\Asset Store-5.x` (hidden folder)  
 *Linux:* `~/.local/share/unity3d/Asset Store-5.x`  
 More info about the Unity cache can be found in the Unity community answers page [here](https://answers.unity.com/questions/45050/where-unity-store-saves-the-packages.html).  
