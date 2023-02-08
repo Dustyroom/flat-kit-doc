@@ -20,15 +20,48 @@ Fog Image Effect is being used in the [**Wanderer** Demo scene](https://flatkit.
 {:.image-caption}
 Fog Image Effect. Inspector panel interface
 
-Gradient editor controls the colors of the gradient. To open it, click on Distance Gradient or Height Gradient. The bottom row of breakpoints (pointing up) is the selection of the colors. The above row (pointing down) controls the opacity of the area it points at; the opacity value of one breakpoint fades into the opacity value of the adjacent one. Same for colors.
+### Parameters
 
-**TIP.** If you want the area close to you to be without fog, apart from increasing Near parameter, you can open up the color ramp(s), add a breakpoint next to the leftmost one on the ramp, select leftmost one, make it transparent (see screenshot of Gradient Editor below). The breakpoint you created (opaque, next to the transparent one) becomes your distance or height control.
-{:.notice--success}
+_Use Distance_ - whether to use fog along horizontal axis or not. If unchecked, the distance fog is not applied.
+
+_Distance Gradient_ - gradient editor for distance fog. The bottom row of breakpoints (pointing up) is the selection of the colors. The above row (pointing down) controls the opacity of the area it points at; the opacity value of one breakpoint fades into the opacity value of the adjacent one. Same for colors. To open it, click on Distance Gradient or Height Gradient.
 
 ![Fog Image Effect. Gradient Editor interface.](/FlatKit_Manual_Images/fog_image_effect_gradient_editor.png){: .image-fancy}
 
 {:.image-caption}
 Fog Image Effect. Gradient Editor interface.
+
+**TIP.** If you want the area close to you to be without fog, apart from increasing Near parameter, you can open up the color ramp(s), add a breakpoint next to the leftmost one on the ramp, select leftmost one, make it transparent (see screenshot of Gradient Editor below). The breakpoint you created (opaque, next to the transparent one) becomes your distance or height control.
+{:.notice--success}
+
+_Near_ - distance from camera where the fog starts. The fog is not applied to the area closer to the camera than this value.
+
+_Far_ - distance from camera where the fog ends. The fog is not applied to the area further from the camera than this value.
+
+_Distance Fog Intensity_ - intensity of the distance fog. The higher the value, the more intense the fog is.
+
+_Use Distance Fog On Sky_ - whether to use distance fog on the skybox or not. If unchecked, the distance fog is not applied to the sky.
+
+_Use Height_ - whether to use fog along vertical axis or not. If unchecked, the height fog is not applied.
+
+_Low_ - height from camera where the fog starts. The fog is not applied to the area lower than this value.
+
+_High_ - height from camera where the fog ends. The fog is not applied to the area higher than this value.
+
+_Height Fog Intensity_ - intensity of the height fog. The higher the value, the more intense the fog is.
+
+_Use Height Fog On Sky_ - whether to use height fog on the skybox or not. If unchecked, the height fog is not applied to the sky.
+
+_Distance Height Blend_ - blend between distance and height fog. The higher the value, the more height fog is applied. The lower the value, the more distance fog is applied.
+
+_Render Event_ — the event at which the Fog effect takes place. Click on the drop down to select the event.
+
+![](/FlatKit_Manual_Images/fog_image_effect_render_events.png){: .image-fancy}
+
+{:.image-caption}
+Fog Image Effect Render Events list.
+
+_Apply in Scene View_ - whether the effect should be applied in the Scene view as well as in the Game view. Please, keep in mind that Unity always renders the Scene view with the default Renderer settings of the URP config.
 
 {% capture notice-text %}
 Both *Fog* and *Outline* image effects can use image-based anti-aliasing, like the one in Unity's Post-processing stack.
@@ -40,3 +73,4 @@ Both *Fog* and *Outline* image effects can use image-based anti-aliasing, like t
 <div class="notice--info">
   {{ notice-text | markdownify }}
 </div>
+

@@ -87,6 +87,10 @@ Outline Image Effect
 
 [![](/Screenshots/Room.png)](/Screenshots/Room.png){: .image-fancy }
 
+[![](/Screenshots/Room-2.png)](/Screenshots/Room-2.png){: .image-fancy }
+
+[![](/Screenshots/Room-3.png)](/Screenshots/Room-3.png){: .image-fancy }
+
 # Retro Cars
 *Retro Cars*. Retro cars are curvy. A great opportunity to show how shiny (or rough) shaders can be. There are 4 scene sets.
 
