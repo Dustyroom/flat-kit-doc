@@ -120,11 +120,15 @@ One of the commonly asked questions is if some of the objects can be rendered wi
 However, there are some ways to exclude objects from outlines. 
 
 * **METHOD 1** One of the ways is to use two cameras in a camera stack: one camera is for non-outlined objects and another one is for everything else (outlined). Please refer to Unity documentation on [camera stacking](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@16.0/manual/camera-stacking.html) to get to know more about this general Unity technique better.
-[![](/FlatKit_Manual_Images/obj_without_outlines_1_1_forward_renderers.png)](/FlatKit_Manual_Images/obj_without_outlines_1_1_forward_renderers.png) {: .image-fancy}
-[![](/FlatKit_Manual_Images/obj_without_outlines_1_2_camera_setup.png)](/FlatKit_Manual_Images/obj_without_outlines_1_2_camera_setup.png){: .image-fancy}
-[![](/FlatKit_Manual_Images/obj_without_outlines_1_3_cameras_order.png)](/FlatKit_Manual_Images/obj_without_outlines_1_3_cameras_order.png){: .image-fancy}
-[![](/FlatKit_Manual_Images/obj_without_outlines_1_3_camera_stack.png)](/FlatKit_Manual_Images/obj_without_outlines_1_3_camera_stack.png){: .image-fancy}
-[![](/FlatKit_Manual_Images/obj_without_outlines_1_4_camera_clear_depth.png)](/FlatKit_Manual_Images/obj_without_outlines_1_4_camera_clear_depth.png){: .image-fancy}
+  [![](/FlatKit_Manual_Images/obj_without_outlines_1_1_forward_renderers.png)](/FlatKit_Manual_Images/obj_without_outlines_1_1_forward_renderers.png){: .image-fancy}
+
+  [![](/FlatKit_Manual_Images/obj_without_outlines_1_2_camera_setup.png)](/FlatKit_Manual_Images/obj_without_outlines_1_2_camera_setup.png){: .image-fancy}
+
+  [![](/FlatKit_Manual_Images/obj_without_outlines_1_3_cameras_order.png)](/FlatKit_Manual_Images/obj_without_outlines_1_3_cameras_order.png){: .image-fancy}
+
+  [![](/FlatKit_Manual_Images/obj_without_outlines_1_3_camera_stack.png)](/FlatKit_Manual_Images/obj_without_outlines_1_3_camera_stack.png){: .image-fancy}
+
+  [![](/FlatKit_Manual_Images/obj_without_outlines_1_4_camera_clear_depth.png)](/FlatKit_Manual_Images/obj_without_outlines_1_4_camera_clear_depth.png){: .image-fancy}
 
 
 * **METHOD 2** Another way of excluding objects from rendered outlines is moving object to be rendered in the transparent pass. In Flat Kit's Stylized Surface there is such an option. If you are using non-Flat Kit shaders, please refer to their documentation to see whether it is possible — to enable transparency without affecting the look. In Flat Kit's image effects there is an option of [Render event](/outlines/#advanced-settings-section-hosts-the-parameters-to-adjust-the-too/). It lets you choose at which stage to render the lines. In our case, it's 'Before Transparents'.
