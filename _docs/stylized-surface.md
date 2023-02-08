@@ -310,10 +310,17 @@ Emission map part of the Stylized Surface interface
 This section is available in the Universal RP of Unity. Built-In RP doesn't have alpha clipping on the shader level, so you can use the [*Stylized Shader Cutout*](/stylized-surface/#stylized-surface-cutout-shader/) shader instead.
 {: .notice--warning}
 
-* **Surface Type** The two options are _Opaque_ and _Transparent_. If Transparent Surface Type is selected, the Blend Mode menu becomes available with the following Blend Mode options: Alpha, Premultiply, Additive and Multiply.
-* **Render Faces** lets you choose between Front, Back or Both faces of the mesh to be rendered.
-* **Alpha Clipping** Discards pixels based on the Albedo texture’s alpha channel. If enabled, the _Threshold_ parameter appears. 
-* **Threshold** The minimum alpha in the Albedo texture to render a pixel, i.e. determines how soon the transparent portion is ‘transparent enough’ to be cut out.
+![](/FlatKit_Manual_Images/flat-kit-stylized-surface-rendering-options-parameters.png){:.image-fancy}
+
+Rendering options part of the Stylized Surface interface
+{:.image-caption}
+
+* **Surface Type** — The two options are _Opaque_ and _Transparent_.
+  * **Blend Mode** — If **Transparent** _Surface Type_ is selected, the Blend Mode menu becomes available with the following Blend Mode options: Alpha, Premultiply, Additive and Multiply.
+* **Render Faces** — lets you choose between Front, Back or Both faces of the mesh to be rendered.
+* **Alpha Clipping** — Discards pixels based on the Albedo texture’s alpha channel. If enabled, the _Threshold_ parameter appears. 
+  * **Threshold** — The minimum alpha in the Albedo texture to render a pixel, i.e. determines how soon the transparent portion is ‘transparent enough’ to be cut out.
+* **Enable GPU Instancing** — Uses GPU Instancing to render multiple copies of the mesh at once. More information in [Unity’s documentation](https://docs.unity3d.com/Manual/GPUInstancing.html) and in this doc [here](/stylized-surface/#gpu-instancing).
 
 ### Setting material values from scripts
 
