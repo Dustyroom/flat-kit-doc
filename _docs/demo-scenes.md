@@ -2,14 +2,14 @@
 title: "Demo Scenes"
 permalink: /demo-scenes/
 excerpt: "Demo Scenes"
-toc: false
+toc: true
 ---
 
 We tried to depict the big spectrum of possibilities using various scenes. They are one of ten million examples of possible Flat Kit use
 cases. Consider viewing them as starting points or macro-preset objects for your own project.
 
-# Valley and Wanderer
-*Valley*, *Wanderer* scenes are environmental. There we tried to show the work of both fog systems of Flat Kit. Also it is one of the perspectives of displaying the shaders — how these would look in a large scene.
+# Valley
+*Valley*, scenes are environmental. There we tried to show the work of both fog systems of Flat Kit. Also it is one of the perspectives of displaying the shaders — how these would look in a large scene.
 
 Valley uses Terrain shader and transparent textures inside a Stylized Surface Cutout shader. Valley demo scene is also an example of
 obvious, rather than subtle, use of *Fog* Image Effect. Once the scene is loaded, you can scan through the *Fog* Image Effect presets to
@@ -21,9 +21,12 @@ using the terrain system.
 
 [![](/Screenshots/Valley1.png)](/Screenshots/Valley1.png){: .image-fancy }
 
+# Wanderer
+*Wanderer* scene is environmental as well.
+
 [![](/Screenshots/Wanderer.png)](/Screenshots/Wanderer.png){: .image-fancy }
 
-# Blueprint Grid (Mugs) and Fruit Vase
+# Blueprint Grid (Mugs)
 *Blueprint Grid (Mugs)* and *Fruit Vase* scenes are an exhibition of most sought use cases of cel / toon shading.
 
 However, you can find more experimental stuff there, too. It has been a temptation to overpopulate the scenes with content, because while making these included materials — literally dozens of interesting by-product or work-in-progress materials showed up, but we had to discard them to keep the scenes clean.
@@ -34,21 +37,23 @@ Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits a
 
 [![](/Screenshots/Mugs%20-%20Scene2%20-%20ColorfulMisc.png)](/Screenshots/Mugs%20-%20Scene2%20-%20ColorfulMisc.png){: .image-fancy }
 
-[![](/Screenshots/1-FruitVaseScene-CelShadingMode-None-CompletelyFlat.png)](/Screenshots/1-FruitVaseScene-CelShadingMode-None-CompletelyFlat.png){:
-.image-fancy }
+# Fruit Vase
 
-[![](/Screenshots/2-FruitVaseScene-CelShadingMode-Single.png)](/Screenshots/2-FruitVaseScene-CelShadingMode-Single.png){:
-.image-fancy }
+There are 7 scene variations in *Fruit Vase* scene. Each scene is dedicated to some specific look, thus uses a different set of materials and two outline methods: [Stylized Surface (Outline parameter)](/stylized-surface/#outline) and [Outline image effect](/outlines/).
+
+[![](/Screenshots/1-FruitVaseScene-CelShadingMode-None-CompletelyFlat.png)](/Screenshots/1-FruitVaseScene-CelShadingMode-None-CompletelyFlat.png){: .image-fancy }
+
+[![](/Screenshots/2-FruitVaseScene-CelShadingMode-Single.png)](/Screenshots/2-FruitVaseScene-CelShadingMode-Single.png){: .image-fancy }
 
 [![](/Screenshots/3-FruitVaseScene-CelShadingMode-Steps.png)](/Screenshots/3-FruitVaseScene-CelShadingMode-Steps.png){: .image-fancy }
 
-[![](/Screenshots/4-FruitVaseScene-CelShadingMode-StepsWithOutline.png)](/Screenshots/4-FruitVaseScene-CelShadingMode-StepsWithOutline.png){: .image-fancy }
+[![](/Screenshots/4-FruitVaseScene-CelShadingMode-Curve.png)](/Screenshots/4-FruitVaseScene-CelShadingMode-Curve.png){: .image-fancy }
 
-[![](/Screenshots/5-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRim.png)](/Screenshots/5-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRim.png){: .image-fancy }
+[![](/Screenshots/5-FruitVaseScene-Var-StylizedSurfaceShaderWithOutlines.png)](/Screenshots/5-FruitVaseScene-Var-StylizedSurfaceShaderWithOutlines.png){: .image-fancy }
 
-[![](/Screenshots/6-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRimAndSpecular.png)](/Screenshots/6-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRimAndSpecular.png){: .image-fancy }
+[![](/Screenshots/6-FruitVaseScene-Var-TwoColor.png)](/Screenshots/6-FruitVaseScene-Var-TwoColor.png){: .image-fancy }
 
-[![](/Screenshots/7-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRimAndSpecularAndReflection.png)](/Screenshots/7-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRimAndSpecularAndReflection.png){: .image-fancy }
+[![](/Screenshots/7-FruitVaseScene-Var-OutlineImageEffect.png)](/Screenshots/7-FruitVaseScene-Var-OutlineImageEffect.png){: .image-fancy }
 
 # Tree Island
 *Tree Island* scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or any other arcade game.
@@ -61,7 +66,7 @@ Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits a
 [![](/Screenshots/Room.png)](/Screenshots/Room.png){: .image-fancy }
 
 # Retro Cars
-*Retro Cars*. Retro cars are curvy. A great opportunity to show how shiny (or rough) shaders can be.
+*Retro Cars*. Retro cars are curvy. A great opportunity to show how shiny (or rough) shaders can be. There are 4 scene variations.
 
 [![](/Screenshots/Car%20-%20Scene%20-%20Set1.png)](/Screenshots/Car%20-%20Scene%20-%20Set1.png){: .image-fancy }
 
