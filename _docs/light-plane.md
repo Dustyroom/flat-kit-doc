@@ -8,7 +8,7 @@ This shader is what we are particularly proud of. It looks like a small tool. Bu
 
 The *Wanderer* demo scene includes *LightPlane* shader implemented not only as fog areas, but also as light beams of so-called pick-up objects and even as planets. The *Valley* demo scene has got the *LightPlane* shader used as floating air particles thanks to the Unity particle system.
 
-![LightPlane Shader. Inspector panel interface](/FlatKit_Manual_Images/light_plane_interface.png){:.image-simple}
+![LightPlane Shader. Inspector panel interface](/FlatKit_Manual_Images/light_plane_interface.png){: .image-fancy}
 
 {:.image-caption}
 LightPlane Shader. Inspector panel interface
@@ -19,28 +19,28 @@ The parameters of the *LightPlane* shader are:
 
 * *Camera Distance Fade Close* / *Camera Distance Fade Far* control distance range from the camera at which **the light plane object** transitions from transparent to opaque (see pic below).
 
-![LightPlane — Camera Distance parameters](/FlatKit_Manual_Images/lightplane-camera-dist.png){:.image-simple}
+![LightPlane — Camera Distance parameters](/FlatKit_Manual_Images/lightplane-camera-dist.png){: .image-fancy}
 
 {:.image-caption}
 *LightPlane* — *Camera Distance X and Y* parameters
 
 * *UV Fade X* controls transparency on the sides along X axis of the plane/mesh (see pic below);
 
-![LightPlane — UV Fade X parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-x.png){:.image-simple}
+![LightPlane — UV Fade X parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-x.png{: .image-fancy}
 
 {:.image-caption}
 *LightPlane* — *UV Fade X* parameter
 
 * *UV Fade Y* controls transparency on the sides along Y axis of the plane/mesh (see pic below);
 
-![LightPlane — UV Fade Y parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-y.png){:.image-simple}
+![LightPlane — UV Fade Y parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-y.png{: .image-fancy}
 
 {:.image-caption}
 *LightPlane* — *UV Fade Y* parameter
 
 When combined, *UV Fade X* and *UV Fade Y* can make a fluffy blob.
 
-![LightPlane — UV Fade X and UV Fade Y parameters combined](/FlatKit_Manual_Images/lightplane-uv-fade-dist-x-y.png){:.image-simple}
+![LightPlane — UV Fade X and UV Fade Y parameters combined](/FlatKit_Manual_Images/lightplane-uv-fade-dist-x-y.png){: .image-fancy}
 
 {:.image-caption}
 *LightPlane* — *UV Fade X* and *UV Fade Y* parameters combined

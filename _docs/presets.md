@@ -12,7 +12,7 @@ In Flat Kit you can find presets as .mat Material instances (that you can drag a
 To save the preset, select the material or an object with this material you want to save, click on the ‘mixer’ icon on the top right of the shader interface on the Inspector panel. Then, the menu will pop up. Click _‘Save Current to…’_. Then you choose the destination. Once created, you can move the actual file wherever you would like. All presets within a project will show up in the ‘Select Preset’ menu.
 
 
-![Preset menu. How to load.](/FlatKit_Manual_Images/preset-button.png)
+![Preset menu. How to load.](/FlatKit_Manual_Images/preset-button.png){: .image-fancy}
 
 {:.image-caption}
 Preset menu. How to load.

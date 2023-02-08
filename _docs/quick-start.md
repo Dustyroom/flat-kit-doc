@@ -22,21 +22,21 @@ On the 3D models side, it’s important that you decide whether you would like m
 Below are the written instructions on how to import Flat Kit. You can watch the video above of follow the guide below.
 
 * **Step 1.** It's advised that you imported Flat Kit from Unity Package Manager. Please make sure you have Unity v. 2020.3 LTS or later running. Go to Window ▶︎ Package Manager. On the top left find the My Assets drop down menu. You'll find Flat Kit among your assets. Choose the version you'd like to import. Click Download, then Import.  
-![Flat Kit import instructions - Step 1](/FlatKit_Manual_Images/manual_import_instructions_2.png)
+![Flat Kit import instructions - Step 1](/FlatKit_Manual_Images/manual_import_instructions_2.png){: .image-fancy}
 
 * **Step 2.** Choose which version of Flat Kit to import. If your project is in URP - select [Render Pipeline] Universal (URP).unitypackage. If your project is in Built-In RP, choose [Render Pipeline] Built-In.unitypackage. Click Import. You can re-import any of the versions anytime. The latest imported version overwrites the previously installed one. If you don't see this step, see the note below.  
-![Flat Kit import instructions - Step 2](/FlatKit_Manual_Images/manual_import_instructions_3.png)
+![Flat Kit import instructions - Step 2](/FlatKit_Manual_Images/manual_import_instructions_3.png){: .image-fancy}
 
 * **Step 3.** Once imported, go to Project tab ▶︎ Assets ▶︎ Flat Kit. You'll find the Flat Kit unitypackage file of your preferred RP. Double-click it.  
-![Flat Kit import instructions - Step 3](/FlatKit_Manual_Images/manual_import_instructions_4.png)
+![Flat Kit import instructions - Step 3](/FlatKit_Manual_Images/manual_import_instructions_4.png){: .image-fancy}
 
 * **Step 4.** Pick what contents of Flat Kit would you like to get unpacked. Click Import. You can import anything at any time while working on your project.  
-![Flat Kit import instructions - Step 4](/FlatKit_Manual_Images/manual_import_instructions_5.png)
+![Flat Kit import instructions - Step 4](/FlatKit_Manual_Images/manual_import_instructions_5.png){: .image-fancy}
 
 **NOTE.** If you don't see *step 2* while importing, or URP unitypackage is missing, try cleanig the Unity Package Manager cache and import / update Flat Kit after that. The cache files can be found here:  
-*Mac OS:* ~/Library/Unity/Asset Store-5.x (press _Shift+Cmd+G_ in any Finder Window and paste this path)  
-*Windows:* %APPDATA%\Unity\Asset Store-5.x (hidden folder)  
-*Linux:* ~/.local/share/unity3d/Asset Store-5.x  
+*Mac OS:* `~/Library/Unity/Asset Store-5.x` (press _Shift+Cmd+G_ in any Finder Window and paste this path)  
+*Windows:* `%APPDATA%\Unity\Asset Store-5.x` (hidden folder)  
+*Linux:* `~/.local/share/unity3d/Asset Store-5.x`  
 More info about the Unity cache can be found in the Unity community answers page [here](https://answers.unity.com/questions/45050/where-unity-store-saves-the-packages.html).  
 {: .notice--info}
 
@@ -55,7 +55,7 @@ We included a **Readme** tool, which is a useful debugging helper. It does the f
 
 The *[Readme]* file can be found in _Project_ panel ▶︎ _Assets_ folder ▶︎ _Flat Kit_ folder ▶︎ _[Readme]_.  
 
-![Readme tool's interface](/FlatKit_Manual_Images/flat-kit-readme-file.png)
+![Readme tool's interface](/FlatKit_Manual_Images/flat-kit-readme-file.png){: .image-fancy}
 
 {:.image-caption}
 Readme tool's interface
