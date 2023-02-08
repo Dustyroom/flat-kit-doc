@@ -16,6 +16,13 @@ Flat Kit has everything you need to achieve a slick minimalist look in your proj
 
 To name Flat Kit a set of flat shaders, cel shaders or toon ones, would be a serious underestimation. Yes, these all can be easily done. As well as countless other (maybe unseen before) styles. It can be sharp flat, it can have one, two, nine steps of hard shadow, or soft-shaded, or gradient-shaded — with pale or acid colors, it can have three gradient effects (when you start thinking out of the box, the parameter like [‘Specular’](/stylized-surface/#specular), a usual for, well, specularity or a glare, here can act as your fourth shadow, or a gradient etc).
 
+At the moment, there are the following shaders included into Flat Kit: [Stylized Surface](/stylized-surface/), [Stylized Surface Cutout](/stylized-surface/#stylized-surface-cutout-shader/), [Stylized Surface with Outline](/stylized-surface/#stylized-surface-with-outline-shader/), [Gradient Skybox](/skybox/), [Water](/water/), [Terrain](/terrain/), [Light Plane](/light-plane/).
+
+![Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader](/FlatKit_Manual_Images/all_shaders.png){:.image-simple}
+
+{:.image-caption}
+Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader.
+
 In case you already use any other flat-looking shaders, you will still find a variety of useful tools for quick image processing. Particularly, later in the manual we’ll overview the [Height Gradient](/stylized-surface/#height-gradient) mode of the [Stylized Surface shader](/stylized-surface/), the [Outline Image Effect](/outlines/), the [Fog Image Effect](/fog/), [Water shader](/water/) etc. They have quite little in relation to toon or cell shading, but in conjunction with a stylish flat or cel look, they add a whole new life to your scene. Plus, they can be used out of context of non-photorealistic aesthetics. It is a spice that can dramatically make your dish sweeter (tastier).
 
 Flat Kit was made with optimised and fast workflow in mind, so that one could fulfil the picture popped up in the mind — as quickly as possible, in various ways. This means:

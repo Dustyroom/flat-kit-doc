@@ -9,13 +9,6 @@ When you create a material, you’ll choose a shader. By default, Unity has the 
 Our shaders expose shading properties as material features. If a feature toggle is not activated on any materials in the build scenes, the portion of shader code for that feature is not included in the build.
 Because of the fact that these shaders are designed for a stylized look as opposed to photorealistic, metallicness and translucency features are not supported. The support for PBR (Physically-Based Rendering) in Flat Kit means that indirect sources of light (e.g. skybox) influence the colors of the material, unless you turn this feature off.
 
-At the moment, there are the following shaders included into Flat Kit: *Stylized Surface*, *Stylized Surface Cutout*, *Stylized Surface with Outline*, *Gradient Skybox*, *Water*, *Terrain*, *LightPlane*.
-
-![Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader](/FlatKit_Manual_Images/all_shaders.png){:.image-simple}
-
-{:.image-caption}
-Collection of shaders in Flat Kit. From a Shader drop-down, hover the FlatKit sub-menu and choose a shader.
-
 ## 'Stylized Surface' Shader
 
 This is a versatile lit shader to be used on rigid object materials. To use it on a material select the shader “FlatKit/Stylized Surface” or “FlatKit/Stylized Surface Cutout” (Built-In RP only). This is your main go-to shader. It works for the vast majority of cases.
