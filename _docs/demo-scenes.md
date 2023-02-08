@@ -9,13 +9,13 @@ We tried to depict the big spectrum of possibilities using various scenes. They 
 cases. Consider viewing them as starting points or macro-preset objects for your own project.
 
 # Valley
-*Valley*, scenes are environmental. There we tried to show the work of both fog systems of Flat Kit. Also it is one of the perspectives of displaying the shaders — how these would look in a large scene.
+*Valley*, scene is environmental. There we tried to show the work of both fog systems of Flat Kit. Also it is one of the perspectives of displaying the shaders — how these would look in a large scene.
+This scene uses [Terrain shader](/terrain/) and cut out transparent textures inside the [Stylized Surface shader](/stylized-surface/).
 
-Valley uses Terrain shader and transparent textures inside a Stylized Surface Cutout shader. Valley demo scene is also an example of
-obvious, rather than subtle, use of *Fog* Image Effect. Once the scene is loaded, you can scan through the *Fog* Image Effect presets to
-find which one you like more. There is a Presets chapter later in this manual with explanation of how to use them.
+*Valley* demo scene is also an example of the obvious, rather than subtle, use of [Fog Image Effect](/fog/). Once the scene is loaded, you can scan through the *Fog image effect* presets to
+find which one you like more. There is a [Presets](/presets/) chapter in this manual with explanation of how to use them.
 
-In a *Valley* scene, please note that although the ground is made with Unity native terrain, the trees on it are populated manually, not
+In the *Valley* scene, please note that although the ground is made with Unity native terrain, the trees on it are populated manually, not
 using the terrain system.
 {: .notice--info}
 
@@ -24,14 +24,15 @@ using the terrain system.
 # Wanderer
 *Wanderer* scene is environmental as well.
 
+You can see how to use [Outline image effect](/outline/), [Fog image effect](/fog) and [Light Plane shader](/light-plane) as an additional fog in this scene.
+
 [![](/Screenshots/Wanderer.png)](/Screenshots/Wanderer.png){: .image-fancy }
 
 # Blueprint Grid (Mugs)
-*Blueprint Grid (Mugs)* and *Fruit Vase* scenes are an exhibition of most sought use cases of cel / toon shading.
+*Blueprint Grid (Mugs)* is an exhibition of the most sought use cases of cel / toon shading.
 
 However, you can find more experimental stuff there, too. It has been a temptation to overpopulate the scenes with content, because while making these included materials — literally dozens of interesting by-product or work-in-progress materials showed up, but we had to discard them to keep the scenes clean.
-Blueprint Grid is a descriptive one, there is a text telling what we used to get the displayed materials.
-Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits across all scenes and each scene is dedicated to some specific look, thus uses a different set of materials.
+*Blueprint Grid* scene is a descriptive one, there is a text telling what we used to get the displayed materials.
 
 [![](/Screenshots/Mugs%20-%20Scene1%20-%20OneColorVariousParameters.png)](/Screenshots/Mugs%20-%20Scene1%20-%20OneColorVariousParameters.png){: .image-fancy }
 
@@ -42,18 +43,32 @@ Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits a
 There are 7 scene variations in *Fruit Vase* scene. Each scene is dedicated to some specific look, thus uses a different set of materials and two outline methods: [Stylized Surface (Outline parameter)](/stylized-surface/#outline) and [Outline image effect](/outlines/).
 
 [![](/Screenshots/1-FruitVaseScene-CelShadingMode-None-CompletelyFlat.png)](/Screenshots/1-FruitVaseScene-CelShadingMode-None-CompletelyFlat.png){: .image-fancy }
+{:.image-caption}
+Cel Shading Mode: None, Completely Flat
 
 [![](/Screenshots/2-FruitVaseScene-CelShadingMode-Single.png)](/Screenshots/2-FruitVaseScene-CelShadingMode-Single.png){: .image-fancy }
+{:.image-caption}
+Cel Shading Mode: Single
 
 [![](/Screenshots/3-FruitVaseScene-CelShadingMode-Steps.png)](/Screenshots/3-FruitVaseScene-CelShadingMode-Steps.png){: .image-fancy }
+{:.image-caption}
+Cel Shading Mode: Steps
 
 [![](/Screenshots/4-FruitVaseScene-CelShadingMode-Curve.png)](/Screenshots/4-FruitVaseScene-CelShadingMode-Curve.png){: .image-fancy }
+{:.image-caption}
+Cel Shading Mode: Curve
 
 [![](/Screenshots/5-FruitVaseScene-Var-StylizedSurfaceShaderWithOutlines.png)](/Screenshots/5-FruitVaseScene-Var-StylizedSurfaceShaderWithOutlines.png){: .image-fancy }
+{:.image-caption}
+Stylized Surface Shader with 'Outline' parameter
 
 [![](/Screenshots/6-FruitVaseScene-Var-TwoColor.png)](/Screenshots/6-FruitVaseScene-Var-TwoColor.png){: .image-fancy }
+{:.image-caption}
+Two Color shading using Stylized Surface Shader
 
 [![](/Screenshots/7-FruitVaseScene-Var-OutlineImageEffect.png)](/Screenshots/7-FruitVaseScene-Var-OutlineImageEffect.png){: .image-fancy }
+{:.image-caption}
+Outline Image Effect
 
 # Tree Island
 *Tree Island* scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or any other arcade game.
@@ -66,23 +81,31 @@ There are 7 scene variations in *Fruit Vase* scene. Each scene is dedicated to s
 [![](/Screenshots/Room.png)](/Screenshots/Room.png){: .image-fancy }
 
 # Retro Cars
-*Retro Cars*. Retro cars are curvy. A great opportunity to show how shiny (or rough) shaders can be. There are 4 scene variations.
+*Retro Cars*. Retro cars are curvy. A great opportunity to show how shiny (or rough) shaders can be. There are 4 scene sets.
 
 [![](/Screenshots/Car%20-%20Scene%20-%20Set1.png)](/Screenshots/Car%20-%20Scene%20-%20Set1.png){: .image-fancy }
+{:.image-caption}
+Cars scene — Set 1
 
 [![](/Screenshots/Car%20-%20Scene%20-%20Set2.png)](/Screenshots/Car%20-%20Scene%20-%20Set2.png){: .image-fancy }
+{:.image-caption}
+Cars scene — Set 2
 
 [![](/Screenshots/Car%20-%20Scene%20-%20Set3.png)](/Screenshots/Car%20-%20Scene%20-%20Set3.png){: .image-fancy }
+{:.image-caption}
+Cars scene — Set 3
 
 [![](/Screenshots/Car%20-%20Scene%20-%20Set4.png)](/Screenshots/Car%20-%20Scene%20-%20Set4.png){: .image-fancy }
+{:.image-caption}
+Cars scene — Set 4
 
 # Normal Map Tree
-An example of normal maps application.
+An example of [normal maps](/stylized-surface/#normal-map-to-make-an-impression-of-a-relatively-low-poly-mesh-h) application of [Stylized Surface shader](/stylized-surface/).
 
 ![](/Screenshots/NormalMapsTree%20-%20Scene.png){: .image-fancy }
 
 # Ocean Water
-This is a demo scene showcasing the *Water* shader in a way the game would look like. A non-toon-shading application for *Stylized Surface* is showed in this scene, too. You can choose various water looks in the Hierarchy tab by switching different Water objects on.
+This is a demo scene showcasing the [Water shader](/water/) in a way the game would look like. A non-toon-shading application for [Stylized Surface shader](/stylized-surface/) is showed in this scene, too. You can choose various water looks in the Hierarchy tab by switching different Water objects on.
 
 This scene is in Universal RP only.
 {: .notice--warning}
@@ -90,7 +113,7 @@ This scene is in Universal RP only.
 [![](/Screenshots/Ocean%20Islands.png)](/Screenshots/Ocean%20Islands.png){: .image-fancy }
 
 # Pool
-*Pool* scene shows more various versions of the *Water* shader. In the Hierarchy tab you can choose between different water objects. Each of these objects has its own *Water* material.
+*Pool* scene shows more various versions of the [Water shader](/water/). In the Hierarchy tab you can choose between different water objects. Each of these objects has its own *Water* material.
 
 This scene is in Universal RP only.
 {: .notice--warning}
@@ -98,7 +121,7 @@ This scene is in Universal RP only.
 [![](/Screenshots/Pool.png)](/Screenshots/Pool.png){: .image-fancy }
 
 # Water Vessels
-*Water Vessels* is an shows a few simple and more non-obvious *Water* shader parameters in a single scene. Having these materials, you can use them as starting points in you own projects.
+*Water Vessels* is an shows a few simple and more non-obvious [Water shader](/water/) parameters in a single scene. Having these materials, you can use them as starting points in you own projects.
 
 This scene is in Universal RP only.
 {: .notice--warning}
