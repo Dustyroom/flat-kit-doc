@@ -47,6 +47,7 @@ To enable outline and fog, select the ForwardRendererConfig and add the 'outline
 The order of the effects can be managed like this.
 
 ![Managing the order of renderer layers in URP](/FlatKit_Manual_Images/URP-renderer-layers-01.png)
+
 {.:image-caption}
 Managing the order of renderer layers in URP
 
@@ -61,5 +62,6 @@ Go to **Assets** (in Project tab) ▶︎ **Universal Rendering Pipeline asset** 
 Enable the Post Processing flat on the camera inspector:
 
 ![Camera properties. How to enable Post-processing v.2](/FlatKit_Manual_Images/enable-post-processing-camera.png)
-{.:image-caption}
+
+{:.image-caption}
 Camera properties. How to enable Post-processing v.2
