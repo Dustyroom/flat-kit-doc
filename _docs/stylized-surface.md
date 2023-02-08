@@ -304,6 +304,17 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 {:.image-caption}
 Emission map part of the Stylized Surface interface
 
+
+#### Rendering options
+
+This section is available in the Universal RP of Unity. Built-In RP doesn't have alpha clipping on the shader level, so you can use the [*Stylized Shader Cutout*](/stylized-surface/#stylized-surface-cutout-shader/) shader instead.
+{: .notice--warning}
+
+* **Surface Type** The two options are _Opaque_ and _Transparent_. If Transparent Surface Type is selected, the Blend Mode menu becomes available with the following Blend Mode options: Alpha, Premultiply, Additive and Multiply.
+* **Render Faces** lets you choose between Front, Back or Both faces of the mesh to be rendered.
+* **Alpha Clipping** Discards pixels based on the Albedo texture’s alpha channel. If enabled, the _Threshold_ parameter appears. 
+* **Threshold** The minimum alpha in the Albedo texture to render a pixel, i.e. determines how soon the transparent portion is ‘transparent enough’ to be cut out.
+
 ### Setting material values from scripts
 
 The following are the color field names for manipulation via the code for tweening, randomization etc:
