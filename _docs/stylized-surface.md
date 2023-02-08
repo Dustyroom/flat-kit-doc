@@ -11,7 +11,7 @@ Because of the fact that these shaders are designed for a stylized look as oppos
 
 ## 'Stylized Surface' Shader
 
-This is a versatile lit shader to be used on rigid object materials. To use it on a material select the shader “FlatKit/Stylized Surface” or “FlatKit/Stylized Surface Cutout” (Built-In RP only). This is your main go-to shader. It works for the vast majority of cases.
+This is a versatile lit shader to be used on rigid object materials. To use it on a material select the shader `FlatKit/Stylized Surface` or `FlatKit/Stylized Surface Cutout` (Built-In RP only). This is your main go-to shader. It works for the vast majority of cases.
 Stylized Surface shader consists of the following **main** building blocks:
 
 * Color,
