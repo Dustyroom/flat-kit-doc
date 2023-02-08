@@ -42,5 +42,7 @@ One of the big advantages of using these shaders is the fact that you don’t ha
 That’s why we’ve made a demo scene for each shader and effect. It’s a good way to see how the shader works and how it can be used. You can find them in the [Demo Scenes](/demo-scenes/) section.
 
 ![Flat Kit structural view chart](FlatKit_Manual_Images/FlatKit-Structure-Chart.png)
-> Flat Kit structural view chart.
+
+{:.image-caption}
+Flat Kit structural view chart.
 
