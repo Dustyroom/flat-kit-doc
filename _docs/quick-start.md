@@ -51,7 +51,6 @@ We included a **Readme** tool, which is a useful debugging helper. It does the f
 * Shows the stats like Unity, Universal RP and Flat Kit's versions;
 * Detects what RP the project belongs to (Universal RP or Built-In RP);
 * Checks for available updates;
-* Configures Flat Kit for the pipeline of the project;
 * Clears Flat Kit's Package Manager cache, which can be useful in re-importing Flat Kit during troubleshooting;
 * Opens this documentation as well as redirects to Git where you can open a support ticket;
 * Copies debug info which is useful for in-depth troubleshooting.  
