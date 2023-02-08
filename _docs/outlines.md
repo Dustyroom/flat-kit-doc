@@ -113,7 +113,15 @@ Rotating normals in Blender. Manipulating the normals angle is one of the ways t
 **TIP:** Combinations of the settings in Outline Image Effect let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using *‘Stylized Surface with Outline’* shader in addition to the global Outline effect. Also, *Rim* parameter of *Stylized Surface* and *Stylized Surface with Outline* shaders can accentuate object's edges, often it looks like a partial outline, which can be helpful.
 {:.notice--success}
 
-**TIP:** One of the commonly asked questions is if some of the objects can be rendered without the Outline Renderer Feature applied. Outline image effect is global and is not designed to be selective to objects — it is applied per Renderer (in URP). However, moving object to be rendered in the transparent pass can solve this problem. In Flat Kit Stylized Surface there is such an option. If you are using non-Flat Kit shaders, please refer to their documentation to see whether it is possible — to enable transparency without affecting the look. In Flat Kit there is an option of Render Event. It lets you choose when to render the lines. Take a look at [this chapter](#outline-image-effect) in our manual.
-Another way of excluding something from rendering outlines on — is to render it with a separate camera in a camera stack: one camera is for non-outlined objects and another one is for everything else (outlined). Please refer to Unity documentation on camera stacking to get to know more about this general Unity technique.
-{:.notice--success}
+### Excluding objects from outlines
 
+One of the commonly asked questions is if some of the objects can be rendered without the Outline Renderer Feature applied. Outline image effect is global and is not designed to be selective to objects — it is applied per Renderer (in URP) in screen space.
+
+However, there are some ways to exclude objects from outlines. 
+
+* **METHOD 1** One of the ways is to use two cameras in a camera stack: one camera is for non-outlined objects and another one is for everything else (outlined). Please refer to Unity documentation on [camera stacking](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@16.0/manual/camera-stacking.html) to get to know more about this general Unity technique better.
+
+* **METHOD 2** Another way of excluding objects from rendered outlines is moving object to be rendered in the transparent pass. In Flat Kit's Stylized Surface there is such an option. If you are using non-Flat Kit shaders, please refer to their documentation to see whether it is possible — to enable transparency without affecting the look. In Flat Kit's image effects there is an option of [Render event](/outlines/#advanced-settings-section-hosts-the-parameters-to-adjust-the-too/). It lets you choose at which stage to render the lines. In our case, it's 'Before Transparents'.
+
+  * Step 1. Turn on the transparency in the shader.
+  * Step 2. On the Outline settings panel, Set the [Render Event](/outlines/#advanced-settings-section-hosts-the-parameters-to-adjust-the-too/) to *Before Transparents*. 

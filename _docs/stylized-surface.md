@@ -252,7 +252,8 @@ Unity Built-in Shadows mode menu. Inspector interface
 * **Sharpness** defines how blurred or crisp the shadow edge is.
 * **Shadow Occlusion** masks received Unity shadows in areas where normals face away from the light. **Useful to remove shadows that 'go through' objects.**
 
-> **NOTE.** *Shadow Occludion* parameter is available in the URP version of Flat Kit only.
+**NOTE.** *Shadow Occludion* parameter is available in the URP version of Flat Kit only.
+{: .notice--warning}
 
 ![Unity Built-in Shadows in Color mode. Inspector interface](/FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png){:.image-fancy}
 
@@ -271,7 +272,7 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 * **Blending Mode** lets you choose between 'Multiply' or 'Add' blending modes. 'Multiply' Blending Mode multiplies the luminosity of the base color by the blend color. Multiplication by white produces no change, while the black pixels remain, making the material darker. 'Add' Blending Mode is a little bit different from 'Multiply' — blending with black color produces no change, while generally it brightens the bright colors.
 * **Texture Impact** controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.
 
-> **TIP.** If you would like to have a material with a texture with a cel shading on top of this texture, you can set the *Stylized Surface* to *Single* **Cel Shading Mode**, set the base **Color** to white or light grey, set the  **Color Shaded** parameter to a bit darker one, set the Albedo texture (if your texture is not mostly white) to *Multiply* **Blending mode**, Texture Impact to the maximum value. You should get the model filled with a texture and with cel shadows combined.
+**TIP.** If you would like to have a material with a texture with a cel shading on top of this texture, you can set the *Stylized Surface* to *Single* **Cel Shading Mode**, set the base **Color** to white or light grey, set the  **Color Shaded** parameter to a bit darker one, set the Albedo texture (if your texture is not mostly white) to *Multiply* **Blending mode**, Texture Impact to the maximum value. You should get the model filled with a texture and with cel shadows combined.
 {:.notice--success}
 
 **Normal Map** To make an impression of a relatively low-poly mesh having many details of a high-poly one, you can use normal maps. Add one to *Bump Map* slot in the Inspector panel.
@@ -292,7 +293,7 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 
 **Emission** Enables Emission map part of the shader.
 
-> **NOTE.** Emission map support is available in Universal RP version of Flat Kit only, there is no Emission map parameter in Built-In version of Flat Kit.
+**NOTE.** Emission map support is available in Universal RP version of Flat Kit only, there is no Emission map parameter in Built-In version of Flat Kit.
 {: .notice--warning}
 
 **Emission Map** Allows to use custom emission maps to designate the parts of the meshes to have a 'glow' effect.
@@ -360,7 +361,7 @@ Use this shader if you work with transparency in Built-In RP. In URP you are goo
 
 ## Stylized Surface with Outline Shader
 
-> **NOTE:** *Stylized Surface with Outline* shader has been deprecated in Universal RP version of Flat Kit: the outline functionality has been moved to the *Stylized Surface* shader. *Stylized Surface with Outline* remains available and working for the sake of compatibility with existing projects, but it is advised to use *Stylized Surface* for the new projects instead. *Stylized Surface with Outline* has not been deprecated in Built-In LTS version of Flat Kit.
+**NOTE:** *Stylized Surface with Outline* shader has been deprecated in Universal RP version of Flat Kit: the outline functionality has been moved to the [Outline parameters](/stylized-surface/#outline/) of *Stylized Surface* shader. *Stylized Surface with Outline* remains available and working for the sake of compatibility with existing projects, but it is advised to use *Stylized Surface* for the new projects instead. *Stylized Surface with Outline* has not been deprecated in Built-In LTS version of Flat Kit.
 {: .notice--warning}
 
 You can use [*Stylized Surface*](/stylized-surface/#outline) shader to outline a particular object. It is a parameter (shader pass) that is built on top of the *Stylized Surface* shader. It has all the features of the *Stylized Surface* shader plus the outline feature.
