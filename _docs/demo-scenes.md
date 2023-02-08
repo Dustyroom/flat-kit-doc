@@ -34,8 +34,21 @@ Fruit Vase is actually a collection of 7 scenes. There is one vase with fruits a
 
 [![](/Screenshots/Mugs%20-%20Scene2%20-%20ColorfulMisc.png)](/Screenshots/Mugs%20-%20Scene2%20-%20ColorfulMisc.png){: .image-fancy }
 
-[![](/Screenshots/1-FruitVaseScene-CelShadingMode-None-CompletelyFlat.png](/Screenshots/1-FruitVaseScene-CelShadingMode-None-CompletelyFlat.png){:
+[![](/Screenshots/1-FruitVaseScene-CelShadingMode-None-CompletelyFlat.png)](/Screenshots/1-FruitVaseScene-CelShadingMode-None-CompletelyFlat.png){:
 .image-fancy }
+
+[![](/Screenshots/2-FruitVaseScene-CelShadingMode-Single.png)](/Screenshots/2-FruitVaseScene-CelShadingMode-Single.png){:
+.image-fancy }
+
+[![](/Screenshots/3-FruitVaseScene-CelShadingMode-Steps.png)](/Screenshots/3-FruitVaseScene-CelShadingMode-Steps.png){: .image-fancy }
+
+[![](/Screenshots/4-FruitVaseScene-CelShadingMode-StepsWithOutline.png)](/Screenshots/4-FruitVaseScene-CelShadingMode-StepsWithOutline.png){: .image-fancy }
+
+[![](/Screenshots/5-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRim.png)](/Screenshots/5-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRim.png){: .image-fancy }
+
+[![](/Screenshots/6-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRimAndSpecular.png)](/Screenshots/6-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRimAndSpecular.png){: .image-fancy }
+
+[![](/Screenshots/7-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRimAndSpecularAndReflection.png)](/Screenshots/7-FruitVaseScene-CelShadingMode-StepsWithOutlineAndRimAndSpecularAndReflection.png){: .image-fancy }
 
 # Tree Island
 *Tree Island* scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or any other arcade game.
