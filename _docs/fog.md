@@ -1,7 +1,7 @@
 ---
 title: "Fog Image Effect"
 permalink: /fog/
-toc: true
+toc: false
 ---
 
 Fog Image Effect camera component can be reviewed as a post-processing effect. It can be subtle, like a mist in the lower part of the valley, or a dominant effect, as in a completely hazed environment. Simply put, it works in the following way. You decide whether you need only length fog or height fog or both. Then you determine the bounds where it would take effect. Then you choose colors along each dimension. And after that, blend between distance and height. This effect starts from camera position up to the Near/Far, Low/High bounds, meaning, your camera is the zero coordinate from where the fog spreads. 
@@ -13,7 +13,7 @@ Fog Image Effect camera component can be reviewed as a post-processing effect. I
 
 When you click on any of the color ramps (Distance or Height Gradient), the Gradient Editor pops up.
 
-Fog Image Effect is being used in the [**Wanderer** Demo scene](https://flatkit.dustyroom.com/demo-scenes/#valley-and-wanderer) (more subtly) and [**Valley** Demo scene](https://flatkit.dustyroom.com/demo-scenes/#valley-and-wanderer) (more accentuated).
+Fog Image Effect is being used in the [**Wanderer** Demo scene](https://flatkit.dustyroom.com/demo-scenes/#wanderer) (more subtly) and [**Valley** Demo scene](https://flatkit.dustyroom.com/demo-scenes/#valley) (more accentuated).
 
 ![Fog Image Effect. Inspector panel interface](/FlatKit_Manual_Images/fog_image_effect.png){: .image-fancy style="width: 500px;"}
 
