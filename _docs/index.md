@@ -23,7 +23,7 @@ Flat Kit was made with optimised and fast workflow in mind, so that one could fu
 * One task could be done in different ways. It is a multi-purpose set of shaders;
 * Some outstanding graphical results can be achieved in minutes (given that you have your models ready, there are lots in Flat Kit);
 * There is always an element of you-didn’t-think-it-can-be-done-this-way surprise thanks to Flat Kit deep yet streamlined interface.  
-For example, let’s take fog, which is usually a big part of any 3D environment. There are lots of methods to implement fog into the scene, often complex and complicated. With Flat Kit, we decided to make it as convenient as possible for the user end. So, the fog can be done in two ways: using [**Fog Image Effect** image effect](/fog/) or/and using [**LightPlane** shader](/light-plane/) (see [**Wanderer** demo scene](/demo-scenes/#valley-and-wanderer)). 
+For example, let’s take fog, which is usually a big part of any 3D environment. There are lots of methods to implement fog into the scene, often complex and complicated. With Flat Kit, we decided to make it as convenient as possible for the user end. So, the fog can be done in two ways: using [**Fog Image Effect** image effect](/fog/) or/and using [**LightPlane** shader](/light-plane/) (see [**Wanderer** demo scene](/demo-scenes/#wanderer)). 
 
 We are going to explain how these work and what they are in this manual. Both ways suit different needs, but they really do compliment each other.
 

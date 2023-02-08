@@ -18,7 +18,7 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 #### Q. What is the difference between Flat Kit and Quibli?
 
-> **A.**Flat Kit is a set of tools for bread-and-butter toon shading end effects. Quibli was designed to be more open in regards to non-photorealistic stylization, while including the tools for the anime style works. The detailed comparison can be found [here](https://quibli.dustyroom.com/quibli-flat-kit/).
+> **A.** Flat Kit is a set of tools for bread-and-butter toon shading end effects. Quibli was designed to be more open in regards to non-photorealistic stylization, while including the tools for the anime style works. The detailed comparison can be found [here](https://quibli.dustyroom.com/quibli-flat-kit/).
 
 #### Q. Is it easy to use Flat Kit for a beginner?  
 
@@ -26,7 +26,7 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 #### Q. Is it possible to apply the Flat Kit look while using my own shaders?  
 
-> **A.** The cel shading (`Flat Kit\Stylized Surface`) is implemented as object shaders, which means that they are used on regular materials. However, the *Outline* and *Fog* are *image effects* applied globally (as camera components in the Built-In RP and as Render Features in URP).
+> **A.** The cel shading ([Stylized Surface shader](/stylized-surface/), located in `Flat Kit\Stylized Surface`) is implemented as object shaders, which means that they are used on regular materials. However, the [Outline](/outline/) and [Fog](/fog/) are *image effects* applied globally (as camera components in the Built-In RP and as Render Features in URP).
 
 #### Q. What platforms can I build for? What about VR?  
 
@@ -42,11 +42,11 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 #### Q. Does Flat Kit support normal maps?  
 
-> **A.** Yes, it does. It is in Normal map section of the interface.
+> **A.** Yes, it does. It is in [Normal map](/stylized-surface/#normal-map-to-make-an-impression-of-a-relatively-low-poly-mesh-h) section of the interface.
 
 #### Q. Does Flat Kit support emission maps?  
 
-> **A.** Yes, the URP version. There is no support for emission maps in Built-In RP version of Flat Kit.
+> **A.** Yes, here is info about [Emission map](/stylized-surface/#emission-enables-emission-map-part-of-the-shader) in the URP version only. There is no support for emission maps in Built-In RP version of Flat Kit.
 
 #### Q. I’ve got errors just after importing Flat Kit. Why?  
 
@@ -62,4 +62,4 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 #### Q. Does Flat Kit work with Post-processing stack v.2?  
 
-> **A.** Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See FlatKit in URP for the details.
+> **A.** Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See [Flat Kit in URP](/flat-kit-in-urp/) chapter for the details.

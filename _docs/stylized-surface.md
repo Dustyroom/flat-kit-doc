@@ -82,7 +82,7 @@ This is like another instance of *Single* mode of *Cel Shading Mode*. Works inde
 
 #### Specular
 
-You can make a, well, specular with this parameter. Also it can be used as another layer of shadow.
+You can make a, well, specular (glare) with this parameter. Also it can be used as another layer of shadow.
 
 * **Specular Color** picks up the color of your glare, the parameter works in HDR.
 * **Specular Size** determines how big the specular is. Higher values mean bigger specular.
@@ -137,7 +137,7 @@ A bit more about the nature and use of *Height Gradient* is covered in the [*‘
 
 #### Enable Vertex Colors
 
-If enabled, the final shading of the object is multiplied by the mesh’s vertex color values. It is a debug parameter, usually this is not used for changing the look.
+If enabled, the final shading of the object is multiplied by the vertex color values of the mesh. It is a debug parameter, usually this is not used for changing the look.
 
 #### Outline
 
@@ -291,7 +291,9 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 ‘Normal Map Tree’ demo scene, a tree without and with a normal map
 
 **Emission** Enables Emission map part of the shader.
+
 > **NOTE.** Emission map support is available in Universal RP version of Flat Kit only, there is no Emission map parameter in Built-In version of Flat Kit.
+{: .notice--warning}
 
 **Emission Map** Allows to use custom emission maps to designate the parts of the meshes to have a 'glow' effect.
 
@@ -318,6 +320,7 @@ The following are the color field names for manipulation via the code for tweeni
 * The full list of parameters is at the top of the file `Assets/FlatKit/Shaders/StylizedSurface/StylizedSurface.shader`.
 
 > **NOTE.** The outline toggle is implemented as a [shader keyword](https://docs.unity3d.com/Manual/shader-keywords.html), so unfortunately it can't be toggled at runtime. However, you can enable the outline in the material inspector and toggle its visibility in code by setting the outline width (0 will visually disable the outline). Or, you can create two identical materials with the only difference being the outline toggle, and switch between these materials at runtime with `renderer.material = myMaterial`.
+{: .notice}
 
 ## Stylized Surface Cutout Shader
 

@@ -15,13 +15,13 @@ In order to have a working Flat Kit in Universal RP (we've included the URP vers
 
 After that, you will need to use a Universal RP Asset file, as this file lists the Renderers that, in their turn, list the Renderer Features (Image Effects). You can either use the one that comes with Flat Kit, called ***[Flat Kit] Example Settings URP***, or you can create your own URP asset file to work with.
 
-* Right click on Assets (in Project tab) ▶︎ Create ▶︎ Rendering ▶︎ URP ▶︎ Pipeline Asset.
+* Right click on **Assets** (in Project tab) ▶︎ **Create** ▶︎ **Rendering** ▶︎ **URP** ▶︎ **Pipeline Asset**.
 
 Once you do it, the _Asset file_ and a _Renderer_ (formerly known _Forward Renderer_) are created.
 
 You can set the _Asset file_ manualy or using the Flat Kit's [Auto Load Pipeline Asset script](/additional-scripts/#auto-load-pipeline-asset).
 
-* **Manual Step 1.** Navigate to *Project Settings* -> *Graphics* and insert **[FlatKit] Example Settings URP** file into *Scriptable Rendering Pipeline Setting* field.
+* **Manual Step 1.** Navigate to *Project Settings* ▶︎ *Graphics* and insert **[FlatKit] Example Settings URP** file into *Scriptable Rendering Pipeline Setting* field.
 If you are using your settings file instead, please make sure to have *Opaque texture* and *Depth texture* checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
 ![Flat Kit import instructions - Step 5](/FlatKit_Manual_Images/manual_import_instructions_6.png)
 
@@ -47,7 +47,8 @@ To enable outline and fog, select the ForwardRendererConfig and add the 'outline
 The order of the effects can be managed like this.
 
 ![Managing the order of renderer layers in URP](/FlatKit_Manual_Images/URP-renderer-layers-01.png)
-> Managing the order of renderer layers in URP
+{.:image-caption}
+Managing the order of renderer layers in URP
 
 It's a default URP thing. It is worth noting that for Outlines we made an option to choose the order of Renderer Events within Outline Image Effect interface. Please, refer to the corresponding chapter of this manual, [Outline Image Effect](/image-effects/#outline-image-effect).
 
@@ -55,9 +56,10 @@ It's a default URP thing. It is worth noting that for Outlines we made an option
 
 We use PPv2 in our demo scenes for additional image effects. To enable these additional effects you need to:
 
-Go to Assets (in Project tab) ▶︎ Universal Rendering Pipeline asset ▶︎ go to Inspector tab ▶︎ Post-processing Feature Set ▶︎ select Post Processing V2 from the drop-down.
+Go to **Assets** (in Project tab) ▶︎ **Universal Rendering Pipeline asset** ▶︎ go to **Inspector** tab ▶︎ **Post-processing Feature Set** ▶︎ select **Post Processing V2** from the drop-down.
 
 Enable the Post Processing flat on the camera inspector:
 
 ![Camera properties. How to enable Post-processing v.2](/FlatKit_Manual_Images/enable-post-processing-camera.png)
-> Camera properties. How to enable Post-processing v.2
+{.:image-caption}
+Camera properties. How to enable Post-processing v.2
