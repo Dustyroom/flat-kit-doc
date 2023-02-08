@@ -88,7 +88,10 @@ You can make a, well, specular (glare) with this parameter. Also it can be used 
 
 #### Rim
 
-Rim was designed as one of the ways to make a specific effect of a color 'wrapping' from behind the object. In some cases it can remind an outline effect.
+Rim was designed as one of the ways to make a specific effect of a color 'wrapping' from behind the object (a fresnel effect, in a nutshell). In some cases it can remind an outline effect.
+
+Please, note that the object has to have curvature. A completely flat object wil be completely included in the rim or completely not included, depending on the angle of view.
+{: .notice--warning}
 
 * **Rim Color** selects the color of the parameter. It works in HDR.
 * **Light Align** parameter rotates the rim.
@@ -177,7 +180,7 @@ As an extra step, to clean up the result a bit, you go to the material and incre
 {:.image-caption}
 Using the _Depth Offset_ parameter on the _Stylized Surface_ shader to clean up the result
 
-Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. This method is called **Inverted hull**, and there are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with very fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
+Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. This method is called **Inverted hull**, when the vertices of a model are moved along their normals in the image space. There are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with very fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
 {: .notice--warning}
 
 Also, to remedy the gaps issue, you can try using the [Scale parameter](/stylized-surface/#the-outline-part-of-the-stylized-surface-shader-allows-you-to-ad/) of the Outline parameter. By keeping the **Width** low and increasing the **Scale** you can get rid of the gaps. But this is not a perfect solution, as it may make the outline look a bit displaced.
@@ -334,7 +337,7 @@ The following are the color field names for manipulation via the code for tweeni
 * `_ColorGradient`: the gradient color used along with the `_BaseColor` parameter when *“Enable Height Color”* feature is active
 * The full list of parameters is at the top of the file `Assets/FlatKit/Shaders/StylizedSurface/StylizedSurface.shader`.
 
-> **NOTE.** The outline toggle is implemented as a [shader keyword](https://docs.unity3d.com/Manual/shader-keywords.html), so unfortunately it can't be toggled at runtime. However, you can enable the outline in the material inspector and toggle its visibility in code by setting the outline width (0 will visually disable the outline). Or, you can create two identical materials with the only difference being the outline toggle, and switch between these materials at runtime with `renderer.material = myMaterial`.
+**NOTE.** The outline toggle is implemented as a [shader keyword](https://docs.unity3d.com/Manual/shader-keywords.html), so unfortunately it can't be toggled at runtime. However, you can enable the outline in the material inspector and toggle its visibility in code by setting the outline width (0 will visually disable the outline). Or, you can create two identical materials with the only difference being the outline toggle, and switch between these materials at runtime with `renderer.material = myMaterial`.
 {: .notice}
 
 ## Stylized Surface Cutout Shader
