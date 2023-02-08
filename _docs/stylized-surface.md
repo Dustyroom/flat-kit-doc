@@ -339,7 +339,9 @@ The following are the color field names for manipulation via the code for tweeni
 
 ## Stylized Surface Cutout Shader
 
-> **NOTE:** '*Stylized Surface Cutout*' shader has been deprecated in Flat Kit 2.1.2 for Universal RP version. Because URP supports transparency by default, there's no need for this separate shader in URP. The *Stylized Surface* and *Stylized Surface with Outline* shaders can do everything *Stylized Surface Cutout* could — using *Rendering options* part of the shaders in the bottom of the interface. There you can find an option to set the shading in transparency mode (*Surface Type* drop down menu ▶︎ *Transparent*. The default type is *Opaque*) '*Stylized Surface Cutout*' is still available in Built-In RP version.
+**NOTE:** '*Stylized Surface Cutout*' shader has been deprecated in Flat Kit 2.1.2 for Universal RP version. Because URP supports transparency by default, there's no need for this separate shader in URP. The *Stylized Surface* and *Stylized Surface with Outline* shaders can do everything *Stylized Surface Cutout* could — using [*Rendering options*](/stylized-surface/#rendering-options/) part of the shaders in the bottom of the interface. There you can find an option to set the shading in transparency mode (*Surface Type* drop down menu ▶︎ *Transparent*. The default type is *Opaque*).
+![](/FlatKit_Manual_Images/flat-kit-stylized-surface-surface-type-dropdown.png)
+'*Stylized Surface Cutout*' is still available in Built-In RP version.
 {: .notice--warning}
 
 This is a version of *Stylized Surface* shader with an option to treat alpha as transparency on a texture. The rest of the shader is the same.
