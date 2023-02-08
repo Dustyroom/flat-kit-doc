@@ -15,7 +15,7 @@ This is a simple method to fill the sky of your scene.
 {:.notice--success}
 
 
-![Gradient Skybox. Inspector panel interface](/FlatKit_Manual_Images/gradient-skybox-interface.png){:.image-simple}
+![Gradient Skybox. Inspector panel interface](/FlatKit_Manual_Images/gradient-skybox-interface.png){:.image-fancy}
 
 {:.image-caption}
 Gradient Skybox. Inspector panel interface

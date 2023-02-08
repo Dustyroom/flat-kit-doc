@@ -26,14 +26,14 @@ The parameters of the *LightPlane* shader are:
 
 * *UV Fade X* controls transparency on the sides along X axis of the plane/mesh (see pic below);
 
-![LightPlane — UV Fade X parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-x.png{: .image-fancy}
+![LightPlane — UV Fade X parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-x.png){: .image-fancy}
 
 {:.image-caption}
 *LightPlane* — *UV Fade X* parameter
 
 * *UV Fade Y* controls transparency on the sides along Y axis of the plane/mesh (see pic below);
 
-![LightPlane — UV Fade Y parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-y.png{: .image-fancy}
+![LightPlane — UV Fade Y parameter](/FlatKit_Manual_Images/lightplane-uv-fade-dist-y.png){: .image-fancy}
 
 {:.image-caption}
 *LightPlane* — *UV Fade Y* parameter

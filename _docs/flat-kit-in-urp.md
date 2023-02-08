@@ -23,10 +23,10 @@ You can set the _Asset file_ manualy or using the Flat Kit's [Auto Load Pipeline
 
 * **Manual Step 1.** Navigate to *Project Settings* ▶︎ *Graphics* and insert **[FlatKit] Example Settings URP** file into *Scriptable Rendering Pipeline Setting* field.
 If you are using your settings file instead, please make sure to have *Opaque texture* and *Depth texture* checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
-![Flat Kit import instructions - Step 5](/FlatKit_Manual_Images/manual_import_instructions_6.png){:.image-simple}
+![Flat Kit import instructions - Step 5](/FlatKit_Manual_Images/manual_import_instructions_6.png){:.image-fancy}
 
 * **Manual Step 2.** Please do this in *Quality* tab's *Rendering* field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file. Do it for all Quality levels.  
-![Flat Kit import instructions - Step 6](/FlatKit_Manual_Images/manual_import_instructions_7.png){:.image-simple}
+![Flat Kit import instructions - Step 6](/FlatKit_Manual_Images/manual_import_instructions_7.png){:.image-fancy}
 
 <!-- Here's a video showing setting it up.  
 
@@ -46,7 +46,7 @@ To enable outline and fog, select the ForwardRendererConfig and add the 'outline
 
 The order of the effects can be managed like this.
 
-![Managing the order of renderer layers in URP](/FlatKit_Manual_Images/URP-renderer-layers-01.png){:.image-simple}
+[![Managing the order of renderer layers in URP](/FlatKit_Manual_Images/URP-renderer-layers-01.png)](/FlatKit_Manual_Images/URP-renderer-layers-01.png){:.image-fancy}
 
 {:.image-caption}
 Managing the order of renderer layers in URP
@@ -61,7 +61,7 @@ Go to **Assets** (in Project tab) ▶︎ **Universal Rendering Pipeline asset** 
 
 Enable the Post Processing flat on the camera inspector:
 
-![Camera properties. How to enable Post-processing v.2](/FlatKit_Manual_Images/enable-post-processing-camera.png){:.image-simple}
+![Camera properties. How to enable Post-processing v.2](/FlatKit_Manual_Images/enable-post-processing-camera.png){:.image-fancy}
 
 {:.image-caption}
 Camera properties. How to enable Post-processing v.2

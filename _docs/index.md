@@ -44,5 +44,5 @@ That’s why we’ve made a demo scene for each shader and effect. It’s a good
 ![Flat Kit structural view chart](FlatKit_Manual_Images/FlatKit-Structure-Chart.png)
 
 {:.image-caption}
-Flat Kit structural view chart.
+Flat Kit structural view chart
 
