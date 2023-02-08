@@ -121,7 +121,7 @@ Although *Rim* option is creatively useful and sometimes can remind an outline e
 
 #### Height Gradient
 
-This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is global (absolute) per material, it doesn't depend on object's boundaries. If you would like to make a relative gradient (for instance, each object holding one material to contain an entire gradient within itself), duplicate the material and adjust the height gradient. Alternatively, you can use a *Curve* mode of *Stylized Surface*.
+This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is global (absolute) per material, it doesn't depend on object's boundaries. If you would like to make a relative gradient (for instance, each object holding one material to contain an entire gradient within itself), duplicate the material and adjust the height gradient. Alternatively, you can use a [Curve mode](/stylized-surface/#cel-shading-mode/) of *Stylized Surface shader*.
 
 ![Height Gradient. Inspector interface](/FlatKit_Manual_Images/gradient_height_parameters.png){:.image-simple}
 
@@ -133,7 +133,7 @@ This effect overlays a gradient from opaque selected color to transparent color 
 * **Size** determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.
 * **Gradient Angle** rotates the gradient.
 
-A bit more about the nature and use of *Height Gradient* is covered in the [*‘Terrain’ Shader*](#terrain-shader) section of this manual.
+A bit more about the nature and use of *Height Gradient* is covered in the [Terrain Shader](/terrain/) chapter.
 
 #### Enable Vertex Colors
 
@@ -185,6 +185,9 @@ Using the _Depth Offset_ parameter on the _Stylized Surface_ shader to clean up 
 
 Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. This method is called **Inverted hull**, and there are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with very fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
 {: .notice--warning}
+
+Also, to remedy the gaps issue, you can try using the [Scale parameter](/stylized-surface/#the-outline-part-of-the-stylized-surface-shader-allows-you-to-ad/) of the Outline parameter. By keeping the **Width** low and increasing the **Scale** you can get rid of the gaps. But this is not a perfect solution, as it may make the outline look a bit displaced.
+{: .notice--success}
 
 ### The Additional Parameters of the Shader
 
