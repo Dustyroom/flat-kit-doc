@@ -80,7 +80,7 @@ Outline Image Effect
 # Tree Island
 *Tree Island* scene is a showcase of a more cartoony use case. Imagine a 3d-platform game with such a look. Or any other arcade game.
 
-![](/Screenshots/IslandWithTrees-Scene.png){: .image-fancy }
+[![](/Screenshots/IslandWithTrees-Scene.png)](/Screenshots/IslandWithTrees-Scene.png){: .image-fancy }
 
 # Room
 *Room*. We just had to include a room.
@@ -113,7 +113,7 @@ Cars scene — Set 4
 # Normal Map Tree
 An example of [normal maps](/stylized-surface/#normal-map-to-make-an-impression-of-a-relatively-low-poly-mesh-h) application of [Stylized Surface shader](/stylized-surface/).
 
-![](/Screenshots/NormalMapsTree%20-%20Scene.png){: .image-fancy }
+[![](/Screenshots/NormalMapsTree%20-%20Scene.png)](/Screenshots/NormalMapsTree%20-%20Scene.png){: .image-fancy }
 
 # Ocean Water
 This is a demo scene showcasing the [Water shader](/water/) in a way the game would look like. A non-toon-shading application for [Stylized Surface shader](/stylized-surface/) is showed in this scene, too. You can choose various water looks in the Hierarchy tab by switching different Water objects on.

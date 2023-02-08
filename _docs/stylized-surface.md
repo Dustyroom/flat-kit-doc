@@ -109,7 +109,7 @@ Variety of uses of *Rim* parameter alone on Suzanne the Blender Monkey. Interfac
 
 Although *Rim* option is creatively useful and sometimes can remind an outline effect, there are two more obvious ways to add an outline using Flat Kit: to use [Stylized Surface with Outline](#stylized-surface-with-outline-shader) shader and/or to use [Outline Image Effect](/image-effects/#outline-image-effect) camera component in Built-In RP/Forward Renderer's Renderer Feature in URP. We’ll talk about both of them later in this manual.
 
-> **TIP.** Animate Cel layer size, Specular size or Rim size — to get a neat transition effect.
+**TIP.** Animate Cel layer size, Specular size or Rim size — to get a neat transition effect.
 {:.notice--success}
 
 #### Height Gradient
@@ -165,14 +165,14 @@ Gaps are visible
 
 In the Import Settings of the mesh, please, find the _Normals_ parameter and change it from **Import** to **Calculate**. Then, drag the _Smoothing Angle_ slider to the right. By doing so, you make the mesh smooth instead of sharp. The more you move this control to the right the bigger angle Unity will expect to consider it as sharp. Click _Apply_. The gaps should be gone.
 
-[![Smoothened normals in the Import Settings](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)
+[![Smoothened normals in the Import Settings](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png){:.image-fancy}
 
 {:.image-caption}
 No gaps
 
 As an extra step, to clean up the result a bit, you go to the material and increase _Depth Offset_ a bit. This will 'push' the outlines away from the camera.
 
-[![Depth Offset parameter](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)
+[![Depth Offset parameter](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png){:.image-fancy}
 
 {:.image-caption}
 Using the _Depth Offset_ parameter on the _Stylized Surface_ shader to clean up the result
