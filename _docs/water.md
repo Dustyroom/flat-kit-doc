@@ -87,7 +87,7 @@ Water Gradient chart
 
 ### Crest
 
-{% video url=/FlatKit_Manual_Videos/water-pool-waterobject01-rec.mp4 %}
+{% video url=/FlatKit_Manual_Videos/water-pool-waterobject01-rec.mp4 %}{: .image-fancy}
 
 Crest parameter colors the tips of the waves.
 

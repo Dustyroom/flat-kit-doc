@@ -15,12 +15,6 @@
   crossorigin="anonymous"></script>
 <script>
   $(function() {
-    $(".page__content > p > img").each(function(idx, el) { 
-      var $el = $(el);
-      var uniqueText = $el.attr("alt") ? $el.attr("alt") : idx;
-      var idText = anchors.urlify("img-" + uniqueText); 
-      $el.parent().attr("id", idText); 
-    });
     anchors.options.visible = 'hover';
     anchors.options.placement = 'left';
     anchors.add('.page__content > p');
