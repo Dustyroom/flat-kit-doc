@@ -15,8 +15,7 @@ search_full_content: true
 analytics:
   provider: "google-gtag"
   google:
-   tracking_id: UA-53337407-20
-   anonymize_ip: false # default
+    tracking_id: G-SK58XH05JP
 
 plugins:
   - jekyll-sitemap
