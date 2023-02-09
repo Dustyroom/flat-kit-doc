@@ -19,7 +19,7 @@ In the *Valley* scene, please note that although the ground is made with Unity n
 using the terrain system.
 {: .notice--info}
 
-[![](/Screenshots/Valley1.png)](/Screenshots/Valley1.png){: .image-fancy }
+[![](/Screenshots/Valley1.png){: .image-fancy }](/Screenshots/Valley1.png)
 
 # Wanderer
 *Wanderer* scene is environmental as well.
@@ -142,4 +142,3 @@ This scene is in Universal RP only.
 {: .notice--warning}
 
 [![](/Screenshots/Water%20Vessels%20-%20Various%20Water%20Presets.png)](/Screenshots/Water%20Vessels%20-%20Various%20Water%20Presets.png){: .image-fancy }
-
