@@ -7,12 +7,16 @@ discord: https://discord.gg/kfumMFahBj
 twitter_username: _dstrm
 email: info@dustyroom.com
 show_downloads: false
-google_analytics: UA-53337407-20
-
 logo: "FlatKit_Manual_Images/flat_kit_manual_header.png"
 
 search: true
 search_full_content: true
+
+analytics:
+  provider: "google-gtag"
+  google:
+   tracking_id: UA-53337407-20
+   anonymize_ip: false # default
 
 plugins:
   - jekyll-sitemap
