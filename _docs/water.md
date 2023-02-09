@@ -42,11 +42,11 @@ Water color source dropdown
 {:.image-caption}
 Water color source - linear
 
-If *Linear* color source is chosen, two exclusive to this mode parameters appear to select colors:
+  If *Linear* color source is chosen, two exclusive to this mode parameters appear to select colors:
 
-**Shallow.** Color at the top of the water.
+  * **Shallow.** Color at the top of the water.
 
-**Deep.** Color below the surface.
+  * **Deep.** Color below the surface.
 
 * **Gradient Texture.** Use this one if you are looking for something fancy. You can create a depth gradient consisting of several colors. Using a Gradient Editor ramp, you can add up to 8 color stops onto the ramp. Now you have a *Shallow* color, *Deep* color and anything you want in between (see *Pool* demo scene).
 
@@ -55,15 +55,14 @@ If *Linear* color source is chosen, two exclusive to this mode parameters appear
 {:.image-caption}
 Water color source - gradient. Clicking on the color window opens the Gradient Editor
 
-When you click on the white color field, the Gradient Editor will show up.
+  When you click on the white color field, the Gradient Editor will show up.
 
 ![Gradient Editor](/FlatKit_Manual_Images/water-gradient-editor.png){: .image-fancy}
 
 {:.image-caption}
 Gradient Editor. Edit the gradient and close the window, then save the texture
 
-After you finished editing the color gradient, click the 'Export' button to save the texture somewhere on the disk. We recommend to name the textures with the names beginning on something like 'water...' or 'awesome_gradient...' because later you'll have these textures stacked up one below another in the texture selection window, and it will be much quicker to scroll through them.
-When you have your texture saved, the material will be instantly filled with this gradient.
+  After you finished editing the color gradient, click the 'Export' button to save the texture somewhere on the disk. We recommend to name the textures with the names beginning on something like 'water...' or 'awesome_gradient...' because later you'll have these textures stacked up one below another in the texture selection window, and it will be much quicker to scroll through them. When you have your texture saved, the material will be instantly filled with this gradient.
 
 ![Export Button](/FlatKit_Manual_Images/water-gradient-export-button.png){: .image-fancy}
 

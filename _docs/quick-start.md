@@ -15,7 +15,7 @@ For URP, it is important that you created the project in URP initially, as oppos
 
 On the 3D models side, it’s important that you decide whether you would like making normals ‘smooth’ or 'sharp' for your meshes in a 3D editor, as the result will be different in either case. If you import someone else's models and can’t edit the object in 3D editor, at least try to calculate normals in Unity — in the import settings of the model. The shaders should work regardless, but sometimes the difference can be obvious, especially on objects with rounded corners.  
 
-**Note.** Our demos were created in **Linear color space** (a setting found in _Edit_ ▶︎ _Project Settings_). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
+**NOTE.** Our demos were created in **Linear color space** (a setting found in _Edit_ ▶︎ _Project Settings_). We recommend switching to it if your project is in **Gamma color space**, although this is entirely optional.  
 {: .notice--info}
 
 **Here's a video showing how to import a Universal RP (URP) version of Flat Kit in a Universal RP project.**

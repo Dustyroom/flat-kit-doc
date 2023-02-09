@@ -252,7 +252,7 @@ Unity Built-in Shadows mode menu. Inspector interface
 * **Sharpness** defines how blurred or crisp the shadow edge is.
 * **Shadow Occlusion** masks received Unity shadows in areas where normals face away from the light. **Useful to remove shadows that 'go through' objects.**
 
-**NOTE.** *Shadow Occludion* parameter is available in the URP version of Flat Kit only.
+**NOTE.** *Shadow Occlusion* parameter is available in the URP version of Flat Kit only.
 {: .notice--warning}
 
 ![Unity Built-in Shadows in Color mode. Inspector interface](/FlatKit_Manual_Images/unity_built_in_shadows_mode_color_parameters.png){:.image-fancy}
@@ -289,7 +289,7 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 ![‘Normal Map Tree’ demo scene, a tree without and with a normal map](/FlatKit_Manual_Images/normalmap-trees.png){:.image-fancy}
 
 {:.image-caption}
-‘Normal Map Tree’ demo scene, a tree without and with a normal map
+[Normal Map Tree](/demo-scenes/#normal-map-tree/) Demo scene, a tree without and with a normal map
 
 **Emission** Enables Emission map part of the shader.
 
