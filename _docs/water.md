@@ -87,7 +87,7 @@ Water Gradient chart
 
 ### Crest
 
-<video width="100%" height="100%" controls="controls" autoplay>
+<video width="100%" height="100%" controls="controls">
   <source src="/FlatKit_Manual_Images/water-crest-video.mp4" type="video/mp4">
 </video>
 
