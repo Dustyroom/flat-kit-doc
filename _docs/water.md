@@ -186,13 +186,12 @@ We included a component called *Buoyancy*. The *Water* shader deforms the water 
 
 **TIP.** Place the plane somewhere behind or in front of your scene objects. Place the *Water* shader on it. Set *Clearness* to max, set
 foam *scale* to very high, lower the *frequency*, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
+<video autoplay="autoplay" loop="loop" width="600" controls="controls">
+  <source src="/FlatKit_Manual_Videos/water-type-scene-noise.mp4" type="video/mp4">
+ </video>
 {:.notice--success}
 
 [![](/FlatKit_Manual_Images/water-preset-4.png)](/FlatKit_Manual_Images/water-preset-4.png){: .image-fancy}
 
 {:.image-caption}
 [Ocean Water Demo scene](/demo-scenes/#ocean-water/) - preset '4'
-
-<video autoplay="autoplay" loop="loop" width="500" controls="controls">
-  <source src="/FlatKit_Manual_Videos/water-type-scene-noise.mp4" type="video/mp4">
- </video>
