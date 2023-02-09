@@ -67,11 +67,12 @@ To change the parameters of the outlines then, please:
 
 * *Min Depth Threshold* and *Max Depth Threshold* determine the range of depth differences where outline should be applied. Lower values draw lines “inside” the scene resulting in a more beveled image. Higher values have more flat effect.
 * *Min Normals Threshold* and *Max Normals Threshold* determine the range of normals edges to be outlined. Lower values increase the amount of affected normals, leading to more stroked effect. Higher values decrease the amount of affected normals, leading to flatter look. Basically, it determines min and max angles of the normals for the outlines to occur.
-* *Min* and *Max Color Thresholds* let you set the least and the strongest differences in color of the mesh to make the outline appear. This feature is URP only.
-* *Outline Only* renders the outlines without meshes themselves, making it a kind of wireframe renderer. This feature is URP only.
+* *Min* and *Max Color Thresholds* let you set the least and the strongest differences in color of the mesh to make the outline appear. The higher the value, the more contrast is needed to make the outline appear. The lower the value, the less contrast is needed to make the outline appear.
 * *Render Event* This is one quite powerful feature available on the interface. It lets you choose a stage at which the outlines are applied. It allows to apply outlines over the transparent objects. If you want to exclude transparent objects like Water or UI elements, set this to 'Before Transparent'. Also, it allows you to stack the *Outline Image Effect* with other post effects. This feature is URP only.
+* *Outline Only* If enabled, it will render only the outlines. This parameter is URP only.
+* *Apply In Scene View* Whether the effect should be applied in the Scene view as well as in the Game view. Please, keep in mind that Unity always renders the scene with the default Renderer settings of the URP config.
 
-You'll need to *press 'Play'* to see the effect of *Render Event*.
+In some cases you'll need to *press 'Play'* to see the effect of *Render Event*.
 
 ![Outline Image Effect Render Event list](/FlatKit_Manual_Images/outline-image-effect-render-events.png){: .image-fancy style="width: 500px;"}
 
