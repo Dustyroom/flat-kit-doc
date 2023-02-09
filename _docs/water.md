@@ -4,11 +4,14 @@ permalink: /water/
 toc: true
 ---
 
+![](/FlatKit_Manual_Images/water-banner-1.png){: .image-fancy}
+
 Water shader works in URP only. There is no Built-In version of a Water shader in Flat Kit.
 {: .notice--warning}
 
 Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird things with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated at first, it is intuitive and has helping tooltips on the parameters.
 
+Please, look at the [Ocean Water](/demo-scenes/#ocean-water/), [Pool](/demo-scenes/#pool/) and [Water Vessels](/demo-scenes/#water-vessels/) demo scenes to see what you can do with it.
 
 ![Water shader interface](/FlatKit_Manual_Images/water-shader-interface.png){: .image-fancy}
 
@@ -16,6 +19,8 @@ Water shader lets you create a stylized water surface. That's is primary functio
 *Water* shader interface
 
 First of all, you'll need a surface to place a material with *Water* shader on. A plane with vertex grid will do fine. The more high resolution the water mesh is the smoother and well-defined the waves will be. For extra interest you can slightly displace the vertices while editing the mesh. With Flat Kit you get a few such models.
+
+
 
 The controls are grouped into the logical sections. Let's float through the parameters of the shader.
 
@@ -184,4 +189,7 @@ foam *scale* to very high, lower the *frequency*, as well as opacity. With fine-
 grain effect.
 {:.notice--success}
 
+[![](/FlatKit_Manual_Images/water-preset-4.png)](/FlatKit_Manual_Images/water-preset-4.png){: .image-fancy}
 
+{:.image-caption}
+Water Demo scene - preset '4'
