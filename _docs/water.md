@@ -11,7 +11,7 @@ Water shader works in URP only. There is no Built-In version of a Water shader i
 
 Water shader lets you create a stylized water surface. That's is primary function. If you feel adventurous, you can make many other wobbling, glittering, weird things with it. It has a lot of parameters to fine-tune the look you want. Although this shader may look a bit complicated at first, it is intuitive and has helping tooltips on the parameters.
 
-Please, look at the [Ocean Water](/demo-scenes/#ocean-water/), [Pool](/demo-scenes/#pool/) and [Water Vessels](/demo-scenes/#water-vessels/) demo scenes to see what you can do with it.
+Please, look at the [Ocean Water](/demo-scenes/#ocean-water), [Pool](/demo-scenes/#pool) and [Water Vessels](/demo-scenes/#water-vessels) demo scenes to see what you can do with it.
 
 ![Water shader interface](/FlatKit_Manual_Images/water-shader-interface.png){: .image-fancy}
 
