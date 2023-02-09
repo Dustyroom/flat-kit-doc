@@ -161,21 +161,21 @@ So, here is one of the ways to get rid of the outline gaps.
 
 Here we see the gaps in the outline on the hard edges.
 
-[![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png){:.image-fancy}
+[![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png){: .image-fancy }](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png)
 
 {:.image-caption}
 Gaps are visible
 
 In the Import Settings of the mesh, please, find the _Normals_ parameter and change it from **Import** to **Calculate**. Then, drag the _Smoothing Angle_ slider to the right. By doing so, you make the mesh smooth instead of sharp. The more you move this control to the right the bigger angle Unity will expect to consider it as sharp. Click _Apply_. The gaps should be gone.
 
-[![Smoothened normals in the Import Settings](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png){:.image-fancy}
+[![Smoothened normals in the Import Settings](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png){: .image-fancy }](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)
 
 {:.image-caption}
 No gaps
 
 As an extra step, to clean up the result a bit, you go to the material and increase _Depth Offset_ a bit. This will 'push' the outlines away from the camera.
 
-[![Depth Offset parameter](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png){:.image-fancy}
+[![Depth Offset parameter](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png){: .image-fancy }](/FlatKit_Manual_Images/outline-gaps-suzanne-3.png)
 
 {:.image-caption}
 Using the _Depth Offset_ parameter on the _Stylized Surface_ shader to clean up the result
@@ -208,7 +208,7 @@ Take the first image (below). At first, we turn down the *Intensity* to the very
 Then we change the color of Directional Light from white to red. It has no effect because Directional Light is too “weak” to fill the scene.
 After raising *Intensity* value back to “1” the scene is now lighter and has a red tint.
 
-[![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png)](/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png){:.image-fancy}
+[![Light Color Contribution at value 0.5. Changing intensity value and color of Directional Light](/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png){: .image-fancy }](/FlatKit_Manual_Images/lighting_2_color_contrib_0.5.png)
 
 {:.image-caption}
 *Light Color Contribution* at value 0.5. Changing *Intensity* value and color of Directional Light
@@ -216,14 +216,14 @@ After raising *Intensity* value back to “1” the scene is now lighter and has
 Once we change *Color Light Contribution* parameter to “0” (pic below), Directional light has no effect light-wise and color-wise. Changing *Intensity* parameter of Directional Light on the Inspector panel has no effect. Both sides of the picture are identical.
 This way you can achieve a flat look, in other words, the colors on the scene are exactly the same as you choose in the shader parameters.
 
-[![Light Color Contribution at value 0. Directional Light intensity at max and min values](/FlatKit_Manual_Images/lighting_1_color_contrib_0.png)](/FlatKit_Manual_Images/lighting_1_color_contrib_0.png){:.image-fancy}
+[![Light Color Contribution at value 0. Directional Light intensity at max and min values](/FlatKit_Manual_Images/lighting_1_color_contrib_0.png){: .image-fancy }](/FlatKit_Manual_Images/lighting_1_color_contrib_0.png)
 
 {:.image-caption}
 *Light Color Contribution* at value 0. Directional Light *Intensity* at max and min values
 
 Now, (on the pic below) we raise *Light Color Contribution* to the max value of “1”. If we set Directional Light *Intensity* parameter low, the scene theoretically has no source of direct light. Local lights now act as the only light sources. If the *Intensity* of Directional Light is at its maximum, it’s too hot now.
 
-[![Light Color Contribution at value 1. Changing intensity value of Directional Light](/FlatKit_Manual_Images/lighting_8.png)](/FlatKit_Manual_Images/lighting_8.png){:.image-fancy}
+[![Light Color Contribution at value 1. Changing intensity value of Directional Light](/FlatKit_Manual_Images/lighting_8.png){: .image-fancy }](/FlatKit_Manual_Images/lighting_8.png)
 
 {:.image-caption}
 *Light Color Contribution* at value 1. Changing *Intensity* value of Directional Light
@@ -322,7 +322,7 @@ Rendering options part of the Stylized Surface interface
 * **Surface Type** — The two options are _Opaque_ and _Transparent_.
   * **Blend Mode** — If **Transparent** _Surface Type_ is selected, the Blend Mode menu becomes available with the following Blend Mode options: Alpha, Premultiply, Additive and Multiply.
 * **Render Faces** — lets you choose between Front, Back or Both faces of the mesh to be rendered.
-* **Alpha Clipping** — Discards pixels based on the Albedo texture’s alpha channel. If enabled, the _Threshold_ parameter appears. 
+* **Alpha Clipping** — Discards pixels based on the Albedo texture’s alpha channel. If enabled, the _Threshold_ parameter appears.
   * **Threshold** — The minimum alpha in the Albedo texture to render a pixel, i.e. determines how soon the transparent portion is ‘transparent enough’ to be cut out.
 * **Enable GPU Instancing** — Uses GPU Instancing to render multiple copies of the mesh at once. More information in [Unity’s documentation](https://docs.unity3d.com/Manual/GPUInstancing.html) and in this doc [here](/stylized-surface/#gpu-instancing).
 
@@ -343,8 +343,8 @@ The following are the color field names for manipulation via the code for tweeni
 
 ## Stylized Surface Cutout Shader
 
-**NOTE:** '*Stylized Surface Cutout*' shader has been deprecated in Flat Kit 2.1.2 for Universal RP version ('*Stylized Surface Cutout*' is still available in Built-In RP version). Because URP supports transparency by default, there's no need for this separate shader in URP.  
-The *Stylized Surface* and *Stylized Surface with Outline* shaders can do everything *Stylized Surface Cutout* could — using [*Rendering options*](/stylized-surface/#rendering-options/) part of the shaders in the bottom of the interface. There you can find an option to set the shading in transparency mode (*Surface Type* drop down menu ▶︎ *Transparent*. The default type is *Opaque*).  
+**NOTE:** '*Stylized Surface Cutout*' shader has been deprecated in Flat Kit 2.1.2 for Universal RP version ('*Stylized Surface Cutout*' is still available in Built-In RP version). Because URP supports transparency by default, there's no need for this separate shader in URP.
+The *Stylized Surface* and *Stylized Surface with Outline* shaders can do everything *Stylized Surface Cutout* could — using [*Rendering options*](/stylized-surface/#rendering-options/) part of the shaders in the bottom of the interface. There you can find an option to set the shading in transparency mode (*Surface Type* drop down menu ▶︎ *Transparent*. The default type is *Opaque*).
 ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-surface-type-dropdown.png)
 {: .notice--warning}
 
