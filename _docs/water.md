@@ -192,4 +192,4 @@ grain effect.
 [![](/FlatKit_Manual_Images/water-preset-4.png)](/FlatKit_Manual_Images/water-preset-4.png){: .image-fancy}
 
 {:.image-caption}
-Water Demo scene - preset '4'
+[Ocean Water Demo scene](/demo-scenes/#ocean-water/) - preset '4'
