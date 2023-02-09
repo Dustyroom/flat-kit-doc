@@ -185,11 +185,14 @@ Use these parameters to control the optical distortion of the water.
 We included a component called *Buoyancy*. The *Water* shader deforms the water mesh, which in its turn moves the objects that have *Buoyancy* component on them. More info can be found in the [Buoyancy](/additional-scripts/#buoyancy) part of Additional Scripts section of this manual.
 
 **TIP.** Place the plane somewhere behind or in front of your scene objects. Place the *Water* shader on it. Set *Clearness* to max, set
-foam *scale* to very high, lower the *frequency*, as well as opacity. With fine-tuning, it is possible to achieve something like a film
-grain effect.
+foam *scale* to very high, lower the *frequency*, as well as opacity. With fine-tuning, it is possible to achieve something like a film grain effect.
 {:.notice--success}
 
 [![](/FlatKit_Manual_Images/water-preset-4.png)](/FlatKit_Manual_Images/water-preset-4.png){: .image-fancy}
 
 {:.image-caption}
 [Ocean Water Demo scene](/demo-scenes/#ocean-water/) - preset '4'
+
+<video autoplay="autoplay" loop="loop" width="830" height="611" controls="controls">
+  <source src="/FlatKit_Manual_Videos/water-type-scene-noise.mp4" type="video/mp4">
+ </video>
