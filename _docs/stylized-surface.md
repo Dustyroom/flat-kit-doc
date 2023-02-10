@@ -52,7 +52,7 @@ sure that only the used features are included in the build. More information on 
 This would be the color of your mesh (applicable to most cases, though you can make the shader's other parameters override or mask this main color, if you wish).
 
 **NOTE.** The flatness and actual representation of colors on the scene depend on the source of lighting in the scene. In the _Lighting_ panel ▶︎ _Environment_ tab, if you select _Color_ as the source of lighting and set _Ambient Color_ to black, the colors you choose inside the materials will look identically to those represented on the scene.  
-![](/FlatKit_Manual_Images/environment-lighting-color.png)
+![](/FlatKit_Manual_Images/environment-lighting-color.png){:.image-simple}
 {: .notice--info}
 
 #### Cel Shading Mode
@@ -68,7 +68,7 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
 * **Single.** This mode provides you with one cel layer of chosen color.
 
-  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-single.png){:.image-fancy width=50%}
+  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-single.png){:.image-fancy}
 
   * **Color Shaded** is the color of the cel. It is not an HDR parameter.
   * **Self Shading Size** is the size of the cel. Larger values mean larger size of the shadow. 
@@ -77,7 +77,7 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
 * **Steps.** Basically, you choose the shading color and number of steps to blend from main *Color* into the color you pick up in *Steps* mode.
   
-  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-steps.png){:.image-fancy width=50%}
+  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-steps.png){:.image-fancy}
   
   * **Color Shaded** is the color of the cel you'd like to blend to. It is not an HDR parameter.
   * **Number of Steps** is the number of steps to blend from main *Color* into the color you pick up in *Color Shaded* parameter.
@@ -87,7 +87,7 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
     The texture will appear in the _Cel steps_ parameter.
 
-    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-steps-mode.png){:.image-fancy width=50%}
+    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-steps-mode.png){:.image-fancy}
 
     {:.image-caption}
     *Steps* shading mode of Stylized Surface shader
@@ -95,7 +95,7 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
 * **Curve.** The gradient, interpolated transition from main *Color* to *Color shaded*.
 
-  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-curve.png){:.image-fancy width=50%}
+  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-curve.png){:.image-fancy}
 
 In order to get Steps and Curve modes to work — as soon as you have a number of steps (*Steps* mode) or curve shape (*Curve* mode) chosen — the shader will ask you to save its utility ramp texture somewhere on the disk. It will write the transition onto it. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
