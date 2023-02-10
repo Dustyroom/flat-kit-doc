@@ -135,6 +135,8 @@ This scene is in Universal RP only.
 
 [![](/Screenshots/Pool.png){: .image-fancy }](/Screenshots/Pool.png)
 
+{% include video.html url='/FlatKit_Manual_Videos/water-pool-waterobjects-presets.mp4' %}{: .image-fancy}
+
 # Water Vessels
 *Water Vessels* is an shows a few simple and more non-obvious [Water shader](/water/) parameters in a single scene. Having these materials, you can use them as starting points in you own projects.
 
