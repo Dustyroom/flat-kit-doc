@@ -26,7 +26,8 @@ The **additional** parameters are:
 
 * Advanced Lighting,
 * Unity Built-in Shadows,
-* Textures (Albedo, Normal, Emission).
+* Textures (Albedo, Normal, Emission),
+* Rendering Options.
 
 Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit
 the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes
@@ -50,28 +51,59 @@ sure that only the used features are included in the build. More information on 
 
 This would be the color of your mesh (applicable to most cases, though you can make the shader's other parameters override or mask this main color, if you wish).
 
+**NOTE.** The flatness and actual representation of colors on the scene depend on the source of lighting in the scene. In the _Lighting_ panel ▶︎ _Environment_ tab, if you select _Color_ as the source of lighting and set _Ambient Color_ to black, the colors you choose inside the materials will look identically to those represented on the scene.
+![](/FlatKit_Manual_Images/environment-lighting-color.png)
+{: .notice--info}
+
 #### Cel Shading Mode
 
-This is where you choose the style (mode) of your shading, the color of the shading, and other respective parameters of the modes. Depending on the mode you choose the parameters will look differently. So, let’s talk about modes.
+This is where you choose the style (mode) of your shading, the color of the shading and other parameters unique to the modes.
 
-* **None.** Use this to achieve a simple flat look or to get any other creative picture not involving cel shading, however, the following parameters of Stylized Surface shader will still let you do this, if you choose so.
-Note, the flatness and actual representation of colors on the scene depend on the lighting of the scene. In our demos we use Skybox as the source of lighting. Conveniently, there is a Dependency slider on the Lighting panel of Unity, which tells how much of the influence the Skybox provides. At minimum, there won’t be any shadows, as well as the colors will be identical to those you would choose in the *Color* block of the shader. At maximum, the Skybox heavily dictates what the colors will look like. For more natural (not necessarily realistic — but natural, organic look of the scene, it’s healthy to let Skybox influence the coloring of the scene).
+* **None.** Use this to achieve a simple flat look with the color picked in the _Color parameter_ above. If you'd like, you can still make the visuals look complex by adding _Extra Cel Layer_, _Specular_, _Rim_, _Outline_ etc (all described below), while being in _'None'_ _Cel Shading Mode_.
 
-* **Single.** This mode provides you with one shadow of chosen *Color*. *Self Shading Size* is the size of the cel. Larger values mean larger size of the shadow. *Shadow Edge Size* controls the sharpness of the cel. The lower the value — the sharper the cel. The higher the value — the more blurry is the shadow. *Localized Shading* is basically how condensed the shadow is. Higher values represent sharper cel.
+  You can select _None_ mode and enable _Extra Cel Layer_ (described below) to get a similar effect to _Single_ mode.
+  {: .notice--info}
+
+* **Single.** This mode provides you with one cel layer of chosen color.
+  * **Color Shaded** is the color of the cel. It is not an HDR parameter.
+  * **Self Shading Size** is the size of the cel. Larger values mean larger size of the shadow. 
+  * **Shadow Edge Size** controls the sharpness of the cel. The lower the value — the sharper the cel. The higher the value — the more blurry is the shadow. 
+  * **Localized Shading** is basically how condensed the shadow is. Higher values represent sharper cel.
 
 * **Steps.** Basically, you choose the shading color and number of steps to blend from main *Color* into the color you pick up in *Steps* mode.
+  * **Color Shaded** is the color of the cel you'd like to blend to. It is not an HDR parameter.
+  * **Number of Steps** is the number of steps to blend from main *Color* into the color you pick up in *Color Shaded* parameter.
+  * **Save Ramp Texture** is a button to save the texture of the gradient. This is useful if you'd like to use the same gradient in other shaders. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
-* **Curve.** The gradient, interpolated transition from one color to another.
+    After you click the _Save Ramp Texture_ button, you'll see the prompt to choose where in the project folder you'd like the texture to be saved. You can use it in other materials and shaders.
+
+    The texture will appear in the _Cel steps_ parameter.
+
+    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-steps-mode.png){:.image-simple}
+
+    {:.image-caption}
+    *Steps* shading mode of Stylized Surface shader
+
+
+* **Curve.** The gradient, interpolated transition from main *Color* to *Color shaded*.
 In order to get Steps and Curve modes to work — as soon as you have a number of steps (*Steps* mode) or curve shape (*Curve* mode) chosen — the shader will ask you to save its utility ramp texture somewhere on the disk. It will write the transition onto it. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
-![Curve shading mode of Stylized Surface shader](/FlatKit_Manual_Images/FK-StylizedSurface-Steps-Curves.png){:.image-simple}
+  * **Color Shaded** is the color of the cel you'd like to blend to. It is not an HDR parameter.
+  * **Save Ramp Texture** is a button to save the texture of the gradient. This is useful if you'd like to use the same gradient in other shaders. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
-{:.image-caption}
-*Steps* and *Curve* shading mode of Stylized Surface shader
+    After you click the _Save Ramp Texture_ button, you'll see the prompt to choose where in the project folder you'd like the texture to be saved. You can use it in other materials and shaders.
+
+    The texture will appear in the _Cel steps_ parameter.
+
+    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-curve-mode.png){:.image-simple}
+
+    {:.image-caption}
+    *Curve* shading mode of Stylized Surface shader
 
 #### Extra Cel Layer
 
-This is like another instance of *Single* mode of *Cel Shading Mode*. Works independently from the *main Cel Shading Mode*. It means, you can make main Cel shading as *None* (flat), and add an *Extra Cel Layer*. The result will be the same as if you would have used the *Single mode*. Or, make the *main Cel layer* and *Extra Cel Layer* almost identical, giving an *Extra Cel Layer* a darker color, and making it smaller. This would result in stepping, similar to Steps mode with 1 step. Classic toon.
+This is like another instance of *Single* mode of *Cel Shading Mode*. Works independently from the *'Single'* *Cel Shading Mode*. This means, you can set _Cel Shading Mode_ to *None* (flat), and add an *Extra Cel Layer*. The result will be the same as if you would have used the *Single mode*. 
+Or choose the *'Single' Cel Shading Mode* and make *Extra Cel Layer* almost identical to it, giving an *Extra Cel Layer* a darker color, and making it smaller. This would result in stepping, similar to _Steps Mode_ with 1 step. Classic toon.
 
 #### Specular
 
