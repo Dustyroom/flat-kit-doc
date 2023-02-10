@@ -61,16 +61,24 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
 * **None.** Use this to achieve a simple flat look with the color picked in the _Color parameter_ above. If you'd like, you can still make the visuals look complex by adding _Extra Cel Layer_, _Specular_, _Rim_, _Outline_ etc (all described below), while being in _'None'_ _Cel Shading Mode_.
 
+  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-none.png){:.image-fancy}
+
   You can select _None_ mode and enable _Extra Cel Layer_ (described below) to get a similar effect to _Single_ mode.
   {: .notice--info}
 
 * **Single.** This mode provides you with one cel layer of chosen color.
+
+  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-single.png){:.image-fancy}
+
   * **Color Shaded** is the color of the cel. It is not an HDR parameter.
   * **Self Shading Size** is the size of the cel. Larger values mean larger size of the shadow. 
   * **Shadow Edge Size** controls the sharpness of the cel. The lower the value — the sharper the cel. The higher the value — the more blurry is the shadow. 
   * **Localized Shading** is basically how condensed the shadow is. Higher values represent sharper cel.
 
 * **Steps.** Basically, you choose the shading color and number of steps to blend from main *Color* into the color you pick up in *Steps* mode.
+  
+  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-steps.png){:.image-fancy}
+  
   * **Color Shaded** is the color of the cel you'd like to blend to. It is not an HDR parameter.
   * **Number of Steps** is the number of steps to blend from main *Color* into the color you pick up in *Color Shaded* parameter.
   * **Save Ramp Texture** is a button to save the texture of the gradient. This is useful if you'd like to use the same gradient in other shaders. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
@@ -86,6 +94,9 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
 
 * **Curve.** The gradient, interpolated transition from main *Color* to *Color shaded*.
+
+  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-curve.png){:.image-fancy}
+  
 In order to get Steps and Curve modes to work — as soon as you have a number of steps (*Steps* mode) or curve shape (*Curve* mode) chosen — the shader will ask you to save its utility ramp texture somewhere on the disk. It will write the transition onto it. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
   * **Color Shaded** is the color of the cel you'd like to blend to. It is not an HDR parameter.
