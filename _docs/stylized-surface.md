@@ -51,7 +51,7 @@ sure that only the used features are included in the build. More information on 
 
 This would be the color of your mesh (applicable to most cases, though you can make the shader's other parameters override or mask this main color, if you wish).
 
-**NOTE.** The flatness and actual representation of colors on the scene depend on the source of lighting in the scene. In the _Lighting_ panel ▶︎ _Environment_ tab, if you select _Color_ as the source of lighting and set _Ambient Color_ to black, the colors you choose inside the materials will look identically to those represented on the scene.
+**NOTE.** The flatness and actual representation of colors on the scene depend on the source of lighting in the scene. In the _Lighting_ panel ▶︎ _Environment_ tab, if you select _Color_ as the source of lighting and set _Ambient Color_ to black, the colors you choose inside the materials will look identically to those represented on the scene.  
 ![](/FlatKit_Manual_Images/environment-lighting-color.png)
 {: .notice--info}
 
@@ -79,7 +79,7 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
     The texture will appear in the _Cel steps_ parameter.
 
-    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-steps-mode.png){:.image-simple}
+    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-steps-mode.png){:.image-fancy}
 
     {:.image-caption}
     *Steps* shading mode of Stylized Surface shader
@@ -90,12 +90,18 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 
   * **Color Shaded** is the color of the cel you'd like to blend to. It is not an HDR parameter.
   * **Save Ramp Texture** is a button to save the texture of the gradient. This is useful if you'd like to use the same gradient in other shaders. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
+  * **Shading curve** is the curve of the gradient. You can edit it by clicking on the curve and dragging the points. You can also add new points by clicking on the curve. You can remove points by clicking on them and pressing the _Delete_ button on your keyboard.
+
+    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-curve-editor.png){:.image-fancy}
+
+    {:.image-caption}
+    *Curve Editor* appears when you click on the curve
 
     After you click the _Save Ramp Texture_ button, you'll see the prompt to choose where in the project folder you'd like the texture to be saved. You can use it in other materials and shaders.
 
-    The texture will appear in the _Cel steps_ parameter.
+    The texture will appear in the _Ramp_ parameter.
 
-    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-curve-mode.png){:.image-simple}
+    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-curve-mode.png){:.image-fancy}
 
     {:.image-caption}
     *Curve* shading mode of Stylized Surface shader
