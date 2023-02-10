@@ -68,7 +68,7 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
 * **Single.** This mode provides you with one cel layer of chosen color.
 
-  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-single.png){:.image-fancy}
+  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-single.png){:.image-fancy width=50%}
 
   * **Color Shaded** is the color of the cel. It is not an HDR parameter.
   * **Self Shading Size** is the size of the cel. Larger values mean larger size of the shadow. 
@@ -77,7 +77,7 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
 * **Steps.** Basically, you choose the shading color and number of steps to blend from main *Color* into the color you pick up in *Steps* mode.
   
-  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-steps.png){:.image-fancy}
+  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-steps.png){:.image-fancy width=50%}
   
   * **Color Shaded** is the color of the cel you'd like to blend to. It is not an HDR parameter.
   * **Number of Steps** is the number of steps to blend from main *Color* into the color you pick up in *Color Shaded* parameter.
@@ -87,7 +87,7 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
     The texture will appear in the _Cel steps_ parameter.
 
-    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-steps-mode.png){:.image-fancy}
+    ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-steps-mode.png){:.image-fancy width=50%}
 
     {:.image-caption}
     *Steps* shading mode of Stylized Surface shader
@@ -95,8 +95,8 @@ This is where you choose the style (mode) of your shading, the color of the shad
 
 * **Curve.** The gradient, interpolated transition from main *Color* to *Color shaded*.
 
-  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-curve.png){:.image-fancy}
-  
+  ![](/FlatKit_Manual_Images/flat-kit-stylized-surface-shading-cel-mode-curve.png){:.image-fancy width=50%}
+
 In order to get Steps and Curve modes to work — as soon as you have a number of steps (*Steps* mode) or curve shape (*Curve* mode) chosen — the shader will ask you to save its utility ramp texture somewhere on the disk. It will write the transition onto it. The texture will appear red in the editor. This is because internally we use the R8 texture format for efficiency.
 
   * **Color Shaded** is the color of the cel you'd like to blend to. It is not an HDR parameter.
