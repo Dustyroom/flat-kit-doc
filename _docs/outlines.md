@@ -4,6 +4,8 @@ permalink: /outlines/
 toc: true
 ---
 
+![](/FlatKit_Manual_Images/flat-kit-outlines-banner-wanderer-2.png)
+
 Outline Image effect is, essentially, a contour on the objects on the scene. It can draw outer outlines, inner ones or both outer and inner outlines of the objects.
 
 ![Outline Forward Renderer in URP. Inspector interface.](/FlatKit_Manual_Images/outline-image-effect-interface.png){: .image-fancy style="width: 500px;"}
