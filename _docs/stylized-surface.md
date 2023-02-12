@@ -295,9 +295,11 @@ If the object has the ‘Receive Shadows’ option turned on in Mesh Renderer, y
 {:.image-caption}
 Unity Built-in Shadows mode menu. Inspector interface
 
-* **Mode** lets you choose the coloring and blending parameters for the built-in shadows. **None** mode turns the built-in shadow parameter off.
-**Multiply** mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'. **Color** mode lets you choose the color of the cast shadow. The blending mode is 'Normal'.
-* **Power** sets how visible the Unity built-in shadow is.
+* **Mode** lets you choose the coloring and blending parameters for the built-in shadows. 
+  * **None** mode turns the built-in shadow parameter off.
+  * **Multiply** mode lets you cast the shadows as in default material. You don’t have direct control over the color. You can change intensity and sharpness. The blending mode is 'Multiply'. 
+  * **Color** mode lets you choose the color of the cast shadow. The blending mode is 'Normal'. The opacity of the shadow is controlled by the alpha parameter in the color chooser.
+<!-- * **Power** sets how visible the Unity built-in shadow is. -->
 * **Sharpness** defines how blurred or crisp the shadow edge is.
 * **Shadow Occlusion** masks received Unity shadows in areas where normals face away from the light. **Useful to remove shadows that 'go through' objects.**
 
