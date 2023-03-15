@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 3.4.1 <small>(2023-03-14)</small>
+- Fixed a build error that occured in Unity 2021 on Android and iOS. Unexplicably, Unity uses two different URP versions in one Unity version.
+
 ## 3.4.0 <small>(2023-03-06)</small>
 - Added support for **dynamic lightmaps** and **debug display** in URP.
 - Improved **Terrain shader** compatibility with the **Forward+** rendering path.
