@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 3.5.0 <small>(2023-03-23)</small>
+- Added support for **Unity 2023.1** and **URP 15**.
+
 ## 3.4.1 <small>(2023-03-14)</small>
 - Fixed a build error that occured in Unity 2021 on Android and iOS. Unexplicably, Unity uses two different URP versions in one Unity version.
 
