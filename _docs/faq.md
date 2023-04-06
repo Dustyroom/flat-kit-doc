@@ -18,48 +18,58 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 #### Q. What is the difference between Flat Kit and Quibli?
 
-> **A.** Flat Kit is a set of tools for bread-and-butter toon shading end effects. Quibli was designed to be more open in regards to non-photorealistic stylization, while including the tools for the anime style works. The detailed comparison can be found [here](https://quibli.dustyroom.com/quibli-flat-kit/).
+> Flat Kit is a set of tools for bread-and-butter toon shading end effects. Quibli was designed to be more open in regards to non-photorealistic stylization, while including the tools for the anime style works. The detailed comparison can be found [here](https://quibli.dustyroom.com/quibli-flat-kit/).
 
 #### Q. Is it easy to use Flat Kit for a beginner?  
 
-> **A.** Yes, there's nothing complicated about it from the user perspective. Even though there are lots of parameters, they all have good default values and well-structured interface. Additionally, there are mouse-over tooltips with little hints on all parameters.
+> Yes, there's nothing complicated about it from the user perspective. Even though there are lots of parameters, they all have good default values and well-structured interface. Additionally, there are mouse-over tooltips with little hints on all parameters.
 
 #### Q. Is it possible to apply the Flat Kit look while using my own shaders?  
 
-> **A.** The cel shading ([Stylized Surface shader](/stylized-surface/), located in `Flat Kit\Stylized Surface`) is implemented as object shaders, which means that they are used on regular materials. However, the [Outline](/outline/) and [Fog](/fog/) are *image effects* applied globally (as camera components in the Built-In RP and as Render Features in URP).
+> The cel shading ([Stylized Surface shader](/stylized-surface/), located in `Flat Kit\Stylized Surface`) is implemented as object shaders, which means that they are used on regular materials. However, the [Outline](/outline/) and [Fog](/fog/) are *image effects* applied globally (as camera components in the Built-In RP and as Render Features in URP).
 
 #### Q. What platforms can I build for? What about VR?  
 
-> **A.** Flat Kit works in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile.
+> Flat Kit works in builds for all platforms listed in Unity Build settings, including VR, WebGL and mobile.
 
 #### Q. There are missing scripts in some demo scenes on the main camera
 
-> **A.** Unity has some camera scripts that are available only in a particular RP. Because we use the same scenes for the URP and Built-In RP demos in Flat Kit, it may appear that a script is missing from the camera in our demos. This warning is harmless and can be safely ignored, or you may remove the missing script from the camera.
+> Unity has some camera scripts that are available only in a particular RP. Because we use the same scenes for the URP and Built-In RP demos in Flat Kit, it may appear that a script is missing from the camera in our demos. This warning is harmless and can be safely ignored, or you may remove the missing script from the camera.
 
 #### Q. Does Flat Kit support URP? Why is the feature X is available in Universal RP but not in Built-In RP?  
 
-> **A.** Flat Kit supports URP as well as Built-In RP, although Built-In RP is not being developed after Flat Kit v.2.0. There are a few known limitations in URP, please see [FlatKit in URP chapter](/flat-kit-in-urp). As Built-In RP is not being actively developed by Unity anymore an it has its drawbacks, we continue to support it but we develop new great features only for URP, instead of supporting an obsolete technology. Please note, there is no HDRP version of Flat Kit yet.
+> Flat Kit supports URP as well as Built-In RP, although Built-In RP is not being developed after Flat Kit v.2.0. There are a few known limitations in URP, please see [FlatKit in URP chapter](/flat-kit-in-urp). As Built-In RP is not being actively developed by Unity anymore an it has its drawbacks, we continue to support it but we develop new great features only for URP, instead of supporting an obsolete technology. Please note, there is no HDRP version of Flat Kit yet.
 
 #### Q. Does Flat Kit support normal maps?  
 
-> **A.** Yes, it does. It is in [Normal map](/stylized-surface/#normal-map-to-make-an-impression-of-a-relatively-low-poly-mesh-h) section of the interface.
+> Yes, it does. It is in [Normal map](/stylized-surface/#normal-map-to-make-an-impression-of-a-relatively-low-poly-mesh-h) section of the interface.
 
 #### Q. Does Flat Kit support emission maps?  
 
-> **A.** Yes, here is info about [Emission map](/stylized-surface/#emission-enables-emission-map-part-of-the-shader) in the URP version only. There is no support for emission maps in Built-In RP version of Flat Kit.
+> Yes, here is info about [Emission map](/stylized-surface/#emission-enables-emission-map-part-of-the-shader) in the URP version only. There is no support for emission maps in Built-In RP version of Flat Kit.
 
 #### Q. I’ve got errors just after importing Flat Kit. Why?  
 
-> **A.** First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, [get in touch](/contact-details).
+> First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. If none of these helped, [get in touch](/contact-details).
 
 #### Q. What is the Shader Compilation Target Level of Flat Kit shaders?  
 
-> **A.** The object shaders target 3.5 (or es 3.0 and WebGL 2.0).
+> The object shaders target 3.5 (or es 3.0 and WebGL 2.0).
 
 #### Q. It takes very long to import Flat Kit into Unity in Built-in RP  
 
-> **A.** FlatKit Built-in RP uses shader variants to achieve high flexibility and best performance. This comes at a cost of increased time to import the asset and build the game binary. In URP importing is much shorter, so we encourage you to use the URP version of Flat Kit if possible. If you have to use Built-In RP, though, to speed things up, uncheck unneeded elements when importing the asset.
+>FlatKit Built-in RP uses shader variants to achieve high flexibility and best performance. This comes at a cost of increased time to import the asset and build the game binary. In URP importing is much shorter, so we encourage you to use the URP version of Flat Kit if possible. If you have to use Built-In RP, though, to speed things up, uncheck unneeded elements when importing the asset.
 
 #### Q. Does Flat Kit work with Post-processing stack v.2?  
 
-> **A.** Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See [Flat Kit in URP](/flat-kit-in-urp/) chapter for the details.
+>Yes, it does. The fog and outline image effects can be added on the same camera as the Post-processing component (Built-in Rendering Pipeline). Post-processing in URP is known as ‘Renderer Features’, so you don't have to install Post-Processing v.2. See [Flat Kit in URP](/flat-kit-in-urp/) chapter for the details.
+
+#### Q. Why is my build getting so many shader variants (and takes long to build)?
+
+>- Chances are you are using Universal RP earlier than v. 10.7. If you are, please update to the latest version of URP. This should reduce the number of shader variants significantly as newer versions have tools that use multi-compilation, which addresses this problem with variants and building times.
+>- Another one thing you can try doing is the following:
+Go to the Graphics settings. At the bottom you should see a 'Save to asset...' button. Use that to save a compiled shader variants file. Then select the newly created preset file into the 'Preloaded Shaders' list.
+If this won't help, delete this preset file, then on the Graphics panel, set 'Instancing Variants' to 'Strip All', create a new preset, add it to the list and try to build. The initial build can take longer than the following ones as the following builds won't be re-calculating it all again.
+>- There were reorts of the same problem (like [this one](https://github.com/Dustyroom/flat-kit-doc/issues/89)), when the cause on this issue was a 3rd party asset that turned on the compilation of all shader variants. If you have any 3rd party assets in your project, please check if they have such an option to temporarily deactivating/deleting them one by one.
+>- To make sure whether it is a problem with Flat Kit shaders, you can try creating a fresh project with only Flat Kit imported into it and building any of the demo scenes.
+>- If nothing helps, please [get in touch](/contact-details).
