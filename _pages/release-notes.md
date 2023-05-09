@@ -5,6 +5,14 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 3.6.0 <small>(2023-05-10)</small>
+- **BREAKING CHANGE**: We've improved the way base texture is used in stylized rendering. This may change the way your textured objects look.
+- Improved support for [Light Layers](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.0/manual/lighting/light-layers.html).
+- Improved support for [SSAO](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.0/manual/post-processing-ssao.html) in Deferred rendering path.
+- Fixed an issue with emission on textured renderers.
+- Improved the water shader inspector.
+- Improved shader variant striping for Stylized Surface, Terrain and Water shaders. This results in shorter build times and binary sizes.
+
 ## 3.5.0 <small>(2023-03-23)</small>
 - Added support for **Unity 2023.1** and **URP 15**.
 
