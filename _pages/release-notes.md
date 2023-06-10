@@ -5,6 +5,14 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 3.7.0 <small>(2023-06-10)</small>
+- Improved **shader variant stripping** of all shaders. This reduces build size and duration.
+- **Skybox shader**: added an option to remove color banding when using two similar colors.
+- Improved integration with URP **Forward+ rendering path**.
+- **Terrain**: Updated rendering layers with the latest version of URP.
+- Improved outline integration with the **Curved World asset**.
+- **URP decals** are now applied after lighting is calculated.
+
 ## 3.6.0 <small>(2023-05-10)</small>
 - **BREAKING CHANGE**: We've improved the way base texture is used in stylized rendering. This may change the way your textured objects look.
 - Improved support for [Light Layers](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.0/manual/lighting/light-layers.html).
