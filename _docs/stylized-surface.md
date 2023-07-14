@@ -333,7 +333,7 @@ A set of textures in Stylized Surface shader
 **TIP.** If you would like to have a material with a texture with a cel shading on top of this texture, you can set the *Stylized Surface* to *Single* **Cel Shading Mode**, set the base **Color** to white or light grey, set the  **Color Shaded** parameter to a bit darker one, set the Albedo texture (if your texture is not mostly white) to *Multiply* **Blending mode**, Texture Impact to the maximum value. You should get the model filled with a texture and with cel shadows combined.
 {:.notice--success}
 
-**Detail** Allows to use a second albedo texture. It is blended with the first one. The blending modes are: _Multiply_, _Add_, _Interpolate_. The last one is a special blending mode that blends the two textures based on the _Detail Impact_ parameter. If the _Detail Impact_ is 0, the texture is not visible. If the _Detail Impact_ is 1, the texture is fully visible. If the _Detail Impact_ is 0.5, the texture is blended 50/50 with the first texture.
+**Detail** Allows to use a second albedo texture. It is blended with the first one. The blending modes are: _Multiply_, _Add_, _Interpolate_.
 
 * **Texture selection slot** lets you pick a texture;
 * **Detail Color** picks the color of the second texture;
