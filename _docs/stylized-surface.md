@@ -313,29 +313,44 @@ Unity Built-in Shadows mode menu. Inspector interface
 
 #### Texture Maps
 
-If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you work with transparency in textures in Built-In RP, please use *Stylized Shader Cutout* shader. It can see alpha on the texture as transparency. URP supports alpha by default.
+If you’ve got a UV-unwrapped mesh, you can add a set of textures to it. The shader supports Albedo, Detail, Normal and Emission maps.
+
+If you work with transparency in textures in Built-In RP, please use *Stylized Shader Cutout* shader. It can use alpha on the texture as transparency. URP supports alpha by default.
+{: .notice--warning}
+
+
+![A set of textures in Stylized Surface shader](/FlatKit_Manual_Images/flat-kit-stylized-surface-textures.png){:.image-fancy}
+
+{:.image-caption}
+A set of textures in Stylized Surface shader
 
 **Albedo** Allows to use the albedo, or diffuse texture. In URP this slot supports transparent textures by default. Can be used together with *Alpha Clipping* parameter (explained below).
 
 * **Texture selection slot** lets you pick a texture;
-* **Tiling** repeats the texture along X and Y axis;
-* **Offset** shifts the texture along X and Y axis within the UV map of the mesh;
 * **Blending Mode** lets you choose between 'Multiply' or 'Add' blending modes. 'Multiply' Blending Mode multiplies the luminosity of the base color by the blend color. Multiplication by white produces no change, while the black pixels remain, making the material darker. 'Add' Blending Mode is a little bit different from 'Multiply' — blending with black color produces no change, while generally it brightens the bright colors.
 * **Texture Impact** controls how visible the texture is. Values to the left decrease visibility of the texture up until it is invisible.
 
 **TIP.** If you would like to have a material with a texture with a cel shading on top of this texture, you can set the *Stylized Surface* to *Single* **Cel Shading Mode**, set the base **Color** to white or light grey, set the  **Color Shaded** parameter to a bit darker one, set the Albedo texture (if your texture is not mostly white) to *Multiply* **Blending mode**, Texture Impact to the maximum value. You should get the model filled with a texture and with cel shadows combined.
 {:.notice--success}
 
-**Normal Map** To make an impression of a relatively low-poly mesh having many details of a high-poly one, you can use normal maps. Add one to *Bump Map* slot in the Inspector panel.
+**Detail** Allows to use a second albedo texture. It is blended with the first one. The blending modes are: _Multiply_, _Add_, _Interpolate_. The last one is a special blending mode that blends the two textures based on the _Detail Impact_ parameter. If the _Detail Impact_ is 0, the texture is not visible. If the _Detail Impact_ is 1, the texture is fully visible. If the _Detail Impact_ is 0.5, the texture is blended 50/50 with the first texture.
 
+* **Texture selection slot** lets you pick a texture;
+* **Detail Color** picks the color of the second texture;
+* **Blending Mode** lets you choose between 'Multiply', 'Add' or 'Interpolate' blending modes;
+* **Detail Impact** controls how visible the second texture is. Values to the left decrease visibility of the texture up until it is invisible.
+
+**Normal Map** To make an impression of a relatively low-poly mesh having many details of a high-poly one, you can use normal maps. Add one to *Normal Map* slot in the Inspector panel.
+
+<!--
 ![‘Stylized Surface’ shader — normal map applied](/FlatKit_Manual_Images/normalmap-interface.png){:.image-fancy}
 
 {:.image-caption}
 ‘Stylized Surface’ shader — normal map applied
+-->
 
 * **Texture selection slot** lets you pick a texture;
-* **Tiling** repeats the texture along X and Y axis;
-* **Offset** shifts the texture along X and Y axis within the UV map of the mesh;
+
 
 ![‘Normal Map Tree’ demo scene, a tree without and with a normal map](/FlatKit_Manual_Images/normalmap-trees.png){:.image-fancy}
 
@@ -350,15 +365,18 @@ If you’ve got a UV-unwrapped mesh, you can add a diffuse texture to it. If you
 **Emission Map** Allows to use custom emission maps to designate the parts of the meshes to have a 'glow' effect.
 
 * **Texture selection slot** lets you pick a texture;
-* **Tiling** repeats the texture along X and Y axis;
-* **Offset** shifts the texture along X and Y axis within the UV map of the mesh;
 * **Emission Color** chooses the color of the 'glowing' effect.
 
+<!--
 ![Emission map part of the Stylized Surface interface](/FlatKit_Manual_Images/stylized-surface-emission-interface.png){:.image-fancy}
 
 {:.image-caption}
 Emission map part of the Stylized Surface interface
+-->
 
+The _tiling_ and _offset_ parameters apply for all the textures simultaneously.
+* **Tiling** repeats the texture along X and Y axis;
+* **Offset** shifts the texture along X and Y axis within the UV map of the mesh;
 
 #### Rendering options
 
