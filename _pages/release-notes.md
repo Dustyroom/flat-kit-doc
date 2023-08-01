@@ -9,6 +9,8 @@ toc: false
 - **Detail Maps!** We've expanded the texture functionality in the stylized rendering to include detail maps. Now you have ability to layer two textures with independent blending settings.
 - **Fog effect!** We've added an option for the fog to apply in world space, allowing a nice variety of new styles, a-la Monument Valley.
 - We've **changed the blending of the Albedo (Base) map** to mix with the stylized shading in a cleaner, more visually appealing way.
+
+## 3.8.0 <small>(2023-07-01)</small>
 - Improved object-based outline effect integration with the **Curved World** asset.
 - Various UI fixes and improvements.
 
