@@ -99,7 +99,7 @@ Please note that *Outline Image Effect* is a global effect. You can use [*Styliz
 
 If you would like to exclude an object from an outline pass, considering that you are using one of the Stylized Surface shaders, and you are in a URP project, please go to the interface of the shader and switch rendering to 'Transparent'. It won't change the look of the shader but will exclude it from the outline pass. You can control this too as described a few paragraphs above in Render Event list part.
 
-![Flat Kit Depth Normals renderer feature](/FlatKit_Manual_Images/flat-kit-depth-normals.png){: .image-fancy style="width: 500px;"}
+![Flat Kit Depth Normals renderer feature](/FlatKit_Manual_Images/flat-kit-depth-normals.png){: .image-fancy}
 
 {:.image-caption}
 Flat Kit Depth Normals Renderer Feature
@@ -108,10 +108,17 @@ Flat Kit Depth Normals Renderer Feature
 
 Some general info. Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. It can be done in a 3d editor. For example, here's how to do it in Blender.
 
-![Rotating normals in Blender](/FlatKit_Manual_Images/normals-rotation1.png){: .image-fancy style="width: 500px;"}
+![Rotating normals in Blender](/FlatKit_Manual_Images/normals-rotation1.png){: .image-fancy style="width: 600px;"}
 
 {:.image-caption}
 Rotating normals in Blender. Manipulating the normals angle is one of the ways to make Flat Kit generate outlines where you want them
+
+Alternatively, Unity has its own tools for doing some operations on the normals of the imported models. Once you select an imported object, go to the _Inspector_ panel and switch to the _Model_tab. There you'll find the _Normals_ section. You can try adjusting the _Normals Mode_ and _Normals Import Settings_ parameters. The _Smoothing Angle_ is particularly useful for controlling the amount of outlines if you use _Min/Max Normals Threshold_ parameter in [Flat Kit Outline settings](#parameters-of-flat-kit-outline). Please, keep in mind that this is a general Unity feature and is not related to Flat Kit.
+
+![Rotating normals in Blender](/FlatKit_Manual_Images/flat-kit-model-import-settings.png){: .image-fancy} 
+
+{:.image-caption}
+Parameters for adjusting the normals of the imported models in Unity
 
 **TIP:** Combinations of the settings in Outline Image Effect let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using *‘Stylized Surface with Outline’* shader in addition to the global Outline effect. Also, *Rim* parameter of *Stylized Surface* and *Stylized Surface with Outline* shaders can accentuate object's edges, often it looks like a partial outline, which can be helpful.
 {:.notice--success}
