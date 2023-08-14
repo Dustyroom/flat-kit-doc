@@ -40,9 +40,9 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 > Flat Kit supports URP as well as Built-In RP, although Built-In RP is not being developed after Flat Kit v.2.0. There are a few known limitations in URP, please see [FlatKit in URP chapter](/flat-kit-in-urp). As Built-In RP is not being actively developed by Unity anymore an it has its drawbacks, we continue to support it but we develop new great features only for URP, instead of supporting an obsolete technology. Please note, there is no HDRP version of Flat Kit yet.
 
-#### Q. Does Flat Kit support normal maps?  
+#### Q. What texture maps does Flat Kit support?  
 
-> Yes, it does. It is in [Normal map](/stylized-surface/#normal-map-to-make-an-impression-of-a-relatively-low-poly-mesh-h) section of the interface.
+> Flat Kit supports albedo, detail, normal and emission maps, more info [here](/stylized-surface/#texture-maps).
 
 #### Q. Does Flat Kit support emission maps?  
 
