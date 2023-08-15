@@ -105,6 +105,7 @@ If you would like to exclude an object from an outline pass, considering that yo
 Flat Kit Depth Normals Renderer Feature
 
 **NOTE:** The *Flat Kit Depth Normals* is no longer needed starting Unity 2021.1 and will soon be removed.
+{:.notice--warning}
 
 Some general info. Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. It can be done in a 3d editor. For example, here's how to do it in Blender.
 
@@ -113,7 +114,7 @@ Some general info. Manipulating the normals of the mesh can be a very efficient 
 {:.image-caption}
 Rotating normals in Blender. Manipulating the normals angle is one of the ways to make Flat Kit generate outlines where you want them
 
-Alternatively, Unity has its own tools for doing some operations on the normals of the imported models. Once you select an imported object, go to the _Inspector_ panel and switch to the _Model_tab. There you'll find the _Normals_ section. You can try adjusting the _Normals Mode_ and _Normals Import Settings_ parameters. The _Smoothing Angle_ is particularly useful for controlling the amount of outlines if you use _Min/Max Normals Threshold_ parameter in [Flat Kit Outline settings](#parameters-of-flat-kit-outline). Please, keep in mind that this is a general Unity feature and is not related to Flat Kit.
+Alternatively, Unity has its own tools for doing some operations on the normals of the imported models. Once you select an imported object, go to the _Inspector_ panel and switch to the _Model_ tab. There you'll find the _Normals_ section. You can try adjusting the _Normals Mode_ and _Normals Import Settings_ parameters. The _Smoothing Angle_ is particularly useful for controlling the amount of outlines if you use _Min/Max Normals Threshold_ parameter in [Flat Kit Outline settings](#parameters-of-flat-kit-outline). Please, keep in mind that this is a general Unity feature and is not related to Flat Kit.
 
 ![Rotating normals in Blender](/FlatKit_Manual_Images/flat-kit-model-import-settings.png){: .image-fancy} 
 
