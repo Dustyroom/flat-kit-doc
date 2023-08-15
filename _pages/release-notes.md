@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 3.9.1 <small>(2023-08-16)</small>
+- Fixed an issue where outline image effect would sometimes show the scene as grey.
+- Improved SRP Batcher compatibility in the latest versions of Unity.
+
 ## 3.9.0 <small>(2023-08-09)</small>
 - **Detail Maps!** We've expanded the texture functionality in the stylized rendering to include detail maps. Now you have ability to layer two textures with independent blending settings.
 - **Fog effect!** We've added an option for the fog to apply in world space, allowing a nice variety of new styles, a-la Monument Valley.
