@@ -6,7 +6,7 @@ toc: true
 
 ![](/FlatKit_Manual_Images/flat-kit-outlines-banner-wanderer-2.png)
 
-Outline Image effect is, essentially, a contour on the objects on the scene. It can draw outer outlines, inner ones or both outer and inner outlines of the objects.
+Outline Image effect is, essentially, a contour on the objects on the scene. It is a global effect, meaning that it is applied to the whole scene. It is not selective to objects. It is applied per Renderer (in URP) in screen space.
 
 ![Outline Forward Renderer in URP. Inspector interface.](/FlatKit_Manual_Images/outline-image-effect-interface.png){: .image-fancy style="width: 500px;"}
 
@@ -23,6 +23,9 @@ Both *Fog* and *Outline* image effects can use image-based anti-aliasing, like t
 <div class="notice--info">
   {{ notice-text | markdownify }}
 </div>
+
+Although the Outline effect is global and not selective to the objects, still, here's [how to exclude objects from outlines](/#excluding-objects-from-outlines).
+{:.notice--success}
 
 **TIP:** Combinations of the settings in Outline Image Effect let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using the [*Outline parameters of Stylized Surface shader*](/stylized-surface/#outline) in addition to the global Outline effect. Also, the [*Rim*](/stylized-surface/#rim) parameter of *Stylized Surface* and [*Outline parameters of Stylized Surface shader*](/stylized-surface/#outline) can accentuate object's edges, often it looks like a partial outline, which can be helpful.
 {:.notice--success}
