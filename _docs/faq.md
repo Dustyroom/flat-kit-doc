@@ -44,9 +44,6 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 > Flat Kit supports albedo, detail, normal and emission maps, more info [here](/stylized-surface/#texture-maps).
 
-#### Q. Does Flat Kit support emission maps?  
-
-> Yes, here is info about [Emission map](/stylized-surface/#emission-enables-emission-map-part-of-the-shader) in the URP version only. There is no support for emission maps in Built-In RP version of Flat Kit.
 
 #### Q. I’ve got errors just after importing Flat Kit. Why?  
 
@@ -68,8 +65,8 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 >- Chances are you are using Universal RP earlier than v. 10.7. If you are, please update to the latest version of URP. This should reduce the number of shader variants significantly as newer versions have tools that use multi-compilation, which addresses this problem with variants and building times.
 >- Another one thing you can try doing is the following:
-Go to the _Graphics_ settings (_Edit_ ▶︎ _Project Settings_ ▶︎ _Graphics_). At the bottom you should see a _Save to asset..._ button. Use that to save a compiled shader variants file. Then select the newly created preset file into the _Preloaded Shaders_ list.
-If this won't help, delete this preset file, then on the Graphics panel, set _Instancing Variants_ to _Strip All_, create a new preset, add it to the list and try to build. The initial build can take longer than the following ones as the following builds won't be re-calculating it all again.
+Go to the 'Graphics' settings (_Edit_ ▶︎ _Project Settings_ ▶︎ _Graphics_). At the bottom you should see a 'Save to asset...' button. Use that to save a compiled shader variants file. Then select the newly created preset file into the 'Preloaded Shaders' list.
+If this won't help, delete this preset file, then on the Graphics panel, set 'Instancing Variants' to 'Strip All', create a new preset, add it to the list and try to build. The initial build can take longer than the following ones as the following builds won't be re-calculating it all again.
 >- There were numerous reports of the same problem (like [this one](https://github.com/Dustyroom/flat-kit-doc/issues/89)), when the cause on this issue was a 3rd party asset that turned on the compilation of all shader variants. If you have any 3rd party assets in your project, please check if they have such an option to temporarily deactivating/deleting them one by one.
 >- To make sure whether it is a problem with Flat Kit shaders, you can try creating a fresh project with only Flat Kit imported into it and building any of the [Demo scenes](/demo-scenes).
 >- If nothing helps, please [get in touch](/contact-details).
