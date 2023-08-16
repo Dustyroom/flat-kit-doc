@@ -59,7 +59,8 @@ To change the parameters of the outlines then, please:
 * *Thickness* makes the outline thicker or thinner. It controls how wide or narrow the line of the outline is.
 * *Resolution Invariant* if enabled, the line width will stay constant regardless of the rendering resolution. However, some of the lines may appear blurry.
 * *Use Depth* enables or disables taking the scene's depth data into calculating the outlines. This parameter outlines the outer contour of the objects with depth threshold control.
-* *Use Normals* creates outlines for 'inner' parts of the objects, meaning, for those that are inside the boundaries of the object, for every given camera perspective. The effect depends on the geometry of an object. So, having proper normals here is important. There is a Normals Threshold control. It's discussed a bit more a little further down.
+* *Use Normals* creates outlines based on the angle difference of the normals of a mesh. The effect mainly depends on the geometry of an object. So, having proper normals here is important, please see [this paragraph](/outlines/#manipulating-the-normals-of-the-mesh) describing in detail how to manipulate normals. 
+
 * *Use Color* enables or disables taking all color difference data on the scene when calculating the outlines. This feature is URP only.
 
 **NOTE:** If you see that *Use Depth* and *Use Normals* have no effect in your project, please navigate to _Project Settings_ ▶︎ _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field. If you are using your own settings file instead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
@@ -109,7 +110,11 @@ Flat Kit Depth Normals Renderer Feature
 
 ### Manipulating the normals of the mesh
 
-Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. It can be done in a 3d editor. For example, here's how to do it in Blender.
+Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. 
+
+Normals are the vectors that are perpendicular to the surface of the mesh. But you can change this angle from 90° to any other angle. After doing it the visually parallel faces of the mesh will be treated as if they are not parallel anymore. This will make the outlines appear on the edges of the processed faces.
+
+It can be done in a 3d editor. For example, here's how to do it in Blender.
 
 ![Rotating normals in Blender](/FlatKit_Manual_Images/normals-rotation1.png){: .image-fancy style="width: 600px;"}
 
