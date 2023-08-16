@@ -53,7 +53,7 @@ To change the parameters of the outlines then, please:
 
 ### Parameters of Flat Kit Outline
 
-**Main settings** are the following.
+#### Main Parameters
 
 * *Edge Color* lets you choose the color of the outline.
 * *Thickness* makes the outline thicker or thinner. It controls how wide or narrow the line of the outline is.
@@ -65,7 +65,8 @@ To change the parameters of the outlines then, please:
 **NOTE:** If you see that *Use Depth* and *Use Normals* have no effect in your project, please navigate to _Project Settings_ ▶︎ _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field. If you are using your own settings file instead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
 {: .notice--info}
 
-**Advanced settings** section hosts the parameters to adjust the tools above as well as a few more controls. The thresholds parameters are basically the limits that determine the ranges in which the effects take places. For example, the higher Min Depth value is, the further away from camera the outline will be generated. The lower Max Depth value is, the sooner outlines stop occurring.
+#### Advanced Parameters
+This section hosts the parameters to adjust the tools above as well as a few more controls. The thresholds parameters are basically the limits that determine the ranges in which the effects take places. For example, the higher Min Depth value is, the further away from camera the outline will be generated. The lower Max Depth value is, the sooner outlines stop occurring.
 
 * *Min Depth Threshold* and *Max Depth Threshold* determine the range of depth differences where outline should be applied. Lower values draw lines “inside” the scene resulting in a more beveled image. Higher values have more flat effect.
 * *Min Normals Threshold* and *Max Normals Threshold* determine the range of normals edges to be outlined. Lower values increase the amount of affected normals, leading to more stroked effect. Higher values decrease the amount of affected normals, leading to flatter look. Basically, it determines min and max angles of the normals for the outlines to occur.
@@ -97,7 +98,6 @@ Also, in URP you have an ability to chain and change the orders of Image effects
 
 Please note that *Outline Image Effect* is a global effect. You can use [*Stylized Surface*](/stylized-surface/#outline) shader to outline a particular object. It is a parameter (shader pass) that is built on top of the *Stylized Surface* shader. It has all the features of the *Stylized Surface* shader plus the outline feature.
 
-If you would like to exclude an object from an outline pass, considering that you are using one of the Stylized Surface shaders, and you are in a URP project, please go to the interface of the shader and switch rendering to 'Transparent'. It won't change the look of the shader but will exclude it from the outline pass. You can control this too as described a few paragraphs above in Render Event list part.
 
 ![Flat Kit Depth Normals renderer feature](/FlatKit_Manual_Images/flat-kit-depth-normals.png){: .image-fancy}
 
@@ -107,7 +107,9 @@ Flat Kit Depth Normals Renderer Feature
 **NOTE:** The *Flat Kit Depth Normals* is no longer needed starting Unity 2021.1 and will soon be removed.
 {:.notice--warning}
 
-Some general info. Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. It can be done in a 3d editor. For example, here's how to do it in Blender.
+### Manipulating the normals of the mesh
+
+Manipulating the normals of the mesh can be a very efficient way to control the behavior of the outlines. It can be done in a 3d editor. For example, here's how to do it in Blender.
 
 ![Rotating normals in Blender](/FlatKit_Manual_Images/normals-rotation1.png){: .image-fancy style="width: 600px;"}
 
@@ -152,7 +154,11 @@ However, there are some ways to exclude objects from outlines.
   [![](/FlatKit_Manual_Images/obj_without_outlines_1_4_camera_clear_depth.png)](/FlatKit_Manual_Images/obj_without_outlines_1_4_camera_clear_depth.png)
 
 
-* **METHOD 2** Another way of excluding objects from rendered outlines is moving object to be rendered in the transparent pass. In Flat Kit's Stylized Surface there is such an option. If you are using non-Flat Kit shaders, please refer to their documentation to see whether it is possible — to enable transparency without affecting the look. In Flat Kit's image effects there is an option of [Render event](/outlines/#advanced-settings-section-hosts-the-parameters-to-adjust-the-too/). It lets you choose at which stage to render the lines. In our case, it's 'Before Transparents'.
+
+* **METHOD 2** Another way of excluding objects from rendered outlines is moving object to be rendered in the transparent pass. In Flat Kit's Stylized Surface there is such an option (please see [Rendering Options](/stylized-surface/#rendering-options) of the Stylized Surface shader).  
+If you are using non-Flat Kit shaders, please refer to their documentation to  see whether it is possible — to enable the transparency pass.  
+Once you switch rendering to 'Transparent', it won't change the look of the shader but will exclude it from the outline pass.  
+After that, you'll need to go to the Flat Kit's Outline image effects settings and locate the [Render event](/outlines/#advanced-parameters) parameter. It lets you choose at which stage to render the lines. In our case, it's 'Before Transparents'.
 
   * Step 1. Turn on the transparency in the shader.
 
