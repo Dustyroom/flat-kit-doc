@@ -24,6 +24,9 @@ Both *Fog* and *Outline* image effects can use image-based anti-aliasing, like t
   {{ notice-text | markdownify }}
 </div>
 
+**TIP:** Combinations of the settings in Outline Image Effect let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using the [*Outline parameters of Stylized Surface shader*](/stylized-surface/#outline) in addition to the global Outline effect. Also, the [*Rim*](/stylized-surface/#rim) parameter of *Stylized Surface* and [*Outline parameters of Stylized Surface shader*](/stylized-surface/#outline) can accentuate object's edges, often it looks like a partial outline, which can be helpful.
+{:.notice--success}
+
 ### Setting up Flat Kit Outline (URP)
 
 If you are working in a Universal Rendering Pipeline (URP) project, the post processing components you used to put on the camera in the old Built-In RP ('Standard', '3D' project) — they are called 'Renderer Features' in URP and can be found in the settings of the Forward Renderer.
@@ -121,15 +124,8 @@ It can be done in a 3d editor. For example, here's how to do it in Blender.
 {:.image-caption}
 Rotating normals in Blender. Manipulating the normals angle is one of the ways to make Flat Kit generate outlines where you want them
 
-Alternatively, Unity has its own tools for doing some operations on the normals of the imported models. Once you select an imported object, go to the _Inspector_ panel and switch to the _Model_ tab. There you'll find the _Normals_ section. You can try adjusting the _Normals Mode_ and _Normals Import Settings_ parameters. The _Smoothing Angle_ is particularly useful for controlling the amount of outlines if you use _Min/Max Normals Threshold_ parameter in [Flat Kit Outline settings](#parameters-of-flat-kit-outline). Please, keep in mind that this is a general Unity feature and is not related to Flat Kit.
-
-![Rotating normals in Blender](/FlatKit_Manual_Images/flat-kit-model-import-settings.png){: .image-fancy} 
-
-{:.image-caption}
-Parameters for adjusting the normals of the imported models in Unity
-
 Here is an example of the abovementioned info on a few parallel primitives.  
-On the left side, all 4 shapes are identical simple meshes (copies), the normals are not adjusted. You can see that there are no outlines when the top faces merge visually.  
+On the left side, all 4 shapes are identical simple meshes (copies), the normals are not adjusted. You can see that there are no outlines where the top faces merge visually.  
 On the right side, the three bottom meshes are identical to the left ones (copies), but the top mesh has a normal rotated in Blender — just enough to make the sufficient difference so that _Min/Max Normals Threshold_ parameter detects an angle and generates an outline.
 
 ![Rotated normal makes an outline](/FlatKit_Manual_Images/flat-kit-rotated-normal-in-3d-editor.png){: .image-fancy} 
@@ -137,9 +133,12 @@ On the right side, the three bottom meshes are identical to the left ones (copie
 {:.image-caption}
 Two sets of identical meshes, with the difference of one mesh having a rotated normal
 
+Alternatively, Unity has its own tools for doing some operations on the normals of the imported models. Once you select an imported object, go to the _Inspector_ panel and switch to the _Model_ tab. There you'll find the _Normals_ section. You can try adjusting the _Normals Mode_ and _Normals Import Settings_ parameters. The _Smoothing Angle_ is particularly useful for controlling the amount of outlines if you use _Min/Max Normals Threshold_ parameter in [Flat Kit Outline settings](#parameters-of-flat-kit-outline). Please, keep in mind that this is a general Unity feature and is not related to Flat Kit.
 
-**TIP:** Combinations of the settings in Outline Image Effect let you control the behavior of the outlines quite widely already. You can get even more control on the outlines using the [*Outline parameters of Stylized Surface shader*](/stylized-surface/#outline) in addition to the global Outline effect. Also, the [*Rim*](/stylized-surface/#rim) parameter of *Stylized Surface* and [*Outline parameters of Stylized Surface shader*](/stylized-surface/#outline) can accentuate object's edges, often it looks like a partial outline, which can be helpful.
-{:.notice--success}
+![Rotating normals in Blender](/FlatKit_Manual_Images/flat-kit-model-import-settings.png){: .image-fancy} 
+
+{:.image-caption}
+Parameters for adjusting the normals of the imported models in Unity
 
 ### Excluding objects from outlines
 
