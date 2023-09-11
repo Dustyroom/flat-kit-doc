@@ -6,7 +6,7 @@ toc: false
 ---
 
 ## 3.9.2 <small>(2023-09-12)</small>
-- Fixed shader error in `'FlatKit/Stylized Surface': 'OUTPUT_SH': Too many arguments for a macro call`.
+- Fixed shader error in `'FlatKit/Stylized Surface': 'OUTPUT_SH': Too many arguments for a macro call` in Unity 2023.1.9+.
 
 ## 3.9.1 <small>(2023-08-16)</small>
 - Fixed an issue where outline image effect would sometimes show the scene as grey.
