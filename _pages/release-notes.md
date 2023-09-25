@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 3.9.6 <small>(2023-09-26)</small>
+- **Stylized Surface** shader now stylizes all additional light sources in **Forward+** rendering path.
+
 ## 3.9.2 <small>(2023-09-12)</small>
 - Fixed shader error in `'FlatKit/Stylized Surface': 'OUTPUT_SH': Too many arguments for a macro call` in Unity 2023.1.9+.
 
