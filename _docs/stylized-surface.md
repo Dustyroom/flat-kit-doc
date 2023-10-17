@@ -193,17 +193,19 @@ If enabled, the final shading of the object is multiplied by the vertex color va
 
 The *Outline* part of the *Stylized Surface* shader allows you to add pseudo-outlines to your models.
 
-* **Color** picks up the color of the outline.
 * **Width** determines how thick the outline is.
+* **Color** picks up the color of the outline.
 * **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).
+* **Smooth Normals** softens the normals of the model. This is useful when you have gaps on the vertices.
 * **Depth Offset** moves the outline inwards or outwards an object.
-* **Camera Distance Impact** **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.
+* **Space** determines the space in which the outline is rendered. The options are: _Object_, _Screen_.
+  * **Camera Distance Impact** **(this parameter is available in Universal RP only)** if **Space** is set to _Screen_, this parameter appears. It makes outlines that are further from camera appear thinner than outlines closer to the camera.
 
 Please remember that in addition to this shader Flat Kit has also a global *Outline image effect* applied per Renderer (in URP) and per camera (in Built-In RP).
 In the [Outline Image Effect](/outline/) chapter in this manual you can find some useful specific and general info.
 {: .notice--info}
 
-Sometimes it is useful to manipulate the normals of your model in order to force the shader to render outlines where it wouldn't do so otherwise.
+In some cases it may be useful to manipulate the normals of your model in order to force the shader to render outlines where it wouldn't do so otherwise.
 More on this is covered in [Outline Image Effect](/outline/) chapter. But here's one thing you can try without using 3d editor software. Among the other parameters of the import settings of the model, there is a section where is it possible to change the angle detection threshold for normals smoothing. It may come handy in adding or removing some of the outlines where they wouldn't appear normally. Also, slight adjustments to these parameters may resolve some of the visual issues such as outline gaps on the edges. If you have such breaks in the outline, for instance, try tweaking these controls (but remember to backup the project first, it's always a good idea to backup things. In fact, if you are working on something, do it now).
 
 So, here is one of the ways to get rid of the outline gaps.
@@ -390,6 +392,7 @@ Rendering options part of the Stylized Surface interface
 
 * **Surface Type** — The two options are _Opaque_ and _Transparent_.
   * **Blend Mode** — If **Transparent** _Surface Type_ is selected, the Blend Mode menu becomes available with the following Blend Mode options: Alpha, Premultiply, Additive and Multiply.
+* **Sorting Priority** — determines the chronological order of rendering for the Material. Materials with lower value are rendered first.
 * **Render Faces** — lets you choose between Front, Back or Both faces of the mesh to be rendered.
 * **Alpha Clipping** — Discards pixels based on the Albedo texture’s alpha channel. If enabled, the _Threshold_ parameter appears.
   * **Threshold** — The minimum alpha in the Albedo texture to render a pixel, i.e. determines how soon the transparent portion is ‘transparent enough’ to be cut out.
