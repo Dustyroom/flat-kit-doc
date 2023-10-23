@@ -71,7 +71,7 @@ If this won't help, delete this preset file, then on the Graphics panel, set 'In
 >- To make sure whether it is a problem with Flat Kit shaders, you can try creating a fresh project with only Flat Kit imported into it and building any of the [Demo scenes](/demo-scenes).
 >- If nothing helps, please [get in touch](/contact-details).
 
-<details><summary>Why is my build getting so many shader variants (and takes long to build)?</summary><div markdown="1">
+#### <details><summary>Why is my build getting so many shader variants (and takes long to build)?</summary><div markdown="1">
 >- Chances are you are using Universal RP earlier than v. 10.7. If you are, please update to the latest version of URP. This should reduce the number of shader variants significantly as newer versions have tools that use multi-compilation, which addresses this problem with variants and building times.
 >- Another one thing you can try doing is the following:
 Go to the 'Graphics' settings (_Edit_ ▶︎ _Project Settings_ ▶︎ _Graphics_). At the bottom you should see a 'Save to asset...' button. Use that to save a compiled shader variants file. Then select the newly created preset file into the 'Preloaded Shaders' list.
