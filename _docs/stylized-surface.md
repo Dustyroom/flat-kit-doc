@@ -14,20 +14,20 @@ Because of the fact that these shaders are designed for a stylized look as oppos
 This is a versatile lit shader to be used on rigid object materials. To use it on a material select the shader `FlatKit/Stylized Surface` or `FlatKit/Stylized Surface Cutout` (Built-In RP only). This is your main go-to shader. It works for the vast majority of cases.
 Stylized Surface shader consists of the following **main** building blocks:
 
-* Color,
-* Cel Shading mode (None, Single [Cel], Steps, Gradient),
-* Extra Cel layer,
-* Specular,
-* Rim,
-* Height Gradient,
-* Outline.
+* Color
+* Cel Shading mode (None, Single [Cel], Steps, Gradient)
+* Extra Cel layer
+* Specular
+* Rim
+* Height Gradient
+* Outline
 
 The **additional** parameters are:
 
-* Advanced Lighting,
-* Unity Built-in Shadows,
-* Textures (Albedo, Normal, Emission),
-* Rendering Options.
+* Advanced Lighting
+* Unity Built-in Shadows
+* Textures (Albedo, Normal, Emission)
+* Rendering Options
 
 Each combination of the features above, used in your project results in generating a **shader variant** during the build process. To limit
 the build time and the resulting binary size be careful not to add un-useful feature combinations. On the other hand, this mechanism makes
@@ -35,12 +35,12 @@ sure that only the used features are included in the build. More information on 
 <https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html>
 {: .notice--info}
 
-![‘Stylized Surface’ shader in Single mode. Simple use case](/FlatKit_Manual_Images/stylized-surface-1.png){:.image-fancy}
+![‘Stylized Surface’ shader collapsed view. Single mode. Simple use case](/FlatKit_Manual_Images/stylized-surface-1.png){:.image-fancy}
 
 {:.image-caption}
 ‘Stylized Surface’ shader in Single mode. Simple use case
 
-![‘Stylized Surface’ shader in Single mode. More complex use case](/FlatKit_Manual_Images/stylized-surface-2.png){:.image-fancy}
+![‘Stylized Surface’ shader in expanded view. Single mode. More complex use case](/FlatKit_Manual_Images/stylized-surface-2.png){:.image-fancy}
 
 {:.image-caption}
 ‘Stylized Surface’ shader in Single mode. More complex use case with more options engaged, but still, uses only Single mode
