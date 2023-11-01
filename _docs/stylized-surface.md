@@ -208,21 +208,30 @@ In the [Outline Image Effect](/outline/) chapter in this manual you can find som
 In some cases it may be useful to manipulate the normals of your model in order to force the shader to render outlines where it wouldn't do so otherwise.
 More on this is covered in [Outline Image Effect](/outline/) chapter. But here's one thing you can try without using 3d editor software. Among the other parameters of the import settings of the model, there is a section where is it possible to change the angle detection threshold for normals smoothing. It may come handy in adding or removing some of the outlines where they wouldn't appear normally. Also, slight adjustments to these parameters may resolve some of the visual issues such as outline gaps on the edges. If you have such breaks in the outline, for instance, try tweaking these controls (but remember to backup the project first, it's always a good idea to backup things. In fact, if you are working on something, do it now).
 
-So, here is one of the ways to get rid of the outline gaps.
-
-Here we see the gaps in the outline on the hard edges.
-
-[![Import settings of the model](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png){: .image-fancy }](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png)
+[![Gaps are visible on hard edges](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png){: .image-fancy }](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png)
 
 {:.image-caption}
-Gaps are visible
+Gaps are visible on hard edges
 
-In the Import Settings of the mesh, please, find the _Normals_ parameter and change it from **Import** to **Calculate**. Then, drag the _Smoothing Angle_ slider to the right. By doing so, you make the mesh smooth instead of sharp. The more you move this control to the right the bigger angle Unity will expect to consider it as sharp. Click _Apply_. The gaps should be gone.
+So, here are two easy ways to get rid of the outline gaps:
 
-[![Smoothened normals in the Import Settings](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png){: .image-fancy }](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)
+- **Method #1** Select a mesh in the scene that carries the Stylized Surface material with the _Outline_ parameter turned on. Then turn on the **Smooth Normals** parameter in the Inspector panel. 
+
+Important! If the _Smooth Normals_ parameter had already been turned on without the mesh selected, you'll need to turn it off and then on again, while the mesh is selected. This is because the mesh needs processing, not the material, in order for the _Smooth Normals_ parameter to work.
+{: .notice--warning}
+
+[![Smooth Normals parameter](/FlatKit_Manual_Images/styl-surf-outline-smooth-normals.png){: .image-fancy }](/FlatKit_Manual_Images/styl-surf-outline-smooth-normals.png)
 
 {:.image-caption}
-No gaps
+Smooth Normals in the Outline section of Stylized Surface shader
+
+
+- **Method #2** In the Import Settings of the mesh, please, find the _Normals_ parameter and change it from **Import** to **Calculate**. Then, drag the _Smoothing Angle_ slider to the right. By doing so, you make the mesh smooth instead of sharp. The more you move this control to the right the bigger angle Unity will expect to consider it as sharp. Click _Apply_. The gaps should be gone.
+
+[![Stylized Surface Outline on mesh with smoothened normals](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png){: .image-fancy }](/FlatKit_Manual_Images/outline-gaps-suzanne-2.png)
+
+{:.image-caption}
+No gaps, Stylized Surface Outline on mesh with smoothened normals
 
 As an extra step, to clean up the result a bit, you go to the material and increase _Depth Offset_ a bit. This will 'push' the outlines away from the camera.
 
