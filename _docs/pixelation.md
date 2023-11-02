@@ -11,7 +11,8 @@ toc: true
 Please note that Flat Kit Pixelation is the Universal RP effect only.
 {:.notice--warning}
 
-![Flat Kit Pixelation. Inspector interface.](/FlatKit_Manual_Images/pixelation-image-effect-interface.png){: .image-fancy style="width: 500px;"}
+![Flat Kit Pixelation. Inspector interface.](/FlatKit_Manual_Images/pixelation-image-effect-interface.png)
+<!-- {: .image-fancy style="width: 500px;"} -->
 
 {:.image-caption}
 Flat Kit Pixelation. Inspector interface.
