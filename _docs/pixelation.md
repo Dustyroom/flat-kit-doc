@@ -11,11 +11,10 @@ toc: true
 Please note that Flat Kit Pixelation is the Universal RP effect only.
 {:.notice--warning}
 
-![Flat Kit Pixelation. Inspector interface.](/FlatKit_Manual_Images/pixelation-image-effect-interface.png)
-<!-- {: .image-fancy style="width: 500px;"} -->
+![Flat Kit Pixelation. Inspector interface](/FlatKit_Manual_Images/pixelation-image-effect-interface.png)
 
 {:.image-caption}
-Flat Kit Pixelation. Inspector interface.
+Flat Kit Pixelation. Inspector interface
 
 <!-- {% capture notice-text %}
 Both *Fog* and *Outline* image effects can use image-based anti-aliasing, like the one in Unity's Post-processing stack. -->
