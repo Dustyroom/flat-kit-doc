@@ -39,6 +39,8 @@ docs:
         url: /outlines/
       - title: Fog
         url: /fog/
+      - title: Pixelation
+        url: /pixelation/        
   - title: Bonuses
     children:
       - title: Additional Scripts
