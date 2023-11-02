@@ -31,7 +31,7 @@ Flat Kit Pixelation. Inspector interface
 ### Parameters of Flat Kit Pixelation
 
 * **Resolution** lets you set the size of the grain, or 'pixels'. The higher the value, the smaller the pixels are.
-* **Render Event** lets you choose a stage at which the outlines are applied. It allows to apply outlines over the transparent objects. If you want to exclude transparent objects like Water or UI elements, set this to 'Before Transparent'. Also, it allows you to stack the _Pixelation_ effect with other post effects. This feature is URP only.
+* **Render Event** lets you choose a stage at which the Pixelation effect is applied.
 * **Apply In Scene View** detrmines whether the effect should be applied in the Scene view as well as in the Game view. Please, keep in mind that Unity always renders the scene with the default Renderer settings of the URP config.
 
 In some cases you'll need to *press 'Play'* to see the effect of *Render Event*.
