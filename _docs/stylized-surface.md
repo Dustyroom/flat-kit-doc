@@ -38,12 +38,12 @@ sure that only the used features are included in the build. More information on 
 ![‘Stylized Surface’ shader collapsed view. Single mode. Simple use case](/FlatKit_Manual_Images/stylized-surface-1.png){:.image-fancy}
 
 {:.image-caption}
-‘Stylized Surface’ shader in Single mode. Simple use case
+‘Stylized Surface’ shader collapsed view. Single mode. Simple use case
 
 ![‘Stylized Surface’ shader in expanded view. Single mode. More complex use case](/FlatKit_Manual_Images/stylized-surface-2.png){:.image-fancy}
 
 {:.image-caption}
-‘Stylized Surface’ shader in Single mode. More complex use case with more options engaged, but still, uses only Single mode
+‘Stylized Surface’ shader in expanded view. Single mode. More complex use case with more options engaged, but still, uses only Single mode
 
 ### The Main Parameters of the Shader
 
