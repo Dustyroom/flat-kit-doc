@@ -5,6 +5,13 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.0.0 <small>(2023-11-02)</small> - **HUGE update**
+- **Pixelation image effect** (+ new demo scene) for a stylish low-res look
+- **Mesh processor** that generates perfectly smooth normals that greatly improve object-based outlines
+- **New demo scene "Desert"** showing a Moebius-esque style using the Outline image effect
+- Stylized Surface materials now support **Local Space Height Gradients**
+- Complete **Inspector UI overhaul** of Stylized Surface and Water shaders (+ tooltips on ALL parameters)
+
 ## 3.9.6 <small>(2023-09-26)</small>
 - **Stylized Surface** shader now stylizes all additional light sources in **Forward+** rendering path.
 
