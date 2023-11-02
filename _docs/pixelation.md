@@ -16,9 +16,6 @@ Please note that Flat Kit Pixelation is the Universal RP effect only.
 {:.image-caption}
 Flat Kit Pixelation. Inspector interface
 
-<!-- {% capture notice-text %}
-Both *Fog* and *Outline* image effects can use image-based anti-aliasing, like the one in Unity's Post-processing stack. -->
-
 * In **Universal RP (URP)**: post-processing effects are called ‘Renderer Features’ of the Forward Renderer.
 * In **Built-In RP**: Post-processing is made of Camera effects placed onto the camera in the scene as Components.
 {% endcapture %}
