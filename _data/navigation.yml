@@ -40,7 +40,7 @@ docs:
       - title: Fog
         url: /fog/
       - title: Pixelation
-        url: /pixelation/        
+        url: /pixelation/
   - title: Bonuses
     children:
       - title: Additional Scripts
