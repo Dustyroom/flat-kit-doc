@@ -11,7 +11,7 @@ toc: true
 Please note that Flat Kit Pixelation is the Universal RP effect only.
 {:.notice--warning}
 
-![Flat Kit Pixelation. Inspector interface](/FlatKit_Manual_Images/pixelation-image-effect-interface.png)
+![Flat Kit Pixelation. Inspector interface](/FlatKit_Manual_Images/pixelation-image-effect-interface.png){: .image-fancy }
 
 {:.image-caption}
 Flat Kit Pixelation. Inspector interface
@@ -28,7 +28,7 @@ Flat Kit Pixelation. Inspector interface
 
 * On your Renderer, please click the **Add Renderer Feature** button and select **Flat Kit Pixelation** from the list.
 
-### Parameters of Flat Kit Outline
+### Parameters of Flat Kit Pixelation
 
 * **Resolution** lets you set the size of the grain, or 'pixels'. The higher the value, the smaller the pixels are.
 * **Render Event** lets you choose a stage at which the outlines are applied. It allows to apply outlines over the transparent objects. If you want to exclude transparent objects like Water or UI elements, set this to 'Before Transparent'. Also, it allows you to stack the _Pixelation_ effect with other post effects. This feature is URP only.
