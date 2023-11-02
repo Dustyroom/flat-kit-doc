@@ -217,7 +217,7 @@ So, here are two easy ways to get rid of the outline gaps:
 
 - **Method #1** Select a mesh in the scene that carries the Stylized Surface material with the _Outline_ parameter turned on. Then turn on the **Smooth Normals** parameter in the Inspector panel. 
 
-Important! If the _Smooth Normals_ parameter had already been turned on without the mesh selected, you'll need to turn it off and then on again, while the mesh is selected. This is because the mesh needs processing, not the material, in order for the _Smooth Normals_ parameter to work.
+Important! If the _Smooth Normals_ parameter had already been turned on without the mesh being selected, you'll need to turn it off and then on again, while the mesh is selected. This is because the mesh needs processing, not the material, in order for the _Smooth Normals_ parameter to work.
 {: .notice--warning}
 
 [![Smooth Normals parameter](/FlatKit_Manual_Images/styl-surf-outline-smooth-normals.png){: .image-fancy }](/FlatKit_Manual_Images/styl-surf-outline-smooth-normals.png)
@@ -240,7 +240,7 @@ As an extra step, to clean up the result a bit, you go to the material and incre
 {:.image-caption}
 Using the _Depth Offset_ parameter on the _Stylized Surface_ shader to clean up the result
 
-Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. This method is called **Inverted hull**, when the vertices of a model are moved along their normals in the image space. There are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour as such but rather a modified (roughly said, 'expanded') copy of a model layered on the back of the original model. In most cases it can produce very good results with very fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
+Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. This method is called **Inverted hull**, when the vertices of a model are moved along their normals in the image space. There are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour — but rather the modified normals layered on the back of the original model. In most cases it can produce very good results with very fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
 {: .notice--warning}
 
 Also, to remedy the gaps issue, you can try using the [Scale parameter](/stylized-surface/#the-outline-part-of-the-stylized-surface-shader-allows-you-to-ad/) of the Outline parameter. By keeping the **Width** low and increasing the **Scale** you can get rid of the gaps. But this is not a perfect solution, as it may make the outline look a bit displaced.
