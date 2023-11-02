@@ -7,8 +7,8 @@ header:
   overlay_image: /assets/images/landing/landing-banner-1.png
   actions:
     - label: "Get on Unity Asset Store"
-      url: "https://u3d.as/334o?aid=1101lHzQ"
-excerpt: "ChatGPT, DALL•E and Google Bard inside your Unity project."
+      url: "https://u3d.as/1uVy?aid=1101lHzQ"
+excerpt: "Advanced tools for versatile stylized game development."
 intro:
 #  - excerpt: 'Use the power of OpenAI GhatGPT in the Unity Editor and in your shipped games. It allows you to generate and edit C# scripts, seamlessly tiling images, shaders and UI documents from text descriptions, operate on new and existing scripts, freely chat with AI — right in your project.'
 

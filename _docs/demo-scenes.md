@@ -92,7 +92,7 @@ Outline Image Effect
 [![](/Screenshots/Room-3.png){: .image-fancy }](/Screenshots/Room-3.png)
 
 # Retro Cars
-*Retro Cars*. Retro cars are curvy. A great opportunity to show how shiny (or rough) shaders can be. There are 4 scene sets.
+*Retro Cars*. Retro cars have smooth curves, so it's a great opportunity to show how shiny (or rough) shaders can be. There are 4 scene sets.
 
 [![](/Screenshots/Car%20-%20Scene%20-%20Set1.png){: .image-fancy }](/Screenshots/Car%20-%20Scene%20-%20Set1.png)
 
@@ -114,33 +114,60 @@ Cars scene — Set 3
 {:.image-caption}
 Cars scene — Set 4
 
+# Racing Car
+
+This scene is in Universal RP only.
+{: .notice--warning}
+
+This demo scene shows an example apllication for the [**Flat Kit Pixelation**](/pixelation/) image effect.
+
+[![](/Screenshots/Racing-Car.png){: .image-fancy }](/Screenshots/Racing-Car.png)
+
+# Desert
+
+This scene is Universal RP only.
+{: .notice--warning}
+
+A showcase for the Fog and Outline image effects, Stylized Surface shader with support of a few custom ones (_Pillars_, _Cloud_ and _Sphere_ — for the rock pillars, the clouds and the bubble capsule objects). 
+
+These custom shaders are not listed as the features of Flat Kit. Although these shaders are included to make sure the scene works well aftr the installation, they are created for the display purpose only and should be used 'as-is', which means we may not provide support for these shaders.
+{: .notice--success}
+
+
+[![](/Screenshots/Desert.png){: .image-fancy }](/Screenshots/Desert.png)
+
 # Normal Map Tree
+
 An example of [normal maps](/stylized-surface/#normal-map-to-make-an-impression-of-a-relatively-low-poly-mesh-h) application of [Stylized Surface shader](/stylized-surface/).
 
 [![](/Screenshots/NormalMapsTree%20-%20Scene.png){: .image-fancy }](/Screenshots/NormalMapsTree%20-%20Scene.png)
 
 # Ocean Water
-This is a demo scene showcasing the [Water shader](/water/) in a way the game would look like. A non-toon-shading application for [Stylized Surface shader](/stylized-surface/) is showed in this scene, too. You can choose various water looks in the Hierarchy tab by switching different Water objects on.
 
 This scene is in Universal RP only.
 {: .notice--warning}
+
+This is a demo scene showcasing the [Water shader](/water/) in a way the game would look like. A non-toon-shading application for [Stylized Surface shader](/stylized-surface/) is showed in this scene, too. You can choose various water looks in the Hierarchy tab by switching different Water objects on.
 
 [![](/Screenshots/Ocean%20Islands.png){: .image-fancy }](/Screenshots/Ocean%20Islands.png)
 
 # Pool
-*Pool* scene shows more various versions of the [Water shader](/water/). In the Hierarchy tab you can choose between different water objects. Each of these objects has its own *Water* material.
 
 This scene is in Universal RP only.
 {: .notice--warning}
+
+*Pool* scene shows more various versions of the [Water shader](/water/). In the Hierarchy tab you can choose between different water objects. Each of these objects has its own *Water* material.
 
 [![](/Screenshots/Pool.png){: .image-fancy }](/Screenshots/Pool.png)
 
 {% include video.html url='/FlatKit_Manual_Videos/water-pool-waterobjects-presets.mp4' %}{: .image-fancy}
 
+
 # Water Vessels
-*Water Vessels* is an shows a few simple and more non-obvious [Water shader](/water/) parameters in a single scene. Having these materials, you can use them as starting points in you own projects.
 
 This scene is in Universal RP only.
 {: .notice--warning}
+
+*Water Vessels* is an shows a few simple and more non-obvious [Water shader](/water/) parameters in a single scene. Having these materials, you can use them as starting points in you own projects.
 
 [![](/Screenshots/Water%20Vessels%20-%20Various%20Water%20Presets.png){: .image-fancy }](/Screenshots/Water%20Vessels%20-%20Various%20Water%20Presets.png)

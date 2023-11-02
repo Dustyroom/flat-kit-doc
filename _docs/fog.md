@@ -45,6 +45,7 @@ Fog Image Effect. Gradient Editor interface.
 * **Low** - height from camera where the fog starts. The fog is not applied to the area lower than this value.
 * **High** - height from camera where the fog ends. The fog is not applied to the area higher than this value.
 * **Height Fog Intensity** - intensity of the height fog. The higher the value, the more intense the fog is.
+* **Camera Relative Position** - Reverts fog behavior to pre-3.9.0. This is useful if you want to use the new fog settings, but want to keep the old look of your scene.
 * **Use Height Fog On Sky** - whether to use height fog on the skybox or not. If unchecked, the height fog is not applied to the sky.
 
 #### Blending
