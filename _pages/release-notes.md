@@ -7,7 +7,8 @@ toc: false
 
 ## 4.1.0 <small>(2023-12-01)</small>
 - **Decals** now receive shadows in URP.
-- Implemented **backwards compatibility of image effects** (Outlines, Fog) with Unity 2021 and prior.
+- Improved backwards compatibility of **image effects** (Outlines, Fog) with Unity 2021 and prior.
+- Inspector UI improvements for the **image effects**.
 
 ## 4.0.0 <small>(2023-11-02)</small> - **HUGE update**
 - **Pixelation image effect** (+ new demo scene) for a stylish low-res look
