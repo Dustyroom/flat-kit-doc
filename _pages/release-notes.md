@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.1.5 <small>(2023-12-08)</small>
+- Improved UI of all image effect settings, making them editable inline.
+- Fixed an issue where image effects are sometimes not included in the project builds.
+
 ## 4.1.0 <small>(2023-12-01)</small>
 - **Decals** now receive shadows in URP.
 - Improved backwards compatibility of **image effects** (Outlines, Fog) with Unity 2021 and prior.
