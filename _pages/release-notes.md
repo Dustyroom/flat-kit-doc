@@ -5,6 +5,11 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.2.0 <small>(2023-12-19)</small>
+- Stylized Water shader now supports multiple lights.
+- Decals now correctly receive shadows in URP.
+- Fixed image effect materials not being initialized in the Editor in rare circumstances.
+
 ## 4.1.5 <small>(2023-12-08)</small>
 - Improved UI of all image effect settings, making them editable inline.
 - Fixed an issue where image effects are sometimes not included in the project builds.
