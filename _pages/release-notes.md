@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.3.0 <small>(2024-01-03)</small>
+- *New!* We've added **"Fade With Distance"** feature to the Outline image effect. If enabled, the lines become more transparent the further they are from the camera.
+
 ## 4.2.0 <small>(2023-12-19)</small>
 - Stylized Water shader now supports multiple lights.
 - Decals now correctly receive shadows in URP.
