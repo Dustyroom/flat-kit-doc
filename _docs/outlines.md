@@ -61,14 +61,17 @@ To change the parameters of the outlines then, please:
 
 #### Main Parameters
 
-* *Edge Color* lets you choose the color of the outline.
-* *Thickness* makes the outline thicker or thinner. It controls how wide or narrow the line of the outline is.
-* *Resolution Invariant* if enabled, the line width will stay constant regardless of the rendering resolution. However, some of the lines may appear blurry.
-* *Use Depth* enables or disables taking the scene's depth data into calculating the outlines. This parameter outlines the outer contour of the objects with depth threshold control.  
+* **Edge Color** lets you choose the color of the outline.
+* **Thickness** makes the outline thicker or thinner. It controls how wide or narrow the line of the outline is.
+* **Fade With Distance** if enabled, the outline will become more transparent the further away it is from the camera. Once enabled, two additional parameters appear:
+  * **Start** controls the distance from the camera at which the outline starts to fade. The value is in world units.
+  * **End** controls the distance from the camera at which the outline is fully transparent. The value is in world units.
+* **Resolution Invariant** if enabled, the line width will stay constant regardless of the rendering resolution. However, some of the lines may appear blurry.
+* **Use Depth** enables or disables taking the scene's depth data into calculating the outlines. This parameter outlines the outer contour of the objects with depth threshold control.  
   ![Outline Image Effect Render Event list](/FlatKit_Manual_Images/flat-kit-outline-param-1-depth.gif)
-* *Use Normals* creates outlines based on the angle difference of the normals of a mesh. The effect mainly depends on the geometry of an object. So, having proper normals here is important, please see [this paragraph](/outlines/#manipulating-the-normals-of-the-mesh) describing in detail how to manipulate normals.  
+* **Use Normals** creates outlines based on the angle difference of the normals of a mesh. The effect mainly depends on the geometry of an object. So, having proper normals here is important, please see [this paragraph](/outlines/#manipulating-the-normals-of-the-mesh) describing in detail how to manipulate normals.  
     ![Outline Image Effect Render Event list](/FlatKit_Manual_Images/flat-kit-outline-param-2-normals.gif)
-* *Use Color* enables or disables taking all color difference data on the scene when calculating the outlines. This feature is URP only.  
+* **Use Color** enables or disables taking all color difference data on the scene when calculating the outlines. This feature is URP only.  
     ![Outline Image Effect Render Event list](/FlatKit_Manual_Images/flat-kit-outline-param-3-color-2.gif)
 
 **NOTE:** If you see that *Use Depth* and *Use Normals* have no effect in your project, please navigate to _Project Settings_ ▶︎ _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field. If you are using your own settings file instead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
