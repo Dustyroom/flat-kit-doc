@@ -42,7 +42,7 @@ Go to Window ▶︎ Package Manager ▶︎ Universal RP ▶︎ Select the versio
 
 Our example scenes already include configurations of the Forward Renderer with outline and fog image effects (look for the URP Config folders in the demo directory).
 
-To enable outline and fog, select the ForwardRendererConfig and add the 'outline' or 'fog' stage. In the case of 'outline' effect, you also need to add the DepthNormalsPass stage.
+<!-- To enable outline and fog, select the ForwardRendererConfig and add the 'outline' or 'fog' stage. In the case of 'outline' effect, you also need to add the DepthNormalsPass stage. -->
 
 The order of the effects can be managed like this.
 
