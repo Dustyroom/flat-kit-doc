@@ -36,13 +36,17 @@ If you are using your settings file instead, please make sure to have *Opaque te
 
 In URP, 'Fog' and 'Outline' image effects, included in Flat Kit, are no longer image effects that are used as Components on the Camera, they have been adapted to become Render Features. Unlike the conventional image effects that are added to the camera game object, _Render Features_ are added as stages to the _Renderer_ (fka _Forward Renderer_).
 
+<!--
 To use Flat Kit effects, please first update the Universal RP to the version higher than 8.2.0.
+-->
 
 Go to Window ▶︎ Package Manager ▶︎ Universal RP ▶︎ Select the version to upgrade to ▶︎ click Upgrade
 
 Our example scenes already include configurations of the Forward Renderer with outline and fog image effects (look for the URP Config folders in the demo directory).
 
-<!-- To enable outline and fog, select the ForwardRendererConfig and add the 'outline' or 'fog' stage. In the case of 'outline' effect, you also need to add the DepthNormalsPass stage. -->
+<!--
+To enable outline and fog, select the ForwardRendererConfig and add the 'outline' or 'fog' stage. In the case of 'outline' effect, you also need to add the DepthNormalsPass stage.
+-->
 
 The order of the effects can be managed like this.
 
