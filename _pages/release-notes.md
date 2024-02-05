@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.4.0 <small>(2024-02-06)</small>
+- Added shader support for **URP 17** (Unity 2023.3).
+
 ## 4.3.0 <small>(2024-01-03)</small>
 - *New!* We've added **"Fade With Distance"** feature to the Outline image effect. If enabled, the lines become more transparent the further they are from the camera.
 
