@@ -37,7 +37,8 @@ plugins:
 include:
   - _pages
 
-remote_theme: "mmistakes/minimal-mistakes@4.21.0"
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
 
 collections:
   docs:
