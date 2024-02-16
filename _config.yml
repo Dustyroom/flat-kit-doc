@@ -17,6 +17,18 @@ analytics:
   google:
     tracking_id: G-SK58XH05JP
 
+# https://giscus.app/
+repository  : "Dustyroom/flat-kit-doc"
+comments:
+  provider: "giscus"
+  giscus:
+    repo_id              : "MDEwOlJlcG9zaXRvcnkyOTYyNzA5NzE="
+    category_name        : "Web Comments"
+    category_id          : "DIC_kwDOEai8e84CdR9a"
+    discussion_term      : "pathname"
+    reactions_enabled    : '1'
+    theme                : "noborder_light"
+
 plugins:
   - jekyll-sitemap
   - jekyll-include-cache
@@ -66,10 +78,9 @@ defaults:
       read_time: false
       author_profile: false
       share: false
-      comments: false
+      comments: true
       toc: true
       toc_sticky: true
-      # classes: wide
       sidebar:
         nav: "docs"
   # _pages
