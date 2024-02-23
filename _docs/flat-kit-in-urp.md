@@ -13,7 +13,7 @@ Please note, Flat Kit had been initially created for the Built-in Rendering Pipe
 
 In order to have a working Flat Kit in Universal RP (we've included the URP version alongside the Built-in pipeline version, in a single package), you'll need to have Unity's **Universal RP** package installed from the Package Manager (Window ▶︎ Package Manager) into your project.
 
-After that, you will need to use a Universal RP Asset file, as this file lists the Renderers that, in their turn, list the Renderer Features (Image Effects). You can either use the one that comes with Flat Kit, called ***[Flat Kit] Example Settings URP***, or you can create your own URP asset file to work with.
+After that, you will need to use a Universal RP Asset file, as this file lists the Renderers that, in their turn, list the Renderer Features (Image Effects). You can either use the one that comes with Flat Kit, called ***[Flat Kit] Example URP Asset***, or you can create your own URP asset file to work with.
 
 * Right click on **Assets** (in Project tab) ▶︎ **Create** ▶︎ **Rendering** ▶︎ **URP** ▶︎ **Pipeline Asset**.
 
@@ -21,11 +21,11 @@ Once you do it, the _Asset file_ and a _Renderer_ (formerly known _Forward Rende
 
 You can set the _Asset file_ manualy or using the Flat Kit's [Auto Load Pipeline Asset script](/additional-scripts/#auto-load-pipeline-asset).
 
-* **Manual Step 1.** Navigate to *Project Settings* ▶︎ *Graphics* and insert **[FlatKit] Example Settings URP** file into *Scriptable Rendering Pipeline Setting* field.
+* **Manual Step 1.** Navigate to *Project Settings* ▶︎ *Graphics* and insert **[FlatKit] Example URP Asset** file into *Scriptable Rendering Pipeline Setting* field.
 If you are using your settings file instead, please make sure to have *Opaque texture* and *Depth texture* checkboxes on, which can be found on Inspector tab when you select that URP settings file.  
 ![Flat Kit import instructions - Step 5](/FlatKit_Manual_Images/manual_import_instructions_6.png){:.image-fancy}
 
-* **Manual Step 2.** Please do this in *Quality* tab's *Rendering* field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example Settings URP** file. Do it for all Quality levels.  
+* **Manual Step 2.** Please do this in *Quality* tab's *Rendering* field as well. This Example Settings file comes with Flat Kit — select **[FlatKit] Example URP Asset** file. Do it for all Quality levels.  
 ![Flat Kit import instructions - Step 6](/FlatKit_Manual_Images/manual_import_instructions_7.png){:.image-fancy}
 
 <!-- Here's a video showing setting it up.  

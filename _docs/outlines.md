@@ -41,7 +41,7 @@ After that you'll be able to load, for example, *Wanderer* demo scene that comes
 To be able to use Flat Kit's Outline in your own scene, you can either go from scratch:
 
 1. Create a new **Forward Renderer**. To avoid further confusion, name it, for example, *MyNewAwesomeForwardRenderer*. (Go to Assets menu on top ▶︎ Create ▶︎ Rendering Universal Rendering Pipeline ▶︎ Forward Renderer).
-2. Add it to the **Renderer List** of the **[Flat Kit] Example Settings URP** file in the Inspector panel. To do this, go to **Project panel ▶︎ Flat Kit ▶︎ ExampleSettings ▶︎ [FlatKit] Example Settings URP**. Select it, look at the Inspector panel, see the **Renderer List** section, press **'+'** button and drag *MyNewAwesomeForwardRenderer* Forward Renderer you created in step 1 — into the created line of the **Renderer List**.
+2. Add it to the **Renderer List** of the **[Flat Kit] Example URP Asset** file in the Inspector panel. To do this, go to **Project panel ▶︎ Flat Kit ▶︎ ExampleSettings ▶︎ [FlatKit] Example URP Asset**. Select it, look at the Inspector panel, see the **Renderer List** section, press **'+'** button and drag *MyNewAwesomeForwardRenderer* Forward Renderer you created in step 1 — into the created line of the **Renderer List**.
 3. Select that newly created *MyNewAwesomeForwardRenderer* Forward Renderer, press **'Add Renderer Feature'** and Select **Flat Kit Outline**. This will add the Outline Renderer feature. But to be able to adjust parameters, like width, color of the outlines, you'll need to create the Outline Settings file.
 4. Go **Assets menu on top ▶︎ Create ▶︎ FlatKit ▶︎ Outline Settings**. This creates an Outline settings file. Name it *MyNewOutlinesSettings*.
 5. Add this *'MyNewOutlinesSettings'* settings file to **Flat Kit Outline** Renderer Feature you created in step 3 — into the **Settings** field.
@@ -74,7 +74,7 @@ To change the parameters of the outlines then, please:
 * **Use Color** enables or disables taking all color difference data on the scene when calculating the outlines. This feature is URP only.  
     ![Outline Image Effect Render Event list](/FlatKit_Manual_Images/flat-kit-outline-param-3-color-2.gif)
 
-**NOTE:** If you see that *Use Depth* and *Use Normals* have no effect in your project, please navigate to _Project Settings_ ▶︎ _Graphics_ and insert **[FlatKit] Example Settings URP** file into _Scriptable Rendering Pipeline Setting_ field. If you are using your own settings file instead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
+**NOTE:** If you see that *Use Depth* and *Use Normals* have no effect in your project, please navigate to _Project Settings_ ▶︎ _Graphics_ and insert **[FlatKit] Example URP Asset** file into _Scriptable Rendering Pipeline Setting_ field. If you are using your own settings file instead, please make sure to have _Opaque texture_ and _Depth texture_ checkboxes on, which can be found on Inspector tab when you select that URP settings file.
 {: .notice--info}
 
 #### Advanced Parameters
