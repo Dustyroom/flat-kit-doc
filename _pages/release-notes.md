@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.4.7 <small>(2024-02-26)</small>
+- **BREAKING CHANGE:** We've changed the way **baked lightmaps and light probes** are applied. It now looks much more coherent with the cell shading stylization.
+
 ## 4.4.0 <small>(2024-02-06)</small>
 - Added shader support for **URP 17** (Unity 2023.3).
 
