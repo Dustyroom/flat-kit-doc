@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.6.0 <small>(2024-05-06)</small>
+- Added **Unity 6 Preview** support.
+
 ## 4.5.0 <small>(2024-03-23)</small>
 - Improved shader support of **DOTS** and the **Hybrid Renderer**.
 - Fixed **shader variant stripping** of the Stylized Surface shader.
@@ -13,7 +16,6 @@ toc: false
 - Improved rendering of **baked lightmaps**.
 - Fixed flipped baked lighting direction when using **light probes**.
 - Improved tooltips throughout the asset.
-- Improved support for **Unity 6.0**.
 
 ## 4.4.7 <small>(2024-02-26)</small>
 - **BREAKING CHANGE:** We've changed the way **baked lightmaps and light probes** are applied. It now looks much more coherent with the cell shading stylization.
