@@ -33,6 +33,16 @@ This script is used with [Water shader](/water/) specifically when there is an o
 * *Water* field is where you choose the mesh of the water surface. The object holding this script will be afloat on this mesh.
 * *Size* parameter sets the definition of the movement, meaning, how many of the _Water_ object's vertices it takes into account.
 * *Amplitude* is how far the object travels from its initial point on the water while floating.
+* *Override Water Material* an optional parameter which allows you to use a separate water material for buoyancy effect. Specifically, it overrides the [Wave Geometry](/water/#wave-geometry) group of parameters from the original [Water](/water/) material.
+
+## Floating Motion
+
+This script is used in [Desert Demo scene](/demo-scenes/#desert) on the transparent bulb with the robot Kyle.
+
+![Floating Motion script interface](/FlatKit_Manual_Images/flat-kit-floating-motion-component.png){: .image-fancy style="width: 500px;"}
+
+{:.image-caption}
+*Floating Motion* script interface
 
 ## Auto Load Pipeline Asset
 

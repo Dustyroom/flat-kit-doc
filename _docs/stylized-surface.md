@@ -186,6 +186,10 @@ If enabled, the final shading of the object is multiplied by the vertex color va
 
 #### Outline
 
+<!-- In the recent update we made some changes to the _Stylized Surface_ shader responsible for the outlines generation. Now, the shader-based _Outline_ doesn't break the SRP batching and is more performant.
+{: .notice--success}
+-->
+
 ![Outline part of Stylized Surface shader. Inspector interface](/FlatKit_Manual_Images/stylized-surface-outline-interface.png){:.image-fancy}
 
 {:.image-caption}
