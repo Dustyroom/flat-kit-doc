@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.6.1 <small>(2024-07-01)</small>
+- Fixed an issue with the **Override Light Direction** setting of the Stylized Surface shader.
+- General usability improvements.
+
 ## 4.6.0 <small>(2024-05-06)</small>
 - Added **Unity 6 Preview** support.
 
