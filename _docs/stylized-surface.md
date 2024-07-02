@@ -120,7 +120,7 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
 
 
 ![](/FlatKit_Manual_Images/stylized_surface_edge_size_flat_smooth.gif){:.image-fancy}
-Please note that the models you are working with can be either flat-shaded or smooth-shaded or in a 3D editor (e.g., here is the [reference](https://docs.blender.org/manual/en/4.2/modeling/meshes/editing/face/shading.html) in Blender). If you have a model with smooth-shaded normals, the cel shading will be smooth as well in Unity. If you have a model with flat shading, the cel shading will appear blocky. But you can adjust smoothing in Unity as well — in the _Import Settings_ of the model -→ _Normals_ section.
+Please note that the models you are working with can be either flat-shaded or smooth-shaded or in a 3D editor (e.g., here is the [reference](https://docs.blender.org/manual/en/4.2/modeling/meshes/editing/face/shading.html) in Blender). If you have a model with smooth-shaded normals, the cel shading will be smooth as well in Unity. If you have a model with flat shading, the cel shading will appear blocky. But you can adjust smoothing in Unity as well — in the _Import Settings_ of the model → _Normals_ section.
 {: .notice--info}
 
 #### Extra Cel Layer
