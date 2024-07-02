@@ -117,10 +117,17 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
     {:.image-caption}
     *Curve* shading mode of Stylized Surface shader
 
+
+![](/FlatKit_Manual_Images/stylized_surface_edge_size_flat_smooth.gif){:.image-fancy}
+
+Please note that the models you are working with can be either smooth-shaded or flat-shaded in a 3D editor. If you have a model with smooth-shaded normals, the cel shading will be smooth as well in Unity. If you have a model with flat shading, the cel shading will appear blocky.
+{: .notice--info}
+
 #### Extra Cel Layer
 
 This is like another instance of *Single* mode of *Cel Shading Mode*. Works independently from the *'Single'* *Cel Shading Mode*. This means, you can set _Cel Shading Mode_ to *None* (flat), and add an *Extra Cel Layer*. The result will be the same as if you would have used the *Single mode*. 
 Or choose the *'Single' Cel Shading Mode* and make *Extra Cel Layer* almost identical to it, giving an *Extra Cel Layer* a darker color, and making it smaller. This would result in stepping, similar to _Steps Mode_ with 1 step. Classic toon.
+
 
 #### Specular
 
