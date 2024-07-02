@@ -118,8 +118,8 @@ In order to get Steps and Curve modes to work — as soon as you have a number o
     *Curve* shading mode of Stylized Surface shader
 
 
-![](/FlatKit_Manual_Images/stylized_surface_edge_size_flat_smooth.gif){:.image-fancy}
 
+![](/FlatKit_Manual_Images/stylized_surface_edge_size_flat_smooth.gif){:.image-fancy}
 Please note that the models you are working with can be either smooth-shaded or flat-shaded in a 3D editor. If you have a model with smooth-shaded normals, the cel shading will be smooth as well in Unity. If you have a model with flat shading, the cel shading will appear blocky.
 {: .notice--info}
 
