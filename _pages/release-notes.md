@@ -5,7 +5,8 @@ permalink: /release-notes/
 toc: false
 ---
 
-## 4.6.1 <small>(2024-07-01)</small>
+## 4.6.1 <small>(2024-07-08)</small>
+- Improved **support for Unity 6.0.8** and later (including `OUTPUT_SH4` error).
 - Fixed an issue with the **Override Light Direction** setting of the Stylized Surface shader.
 - General usability improvements.
 
