@@ -7,7 +7,7 @@ toc: false
 
 ## 4.7.0 <small>(2024-07-14)</small>
 - **Per-object Outline feature in Stylized Surface**: outline shader pass is now applied using a custom Renderer Feature (as opposed to additional object shader pass). This significantly **improves performance** of per-object outlines and supports **SRP batching**.
-- The migration to the new per-object outlines happens fully automatically when you view the Inspector of a material that uses the Outline feature.
+- The migration to the new per-object outlines happens fully automatically when you view the Inspector of a scene object using the Outline feature.
 
 ## 4.6.1 <small>(2024-07-08)</small>
 - Improved **support for Unity 6.0.8** and later (including `OUTPUT_SH4` error).
