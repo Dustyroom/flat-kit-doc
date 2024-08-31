@@ -8,6 +8,7 @@ twitter_username: _dstrm
 email: info@dustyroom.com
 show_downloads: false
 logo: "FlatKit_Manual_Images/flat_kit_manual_header.png"
+og_image: "FlatKit_Manual_Images/overview-intro-pic.jpg"
 
 search: true
 search_full_content: true
