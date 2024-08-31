@@ -263,7 +263,7 @@ Please note that this way of doing the outlines is made to be super fast, but un
 Also, to remedy the gaps issue, you can try using the [Scale parameter](/stylized-surface/#the-outline-part-of-the-stylized-surface-shader-allows-you-to-ad/) of the Outline parameter. By keeping the **Width** low and increasing the **Scale** you can get rid of the gaps. But this is not a perfect solution, as it may make the outline look a bit displaced.
 {: .notice--success}
 
-### The Additional Parameters of the Shader
+### Additional Parameters of the Shader
 
 #### Advanced Lighting
 
