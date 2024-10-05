@@ -4,6 +4,9 @@ excerpt: "Notes on Flat Kit updates."
 permalink: /release-notes/
 toc: false
 ---
+## 4.7.1 <small>(2024-09-01)</small>
+
+- Improved shader compatibility with **Unity 6.0.12 and later**.
 
 ## 4.7.0 <small>(2024-08-01)</small>
 - **Per-object Outline feature in Stylized Surface**: outline shader pass is now applied using a custom Renderer Feature (as opposed to additional object shader pass). This significantly **improves performance** of per-object outlines and supports **SRP batching**.
