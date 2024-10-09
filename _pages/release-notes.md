@@ -4,6 +4,10 @@ excerpt: "Notes on Flat Kit updates."
 permalink: /release-notes/
 toc: false
 ---
+
+## 4.7.5 <small>(2024-10-09)</small>
+- Added object **dissolve effect** example to the **Room demo scene** (press Play to view).
+
 ## 4.7.1 <small>(2024-09-01)</small>
 - Improved shader compatibility with **Unity 6.0.12 and later**.
 
