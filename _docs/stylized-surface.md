@@ -504,11 +504,11 @@ Below is an example of how we'd do this effect in the Stylized Surface shader.
 
 1. **Add a noise texture to the material**. Insert it to the Albedo (diffuse) slot and set the _Impact_ to 0 if needed. The texture should not necessarily be a noise one but it should have transparent areas in the alpha channel.
 1. **Set the *Alpha Clipping* parameter** to *On* in the *Rendering options* section of the shader.
-1. **Adjust the *Threshold* parameter** to make the texture transparent where you need it to be.
+1. **Adjust the *Threshold* parameter** to make the effect kick in. At 0, the texture is fully visible, at 1, it is fully cut out.
 
 In the [Room Demo scene](/demo-scenes/#room) the dissolve effect was applied to the plant material. If you launch the scene (press Play), you can see the plant dissolve.
 
-![Dissolve effect in the Room Demo scene](/FlatKit_Manual_Videos/dissolve-effect-room-demo.mp4){:.image-fancy}
+{% include video.html url='/FlatKit_Manual_Videos/dissolve-effect-room-demo.mp4' %}{: .image-fancy}
 
 Dissolve effect applied to the plant in the Room Demo scene
 {:.image-caption}
