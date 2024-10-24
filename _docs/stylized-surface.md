@@ -216,6 +216,31 @@ Please remember that in addition to this shader Flat Kit has also a global *Outl
 In the [Outline Image Effect](/outline/) chapter in this manual you can find some useful specific and general info.
 {: .notice--info}
 
+
+##### Flat Kit Per Object Outline Renderer Feature
+Once you enable the _Outline_ chaeckbox on the Stylized Surface material, a new Renderer Feature will be added to the Renderer. This feature is called _Flat Kit Per Object Outline_.
+
+![Flat Kit Per Object Outline Renderer Feature, main parameters](/FlatKit_Manual_Images/flat-kit-per-object-outline-renderer-feature-simple.png){:.image-fancy}
+
+{:.image-caption}
+Flat Kit Per Object Outline Renderer Feature, main parameters
+
+* **Name** — Render pass name. It is used to identify the pass in the frame debugger.
+* **Auto Reference Materials** — Keep track of materials using outlines and automatically delete this feature if no materials use it. If disabled, you must manually remove this feature when no materials use it.
+* **Materials** — Materials using this feature. The list is updated automatically based on the _Enable Outline_ toggle on materials using the Stylized Surface shader.
+
+Clicking the **Advanced Settings** line will reveal more parameters such as:
+
+* **Event** — Choose at which point this render pass is executed in the frame.
+* **Filters** — Settings that control which objects should be rendered.
+* **Overrides** — Different parts of the rendering that you can choose to override.
+
+![Flat Kit Per Object Outline Renderer Feature, main parameters](/FlatKit_Manual_Images/flat-kit-per-object-outline-renderer-feature-advanced.png){:.image-fancy}
+
+{:.image-caption}
+Flat Kit Per Object Outline Renderer Feature, main parameters
+
+
 ##### Gaps in the outline
 In some cases it may be useful to **manipulate the normals of your model** in order to **force the shader to render outlines** where it wouldn't do so otherwise.
 
