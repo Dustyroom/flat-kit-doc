@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.7.6 <small>(2024-10-25)</small>
+- Fixes and improvements to **per-object outline rendering**.
+
 ## 4.7.5 <small>(2024-10-09)</small>
 - Added object **dissolve effect** example to the **Room demo scene** (press Play to view).
 
