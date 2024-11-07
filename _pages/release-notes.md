@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.7.8 <small>(2024-11-07)</small>
+- Fixes and improvements to static lightmapping of the Stylized Surface shader.
+
 ## 4.7.6 <small>(2024-10-25)</small>
 - Fixes and improvements to **per-object outline rendering**.
 
