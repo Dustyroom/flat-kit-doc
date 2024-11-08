@@ -173,23 +173,27 @@ Although *Rim* option is creatively useful and sometimes can remind an outline e
 
 #### Height Gradient
 
-This effect overlays a gradient from opaque selected color to transparent color onto everything you’ve set before. Height Gradient is global (absolute) per material, it doesn't depend on object's boundaries. If you would like to make a relative gradient (for instance, each object holding one material to contain an entire gradient within itself), duplicate the material and adjust the height gradient. Alternatively, you can use a [Curve mode](/stylized-surface/#cel-shading-mode/) of *Stylized Surface shader*.
+This effect overlays a gradient (blend) from a selected opaque color to the transparency over an object. Height Gradient can be in world space or in local space.
+
+**TIP.** As a reminder, another gradient-producing tool in Flat Kit is a [Curve mode](/stylized-surface/#cel-shading-mode/) of *Stylized Surface shader*.
+{:.notice--success}
 
 ![Height Gradient. Inspector interface](/FlatKit_Manual_Images/gradient_height_parameters.png){:.image-fancy}
 
 {:.image-caption}
 *Height Gradient.* Inspector interface
 
-* **Gradient Color** picks the parameter’s own color to fade into from transparency.
+* **Gradient Color** picks the parameter’s own color to fade from into transparency. The parameter works in HDR.
+* **Space** determines whether the gradient is in world or local space. The options are: _World_, _Local_. _World Space_ means that the _Center_ parameter is relative to the world origin, _Local Space_ means that the _Center_ parameter is relative to the object’s pivot point.
 * **Center X** and **Y** are initial points from where the effect takes effect. Adjust these to move the gradient across the scene. Center X is useful if you engage - *Gradient Angle*, which means the rotation of the Gradient.
-* **Size** determines how steep the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.
+* **Size** determines how stretched the transition of Gradient is. The further the value is from 0 (zero) — the more gradual the effect is. Negative values flip the Gradient.
 * **Gradient Angle** rotates the gradient.
 
 A bit more about the nature and use of *Height Gradient* is covered in the [Terrain Shader](/terrain/) chapter.
 
 #### Enable Vertex Colors
 
-If enabled, the final shading of the object is multiplied by the vertex color values of the mesh. It is a debug parameter, usually this is not used for changing the look.
+If enabled, the final shading of the object is multiplied by the vertex color values of the mesh. It is a debug parameter, usually it is not used for changing the look.
 
 #### Outline
 
