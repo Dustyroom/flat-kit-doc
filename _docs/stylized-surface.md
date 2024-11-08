@@ -208,6 +208,8 @@ If enabled, the final shading of the object is multiplied by the vertex color va
 
 The *Outline* part of the *Stylized Surface* shader allows you to add pseudo-outlines to your models.
 
+* **Enable Outline** — turns the outline on and off. Once turned on, a dedicated Renderer Feature will be added to the Renderer the scene is rendered in. Unchecking _Enable Outline_ removes the Renderer Feature. More info — [a bit below](/#flat-kit-per-object-outline-renderer-feature).
+* **Select Renderer Feature** — locates and selects the Renderer the object-based Outline is used in as a Renderer Feature. More info — [a bit below](/#flat-kit-per-object-outline-renderer-feature).
 * **Width** determines how thick the outline is.
 * **Color** picks up the color of the outline.
 * **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).
