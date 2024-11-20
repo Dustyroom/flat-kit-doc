@@ -5,6 +5,11 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.8.0 <small>(2024-11-20)</small>
+- Improved support for **Adaptive Light Probes** in Unity 6.0.
+- Improved support for the **Forward+** rendering path in Unity 6.0.
+- Fixed **Override Light Direction** setting on the Terrain shader.
+
 ## 4.7.8 <small>(2024-11-07)</small>
 - Fixes and improvements to static lightmapping of the Stylized Surface shader.
 
