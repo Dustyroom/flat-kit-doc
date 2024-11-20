@@ -7,7 +7,7 @@ toc: false
 
 ## 4.8.0 <small>(2024-11-20)</small>
 - Improved support for **Adaptive Light Probes** in Unity 6.0.
-- Improved support for the **Forward+** rendering path in Unity 6.0.
+- Improved support for the **Forward+** rendering path in **Unity 6.0.16** or later.
 - Fixed **Override Light Direction** setting on the Terrain shader.
 
 ## 4.7.8 <small>(2024-11-07)</small>
