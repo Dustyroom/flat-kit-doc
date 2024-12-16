@@ -5,7 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
-## 4.9.0 <small>(2025-12-16)</small>
+## 4.9.2 <small>(2024-12-20)</small>
+- Improved **compatibility with Unity 6**: proble blending, global illumination.
+
+## 4.9.0 <small>(2024-12-16)</small>
 - All **image effects** (Outline, Fog, Pixelation) now **support Render Graph** in **Unity 6.0.16** or later. The effects work with and without the Compatibility Mode (Project Settings -> Graphics).
 
 ## 4.8.0 <small>(2024-11-20)</small>
