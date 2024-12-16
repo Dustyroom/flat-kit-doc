@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.0 <small>(2025-12-16)</small>
+- All **image effects** (Outline, Fog, Pixelation) now **support** Unity 6 **Render Graph**. The effects work with and without the Compatibility Mode (Project Settings -> Graphics).
+
 ## 4.8.0 <small>(2024-11-20)</small>
 - Improved support for **Adaptive Light Probes** in Unity 6.0.
 - Improved support for the **Forward+** rendering path in **Unity 6.0.16** or later.
