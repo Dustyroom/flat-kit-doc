@@ -208,7 +208,7 @@ If enabled, the final shading of the object is multiplied by the vertex color va
 
 The *Outline* part of the *Stylized Surface* shader allows you to add pseudo-outlines to your models.
 
-* **Enable Outline** — turns the outline on and off. Once turned on, a dedicated Renderer Feature will be added to the Renderer the scene is rendered in. Unchecking _Enable Outline_ removes the Renderer Feature. More info — [a bit below](/#flat-kit-per-object-outline-renderer-feature).
+* **Enable Outline** — turns the outline on and off. Once turned on, a dedicated Renderer Feature will be automatically added to the Renderer the scene is rendered in. Unchecking _Enable Outline_ removes the Renderer Feature. More info — [a bit below](/#flat-kit-per-object-outline-renderer-feature).
 * **Select Renderer Feature** — locates and selects the Renderer the object-based Outline is used in as a Renderer Feature. More info — [a bit below](/#flat-kit-per-object-outline-renderer-feature).
 * **Width** determines how thick the outline is.
 * **Color** picks up the color of the outline.
@@ -218,13 +218,13 @@ The *Outline* part of the *Stylized Surface* shader allows you to add pseudo-out
 * **Space** determines the space in which the outline is rendered. The options are: _Object_, _Screen_.
   * **Camera Distance Impact** **(this parameter is available in Universal RP only)** if **Space** is set to _Screen_, this parameter appears. It makes outlines that are further from camera appear thinner than outlines closer to the camera.
 
-Please remember that in addition to this shader Flat Kit has also a global *Outline image effect* applied per Renderer (in URP) and per camera (in Built-In RP).
+Please remember that in addition to this shader Flat Kit has also a global **Outline image effect** applied per Renderer (in URP) and per camera (in Built-In RP).
 In the [Outline Image Effect](/outline/) chapter in this manual you can find some useful specific and general info.
 {: .notice--info}
 
 
 ##### Flat Kit Per Object Outline Renderer Feature
-Once you enable the _Outline_ chaeckbox on the Stylized Surface material, a new Renderer Feature will be added to the Renderer. This feature is called _Flat Kit Per Object Outline_.
+Once you enable the _Outline_ chaeckbox on the Stylized Surface material, a new Renderer Feature will be added to the Renderer. This feature is called _Flat Kit Per Object Outline_. You don't need to add this Renderer feature manually, it is added automatically when you enable the _Outline_ checkbox on the material.  
 
 ![Flat Kit Per Object Outline Renderer Feature, main parameters](/FlatKit_Manual_Images/flat-kit-per-object-outline-renderer-feature-simple.png){:.image-fancy}
 
