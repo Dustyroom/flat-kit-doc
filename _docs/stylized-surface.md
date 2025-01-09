@@ -214,7 +214,7 @@ The *Outline* part of the *Stylized Surface* shader allows you to add pseudo-out
 * **Color** picks up the color of the outline.
 * **Scale** adjust this parameter when you have gaps on the vertices. Please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc. More info about the gaps issue can be found [a bit below](#gaps-in-the-outline).
 * **Smooth Normals** softens the normals of the model. This is useful when you have gaps on the vertices.
-* **Depth Offset** moves the outline inwards or outwards an object.
+* **Depth Offset** moves the outline inwards or outwards an object. This is useful in cases when there are chatotic outlines on the model — pushing them behind the model can clean up the look.
 * **Space** determines the space in which the outline is rendered. The options are: _Object_, _Screen_.
   * **Camera Distance Impact** **(this parameter is available in Universal RP only)** if **Space** is set to _Screen_, this parameter appears. It makes outlines that are further from camera appear thinner than outlines closer to the camera.
 
