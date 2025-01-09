@@ -212,7 +212,7 @@ The *Outline* part of the *Stylized Surface* shader allows you to add pseudo-out
 * **Select Renderer Feature** — locates and selects the Renderer the object-based Outline is used in as a Renderer Feature. More info — [a bit below](/#flat-kit-per-object-outline-renderer-feature).
 * **Width** determines how thick the outline is.
 * **Color** picks up the color of the outline.
-* **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).
+* **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc. More info about the gaps issue can be found [a bit below](/#gaps-in-the-outline)).
 * **Smooth Normals** softens the normals of the model. This is useful when you have gaps on the vertices.
 * **Depth Offset** moves the outline inwards or outwards an object.
 * **Space** determines the space in which the outline is rendered. The options are: _Object_, _Screen_.
