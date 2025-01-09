@@ -503,7 +503,7 @@ You can use [*Stylized Surface*](/stylized-surface/#outline) shader to outline a
 
 * **Color** picks up the color of the outline.
 * **Width** determines how thick the outline is.
-* **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc).
+* **Scale** adjust this parameter when you have gaps on the vertices (please note, this is not an ultimate solution, the gaps need a complex approach — in modelling, adjusting the normals, adjusting camera distance etc. More about the gaps issue can be found [a bit below](/#gaps-in-the-outline)).
 * **Depth Offset** moves the outline inwards or outwards an object.
 * **Camera Distance Impact** **(this parameter is available in Universal RP only)** makes outlines that are further from camera appear thinner than outlines closer to the camera.
 
