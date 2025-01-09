@@ -248,6 +248,9 @@ Flat Kit Per Object Outline Renderer Feature, main parameters
 
 
 ##### Gaps in the outline
+
+The gaps issue appears in the shader-based (inverted hull) outline mostly on the sharp edges of the model. The most succeptible to this issue are the cube-like models and low-poly models.
+
 In some cases it may be useful to **manipulate the normals of your model** in order to **force the shader to render outlines** where it wouldn't do so otherwise.
 
 [![Gaps are visible on hard edges](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png){: .image-fancy }](/FlatKit_Manual_Images/outline-gaps-suzanne-1.png)
