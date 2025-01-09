@@ -291,7 +291,7 @@ Using the _Depth Offset_ parameter on the _Stylized Surface_ shader to clean up 
 Please note that this way of doing the outlines is made to be super fast, but unlike in Photoshop it can't produce an ideal outline. This method is called **Inverted hull**, when the vertices of a model are moved along their normals in the image space. There are fundamental limitations to this fast approach of making the outline. For example, the outline itself in not a hollow contour — but rather the modified normals layered on the back of the original model. In most cases it can produce very good results with very fast performance, but the transparency on this model won't work, as reducing the model's opacity will reveal the filled pseudo-outline layer in the background.
 {: .notice--warning}
 
-Also, to remedy the gaps issue, you can try using the [Scale parameter](/stylized-surface/#the-outline-part-of-the-stylized-surface-shader-allows-you-to-ad/) of the Outline parameter. By keeping the **Width** low and increasing the **Scale** you can get rid of the gaps. But this is not a perfect solution, as it may make the outline look a bit displaced.
+Also, to remedy the gaps issue, you can try using the [Scale parameter](#outline) of the Outline parameter. By keeping the **Width** low and increasing the **Scale** you can get rid of the gaps. But this is not a perfect solution, as it may make the outline look a bit displaced.
 {: .notice--success}
 
 ### Additional Parameters of the Shader
