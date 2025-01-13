@@ -402,6 +402,9 @@ A set of textures in Stylized Surface shader
 * **Blending Mode** lets you choose between 'Multiply', 'Add' or 'Interpolate' blending modes;
 * **Detail Impact** controls how visible the second texture is. Values to the left decrease visibility of the texture up until it is invisible.
 
+**NOTE.** Detail map support is available in Universal RP version of Flat Kit only, there is no Detail map parameter in Built-In version of Flat Kit.
+{: .notice--warning}
+
 **Normal Map** To make an impression of a relatively low-poly mesh having many details of a high-poly one, you can use normal maps. Add one to *Normal Map* slot in the Inspector panel.
 
 <!--
