@@ -68,8 +68,8 @@ If you have any difficulties during the installation, or at any point while work
 #### After importing, Flat Kit gives errors
 - First, try **restarting Unity**. A simple restart indeed sometimes fixes some strange issues.
 - **Re-import Flat Kit** the fast way. Here is how:
-  1. In Unity, go to Project panel ▶︎ Assets folder ▶︎ Flat Kit folder;
-  1. Right click on the Flat Kit folder and choose Reimport.
+  1. In Unity, go to **Project** panel ▶︎ **Assets** folder ▶︎ **Flat Kit** folder;
+  1. Right click on the **Flat Kit** folder and choose **Reimport**.
 - **Re-import Flat Kit** the deeper way. Here is how:
   1. Please, locate the **Readme** helper tool:  
 **Project** panel ▶︎ **Assets** folder ▶︎ **Flat Kit** folder ▶︎ select **[Readme]** and go to _Inspector_ panel;  
@@ -78,7 +78,7 @@ If you have any difficulties during the installation, or at any point while work
     - *Windows:* `%APPDATA%\Unity\Asset Store-5.x` (press _Win+R_, paste this path and press Enter);
     - *Linux:* `~/.local/share/unity3d/Asset Store-5.x`;
   1. Delete the **Flat Kit** folder from the **Project** panel ▶︎ **Assets** folder;
-  1. Got to _Window_ ▶︎ _Package Manager_ ▶︎ _My Assets_;
+  1. Got to **Window** ▶︎ **Package Manager** ▶︎ **My Assets**;
   1. Find **Flat Kit** among your assets, click **Download**, then **Import**.
 - Verify that the Unity version is equal or is newer than **2020.3 LTS**.
 - If you are using the URP version of Flat Kit, please check if you have a **Universal RP project** open.
