@@ -72,8 +72,11 @@ If you have any difficulties during the installation, or at any point while work
   1. Right click on the Flat Kit folder and choose Reimport.
 - **Re-import Flat Kit** the deeper way. Here is how:
   1. Please, locate the **Readme** helper tool:  
-**Project** panel ▶︎ **Assets** folder ▶︎ **Flat Kit** folder ▶︎ select **Readme** and go to _Inspector_ panel;  
-  1. Press **Clear Cache**;
+**Project** panel ▶︎ **Assets** folder ▶︎ **Flat Kit** folder ▶︎ select **[Readme]** and go to _Inspector_ panel;  
+  1. Press **Clear Cache**; You can clear the cache manually as well, just delete the **Dustyroom** folder from the following directory:
+    - *Mac OS:* `~/Library/Unity/Asset Store-5.x` (press _Shift+Cmd+G_ in Finder, paste this path, press Return);
+    - *Windows:* `%APPDATA%\Unity\Asset Store-5.x` (press _Win+R_, paste this path and press Enter);
+    - *Linux:* `~/.local/share/unity3d/Asset Store-5.x`;
   1. Delete the **Flat Kit** folder from the **Project** panel ▶︎ **Assets** folder;
   1. Got to _Window_ ▶︎ _Package Manager_ ▶︎ _My Assets_;
   1. Find **Flat Kit** among your assets, click **Download**, then **Import**.
