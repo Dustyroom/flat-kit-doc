@@ -64,3 +64,22 @@ Readme tool's interface
 
 If you have any difficulties during the installation, or at any point while working with Flat Kit, please, [contact us](/contact-details), we'll be glad to help.
 {: .notice--info}
+
+#### After importing, Flat Kit gives errors
+- First, try **restarting Unity**. A simple restart indeed sometimes fixes some strange issues.
+- **Re-import Flat Kit** the fast way. Here is how:
+  1. In Unity, go to Project panel ▶︎ Assets folder ▶︎ Flat Kit folder;
+  1. Right click on the Flat Kit folder and choose Reimport.
+- **Re-import Flat Kit** the deeper way. Here is how:
+  1. Please, locate the **Readme** helper tool:  
+**Project** panel ▶︎ **Assets** folder ▶︎ **Flat Kit** folder ▶︎ select **Readme** and go to _Inspector_ panel;  
+  1. Press **Clear Cache**;
+  1. Delete the **Flat Kit** folder from the **Project** panel ▶︎ **Assets** folder;
+  1. Got to _Window_ ▶︎ _Package Manager_ ▶︎ _My Assets_;
+  1. Find **Flat Kit** among your assets, click **Download**, then **Import**.
+- Verify that the Unity version is equal or is newer than **2020.3 LTS**.
+- If you are using the URP version of Flat Kit, please check if you have a **Universal RP project** open.
+- Make sure that you are using a stable (not beta) verson of Unity.
+- If nothing helps, please, [contact us](/contact-details), we'll be glad to help. Don't forget to include the following:
+  1. Info about the errors (a screenshot of Console panel, for example)
+  1. Locate and select the **[Readme]** file (located by default in **Assets** folder ▶︎ **Flat Kit** folder), go to the Inspector panel, press **Copy** button in the _Debug info_ section and paste the copied text in your mail (or just make a screenshot of the panel).
