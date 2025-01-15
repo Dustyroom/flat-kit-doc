@@ -42,11 +42,11 @@ If you updated to the latest version of Unity, and still haven't resolved it, pl
 
 #### Q. What texture maps does Flat Kit support?  
 
-> Flat Kit supports albedo, detail, normal and emission maps, more info [here](/stylized-surface/#texture-maps).
+> Flat Kit supports albedo, detail (URP version of Flat Kit only), normal and emission (URP version of Flat Kit only) maps, more info [here](/stylized-surface/#texture-maps).
 
 #### Q. I’ve got errors just after importing Flat Kit. Why?  
 
-> First thing to try would be to restart Unity and check again. Secondly, try re-importing the asset. Check if you've got the correct RP version of Flat Kit. If none of these helped, [get in touch](/contact-details).
+> Please read this detailed [guide](/quick-start/#after-importing-flat-kit-gives-errors) on how to resolve errors after importing Flat Kit into your project. If none of those helped, [get in touch](/contact-details).
 
 #### Q. What is the Shader Compilation Target Level of Flat Kit shaders?  
 
