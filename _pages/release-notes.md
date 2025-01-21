@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.3 <small>(2025-01-21)</small>
+- Fixed an issue with **SRP batching** in Stylized Surface shader.
+- Improved the **Pixelation** image effect when using Render Graph.
+
 ## 4.9.2 <small>(2024-12-20)</small>
 - Improved **compatibility with Unity 6**: proble blending, global illumination.
 
