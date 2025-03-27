@@ -7,6 +7,8 @@ toc: false
 
 ## 4.9.4 <small>(2025-03-28)</small>
 - Improved **baked light** integration in **Unity 6.0.12** and later.
+- Added **support for DOTS** to the **water shader** (enable `FLAT_KIT_DOTS_INSTANCING_ON` in Water.shader).
+- Improved **Render Graph** integration for all **image effects**: Outline, Fog, Pixelation.
 
 ## 4.9.3 <small>(2025-01-21)</small>
 - Fixed an issue with **SRP batching** in Stylized Surface shader.
