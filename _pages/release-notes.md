@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.4 <small>(2025-03-28)</small>
+- Improved **baked light** integration in **Unity 6.0.12** and later.
+
 ## 4.9.3 <small>(2025-01-21)</small>
 - Fixed an issue with **SRP batching** in Stylized Surface shader.
 - Improved the **Pixelation** image effect when using Render Graph.
