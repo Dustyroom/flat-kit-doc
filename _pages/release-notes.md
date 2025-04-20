@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.5 <small>(2025-04-21)</small>
+- Improved **baked global illumination** integration for the **Terrain shader** in Unity 6 and later.
+- General usability improvements.
+
 ## 4.9.4 <small>(2025-03-28)</small>
 - Improved **baked light** integration in **Unity 6.0.12** and later.
 - Added **support for DOTS** to the **water shader** (enable `FLAT_KIT_DOTS_INSTANCING_ON` in Water.shader).
