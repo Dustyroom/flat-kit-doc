@@ -5,6 +5,9 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.6 <small>(2025-08-24)</small>
+- Fixed **Desert Pillar** shader of the **Desert** demo producing errors in **Unity 6.1**.
+
 ## 4.9.5 <small>(2025-04-21)</small>
 - Improved **baked global illumination** integration for the **Terrain shader** in Unity 6 and later.
 - General usability improvements.
