@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.7 <small>(2025-08-06)</small>
+- Added **Tiling Source** choice to the **Water shader**. It's now possible to make the water geometry noise seamlessly tile across multiple water meshes by using **"World Space"** as the Tiling Source.
+- Fixed compatibility of the **Terrain shader** with **Decals** when **"Use Rendering Layers"** is enabled on the URP Renderer.
+
 ## 4.9.6 <small>(2025-08-24)</small>
 - Fixed **Desert Pillar** shader of the **Desert** demo producing errors in **Unity 6.1**.
 
