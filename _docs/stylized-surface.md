@@ -247,6 +247,14 @@ Clicking the **Advanced Settings** line will reveal more parameters such as:
 Flat Kit Per Object Outline Renderer Feature, main parameters
 
 
+##### Auto-Reference Materials Warning
+
+The per-object Outline works by adding a _Flat Kit Per Object Outline_ Renderer Feature to your project's URP Renderer asset. This happens automatically when you enable the Outline toggle on a material.
+
+However, disabling the Outline toggle on the material does not always automatically remove this Renderer Feature. While our _Auto-Reference Materials_ option attempts to clean this up for you in simple cases, it is not possible to reliably track all uses in complex scenarios or at runtime, thus the feature may be left active on the Renderer.
+
+Therefore, we strongly recommend that when you decide to disable the outline on the material, you also manually check your Renderer and disable/remove the Flat Kit Per Object Outline feature from its list to ensure it does not use resources or leaves the material optimized for batching.
+
 ##### Gaps in the outline
 
 The gaps issue appears in the shader-based (inverted hull) outline mostly on the sharp edges of the model. The most succeptible to this issue are the cube-like models and low-poly models.
