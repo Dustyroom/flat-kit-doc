@@ -72,7 +72,7 @@ If this won't help, delete this preset file, then on the Graphics panel, set 'In
 
 #### Q. Does Flat Kit support DOTS?
 
->- Yes, it's described here in [/stylized-surface/#using-dots] of the [Stylized Surface](/stylized-surface) shader's page.
+>- Yes, it's described in [this paragraph](/stylized-surface/#using-dots) of the [Stylized Surface](/stylized-surface) shader's page.
 
 <!-- <details><summary>Why is my build getting so many shader variants (and takes long to build)?</summary><div markdown="1">
 >- Chances are you are using Universal RP earlier than v. 10.7. If you are, please update to the latest version of URP. This should reduce the number of shader variants significantly as newer versions have tools that use multi-compilation, which addresses this problem with variants and building times.
