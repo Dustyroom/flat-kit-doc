@@ -540,6 +540,9 @@ When the `Enable Instancing` option is enabled on a material, the shaders can pe
 1. Unity shadow parameters, located in the *“Unity Built-in Shadows”* section
     * *Color* value (property name `_UnityShadowColor`).
 
+## Using DOTS
+
+To enable DOTS in Flat Kit, please locate the `StylizedSurface` shader file, open it in a text editor and uncomment the line `#define FLAT_KIT_DOTS_INSTANCING_ON`.
 
 ## Dissolve Effect
 
