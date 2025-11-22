@@ -5,6 +5,13 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.8 <small>(2025-11-23)</small>
+- Added **runtime access to effect materials** for **Fog**, **Outline**, and **Pixelation** features.
+- Improved all shader compatibility with **Unity 6.3+**.
+- Improved **image effects** compatibility with **Unity 6.2+**.
+- Fixed **Render Graph** compatibility for image effects in **WebGL** builds.
+- Fixed **Bubble Shader Graph** in **Android** builds.
+
 ## 4.9.7 <small>(2025-08-06)</small>
 - Added **Tiling Source** choice to the **Water shader**. It's now possible to make the water geometry noise seamlessly tile across multiple water meshes by using **"World Space"** as the Tiling Source.
 - Fixed compatibility of the **Terrain shader** with **Decals** when **"Use Rendering Layers"** is enabled on the URP Renderer.
