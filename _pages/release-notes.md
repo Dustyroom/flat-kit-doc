@@ -5,7 +5,15 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.9 (2026-02-16)
+
+- Improved shader compatibility with **Unity 6.3+** by updating Unity 6 keyword paths to `_CLUSTER_LIGHT_LOOP`.
+- Improved **Water shader** build-time performance by reducing shader variant permutations.
+- Fixed **Fog**, **Outline**, and **Pixelation** image effects being over-applied in **camera stacking** setups (overlay cameras).
+- Clarified **Outline** settings for transparent objects in URP.
+
 ## 4.9.8 <small>(2025-11-23)</small>
+
 - Added **runtime access to effect materials** for **Fog**, **Outline**, and **Pixelation** features.
 - Improved all shader compatibility with **Unity 6.3+**.
 - Improved **image effects** compatibility with **Unity 6.2+**.
@@ -13,59 +21,74 @@ toc: false
 - Fixed **Bubble Shader Graph** in **Android** builds.
 
 ## 4.9.7 <small>(2025-08-06)</small>
+
 - Added **Tiling Source** choice to the **Water shader**. It's now possible to make the water geometry noise seamlessly tile across multiple water meshes by using **"World Space"** as the Tiling Source.
 - Fixed compatibility of the **Terrain shader** with **Decals** when **"Use Rendering Layers"** is enabled on the URP Renderer.
 
 ## 4.9.6 <small>(2025-08-24)</small>
+
 - Fixed **Desert Pillar** shader of the **Desert** demo producing errors in **Unity 6.1**.
 
 ## 4.9.5 <small>(2025-04-21)</small>
+
 - Improved **baked global illumination** integration for the **Terrain shader** in Unity 6 and later.
 - General usability improvements.
 
 ## 4.9.4 <small>(2025-03-28)</small>
+
 - Improved **baked light** integration in **Unity 6.0.12** and later.
 - Added **support for DOTS** to the **water shader** (enable `FLAT_KIT_DOTS_INSTANCING_ON` in Water.shader).
 - Improved **Render Graph** integration for all **image effects**: Outline, Fog, Pixelation.
 
 ## 4.9.3 <small>(2025-01-21)</small>
+
 - Fixed an issue with **SRP batching** in Stylized Surface shader.
 - Improved the **Pixelation** image effect when using Render Graph.
 
 ## 4.9.2 <small>(2024-12-20)</small>
+
 - Improved **compatibility with Unity 6**: proble blending, global illumination.
 
 ## 4.9.0 <small>(2024-12-16)</small>
+
 - All **image effects** (Outline, Fog, Pixelation) now **support Render Graph** in **Unity 6.0.16** or later. The effects work with and without the Compatibility Mode (Project Settings -> Graphics).
 
 ## 4.8.0 <small>(2024-11-20)</small>
+
 - Improved support for **Adaptive Light Probes** in Unity 6.0.
 - Improved support for the **Forward+** rendering path in **Unity 6.0.16** or later.
 - Fixed **Override Light Direction** setting on the Terrain shader.
 
 ## 4.7.8 <small>(2024-11-07)</small>
+
 - Fixes and improvements to static lightmapping of the Stylized Surface shader.
 
 ## 4.7.6 <small>(2024-10-25)</small>
+
 - Fixes and improvements to **per-object outline rendering**.
 
 ## 4.7.5 <small>(2024-10-09)</small>
+
 - Added object **dissolve effect** example to the **Room demo scene** (press Play to view).
 
 ## 4.7.1 <small>(2024-09-01)</small>
+
 - Improved shader compatibility with **Unity 6.0.12 and later**.
 
 ## 4.7.0 <small>(2024-08-01)</small>
+
 - **Per-object Outline feature in Stylized Surface**: outline shader pass is now applied using a custom Renderer Feature (as opposed to additional object shader pass). This significantly **improves performance** of per-object outlines and supports **SRP batching**.
 - The migration to the new per-object outlines happens fully automatically when you view the Inspector of a scene object using the Outline feature.
 - Improved shader compatibility with **Unity 6.0.12** and later.
 
 ## 4.6.1 <small>(2024-07-08)</small>
+
 - Improved **support for Unity 6.0.8** and later (including `OUTPUT_SH4` error).
 - Fixed an issue with the **Override Light Direction** setting of the Stylized Surface shader.
 - General usability improvements.
 
 ## 4.6.0 <small>(2024-05-06)</small>
+
 - Added **Unity 6 Preview** support.
 
 ## 4.5.0 <small>(2024-03-23)</small>
@@ -78,29 +101,36 @@ toc: false
 - Improved tooltips throughout the asset.
 
 ## 4.4.7 <small>(2024-02-26)</small>
+
 - **BREAKING CHANGE:** We've changed the way **baked lightmaps and light probes** are applied. It now looks much more coherent with the cell shading stylization.
 
 ## 4.4.0 <small>(2024-02-06)</small>
+
 - Added shader support for **URP 17** (Unity 2023.3).
 
 ## 4.3.0 <small>(2024-01-03)</small>
+
 - *New!* We've added **"Fade With Distance"** feature to the Outline image effect. If enabled, the lines become more transparent the further they are from the camera.
 
 ## 4.2.0 <small>(2023-12-19)</small>
+
 - Stylized Water shader now supports multiple lights.
 - Decals now correctly receive shadows in URP.
 - Fixed image effect materials not being initialized in the Editor in rare circumstances.
 
 ## 4.1.5 <small>(2023-12-08)</small>
+
 - Improved UI of all image effect settings, making them editable inline.
 - Fixed an issue where image effects are sometimes not included in the project builds.
 
 ## 4.1.0 <small>(2023-12-01)</small>
+
 - **Decals** now receive shadows in URP.
 - Improved backwards compatibility of **image effects** (Outlines, Fog) with Unity 2021 and prior.
 - Inspector UI improvements for the **image effects**.
 
 ## 4.0.0 <small>(2023-11-02)</small> - **HUGE update**
+
 - **Pixelation image effect** (+ new demo scene) for a stylish low-res look
 - **Mesh processor** that generates perfectly smooth normals that greatly improve object-based outlines
 - **New demo scene "Desert"** showing a Moebius-esque style using the Outline image effect
@@ -108,26 +138,32 @@ toc: false
 - Complete **Inspector UI overhaul** of Stylized Surface and Water shaders (+ tooltips on ALL parameters)
 
 ## 3.9.6 <small>(2023-09-26)</small>
+
 - **Stylized Surface** shader now stylizes all additional light sources in **Forward+** rendering path.
 
 ## 3.9.2 <small>(2023-09-12)</small>
+
 - Fixed shader error in `'FlatKit/Stylized Surface': 'OUTPUT_SH': Too many arguments for a macro call` in Unity 2023.1.9+.
 
 ## 3.9.1 <small>(2023-08-16)</small>
+
 - Fixed an issue where outline image effect would sometimes show the scene as grey.
 - Improved SRP Batcher compatibility in the latest versions of Unity.
 
 ## 3.9.0 <small>(2023-08-09)</small>
+
 - **Detail Maps!** We've expanded the texture functionality in the stylized rendering to include detail maps. Now you have ability to layer two textures with independent blending settings.
 - **Fog effect!** We've added an option for the fog to apply in world space, allowing a nice variety of new styles, a-la Monument Valley.
 - We've **changed the blending of the Albedo (Base) map** to mix with the stylized shading in a cleaner, more visually appealing way.
 - Reworked the Outline image effect to correctly **render in XR** mode when using recent versions of Unity.
 
 ## 3.8.0 <small>(2023-07-01)</small>
+
 - Improved object-based outline effect integration with the **Curved World** asset.
 - Various UI fixes and improvements.
 
 ## 3.7.0 <small>(2023-06-10)</small>
+
 - Improved **shader variant stripping** of all shaders. This reduces build size and duration.
 - **Skybox shader**: added an option to remove color banding when using two similar colors.
 - Improved integration with URP **Forward+ rendering path**.
@@ -136,6 +172,7 @@ toc: false
 - **URP decals** are now applied after lighting is calculated.
 
 ## 3.6.0 <small>(2023-05-10)</small>
+
 - **BREAKING CHANGE**: We've improved the way base texture is used in stylized rendering. This may change the way your textured objects look.
 - Improved support for [Light Layers](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.0/manual/lighting/light-layers.html).
 - Improved support for [SSAO](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.0/manual/post-processing-ssao.html) in Deferred rendering path.
@@ -147,9 +184,11 @@ toc: false
 - Added support for **Unity 2023.1** and **URP 15**.
 
 ## 3.4.1 <small>(2023-03-14)</small>
+
 - Fixed a build error that occured in Unity 2021 on Android and iOS. Unexplicably, Unity uses two different URP versions in one Unity version.
 
 ## 3.4.0 <small>(2023-03-06)</small>
+
 - Added support for **dynamic lightmaps** and **debug display** in URP.
 - Improved **Terrain shader** compatibility with the **Forward+** rendering path.
 - Added suport for **screen-space shadows** and **reflection probe blending** in the **Terrain shader**.
@@ -159,6 +198,7 @@ toc: false
 - Added two water materials to the **Ocean Islands** demo scene.
 
 ## 3.3.0 <small>(2023-01-20)</small>
+
 - **BREAKING CHANGE**: If a water material uses foam with a texture, it might look **slightly different** with this update. The foam direction formula had a bug, which caused foam textures to be slightly stretched. This is now fixed.
 - Added support for Unity's new **LOD cross-fade** functionality.
 - Added support for the **Forward+** rendering path.
@@ -168,6 +208,7 @@ toc: false
 - Fixed an issue where sometimes the Outline shader pass was not properly disabled, causing **SRP Batching** to break.
 
 ## 3.2.5 <small>(2023-01-02)</small>
+
 - Fixed **water** rendering in **WebGL** builds.
 - **URP demo scenes now auto-configure** the URP Asset/Renderer. No maual configuration is needed anymore, removed actions from the Readme config section.
 
