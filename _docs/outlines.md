@@ -177,3 +177,10 @@ After that, you'll need to go to the Flat Kit's Outline image effects settings a
     [![](/FlatKit_Manual_Images/obj_without_outlines_2_1_rendering_surface_type_transparent.png)](/FlatKit_Manual_Images/obj_without_outlines_2_1_rendering_surface_type_transparent.png)
 
   * Step 2. On the Outline settings panel, Set the [Render Event](/outlines/#advanced-settings-section-hosts-the-parameters-to-adjust-the-too/) to *Before Transparents*. 
+
+  ### Outlines on transparent objects
+
+If you want to have outlines on transparent objects, you can set the [Render Event](/outlines/#advanced-parameters) to *After Transparents* or any other option that comes after the transparent pass. Sometimes you'll need to press Play to see the effect of the Render Event changing.
+
+**NOTE:** Transparent objects can be outlined only by the [_Color threshold_](/outlines/#advanced-parameters) parameter. This is a URP limitation: transparent objects are excluded from camera depth/normals textures in URP, so depth/normals outline modes won’t detect them. That’s why enabling Use Color works on transparent materials.
+{:.notice--warning}
