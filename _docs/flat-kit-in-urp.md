@@ -34,7 +34,7 @@ If you are using your settings file instead, please make sure to have *Opaque te
 
 ## Flat Kit Image Effects in URP
 
-The Fog and Outline Image Effects are implemented as Renderer Features in URP. To use them, you need to add them to the Renderer that is assigned to your URP Asset file. You can either use the one that comes with Flat Kit, called ***[Flat Kit] Example Forward Renderer***, or you can create your own Renderer file to work with.
+The Fog, Outline and Pixellation effects are implemented as Renderer Features in URP. To use them, you need to add them to the Renderer that is assigned to your URP Asset file. You can either use the one that comes with Flat Kit, called ***[Flat Kit] Example Forward Renderer***, or you can create your own Renderer file to work with.
 
 <!--
 To use Flat Kit effects, please first update the Universal RP to the version higher than 8.2.0.
