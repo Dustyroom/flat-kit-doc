@@ -17,7 +17,7 @@ After that, you will need to use a Universal RP Asset file, as this file lists t
 
 * Right click on **Assets** (in Project tab) ▶︎ **Create** ▶︎ **Rendering** ▶︎ **URP** ▶︎ **Pipeline Asset**.
 
-Once you do it, the _Asset file_ and a _Renderer_ (formerly known _Forward Renderer_) are created.
+Once you do it, the _Asset file_ and a _Renderer_ are created.
 
 You can set the _Asset file_ manualy or using the Flat Kit's [Auto Load Pipeline Asset script](/additional-scripts/#auto-load-pipeline-asset).
 
