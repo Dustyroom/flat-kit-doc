@@ -5,7 +5,7 @@ excerpt: "Flat Kit in URP"
 toc: true
 ---
 
-Although many of the features in Flat Kit look identically in URP and in Built-In RP versions, the differences are becoming inevitable for a couple of reasons. Built-in RP is being deprecated by Unity, URP is faster and it is a way to go, URP offers the tools Built-In RP is lacking. One of the differences is in post-processing. Flat Kit Built-In RP uses Post-Processing Stack v.2. Flat Kit URP uses URP's native Volume toolkit. Both of these offer similar post-processing tools but they behave differently. Even when using the same values for Color grading section in Built-In RP and URP, the outcome is slightly different.
+Although many of the features in Flat Kit look identically in URP and in Built-In RP versions, the differences are becoming inevitable for a couple of reasons. Built-in RP is being deprecated by Unity, URP is faster and it is a way to go, URP offers the tools Built-In RP is lacking. One of the differences is in post-processing. Flat Kit Built-In RP uses Post-Processing Stack v.2. Flat Kit URP provides post effects on the Renderers. Both of these offer similar post-processing tools but they behave differently. Even when using the same values for Color grading section in Built-In RP and URP, the outcome is slightly different.
 
 Please note, Flat Kit had been initially created for the Built-in Rendering Pipeline. To keep the visual results as close to the original as possible, the URP version of Flat Kit is using HLSL code rather than shader graph. It means you can switch a Flat Kit project between URP and Built-in RP at any point without extra work. However if you’d like to edit the shaders, you'll need some programming skills. Although you can switch between the Rendering Pipelines, we cannot guarantee that all Unity versions will let you do it flawlessly. That is why, to make Flat Kit work out of the box, we highly recommended that you created a Universal RP project to begin with.
 
@@ -34,21 +34,15 @@ If you are using your settings file instead, please make sure to have *Opaque te
 
 ## Flat Kit Image Effects in URP
 
-In URP, 'Fog' and 'Outline' image effects, included in Flat Kit, are no longer image effects that are used as Components on the Camera, they have been adapted to become Render Features. Unlike the conventional image effects that are added to the camera game object, _Render Features_ are added as stages to the _Renderer_ (fka _Forward Renderer_).
+The Fog and Outline Image Effects are implemented as Renderer Features in URP. To use them, you need to add them to the Renderer that is assigned to your URP Asset file. You can either use the one that comes with Flat Kit, called ***[Flat Kit] Example Forward Renderer***, or you can create your own Renderer file to work with.
 
 <!--
 To use Flat Kit effects, please first update the Universal RP to the version higher than 8.2.0.
 -->
 
-Go to Window ▶︎ Package Manager ▶︎ Universal RP ▶︎ Select the version to upgrade to ▶︎ click Upgrade
+Our [Demo scenes](/demo-scenes/) already include their own URP Assets with Renderers (per scene). It is done via [Auto Load Pipeline Asset](/additional-scripts/#auto-load-pipeline-asset) script, which is included in the package. Please visit the script's page for more details on how it works.
 
-Our example scenes already include configurations of the Forward Renderer with outline and fog image effects (look for the URP Config folders in the demo directory).
-
-<!--
-To enable outline and fog, select the ForwardRendererConfig and add the 'outline' or 'fog' stage. In the case of 'outline' effect, you also need to add the DepthNormalsPass stage.
--->
-
-The order of the effects can be managed like this.
+<!--The order of the effects can be managed like this.
 
 [![Managing the order of renderer layers in URP](/FlatKit_Manual_Images/URP-renderer-layers-01.png)](/FlatKit_Manual_Images/URP-renderer-layers-01.png){:.image-fancy}
 
@@ -56,7 +50,9 @@ The order of the effects can be managed like this.
 Managing the order of renderer layers in URP
 
 It's a default URP thing. It is worth noting that for Outlines we made an option to choose the order of Renderer Events within Outline Image Effect interface. Please, refer to the corresponding chapter of this manual, [Outline Image Effect](/outline).
+-->
 
+<!--
 ## Post-processing V2 in URP (General Info)
 
 We use PPv2 in our demo scenes for additional image effects. To enable these additional effects you need to:
@@ -69,3 +65,4 @@ Enable the Post Processing flat on the camera inspector:
 
 {:.image-caption}
 Camera properties. How to enable Post-processing v.2
+-->

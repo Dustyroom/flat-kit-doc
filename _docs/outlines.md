@@ -178,7 +178,7 @@ After that, you'll need to go to the Flat Kit's Outline image effects settings a
 
   * Step 2. On the Outline settings panel, Set the [Render Event](/outlines/#advanced-settings-section-hosts-the-parameters-to-adjust-the-too/) to *Before Transparents*. 
 
-  ### Outlines on transparent objects
+### Outlines on transparent objects
 
 If you want to have outlines on transparent objects, you can set the [Render Event](/outlines/#advanced-parameters) to *After Transparents* or any other option that comes after the transparent pass. Sometimes you'll need to press Play to see the effect of the Render Event changing.
 
