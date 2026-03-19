@@ -5,7 +5,11 @@ permalink: /release-notes/
 toc: false
 ---
 
-## 4.9.9 (2026-02-16)
+## 4.9.10 <small>(2026-03-19)</small>
+
+- Fixed GPU Resident Drawer compatibility (Unity 6). Shaders now properly pass the SRP Batcher validation when GPU Resident Drawer is enabled.
+
+## 4.9.9 <small>(2026-02-16)</small>
 
 - Improved shader compatibility with **Unity 6.3+** by updating Unity 6 keyword paths to `_CLUSTER_LIGHT_LOOP`.
 - Improved **Water shader** build-time performance by reducing shader variant permutations.
