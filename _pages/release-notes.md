@@ -5,9 +5,11 @@ permalink: /release-notes/
 toc: false
 ---
 
-## 4.9.10 <small>(2026-03-19)</small>
+## 4.9.10 <small>(2026-03-21)</small>
 
 - Fixed GPU Resident Drawer compatibility (Unity 6). Shaders now properly pass the SRP Batcher validation when GPU Resident Drawer is enabled.
+- Improved support for **Unity 6.4**.
+- Fixed the (harmless) error "State comes from an incompatible keyword space".
 
 ## 4.9.9 <small>(2026-02-16)</small>
 
