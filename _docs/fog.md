@@ -38,7 +38,7 @@ Fog Image Effect. Gradient Editor interface.
 * **Near** - distance from camera where the fog starts. The fog is not applied to the area closer to the camera than this value.
 * **Far** - distance from camera where the fog ends. The fog is not applied to the area further from the camera than this value.
 * **Distance Fog Intensity** - intensity of the distance fog. The higher the value, the more intense the fog is.
-* **Use Distance Fog On Sky** - whether to use distance fog on the skybox or not. If unchecked, the distance fog is not applied to the sky.
+* **Use Distance Fog On Sky**^  - whether to use distance fog on the skybox or not. If unchecked, the distance fog is not applied to the sky.
 
 #### Height Fog
 * **Use Height** - whether to use fog along vertical axis or not. If unchecked, the height fog is not applied.
@@ -46,7 +46,10 @@ Fog Image Effect. Gradient Editor interface.
 * **High** - height from camera where the fog ends. The fog is not applied to the area higher than this value.
 * **Height Fog Intensity** - intensity of the height fog. The higher the value, the more intense the fog is.
 * **Camera Relative Position** - Reverts fog behavior to pre-3.9.0. This is useful if you want to use the new fog settings, but want to keep the old look of your scene.
-* **Use Height Fog On Sky** - whether to use height fog on the skybox or not. If unchecked, the height fog is not applied to the sky.
+* **Use Height Fog On Sky**^ - whether to use height fog on the skybox or not. If unchecked, the height fog is not applied to the sky.
+
+^ **Use Distance/Height Fog On Sky** parameters are discontinued and appear in legacy pre-2022.3 Unity versions only. 
+{:.notice--warning}
 
 #### Blending
 * **Distance Height Blend** - blend between distance and height fog. The higher the value, the more height fog is applied. The lower the value, the more distance fog is applied.
