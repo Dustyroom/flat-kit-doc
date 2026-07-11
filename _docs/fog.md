@@ -55,11 +55,12 @@ Fog Image Effect. Gradient Editor interface.
 * **Distance Height Blend** - blend between distance and height fog. The higher the value, the more height fog is applied. The lower the value, the more distance fog is applied.
 
 #### Advanced settings
-* **Render Event** — the event at which the Fog effect takes place. Click on the drop down to select the event.
+* **Render Event** — the event at which the Fog effect takes place. Click on the drop down to select the event.  
 ![](/FlatKit_Manual_Images/fog_image_effect_render_events.png){: .image-fancy}
 
 {:.image-caption}
 Fog Image Effect Render Events list.
+
 * **Apply in Scene View** - whether the effect should be applied in the Scene view as well as in the Game view. Please, keep in mind that Unity always renders the Scene view with the default Renderer settings of the URP config.
 
 {% capture notice-text %}
