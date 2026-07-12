@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.11 <small>(2026-06-22)</small>
+
+- Improved compatibility with Unity 6.5+.
+
 ## 4.9.10 <small>(2026-03-21)</small>
 
 - Fixed GPU Resident Drawer compatibility (Unity 6). Shaders now properly pass the SRP Batcher validation when GPU Resident Drawer is enabled.
