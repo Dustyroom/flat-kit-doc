@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.13 <small>(2026-09-06)</small>
+
+- Improved compatibility with Unity 6.6+.
+
 ## 4.9.12 <small>(2026-08-10)</small>
 
 - Improved **per-object Outline** performance and **SRP Batcher** compatibility.
