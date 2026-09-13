@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.14 <small>(2026-09-14)</small>
+
+- Resolved Terrain shader error in URP 17.6+ ([Dustyroom/flat-kit-doc#143](https://github.com/Dustyroom/flat-kit-doc/issues/143)).
+
 ## 4.9.13 <small>(2026-09-06)</small>
 
 - Improved compatibility with Unity 6.6+.
