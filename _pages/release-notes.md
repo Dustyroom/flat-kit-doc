@@ -5,6 +5,10 @@ permalink: /release-notes/
 toc: false
 ---
 
+## 4.9.15 <small>(2026-10-29)</small>
+
+- Fixed fullscreen effect shader build errors on systems using Turkish or Azerbaijani regional formats.
+
 ## 4.9.14 <small>(2026-09-14)</small>
 
 - Resolved Terrain shader error in URP 17.6+ ([Dustyroom/flat-kit-doc#143](https://github.com/Dustyroom/flat-kit-doc/issues/143)).
